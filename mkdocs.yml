@@ -13,7 +13,6 @@ theme:
   font:
     text: Inter
   features:
-    - navigation.footer
     - navigation.instant
     - navigation.instant.progress
     - search.highlight
@@ -38,7 +37,7 @@ markdown_extensions:
   - tables
 
 nav:
-  - Home: index.md
+  - What is all this?: documentation/index.md
 
 copyright: "&copy; 2026 cannoli_OS Team"
 

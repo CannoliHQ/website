@@ -1,1 +1,5 @@
 {% extends "base.html" %}
+
+{% block htmltitle %}
+  <title>{% if page and page.meta and page.meta.template == 'home.html' %}cannoli_OS{% else %}cannoli_OS Docs - {{ page.title }}{% endif %}</title>
+{% endblock %}

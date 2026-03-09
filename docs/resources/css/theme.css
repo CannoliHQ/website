@@ -12,7 +12,16 @@
 }
 
 .md-header {
-  display: none;
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-header__topic:first-child .md-ellipsis {
+  font-size: 0;
+}
+
+.md-header__topic:first-child .md-ellipsis::after {
+  content: "cannoli_OS Docs";
+  font-size: 0.9rem;
 }
 
 .md-nav__link--active {
@@ -24,19 +33,26 @@
   margin-top: 0;
 }
 
-.md-content__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 7rem);
+.md-typeset h1 {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
+
 
 .hero {
   text-align: center;
   max-width: 600px;
+  min-height: calc(100vh - 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero h1 {
+  display: block;
   margin-bottom: 0;
   color: #ffffff;
 }
