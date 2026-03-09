@@ -13,8 +13,6 @@ theme:
   font:
     text: Inter
   features:
-    - navigation.instant
-    - navigation.instant.progress
     - search.highlight
     - search.suggest
     - content.code.copy

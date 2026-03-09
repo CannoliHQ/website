@@ -4,6 +4,12 @@
 
 {% block tabs %}{% endblock %}
 
+{% block extrahead %}
+<style>
+  .md-main__inner { margin-top: 0; }
+</style>
+{% endblock %}
+
 {% block content %}
   {{ page.content }}
 {% endblock %}
