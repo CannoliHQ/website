@@ -23,15 +23,15 @@ Here is how cannoli_OS is planning to bring the convenience of MinUI to Android.
 - [Scorza](https://github.com/cannoliOS/scorza) - a custom frontend / launcher with just the right amount of filling!
 - [LowFatRicotta](https://github.com/cannoliOS/scorza/tree/main/app/src/main/cpp) - an experimental (_vibe coded_) libretro core runner inspired by
   minarch that is included inside Scorza.
+- [Nonna's Kitchen](https://github.com/cannoliOS/kitchen), a web client that lets you reach into the cookie jar. Upload your
+  legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
 
-The following are in progress but not quite ready for showtime.
+The following is in progress but not quite ready for showtime.
 
 - [RicottaArch](https://github.com/cannoliOS/RicottaArch) - an optional fork of RetroArch with a dumb name so the
   maintainers don't need to support a custom menu driver.
-- Nonna's Bakery, a web client that lets you reach into the cookie jar. Upload your
-  legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
 
-## Don't make her grab her rolling pin!
+## Avoid the rolling pin!
 
 It has to be said. Nonna is too old for prison. And too gangster.
 
