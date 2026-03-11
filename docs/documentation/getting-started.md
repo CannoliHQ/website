@@ -7,8 +7,6 @@
 
 ## Installing Scorza
 
-Full instructions coming soon!
-
 You can snag the latest early preview from the [GitHub Releases](https://github.com/cannoliOS/scorza/releases/latest).
 
 ## First Launch
