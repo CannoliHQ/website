@@ -36,10 +36,8 @@ You will then land on a pretty barren main menu.
 While you are free to add content however way you'd like, Scorza ships with a built in web client
 called [Nonna's Kitchen](https://github.com/cannoliOS/kitchen). To access it you can press Y on the main menu.
 
-!!! tip
-    The Kitchen shortcut goes away after you add content.
-
-    You can access Nonna's Kitchen in the future by going to the settings menu.
+!!! important
+    The kitchen `Y` shortcut only appears when the server is running.
 
 ![Kitchen](../resources/img/getting-started/kitchen.png)
 
