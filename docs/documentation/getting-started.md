@@ -1,7 +1,7 @@
 # Getting Started
 
 !!! warning "This Documentation Sucks"
-cannoli_OS is in early preview. Expect the docs to get better as things progress and get finalized.
+    cannoli_OS is in early preview. Expect the docs to get better as things progress and get finalized.
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
@@ -39,7 +39,7 @@ While you are free to add content however way you'd like, Scorza ships with a bu
 called [Nonna's Kitchen](https://github.com/cannoliOS/kitchen). To access it you can press Y on the main menu.
 
 !!! tip
-The Kitchen shortcut goes away after you add content.
+    The Kitchen shortcut goes away after you add content.
 
     You can access Nonna's Kitchen in the future by going to the settings menu.
 
