@@ -29,7 +29,7 @@ Here is how cannoli_OS is planning to bring the convenience of MinUI to Android.
 - [Nonna's Kitchen](https://github.com/cannoliOS/kitchen), a web client that lets you reach into the cookie jar. Upload your
   legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
 
-The following is in progress but not quite ready for showtime.
+The following is not ready for prime-time, but I want you to know about it!
 
 - [RicottaArch](https://github.com/cannoliOS/RicottaArch) - an optional fork of RetroArch with a dumb name so the
   maintainers don't need to support a custom menu driver.

@@ -5,12 +5,8 @@
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
-Cannoli supports both **Xbox** and **Nintendo** button layouts. Pick one in settings.
-
-In **Xbox** layout, A confirms and B goes back. In **Nintendo** layout, it's the opposite.
-
-!!! important
-    The tables below use the Xbox layout as the default.
+!!! tip "You don't have to settle for the default button mapping!"
+    Go into Settings → Input → Button Mapping and make yourself at home!
 
 ## Platform List
 
