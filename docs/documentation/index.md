@@ -41,3 +41,7 @@ It has to be said. Nonna is too old for prison. And too gangster.
 **Cannoli does not provide copyrighted materials nor advise you on how to get them.**
 
 If you ask for these anywhere (Discord, GitHub, etc.) say goodbye to your knuckles.
+
+## Don't be a stranger!
+
+Come hang out with the rest of the Holy Cannoli on [Discord](https://discord.gg/QKTjTQ796q)!
