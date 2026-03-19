@@ -2,37 +2,44 @@
 
 cannoli_OS supports a wide range of retro platforms out of the box.
 
-Platforms are run using either the built-in core runner,
-RetroArch or a standalone emulator.
+The **Folder** column shows the accepted directory name for your ROMs.
 
-The **Tag** column shows the accepted directory name for your ROMs.
-
-Place your ROM files in `Cannoli/Roms/{Tag}`.
+Place your ROM files in `Cannoli/Roms/{Folder}`.
 
 For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
-Cores marked with :material-check-bold:{ .shipped } are shipped with Cannoli and *should* work out of the box.
+---
 
-The last section contains higher end systems that require a standalone app.
+:material-check-bold:{ .shipped } Shipped with Cannoli and handled by the built-in core runner
+
+:custom-retroarch: Requires [RetroArch](https://www.retroarch.com/) and the appropriate core downloaded
+
+:material-android: Requires a standalone Android app
 
 ### Nintendo
 
-| Platform                            | Tag          | Core                                                 |
-|-------------------------------------|--------------|------------------------------------------------------|
-| Nintendo Entertainment System       | `NES`        | `nestopia` :material-check-bold:{ .shipped }         |
-| Famicom Disk System                 | `FDS`        | `nestopia` :material-check-bold:{ .shipped }         |
-| Game Boy                            | `GB`         | `gambatte` :material-check-bold:{ .shipped }         |
-| Super Nintendo Entertainment System | `SNES`       | `snes9x` :material-check-bold:{ .shipped }           |
-| Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb` :material-check-bold:{ .shipped }      |
-| Game Boy Color                      | `GBC`        | `gambatte` :material-check-bold:{ .shipped }         |
-| Nintendo 64                         | `N64`        | `mupen64plus_next` :material-check-bold:{ .shipped } |
-| Game Boy Advance                    | `GBA`        | `mgba` :material-check-bold:{ .shipped }             |
-| Pokemon Mini                        | `POKEMINI`   | `pokemini` :material-check-bold:{ .shipped }         |
-| Nintendo DS                         | `NDS`        | `melonds`                                            |
+| Platform                            | Folder       | Core / App                                                                              |
+|-------------------------------------|--------------|-----------------------------------------------------------------------------------------|
+| Nintendo Entertainment System       | `NES`        | `nestopia` :material-check-bold:{ .shipped }                                            |
+| Famicom Disk System                 | `FDS`        | `nestopia` :material-check-bold:{ .shipped }                                            |
+| Game Boy                            | `GB`         | `gambatte` :material-check-bold:{ .shipped }                                            |
+| Super Nintendo Entertainment System | `SNES`       | `snes9x` :material-check-bold:{ .shipped }                                              |
+| Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb` :material-check-bold:{ .shipped }                                         |
+| Game Boy Color                      | `GBC`        | `gambatte` :material-check-bold:{ .shipped }                                            |
+| Nintendo 64                         | `N64`        | `mupen64plus_next` :material-check-bold:{ .shipped }                                    |
+| Game Boy Advance                    | `GBA`        | `mgba` :material-check-bold:{ .shipped }                                                |
+| Pokemon Mini                        | `POKEMINI`   | `pokemini` :material-check-bold:{ .shipped }                                            |
+| Nintendo DS                         | `NDS`        | `melonds` :custom-retroarch:                                                            |
+| Nintendo DS                         | `NDS`        | [melonDS](https://github.com/rafaelvcaetano/melonDS-android) :material-android:         |
+| Nintendo 3DS                        | `3DS`        | [Azahar](https://github.com/azahar-emu/azahar) :material-android:                      |
+| GameCube                            | `GC`         | [Dolphin](https://dolphin-emu.org) :material-android:                                   |
+| Wii                                 | `WII`        | [Dolphin](https://dolphin-emu.org) :material-android:                                   |
+| Wii U                               | `WIIU`       | [Cemu](https://cemu.info) :material-android:                                            |
+| Nintendo Switch                     | `NSW`        | [Citron](https://citron-emu.org) :material-android:                                     |
 
 ### Sega
 
-| Platform      | Tag      | Core                                                |
+| Platform      | Folder   | Core / App                                          |
 |---------------|----------|-----------------------------------------------------|
 | Sega SG-1000  | `SG1000` | `genesis_plus_gx` :material-check-bold:{ .shipped } |
 | Master System | `SMS`    | `genesis_plus_gx` :material-check-bold:{ .shipped } |
@@ -40,19 +47,22 @@ The last section contains higher end systems that require a standalone app.
 | Sega CD       | `SEGACD` | `genesis_plus_gx` :material-check-bold:{ .shipped } |
 | Game Gear     | `GG`     | `genesis_plus_gx` :material-check-bold:{ .shipped } |
 | Sega 32X      | `32X`    | `picodrive` :material-check-bold:{ .shipped }       |
-| Sega Saturn   | `SATURN` | `mednafen_saturn`                                   |
-| Dreamcast     | `DC`     | `flycast`                                           |
+| Sega Saturn   | `SATURN` | `mednafen_saturn` :custom-retroarch:                |
+| Dreamcast     | `DC`     | `flycast` :custom-retroarch:                        |
 
 ### Sony
 
-| Platform    | Tag   | Core                                            |
-|-------------|-------|-------------------------------------------------|
-| PlayStation | `PS`  | `swanstation` :material-check-bold:{ .shipped } |
-| PSP         | `PSP` | `ppsspp`                                        |
+| Platform             | Folder   | Core / App                                                                     |
+|----------------------|----------|--------------------------------------------------------------------------------|
+| PlayStation          | `PS`     | `swanstation` :material-check-bold:{ .shipped }                                |
+| PlayStation Portable | `PSP`    | [PPSSPP](https://www.ppsspp.org) :material-android:                            |
+| PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) :material-android:  |
+| PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e) :material-android:                    |
+| PS Vita              | `PSVITA` | [Vita3K](https://vita3k.org) :material-android:                                |
 
 ### Atari
 
-| Platform     | Tag         | Core                                              |
+| Platform     | Folder      | Core / App                                        |
 |--------------|-------------|---------------------------------------------------|
 | Atari 2600   | `ATARI2600` | `stella` :material-check-bold:{ .shipped }        |
 | Atari 5200   | `ATARI5200` | `atari800` :material-check-bold:{ .shipped }      |
@@ -62,7 +72,7 @@ The last section contains higher end systems that require a standalone app.
 
 ### NEC
 
-| Platform             | Tag          | Core                                                  |
+| Platform             | Folder       | Core / App                                            |
 |----------------------|--------------|-------------------------------------------------------|
 | PC Engine            | `PCE`        | `mednafen_pce_fast` :material-check-bold:{ .shipped } |
 | PC Engine SuperGrafx | `SUPERGRAFX` | `mednafen_pce_fast` :material-check-bold:{ .shipped } |
@@ -70,29 +80,29 @@ The last section contains higher end systems that require a standalone app.
 
 ### SNK
 
-| Platform             | Tag      | Core                                             |
+| Platform             | Folder   | Core / App                                       |
 |----------------------|----------|--------------------------------------------------|
 | Neo Geo Pocket       | `NGP`    | `mednafen_ngp` :material-check-bold:{ .shipped } |
 | Neo Geo Pocket Color | `NGPC`   | `mednafen_ngp` :material-check-bold:{ .shipped } |
-| Neo Geo              | `NEOGEO` | `fbneo`                                          |
+| Neo Geo              | `NEOGEO` | `fbneo` :custom-retroarch:                       |
 
 ### Bandai
 
-| Platform         | Tag   | Core                                               |
-|------------------|-------|----------------------------------------------------|
-| WonderSwan       | `WS`  | `mednafen_wswan` :material-check-bold:{ .shipped } |
-| WonderSwan Color | `WSC` | `mednafen_wswan` :material-check-bold:{ .shipped } |
+| Platform         | Folder | Core / App                                         |
+|------------------|--------|----------------------------------------------------|
+| WonderSwan       | `WS`   | `mednafen_wswan` :material-check-bold:{ .shipped } |
+| WonderSwan Color | `WSC`  | `mednafen_wswan` :material-check-bold:{ .shipped } |
 
 ### Arcade
 
-| Platform       | Tag    | Core            |
-|----------------|--------|-----------------|
-| Arcade (MAME)  | `MAME` | `mame2003_plus` |
-| Arcade (FBNeo) | `FBN`  | `fbneo`         |
+| Platform       | Folder | Core / App                         |
+|----------------|--------|------------------------------------|
+| Arcade (MAME)  | `MAME` | `mame2003_plus` :custom-retroarch: |
+| Arcade (FBNeo) | `FBN`  | `fbneo` :custom-retroarch:         |
 
 ### Other
 
-| Platform      | Tag             | Core                                         |
+| Platform      | Folder          | Core / App                                   |
 |---------------|-----------------|----------------------------------------------|
 | Intellivision | `INTELLIVISION` | `freeintv` :material-check-bold:{ .shipped } |
 | ColecoVision  | `COLECOVISION`  | `bluemsx` :material-check-bold:{ .shipped }  |
@@ -100,24 +110,8 @@ The last section contains higher end systems that require a standalone app.
 
 ### Computer
 
-| Platform                    | Tag         | Core                                            |
-|-----------------------------|-------------|-------------------------------------------------|
-| Amiga, Amiga 500, Amiga1200 | `AMIGA`     | `puae`                                          |
-| DOS                         | `DOS`       | `dosbox_pure` :material-check-bold:{ .shipped } |
-| ScummVM                     | `SCUMMVM`   | `scummvm`                                       |
-
-### Requires Standalone App
-
-These platforms launch a standalone Android app instead of using a libretro core.
-
-| Platform        | Tag      | App       |
-|-----------------|----------|-----------|
-| Nintendo DS     | `NDS`    | melonDS   |
-| PlayStation 2   | `PS2`    | AetherSX2 |
-| PlayStation 3   | `PS3`    | aPS3e     |
-| PS Vita         | `PSVITA` | Vita3K    |
-| GameCube        | `GC`     | Dolphin   |
-| Nintendo 3DS    | `3DS`    | Citra     |
-| Wii             | `WII`    | Dolphin   |
-| Wii U           | `WIIU`   | Cemu      |
-| Nintendo Switch | `NSW`    | Citron    |
+| Platform                    | Folder    | Core / App                                      |
+|-----------------------------|-----------|-------------------------------------------------|
+| Amiga, Amiga 500, Amiga1200 | `AMIGA`   | `puae` :custom-retroarch:                       |
+| DOS                         | `DOS`     | `dosbox_pure` :material-check-bold:{ .shipped } |
+| ScummVM                     | `SCUMMVM` | `scummvm` :custom-retroarch:                    |

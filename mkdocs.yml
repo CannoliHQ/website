@@ -1,7 +1,7 @@
-site_name: Cannoli
+site_name: cannoli_OS
 docs_dir: docs
 site_url: https://cannoli.dev/
-site_description: Cannoli Documentation
+site_description: Cannoli_OS Documentation
 theme:
   name: material
   custom_dir: overrides/
@@ -32,6 +32,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - attr_list
   - md_in_html
   - tables

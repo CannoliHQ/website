@@ -33,7 +33,7 @@ You will then land on a pretty barren main menu.
 
 ![No Content](../resources/img/getting-started/no_content.png)
 
-While you are free to add content however way you'd like, Cannoli ships with a built in web client
+While you are free to add content however way you'd like, Cannoli ships with a built-in web client
 called [Nonna's Kitchen](https://github.com/cannoliOS/kitchen). To access it you can press Y on the main menu.
 
 !!! important
