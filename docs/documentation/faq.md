@@ -7,11 +7,12 @@
     If you'd like to show empty folders, set `Empty Platforms` to `show` under Settings → Content.
 
     See [Directory Structure](directory-structure.md) for the expected folder layout
-    and [Platforms](platforms.md) for the full list of supported platforms and their
-    expected file extensions.
+    and [Platforms](platforms.md) for everything that is supported.
 
 ??? question "How can I reorder platforms?"
-    Highlight the platform you want to move and press `Select`. Up / Down arrows will appear next to the name. Use the `D-Pad` to move it into position. Press `Select` again to lock it in
+    Highlight the platform you want to move and press `Select`. 
+
+    `↕` will appear next to the name. Use the `D-Pad` to move it into position. Press `Select` again to lock it in
 
 ??? question "How do I add or remove Favorites?"
     Highlight a game and press `Y`. Same process for removing.
