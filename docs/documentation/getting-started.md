@@ -1,13 +1,13 @@
 # Getting Started
 
 !!! warning "This Documentation Sucks"
-    cannoli_OS is in early preview. Expect the docs to get better as things progress and get finalized.
+    Cannoli is in early preview. Expect the docs to get better as things progress and get finalized.
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
 ## Installing Cannoli
 
-You can snag the latest early preview from the [GitHub Releases](https://github.com/cannoliOS/cannoli/releases/latest).
+You can snag the latest early preview from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).
 
 ## First Launch
 
@@ -34,7 +34,7 @@ You will then land on a pretty barren main menu.
 ![No Content](../resources/img/getting-started/no_content.png)
 
 While you are free to add content however way you'd like, Cannoli ships with a built-in web client
-called [Nonna's Kitchen](https://github.com/cannoliOS/kitchen). To access it you can press Y on the main menu.
+called [Nonna's Kitchen](https://github.com/CannoliHQ/kitchen). To access it you can press Y on the main menu.
 
 !!! important
     The kitchen `Y` shortcut only appears when the server is running.

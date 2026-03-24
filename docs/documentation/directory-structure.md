@@ -1,11 +1,11 @@
 ## Directory Structure
 
 !!! warning "This Documentation Sucks"
-    cannoli_OS is in early preview. Expect the docs to get better as things progress and get finalized.
+    Cannoli is in early preview. Expect the docs to get better as things progress and get finalized.
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
-cannoli_OS uses an opinionated directory structure heavily inspired by [MinUI](https://github.com/shauninman/MinUI).
+Cannoli uses an opinionated directory structure heavily inspired by [MinUI](https://github.com/shauninman/MinUI).
 
 All paths below are relative to the **Cannoli Root** folder.
 
@@ -38,7 +38,7 @@ The following folders expect subdirectories using the accepted platform tags.
 - Save States
 - Saves
 
-## What?
+## Wait, What?
 
 Sorry that was a shitty explanation.
 

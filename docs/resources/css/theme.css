@@ -29,7 +29,7 @@
 }
 
 .md-header__topic:first-child .md-ellipsis::after {
-  content: "cannoli_OS Docs";
+  content: "Cannoli Docs";
   font-size: 0.9rem;
 }
 

@@ -1,3 +1,3 @@
-# cannoli_OS Website
+# Cannoli Website
 
-The official website for cannoli_OS.
+The official website for Cannoli.

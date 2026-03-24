@@ -1,6 +1,6 @@
 ## Supported Platforms
 
-cannoli_OS supports a wide range of retro platforms out of the box.
+Cannoli supports a wide range of retro platforms out of the box.
 
 The **Folder** column shows the accepted directory name for your ROMs.
 
