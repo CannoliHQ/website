@@ -1,4 +1,4 @@
-site_name: cannoli_OS
+site_name: Cannoli
 docs_dir: docs
 site_url: https://cannoli.dev/
 site_description: Cannoli_OS Documentation
@@ -35,25 +35,28 @@ markdown_extensions:
       options:
         custom_icons:
           - overrides/.icons
+  - pymdownx.tilde
   - attr_list
   - md_in_html
   - tables
 
 nav:
   - Introduction: documentation/index.md
+  - Features: documentation/features.md
   - Getting Started: documentation/getting-started.md
   - Directory Structure: documentation/directory-structure.md
   - Platforms: documentation/platforms.md
+  - RomM Integration: documentation/romm.md
   - Button Reference: documentation/button-reference.md
   - FAQ: documentation/faq.md
 
-copyright: "&copy; 2026 cannoli_OS"
+copyright: "&copy; 2026 Cannoli"
 
 extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/cannoliOS
+      link: https://github.com/CannoliHQ/cannoli
     - icon: fontawesome/brands/discord
       link: https://discord.gg/QKTjTQ796q
 
