@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 ## FAQ
 
 ??? question "Why isn't my platform showing up?"
