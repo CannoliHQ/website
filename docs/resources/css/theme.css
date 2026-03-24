@@ -17,7 +17,7 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-typeset-a-color: #80c1dd;
+  --md-typeset-a-color: #4a9ab5;
 }
 
 .md-header {
@@ -31,6 +31,10 @@
 .md-header__topic:first-child .md-ellipsis::after {
   content: "Cannoli Docs";
   font-size: 0.9rem;
+}
+
+.md-nav--primary > .md-nav__title {
+  display: none;
 }
 
 .md-nav__link--active {
