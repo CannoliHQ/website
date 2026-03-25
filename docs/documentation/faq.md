@@ -49,8 +49,8 @@ hide:
     Cannoli includes an optional accessibility service that works around this. When enabled, it intercepts these buttons
     only while Cannoli is in the foreground and passes them through so they work as expected.
 
-    - `Home` opens the in-game menu while playing
-    - `Menu` acts as `Select` in the launcher UI
+    - `Home` opens the in-game menu while playing.
+    - `Menu` acts as `Select` in the launcher UI.
 
     Long-pressing `Home` on your TV Remote for one second still takes you back to the Android home screen.
 

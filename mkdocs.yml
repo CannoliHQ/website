@@ -44,10 +44,12 @@ nav:
   - Introduction: documentation/index.md
   - Features: documentation/features.md
   - Getting Started: documentation/getting-started.md
-  - Directory Structure: documentation/directory-structure.md
+  - User Guide: documentation/user-guide.md
+  - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Platforms: documentation/platforms.md
-  - RomM Integration: documentation/romm.md
+  - Directory Structure: documentation/directory-structure.md
   - Button Reference: documentation/button-reference.md
+  - RomM Integration: documentation/romm.md
   - FAQ: documentation/faq.md
 
 copyright: "&copy; 2026 Cannoli"

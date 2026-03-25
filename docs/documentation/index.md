@@ -7,7 +7,7 @@ Android has a reputation for being tedious to set up. Cannoli looks to change th
 ## What is an emulator?
 
 An emulator is software that mimics gaming hardware. It allows your Android device
-to pretend to be a Game Boy, a SNES, a PlayStation, etc. 
+to pretend to be a Game Boy, a SNES, a PlayStation, etc.
 
 ## The Inspiration
 
@@ -20,19 +20,6 @@ I've been yearning for this type of experience on Android.
 Without his masterpiece this derivative would not exist.
 
 For that I thank him, and apologize for this bastardization of his creation.
-
-## Cut to the chase!
-
-Here is how Cannoli is planning to bring the convenience of MinUI to Android.
-
-- [Cannoli](https://github.com/CannoliHQ/cannoli) - a custom frontend / launcher with just the right amount of filling!
-- [Nonna's Kitchen](https://github.com/CannoliHQ/kitchen), a web client that lets you reach into the cookie jar. Upload your
-  legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
-
-The following is not ready for prime-time, but I want you to know about it!
-
-- [RicottaArch](https://github.com/CannoliHQ/RicottaArch) - an optional fork of RetroArch with a dumb name so the
-  maintainers don't need to support a custom menu driver.
 
 ## Avoid the rolling pin!
 

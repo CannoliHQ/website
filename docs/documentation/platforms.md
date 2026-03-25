@@ -18,24 +18,24 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 ### Nintendo
 
-| Platform                            | Folder       | Core / App                                                                              |
-|-------------------------------------|--------------|-----------------------------------------------------------------------------------------|
-| Nintendo Entertainment System       | `NES`        | `nestopia` :material-check-bold:{ .shipped }                                            |
-| Famicom Disk System                 | `FDS`        | `nestopia` :material-check-bold:{ .shipped }                                            |
-| Game Boy                            | `GB`         | `gambatte` :material-check-bold:{ .shipped }                                            |
-| Super Nintendo Entertainment System | `SNES`       | `snes9x` :material-check-bold:{ .shipped }                                              |
-| Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb` :material-check-bold:{ .shipped }                                         |
-| Game Boy Color                      | `GBC`        | `gambatte` :material-check-bold:{ .shipped }                                            |
-| Nintendo 64                         | `N64`        | `mupen64plus_next` :material-check-bold:{ .shipped }                                    |
-| Game Boy Advance                    | `GBA`        | `mgba` :material-check-bold:{ .shipped }                                                |
-| Pokemon Mini                        | `POKEMINI`   | `pokemini` :material-check-bold:{ .shipped }                                            |
-| Nintendo DS                         | `NDS`        | `melonds` :custom-retroarch:                                                            |
-| Nintendo DS                         | `NDS`        | [melonDS](https://github.com/rafaelvcaetano/melonDS-android) :material-android:         |
-| Nintendo 3DS                        | `3DS`        | [Azahar](https://github.com/azahar-emu/azahar) :material-android:                      |
-| GameCube                            | `GC`         | [Dolphin](https://dolphin-emu.org) :material-android:                                   |
-| Wii                                 | `WII`        | [Dolphin](https://dolphin-emu.org) :material-android:                                   |
-| Wii U                               | `WIIU`       | [Cemu](https://cemu.info) :material-android:                                            |
-| Nintendo Switch                     | `NSW`        | [Citron](https://citron-emu.org) :material-android:                                     |
+| Platform                            | Folder       | Core / App                                                                      |
+|-------------------------------------|--------------|---------------------------------------------------------------------------------|
+| Nintendo Entertainment System       | `NES`        | `nestopia` :material-check-bold:{ .shipped }                                    |
+| Famicom Disk System                 | `FDS`        | `nestopia` :material-check-bold:{ .shipped }                                    |
+| Game Boy                            | `GB`         | `gambatte` :material-check-bold:{ .shipped }                                    |
+| Super Nintendo Entertainment System | `SNES`       | `snes9x` :material-check-bold:{ .shipped }                                      |
+| Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb` :material-check-bold:{ .shipped }                                 |
+| Game Boy Color                      | `GBC`        | `gambatte` :material-check-bold:{ .shipped }                                    |
+| Nintendo 64                         | `N64`        | `mupen64plus_next` :material-check-bold:{ .shipped }                            |
+| Game Boy Advance                    | `GBA`        | `mgba` :material-check-bold:{ .shipped }                                        |
+| Pokemon Mini                        | `POKEMINI`   | `pokemini` :material-check-bold:{ .shipped }                                    |
+| Nintendo DS                         | `NDS`        | `melonds` :custom-retroarch:                                                    |
+| Nintendo DS                         | `NDS`        | [melonDS](https://github.com/rafaelvcaetano/melonDS-android) :material-android: |
+| Nintendo 3DS                        | `3DS`        | [Azahar](https://github.com/azahar-emu/azahar) :material-android:               |
+| GameCube                            | `GC`         | [Dolphin](https://dolphin-emu.org) :material-android:                           |
+| Wii                                 | `WII`        | [Dolphin](https://dolphin-emu.org) :material-android:                           |
+| Wii U                               | `WIIU`       | [Cemu](https://cemu.info) :material-android:                                    |
+| Nintendo Switch                     | `NSW`        | [Citron](https://citron-emu.org) :material-android:                             |
 
 ### Sega
 
@@ -52,13 +52,13 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 ### Sony
 
-| Platform             | Folder   | Core / App                                                                     |
-|----------------------|----------|--------------------------------------------------------------------------------|
-| PlayStation          | `PS`     | `swanstation` :material-check-bold:{ .shipped }                                |
-| PlayStation Portable | `PSP`    | [PPSSPP](https://www.ppsspp.org) :material-android:                            |
-| PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) :material-android:  |
-| PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e) :material-android:                    |
-| PS Vita              | `PSVITA` | [Vita3K](https://vita3k.org) :material-android:                                |
+| Platform             | Folder   | Core / App                                                                   |
+|----------------------|----------|------------------------------------------------------------------------------|
+| PlayStation          | `PS`     | `swanstation` :material-check-bold:{ .shipped }                              |
+| PlayStation Portable | `PSP`    | [PPSSPP](https://www.ppsspp.org) :material-android:                          |
+| PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) :material-android: |
+| PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e) :material-android:                   |
+| PS Vita              | `PSVITA` | [Vita3K](https://vita3k.org) :material-android:                              |
 
 ### Atari
 
