@@ -10,19 +10,29 @@
 
 ## What's In The Box
 
-- MinUI-inspired UI
+**Organization**
+
 - Opinionated [directory structure](directory-structure.md)
-- Rename and delete games
 - Favorites
-- Collections (with nesting)
+- Collections with nesting
 - Platform and collection reordering
-- Box art
-- Background wallpaper
+- Rename and delete games
+
+**Customization**
+
 - Accent colors
-- Per-platform emulator association
+- Background wallpaper
+- Box art
+
+**Playing Games**
+
 - Built-in libretro core runner
-- Launch RetroArch or standalone emulators
+- RetroAchievements, softcore only with offline support
+- Launch RetroArch / Standalone Emulators (with per platform / game association)
 - Launch Android apps and games
+
+**Content Management**
+
 - Built-in [web management interface](nonnas-kitchen.md)
 - [RomM integration](romm.md) for downloading games and syncing saves
 
@@ -34,7 +44,6 @@
 - LED Control
 - Menu Music
 - Netplay
-- RetroAchievements
 - Themes
 - Video Previews
 
