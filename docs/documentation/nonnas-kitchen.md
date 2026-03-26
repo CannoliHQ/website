@@ -33,6 +33,6 @@ Once connected you'll see options to manage content across all supported platfor
 - **ROMs:** Upload, rename, and delete games
 - **Box Art:** Upload artwork for your games
 - **Saves:** Upload and download in-game save files
-- **Save States:** Upload and download emulator save states
+- **Save States:** Upload and download emulator save states (coming soon)
 - **BIOS:** Upload BIOS files required by certain platforms
 - **Wallpapers:** Upload background images for the launcher
