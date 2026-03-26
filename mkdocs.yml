@@ -44,8 +44,11 @@ nav:
   - Introduction: documentation/index.md
   - Features: documentation/features.md
   - Getting Started: documentation/getting-started.md
-  - User Guide: documentation/user-guide.md
-  - Nonna's Kitchen: documentation/nonnas-kitchen.md
+  - User Guide:
+    - Library: documentation/library.md
+    - Playing Games: documentation/playing-games.md
+    - Settings: documentation/settings.md
+    - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Integrations:
     - RetroAchievements: documentation/retroachievements.md
     - RomM: documentation/romm.md
