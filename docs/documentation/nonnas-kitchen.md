@@ -13,7 +13,7 @@ It's organized by platform, so you pick a system and upload ROMs, box art, saves
 
 ## Starting the Server
 
-You can toggle the server on and off from **Settings → Nonna's Kitchen → File Server**.
+You can toggle the server on and off from **Settings → Nonna's Kitchen**.
 
 When the server is running, pressing `Y` on the main menu will open the Kitchen overlay showing a QR code and URL.
 

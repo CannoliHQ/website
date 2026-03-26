@@ -65,9 +65,9 @@ To clear an override, open the same menu and leave the field blank.
 
 ## Things to Know
 
-- **Softcore only.** Achievements run in softcore mode. Hardcore mode will never be supported. Don't bother asking, just use an approved hardcore emulator setup.
+- **Softcore only.** Hardcore mode will never be implemented. Don't bother asking. If you need hardcore, use an approved emulator setup.
 - **Internet required.** Cannoli talks to the RetroAchievements server to load achievement data and report unlocks. No
-  offline tracking.
+  offline tracking (yet).
 - **Loading a save state resets tracking.** When you load a save state, achievement progress resets to avoid false
   triggers. This is the same behavior used by RetroArch.
 - **ROM must be in the database.** If your ROM doesn't match anything on RetroAchievements, you won't get achievements
