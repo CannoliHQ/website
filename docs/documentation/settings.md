@@ -14,6 +14,13 @@ Press `X` on the main menu to open settings.
 ## Content
 
 - **Empty Platforms:** Show or hide platforms with no ROMs
+- **Ports:** Show or hide a renamable `platform` meant to hold Android Games.
+- **Manage Ports:** Select which Android Apps appear in Ports.
+- **Tools:** Show or hide a renamable `platform` mean to hold Android Apps (non-games).
+- **Manage Tools:** Select which Android Apps appear in Tools.
+
+!!! important
+    The `manage` options only appear if the corresponding setting is set to `show`.
 
 ## Status Bar
 

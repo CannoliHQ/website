@@ -29,7 +29,7 @@ When an achievement unlocks you'll see a notification pop up on screen.
 
 Not every platform supports achievements. 
 
-Look for :material-trophy: in the "Achievements" column on the [Platforms](platforms.md) page for the full list.
+Look for :material-trophy: in the `Achievements` column on the [Platforms](platforms.md) page for the full list.
 
 ## Viewing Achievements In-Game
 

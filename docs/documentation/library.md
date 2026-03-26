@@ -8,7 +8,7 @@ Favorites appear as their own entry on the main menu.
 
 ## Collections
 
-Collections let you group games across platforms. Think "Beat 'Em Ups" or "Couch Co-op".
+Collections let you group games across platforms. Think `Beat 'Em Ups` or `Couch Co-op`.
 
 To create a collection:
 
