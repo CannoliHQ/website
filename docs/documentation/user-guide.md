@@ -108,7 +108,7 @@ Press `X` on the main menu to open settings.
 - **Time Format:** 12 or 24 hour
 
 !!! important
-Battery indicator is not available on Android TV devices.
+    Battery indicator is not available on Android TV devices.
 
 ### Input
 
