@@ -27,7 +27,7 @@
 **Playing Games**
 
 - Built-in libretro core runner
-- RetroAchievements, softcore only with offline support
+- RetroAchievements, **<u>Softcore Only</u>**
 - Launch RetroArch / Standalone Emulators (with per platform / game association)
 - Launch Android apps and games
 

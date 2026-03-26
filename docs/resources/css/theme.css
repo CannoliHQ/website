@@ -311,6 +311,14 @@
   width: 100%;
 }
 
+.md-typeset .twemoji svg {
+  vertical-align: middle;
+}
+
+.md-typeset table .twemoji svg {
+  vertical-align: text-bottom;
+}
+
 .hero .md-button--accent {
   background-color: #d9a06a;
   border-color: #d9a06a;

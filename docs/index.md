@@ -25,9 +25,9 @@ hide:
   </div>
   <div class="hero-device">
     <img src="resources/img/homepage/handheld.svg" class="device-frame" alt="">
-    <!-- <video class="device-screen" muted playsinline>
+    <video class="device-screen" muted playsinline>
       <source src="resources/videos/demo.mp4" type="video/mp4">
-    </video> -->
+    </video>
     <div class="device-screen-content">
       <img src="resources/img/logo.png" width="80" alt="cannoli logo">
       <h1>Cannoli</h1>
