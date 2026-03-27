@@ -1,4 +1,4 @@
-# RetroAchievements
+## RetroAchievements Integration
 
 Cannoli's built-in core runner has [RetroAchievements](https://retroachievements.org) support!
 

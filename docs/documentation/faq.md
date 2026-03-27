@@ -20,7 +20,7 @@ hide:
     `↕` will appear next to the name. Use the `D-Pad` to move it into position. Press `Select` again to lock it in.
 
 ??? question "How do I add or remove Favorites?"
-    Highlight a game and press `Y` to add it. Press `Y` again to remove it.
+    Highlight a game, press `Start` to open the context menu, and toggle **Favorite**.
 
 ??? question "How do I make or edit a collection?"
     There are two ways to create a collection:
@@ -44,18 +44,4 @@ hide:
     If you care about long-term portability, use in-game saves. Use save states for convenience — a quick pause mid-level — not as a replacement for a proper in-game save.
 
 ??? question "What is the Accessibility Service for?"
-    Google TV and some Android TV devices intercept the `Home` and `Menu` buttons on controllers before apps can see them.
-
-    Cannoli includes an optional accessibility service that works around this. When enabled, it intercepts these buttons
-    only while Cannoli is in the foreground and passes them through so they work as expected.
-
-    - `Home` opens the in-game menu while playing.
-    - `Menu` acts as `Select` in the launcher UI.
-
-    Long-pressing `Home` on your TV Remote for one second still takes you back to the Android home screen.
-
-    You can enable it under **Settings → Accessibility → Cannoli**.
-
-    You may see this and balk at the permissions and that is totally fair. You can audit the implementation for yourself.
-
-    I figured integrating an accessibility service into Cannoli was better than having you go out and buy a random button remapper.
+    See [Android TV Accessibility Service](quirks.md#android-tv-accessibility-service) in the Quirks page.

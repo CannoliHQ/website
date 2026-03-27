@@ -2,9 +2,13 @@
 
 ## Favorites
 
-Highlight any game and press `Y` to favorite it. Press `Y` again to remove it.
+Highlight a game, press `Start` to open the context menu, and select **Add To Favorites**. 
 
 Favorites appear as their own entry on the main menu.
+
+To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+
+Unfavoriting a game follows the same process. Rress `Start` to open the context menu, and select **Remove From Favorites**.
 
 ## Collections
 
@@ -19,6 +23,8 @@ Give it a name and press `Start` to save.
 
 When managing a game's membership, the checkboxes show which collections it belongs to. Toggle them to add or remove.
 
+To add multiple games to a collection at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to manage their collection membership together.
+
 To rename or delete a collection, highlight it on the Collections screen and press `Start`.
 
 ## Reordering
@@ -31,6 +37,7 @@ Highlight the item you want to move, press `Select`, then use the `D-Pad` to rep
 
 Highlight a game and press `Start` to open the context menu. From here you can:
 
+- Favorite / unfavorite
+- Manage collection membership
 - Rename the game
 - Delete the game
-- Manage collection membership

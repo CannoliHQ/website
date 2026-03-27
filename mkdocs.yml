@@ -2,6 +2,8 @@ site_name: Cannoli
 docs_dir: docs
 site_url: https://cannoli.dev/
 site_description: Cannoli_OS Documentation
+repo_url: https://github.com/CannoliHQ/cannoli
+repo_name: CannoliHQ/cannoli
 theme:
   name: material
   custom_dir: overrides/
@@ -11,6 +13,8 @@ theme:
   palette:
     scheme: slate
   font: false
+  icon:
+    repo: fontawesome/brands/github
   features:
     - search.highlight
     - search.suggest
@@ -50,12 +54,14 @@ nav:
     - Settings: documentation/settings.md
     - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Integrations:
+    - RetroArch: documentation/retroarch.md
     - RetroAchievements: documentation/retroachievements.md
     - RomM: documentation/romm.md
   - Reference:
     - Platforms: documentation/platforms.md
     - Directory Structure: documentation/directory-structure.md
     - Button Reference: documentation/button-reference.md
+    - Quirks: documentation/quirks.md
   - FAQ: documentation/faq.md
 
 copyright: "&copy; 2026 Cannoli"
