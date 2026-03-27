@@ -4,12 +4,10 @@ Press `X` on the main menu to open settings.
 
 ## Appearance
 
-- **Colors:** Customize highlight, text, highlight text, and accent colors
-- **Box Art:** Toggle box art display
-- **Text Size:** Adjust the UI text size
 - **Background Image:** Set a wallpaper
-- **Background Tint:** Control the tint overlay on the wallpaper
-- **Marquee Speed:** Adjust how fast long names scroll
+- **Background Tint:** Control the tint overlay on the wallpaper (only shown when a background image is set)
+- **Colors:** Customize highlight, text, highlight text, and accent colors
+- **Text Size:** Adjust the UI text size
 
 ## Content
 
@@ -24,19 +22,28 @@ Press `X` on the main menu to open settings.
 
 ## Status Bar
 
-- **Wi-Fi** / **Bluetooth** / **Clock** / **Battery:** Toggle status bar indicators
-- **Time Format:** 12 or 24 hour
+- **Battery** / **Bluetooth** / **Clock** / **Wi-Fi** / **VPN:** Toggle status bar indicators
+- **Clock** cycles through **Hide**, **12h**, and **24h**
 
 !!! important
     Battery indicator is not available on Android TV devices.
 
 ## Input
 
-- **Button Layout:** Choose your controller button layout
 - **Button Mapping:** Remap individual buttons
 - **Shortcuts:** Configure shortcut actions
-- **Swap Start / Select:** Swap the two if your controller has them reversed
 - **L1 / R1 Switches Platform:** Jump between platforms from the game list
+
+## Nonna's Kitchen
+
+Opens the [Nonna's Kitchen](nonnas-kitchen.md) file manager.
+
+## RetroAchievements
+
+- **Username** / **Password:** Enter your RetroAchievements credentials
+- **Login:** Appears once both fields are filled. Press to authenticate.
+
+See the [RetroAchievements](retroachievements.md) page for more details.
 
 ## Advanced
 

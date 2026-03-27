@@ -57,7 +57,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Platform             | Folder   | Core / App                                                                   | Achievements |
 |----------------------|----------|------------------------------------------------------------------------------|--------------|
 | PlayStation          | `PS`     | `swanstation` :material-check-bold:{ .shipped }                              | :material-trophy: |
-| PlayStation Portable | `PSP`    | [PPSSPP](https://www.ppsspp.org) :material-android:                          | :material-trophy: |
+| PlayStation Portable | `PSP`    | `ppsspp` :custom-retroarch:                                                  | :material-trophy: |
 | PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) :material-android: | :material-trophy: |
 | PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e) :material-android:                   |              |
 | PS Vita              | `PSVITA` | [Vita3K](https://vita3k.org) :material-android:                              |              |
@@ -86,7 +86,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 |----------------------|----------|--------------------------------------------------|--------------|
 | Neo Geo Pocket       | `NGP`    | `mednafen_ngp` :material-check-bold:{ .shipped } | :material-trophy: |
 | Neo Geo Pocket Color | `NGPC`   | `mednafen_ngp` :material-check-bold:{ .shipped } | :material-trophy: |
-| Neo Geo              | `NEOGEO` | `fbneo` :custom-retroarch:                       | :material-trophy: |
+| Neo Geo              | `NEOGEO` | `fbneo` :material-check-bold:{ .shipped }        | :material-trophy: |
 
 ### Bandai
 
@@ -99,8 +99,8 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 | Platform       | Folder | Core / App                         | Achievements |
 |----------------|--------|------------------------------------|--------------|
-| Arcade (MAME)  | `MAME` | `mame2003_plus` :custom-retroarch: | :material-trophy: |
-| Arcade (FBNeo) | `FBN`  | `fbneo` :custom-retroarch:         | :material-trophy: |
+| Arcade (MAME)  | `MAME` | `mame2003_plus` :material-check-bold:{ .shipped } | :material-trophy: |
+| Arcade (FBNeo) | `FBN`  | `fbneo` :material-check-bold:{ .shipped }          | :material-trophy: |
 
 ### Other
 

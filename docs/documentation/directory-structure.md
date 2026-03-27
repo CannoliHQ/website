@@ -16,12 +16,18 @@ Cannoli/
 ├── BIOS/
 ├── Collections/
 ├── Config/
+│   ├── Launch Scripts/
+│   │   ├── Ports/
+│   │   └── Tools/
+│   └── Overrides/
 ├── Media/
 │   ├── Recordings/
 │   └── Screenshots/
+├── Overlays/
 ├── Roms/
 ├── Save States/
 ├── Saves/
+├── Shaders/
 └── Wallpapers/
 ```
 

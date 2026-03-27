@@ -27,6 +27,17 @@ To add multiple games to a collection at once, press `Select` on the game list t
 
 To rename or delete a collection, highlight it on the Collections screen and press `Start`.
 
+### Nested Collections
+
+Collections can be nested inside other collections. This lets you organize things like `RPGs` → `JRPGs`, `WRPGs`.
+
+To nest a collection, highlight it on the Collections screen, press `Start`, and select **Child Collections**. From there, toggle which collections should appear as children.
+
+Child collections show up at the top of the parent collection with a `/` prefix.
+
+!!! important
+    Child collections only appear inside their parent. They are removed from the top-level collections list.
+
 ## Reordering
 
 You can reorder platforms and collections to your liking.

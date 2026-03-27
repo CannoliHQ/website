@@ -38,7 +38,7 @@ While playing a game that has achievements you will see a new option in the in-g
 From here you can:
 
 - Browse the full achievement list
-- Press `Y` to filter by **All**, **Locked**, or **Unlocked**
+- Press `Y` to filter by **All** or **Unlocked**
 - Press `A` on any achievement to see its description, point value, and unlock status
 
 The header shows your progress, something like `Achievements (5/15)` meaning 5 out of 15 unlocked.
@@ -66,8 +66,7 @@ To clear an override, open the same menu and leave the field blank.
 ## Things to Know
 
 - **Softcore only.** Hardcore mode will never be implemented. Don't bother asking. If you need hardcore, use an approved emulator setup.
-- **Internet required.** Cannoli talks to the RetroAchievements server to load achievement data and report unlocks. No
-  offline tracking (yet).
+- **Works offline.** Cannoli caches achievement data so games load without internet. Achievements earned offline are queued and automatically synced when connectivity returns.
 - **Loading a save state resets tracking.** When you load a save state, achievement progress resets to avoid false
   triggers. This is the same behavior used by RetroArch.
 - **ROM must be in the database.** If your ROM doesn't match anything on RetroAchievements, you won't get achievements

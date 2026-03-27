@@ -25,27 +25,36 @@ Closes the menu and returns to gameplay.
 
 ### Save State
 
-Saves a snapshot of the game to the selected slot. There's an `AUTO` slot plus 10 numbered slots.
+Saves a snapshot of the game to the selected slot. There's an `AUTO` slot plus 10 slots.
 
-The `AUTO` slot is a special auto-incrementing slot. When you save to it, existing saves shift up by one slot to make room. The newest save always lands in the first position.
+The `AUTO` slot is a dedicated save file, separate from the slots. When you save to it, the previous auto save rotates into the slots, shifting each one up by one. This means your slots double as auto save history.
 
-Use `Left` / `Right` on the `D-Pad` to cycle between slots. Each slot shows a preview of what's saved in it.
+The slots use the same file format as RetroArch, so save states are compatible between Cannoli and RetroArch.
+
+Use `Left` / `Right` on the `D-Pad` to cycle between slots. Each slot shows a screenshot of what's saved in it.
 
 - `A` saves to the selected slot
-- `Y` deletes a slot (not available on `AUTO`)
+- `Y` deletes a slot
 - `X` undoes the last save
+
+!!! warning
+    When all 10 slots are full, saving to `AUTO` will overwrite the oldest slot.
 
 ### Load State
 
 Loads a previously saved snapshot. Same slot picker as Save State.
 
 - `A` loads the selected slot
-- `Y` deletes a slot (not available on `AUTO`)
+- `Y` deletes a slot
 - `X` undoes the last load
 
 ### Switch Disc
 
 Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
+
+### Reset
+
+Resets the game to its initial state. Press `X` to undo the reset.
 
 ### Achievements
 
@@ -85,15 +94,29 @@ Available actions:
 
 To assign a shortcut, select the action and hold your desired button combination for 1.5 seconds. Press `X` to clear a shortcut.
 
-## Save States vs. In-Game Saves
+## Shaders
 
-These are two separate things, and they don't mix.
+Cannoli ships with several built-in shaders. 
 
-**In-game saves** are created by the game itself: save points, a save menu, or battery-backed RAM. They're stored as `.sav` files and work across any device or emulator that supports the game.
+| Shader          | Description               |
+|-----------------|---------------------------|
+| crt-cannoli     | Multi-pass CRT composite  |
+| crt-easymode    | Lightweight CRT           |
+| lcd3x           | LCD grid effect           |
+| scanline-fract  | Fractional scanlines      |
+| sharp-bilinear  | Sharp bilinear scaling    |
+| zfast-crt       | Fast CRT composite        |
+| zfast-lcd       | Fast LCD effect           |
 
-**Save states** are snapshots of the entire emulator at a moment in time, created from the in-game menu. They're fast and can be made anywhere, but they're emulator-specific and may break if you switch cores.
+Cycle through them in **In-Game Menu → Settings → Video → Shader** using `Left` / `Right`.
 
-Use in-game saves for long-term portability. Use save states for convenience, not as a substitute for a proper in-game save.
+To add custom shaders, place `.glslp` or `.slangp` preset files in `Cannoli/Shaders/`.
+
+## Overlays
+
+You can add screen overlays (bezels, borders, etc.) by placing PNG or JPG images in `Cannoli/Overlays/{PlatformTag}/`. 
+
+Cycle through them in **In-Game Menu → Settings → Video → Overlay**.
 
 ## Resume
 
