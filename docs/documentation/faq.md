@@ -35,13 +35,11 @@ hide:
     To **rename or delete** an existing collection, highlight it on the Collections screen and press `Start`.
 
 ??? question "What's the difference between save states and in-game saves?"
-    These are two separate things and they don't mix.
+    **In-game saves** are created by the game itself by using the game's built-in save feature. These act functionally identical to how you would save on real hardware. They're commonly stored as `.srm` files and work across any device or emulator that supports the game.
 
-    **In-game saves** are created by the game itself — using a save point, save menu, or battery-backed RAM. They're stored as `.sav` files and work across any device or emulator that supports the game.
+    **Save states** are snapshots of the entire emulator at a moment in time, created by opening the IGM and selecting `Save State`. They're fast and can be made anywhere, but they're emulator-specific and can break if you switch cores.
 
-    **Save states** are snapshots of the entire emulator at a moment in time, created by pressing `Home` → `Save State`. They're fast and can be made anywhere, but they're emulator-specific and can break if you switch cores.
-
-    If you care about long-term portability, use in-game saves. Use save states for convenience — a quick pause mid-level — not as a replacement for a proper in-game save.
+    If you care about long-term portability, use in-game saves. Use save states for convenience, not as a replacement for a proper in-game save.
 
 ??? question "What is the Accessibility Service for?"
     See [Android TV Accessibility Service](quirks.md#android-tv-accessibility-service) in the Quirks page.

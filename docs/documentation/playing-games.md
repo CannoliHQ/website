@@ -1,14 +1,25 @@
 # Playing Games
 
-!!! warning "This Documentation Sucks"
-    Cannoli is in early preview. Expect the docs to get better as things progress and get finalized.
+--8<-- "docs/documentation/snippets/early-preview.md"
 
 ## Built-In Core Runner
 
 Cannoli ships with a built-in libretro core runner. Press `A` on a game to play it. 
 
 !!! tip
-    Some platforms use RetroArch or a standalone emulator instead. See [Platforms](platforms.md) for details.
+    Some platforms are not available in the built-in core runner. See [Platforms](platforms.md) for details.
+
+## RetroArch / Standalone Emulators
+
+Cannoli can also launch your games using RetroArch or a standalone emulator.
+
+You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Advanced → Core Mapping**.
+
+The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
+
+## Resuming a Game
+
+If a save state exists for a game, press `X` to jump back in. Use `A` to start the game without using the last save state.
 
 ## Opening the In-Game Menu
 
@@ -17,7 +28,7 @@ Cannoli ships with a built-in libretro core runner. Press `A` on a game to play 
 
 The menu gives you access to save states, settings, achievements, and more.
 
-## In-Game Menu Options
+## In-Game Menu (IGM)
 
 ### Resume
 
@@ -27,7 +38,7 @@ Closes the menu and returns to gameplay.
 
 Saves a snapshot of the game to the selected slot. There's an `AUTO` slot plus 10 slots.
 
-The `AUTO` slot is a dedicated save file, separate from the slots. When you save to it, the previous auto save rotates into the slots, shifting each one up by one. This means your slots double as auto save history.
+The `AUTO` slot is a dedicated save file, separate from the slots. When you save to it, the previous auto save is placed into the first slot. All existing save states are then pushed back by one slot. This means your slots also double as auto save history.
 
 The slots use the same file format as RetroArch, so save states are compatible between Cannoli and RetroArch.
 
@@ -35,10 +46,10 @@ Use `Left` / `Right` on the `D-Pad` to cycle between slots. Each slot shows a sc
 
 - `A` saves to the selected slot
 - `Y` deletes a slot
-- `X` undoes the last save
+- `X` undoes the last save, within a one-minute grace period
 
 !!! warning
-    When all 10 slots are full, saving to `AUTO` will overwrite the oldest slot.
+    When all 10 slots are full, saving to `AUTO` will cause the oldest slot to be deleted.
 
 ### Load State
 
@@ -46,19 +57,26 @@ Loads a previously saved snapshot. Same slot picker as Save State.
 
 - `A` loads the selected slot
 - `Y` deletes a slot
-- `X` undoes the last load
+- `X` undoes the last load, again within a one-minute grace period
 
 ### Switch Disc
 
 Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
 
-### Reset
 
-Resets the game to its initial state. Press `X` to undo the reset.
+### Guide
+
+The IGM will allow you to view `.pdf`, `.txt`, `.png` and `.jpg / .jpeg` files. This is perfect for guides, manuals, maps and the like.
+
+This menu option will only appear if the game you are playing has at least one guide file.
+
+If you have one file this option will open it directly. If you have multiple files you will see a list. In both cases the IGM will remember the last page and position for each file.
 
 ### Achievements
 
-Only appears if you're logged into [RetroAchievements](retroachievements.md) and the game has achievements. See the [RetroAchievements](retroachievements.md) page for details.
+Only appears if you're logged into [RetroAchievements](retroachievements.md) and the game has achievements. 
+
+See the [RetroAchievements](retroachievements.md) page for details.
 
 ### Settings
 
@@ -71,59 +89,10 @@ Opens the in-game settings with six categories:
 - **Advanced** - Low latency mode, fast forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 
-When exiting settings with unsaved changes, you'll be prompted to save for the platform, save for the game, or discard.
+### Reset
+
+Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within the one-minute grace period.
 
 ### Quit
 
 Exits the game and returns to the launcher.
-
-## Shortcuts
-
-You can assign button combos to perform actions without opening the menu. Configure them under **In-Game Menu → Settings → Shortcuts**.
-
-Available actions:
-
-- Save State
-- Load State
-- Reset Game
-- Save and Quit
-- Cycle Scaling
-- Cycle Shader
-- Toggle Fast Forward
-- Hold Fast Forward
-
-To assign a shortcut, select the action and hold your desired button combination for 1.5 seconds. Press `X` to clear a shortcut.
-
-## Shaders
-
-Cannoli ships with several built-in shaders. 
-
-| Shader          | Description               |
-|-----------------|---------------------------|
-| crt-cannoli     | Multi-pass CRT composite  |
-| crt-easymode    | Lightweight CRT           |
-| lcd3x           | LCD grid effect           |
-| scanline-fract  | Fractional scanlines      |
-| sharp-bilinear  | Sharp bilinear scaling    |
-| zfast-crt       | Fast CRT composite        |
-| zfast-lcd       | Fast LCD effect           |
-
-Cycle through them in **In-Game Menu → Settings → Video → Shader** using `Left` / `Right`.
-
-To add custom shaders, place `.glslp` or `.slangp` preset files in `Cannoli/Shaders/`.
-
-## Overlays
-
-You can add screen overlays (bezels, borders, etc.) by placing PNG or JPG images in `Cannoli/Overlays/{PlatformTag}/`. 
-
-Cycle through them in **In-Game Menu → Settings → Video → Overlay**.
-
-## Resume
-
-If a save state exists for a game, press `X` from the game list to jump straight back in.
-
-## External Emulators
-
-You can configure which emulator or core handles a platform under **Settings → Advanced → Core Mapping**.
-
-The [directory structure](directory-structure.md) is the same regardless of whether you use the built-in runner or an external app.

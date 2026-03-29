@@ -1,9 +1,6 @@
 # Nonna's Kitchen
 
-!!! warning "This Documentation Sucks"
-    Cannoli is in early preview. Expect the docs to get better as things progress and get finalized.
-
-    I'd rather just get feedback than commit to making good docs against a moving target.
+--8<-- "docs/documentation/snippets/early-preview.md"
 
 ## WTF is Nonna's Kitchen?
 
@@ -22,7 +19,7 @@ When the server is running, pressing `Y` on the main menu will open the Kitchen 
 From any device on the same Wi-Fi network:
 
 1. Scan the QR code or enter the URL shown on screen
-2. Enter the 6 character PIN displayed on the device
+2. Enter the 6-character PIN displayed on the device
 
 No pesky passwords to remember here! The PIN changes every time the server starts. 
 
@@ -30,9 +27,10 @@ No pesky passwords to remember here! The PIN changes every time the server start
 
 Once connected you'll see options to manage content across all supported platforms:
 
-- **ROMs:** Upload, rename, and delete games
-- **Box Art:** Upload artwork for your games
-- **Saves:** Upload and download in-game save files
-- **Save States:** Upload and download emulator save states (coming soon)
 - **BIOS:** Upload BIOS files required by certain platforms
+- **Box Art:** Upload artwork for your games
+- **Guides:** Upload `.pdf`, `.txt`, `.png` or `.jpg / .jpeg` files that you can view while in-game
+- **ROMs:** Upload, rename, and delete games
+- **Save States:** Upload and download emulator save states (coming soon)
+- **Saves:** Upload and download in-game save files
 - **Wallpapers:** Upload background images for the launcher

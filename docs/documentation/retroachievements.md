@@ -29,7 +29,7 @@ When an achievement unlocks you'll see a notification pop up on screen.
 
 Not every platform supports achievements. 
 
-Look for :material-trophy: in the `Achievements` column on the [Platforms](platforms.md) page for the full list.
+Look for :material-trophy:{ .trophy } on the [Platforms](platforms.md) page to find the supported platforms.
 
 ## Viewing Achievements In-Game
 
@@ -61,7 +61,7 @@ To clear an override, open the same menu and leave the field blank.
 
     **This is not an approved feature and if you use it know achievements might not work.**
 
-    **<u>Under no circumstance</u>** should you bother the developer of the achievements when using an override.
+    **<u>Under no circumstances</u>** should you bother the developer of the achievements when using an override.
 
 ## Things to Know
 

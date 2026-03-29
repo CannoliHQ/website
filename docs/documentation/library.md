@@ -4,7 +4,7 @@
 
 Highlight a game, press `Start` to open the context menu, and select **Add To Favorites**. 
 
-Favorites appear as their own entry on the main menu.
+A `Favorites` option will now appear on the main menu.
 
 To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
 
@@ -12,7 +12,7 @@ Unfavoriting a game follows the same process. Press `Start` to open the context 
 
 ## Collections
 
-Collections let you group games across platforms. Think `Beat 'Em Ups` or `Couch Co-op`.
+Collections let you group games across platforms. Think `RPGs` or `Puzzle Games`.
 
 To create a collection:
 
@@ -29,7 +29,7 @@ To rename or delete a collection, highlight it on the Collections screen and pre
 
 ### Nested Collections
 
-Collections can be nested inside other collections. This lets you organize things like `RPGs` → `JRPGs`, `WRPGs`.
+Collections can be nested inside other collections. This lets you organize things like `RPGs` → `JRPGs`, `CRPGs`.
 
 To nest a collection, highlight it on the Collections screen, press `Start`, and select **Child Collections**. From there, toggle which collections should appear as children.
 

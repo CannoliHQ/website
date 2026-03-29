@@ -28,7 +28,7 @@ RomM handles all of this for you off device. A clean, web-based interface for yo
 
 It will let you keep your device free from the dangers of having too many games. 
 
-It also will sync your save files!
+It will also sync your save files!
 
 Want a game that your device doesn't have? Pull it down wirelessly.
 

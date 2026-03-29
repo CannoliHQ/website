@@ -2,11 +2,10 @@
 
 ## Here Are Cannoli's Design Goals { data-toc-label="Design Goals" }
 
-- Play Some Damn Games!
-- Minimal Configuration
+- Play some damn games!
+- Minimal configuration
 - Easy to add new games
 - Basic features baked in
-- Judicious addition of new features
 
 ## What's In The Box
 
@@ -20,24 +19,27 @@
 
 **Customization**
 
-- Accent colors
-- Background wallpaper
-- Box art
+- Accent Colors
+- Background Wallpaper with Tint
+- Box Art
+- Text Size
 
 **Playing Games**
 
 - Built-in libretro core runner
 - RetroAchievements, **<u>Softcore Only</u>** with Offline Support
-- Compressed ROMs (.zip, .7z)
-- Launch RetroArch / Standalone Emulators (with per platform / game association)
-- Launch Android apps and games
+- Guides via In-Game Menu, `.pdf`, `.txt`, `.png` and `.jpg / .jpeg`  
+- Compressed ROMs, `.zip` and `.7z`
+- Launch RetroArch / Standalone Emulators per platform / game
+
 
 **Content Management**
 
-- Built-in [web management interface](nonnas-kitchen.md)
-- [RomM integration](romm.md) for downloading games and syncing saves
+- Android Apps / Games on Platform Screen
+- [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more
+- [RomM integration](romm.md) (coming soon)
 
-## Features That Will Not Be Considered Nor Implemented { data-toc-label="Rejected Features" }
+## Features That Will Not Be Considered Or Implemented { data-toc-label="Rejected Features" }
 
 - Art Scraper
 - Game Switcher

@@ -307,8 +307,14 @@
   background-color: #4a9ab5;
 }
 
-.md-typeset table {
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
   width: 100%;
+  border-spacing: 0;
 }
 
 .md-typeset .twemoji svg {
@@ -317,6 +323,30 @@
 
 .md-typeset table .twemoji svg {
   vertical-align: text-bottom;
+}
+
+.md-typeset .shipped svg,
+.md-typeset .retroarch svg,
+.md-typeset .android svg,
+.md-typeset .trophy svg {
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.md-typeset .shipped svg {
+  fill: #4a9ab5;
+}
+
+.md-typeset .retroarch svg {
+  fill: #9b59b6;
+}
+
+.md-typeset .android svg {
+  fill: #3ddc84;
+}
+
+.md-typeset .trophy svg {
+  fill: #FFD700;
 }
 
 .hero .md-button--accent {
