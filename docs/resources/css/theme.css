@@ -303,6 +303,14 @@
   color: #1a1a2e;
 }
 
+.md-source__facts {
+  display: none;
+}
+
+.md-source__repository {
+  font-size: 0.75rem;
+}
+
 .md-footer {
   background-color: #4a9ab5;
 }
