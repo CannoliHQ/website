@@ -2,7 +2,7 @@
 
 ## What is RicottaArch?
 
-[RicottaArch](https://github.com/CannoliHQ/RicottaArch) is a fork of RetroArch updated to be specifically used with Cannoli.
+[RicottaArch](https://github.com/CannoliHQ/RicottaArch) is a fork of RetroArch updated to be specifically used with Cannoli. 
 
 !!! important
     You might be thinking, will using this replace / delete my RetroArch install?
@@ -23,4 +23,4 @@ Second, this fork holds two pull requests that have not been accepted upstream.
 - [Add 'Menu Toggle Without Hotkey Enable' option](https://github.com/libretro/RetroArch/pull/18785)
 - [Query Installed Cores on Android](https://github.com/libretro/RetroArch/pull/18870)
 
-Everything else about RicottaArch is just RetroArch. A very minimal footprint of changes.
+Everything else about RicottaArch is just RetroArch!
