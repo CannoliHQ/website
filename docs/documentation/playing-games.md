@@ -71,6 +71,8 @@ Loads a previously saved snapshot. Same slot picker as Save State.
 
 Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
 
+See [Multi-Disc Games](#multi-disc-games) below for how disc bundling works.
+
 
 ### Guide
 
@@ -113,3 +115,33 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 ### Quit
 
 Exits the game and returns to the launcher.
+
+## Multi-Disc Games
+
+Cannoli automatically detects and bundles multi-disc games. If your ROM files follow standard naming conventions, they'll appear as a single entry in the game list.
+
+### Supported Naming
+
+Cannoli recognizes the following patterns (case-insensitive):
+
+- `Game Name (Disc 1).bin`, `Game Name (Disc 2).bin`
+- `Game Name (Disk 1).iso`, `Game Name (Disk 2).iso`
+- `Game Name (CD1).img`, `Game Name (CD2).img`
+
+The disc markers are stripped from the display name, so you'll just see `Game Name` in the list.
+
+### M3U Playlists
+
+If an `.m3u` file exists with the same base name as the disc set, Cannoli will use it instead of auto-bundling. This is useful if you need to control disc order or if your files don't follow the standard naming.
+
+```
+Roms/PS/
+├── Final Fantasy VII (Disc 1).bin
+├── Final Fantasy VII (Disc 2).bin
+├── Final Fantasy VII (Disc 3).bin
+└── Final Fantasy VII.m3u        ← optional, takes priority
+```
+
+### Switching Discs
+
+When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc** to pick the right one.

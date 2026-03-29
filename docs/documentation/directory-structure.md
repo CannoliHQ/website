@@ -65,3 +65,16 @@ With those two pieces of info you know where everything has to go!
 | ROM Files   | `Cannoli/Roms/GBA/Pokémon - Recharged Yellow.gba`                                       |
 | Save Files  | `Cannoli/Saves/GBA/Pokémon - Recharged Yellow.sav`                                      |
 | Save States | `Cannoli/Save States/GBA/Pokémon - Recharged Yellow/Pokémon - Recharged Yellow.state.1` |
+
+## Multi-Disc Games
+
+Multi-disc games go in the same ROM folder. Cannoli auto-bundles them into a single entry.
+
+```
+Roms/PS/
+├── Final Fantasy VII (Disc 1).chd
+├── Final Fantasy VII (Disc 2).chd
+└── Final Fantasy VII (Disc 3).chd
+```
+
+This shows up as `Final Fantasy VII` in the game list. You can optionally include an `.m3u` file if you want to control disc order yourself. See [Multi-Disc Games](playing-games.md#multi-disc-games) for details.

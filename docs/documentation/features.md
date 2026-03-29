@@ -32,6 +32,7 @@ Cannoli ships with a built-in libretro core runner. It has the following feature
 - Guides via In-Game Menu, `.pdf`, `.txt`, `.png` and `.jpg / .jpeg`
 - Shaders and Overlays
 - Compressed ROMs, `.zip` and `.7z`
+- Multi-Disc Auto-Bundling with In-Game Disc Switching
 - Multi-Controller Support (up to 4 players)
 
 Cannoli can also be used as a traditional launcher to open games in RetroArch or a Standalone Emulator.
