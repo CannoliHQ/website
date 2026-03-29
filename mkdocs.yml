@@ -63,6 +63,8 @@ nav:
     - Button Reference: documentation/button-reference.md
     - Quirks: documentation/quirks.md
   - FAQ: documentation/faq.md
+  - License: documentation/license.md
+  - Credits: documentation/credits.md
 
 copyright: "&copy; 2026 Cannoli"
 

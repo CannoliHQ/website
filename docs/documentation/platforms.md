@@ -48,7 +48,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Sega Genesis  | `MD`     | `genesis_plus_gx` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Sega CD       | `SEGACD` | `genesis_plus_gx` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Game Gear     | `GG`     | `genesis_plus_gx` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Sega 32X      | `32X`    | `picodrive`       | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| Sega 32X      | `32X`    | `picodrive`       |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Sega Saturn   | `SATURN` | `mednafen_saturn` |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Dreamcast     | `DC`     | `flycast`         |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 
@@ -67,9 +67,9 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Platform     | Folder      | Core / App      |                                                                |
 |--------------|-------------|-----------------|---------------------------------------------------------------:|
 | Atari 2600   | `ATARI2600` | `stella`        | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Atari 5200   | `ATARI5200` | `atari800`      |                              :material-check-bold:{ .shipped } |
+| Atari 5200   | `ATARI5200` | `atari800`      |                               :custom-retroarch:{ .retroarch } |
 | Atari 7800   | `ATARI7800` | `prosystem`     | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Atari Jaguar | `JAGUAR`    | `virtualjaguar` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| Atari Jaguar | `JAGUAR`    | `virtualjaguar` |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Atari Lynx   | `LYNX`      | `handy`         | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 
 ### NEC
@@ -78,7 +78,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 |----------------------|--------------|---------------------|---------------------------------------------------------------:|
 | PC Engine            | `PCE`        | `mednafen_pce_fast` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | PC Engine SuperGrafx | `SUPERGRAFX` | `mednafen_pce_fast` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| PC-FX                | `PCFX`       | `mednafen_pcfx`     | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| PC-FX                | `PCFX`       | `mednafen_pcfx`     |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 
 ### SNK
 
@@ -106,14 +106,14 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 | Platform      | Folder          | Core / App |                                                                |
 |---------------|-----------------|------------|---------------------------------------------------------------:|
-| Intellivision | `INTELLIVISION` | `freeintv` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | `bluemsx`  | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Vectrex       | `VECTREX`       | `vecx`     | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| Intellivision | `INTELLIVISION` | `freeintv` |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| ColecoVision  | `COLECOVISION`  | `bluemsx`  |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| Vectrex       | `VECTREX`       | `vecx`     |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 
 ### Computer
 
 | Platform                     | Folder    | Core / App    |                                                                |
 |------------------------------|-----------|---------------|---------------------------------------------------------------:|
 | Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae`        |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| DOS                          | `DOS`     | `dosbox_pure` | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| DOS                          | `DOS`     | `dosbox_pure` |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | ScummVM                      | `SCUMMVM` | `scummvm`     |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
