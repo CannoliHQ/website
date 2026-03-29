@@ -8,7 +8,7 @@ Favorites appear as their own entry on the main menu.
 
 To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
 
-Unfavoriting a game follows the same process. Rress `Start` to open the context menu, and select **Remove From Favorites**.
+Unfavoriting a game follows the same process. Press `Start` to open the context menu, and select **Remove From Favorites**.
 
 ## Collections
 
