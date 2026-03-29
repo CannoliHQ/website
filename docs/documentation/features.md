@@ -26,12 +26,16 @@
 
 **Playing Games**
 
-- Built-in libretro core runner
-- RetroAchievements, **<u>Softcore Only</u>** with Offline Support
-- Guides via In-Game Menu, `.pdf`, `.txt`, `.png` and `.jpg / .jpeg`  
-- Compressed ROMs, `.zip` and `.7z`
-- Launch RetroArch / Standalone Emulators per platform / game
+Cannoli ships with a built-in libretro core runner. It has the following features:
 
+- RetroAchievements, **<u>Softcore Only</u>** with Offline Support
+- Guides via In-Game Menu, `.pdf`, `.txt`, `.png` and `.jpg / .jpeg`
+- Shaders and Overlays
+- Compressed ROMs, `.zip` and `.7z`
+
+Cannoli can also be used as a traditional launcher to open games in RetroArch or a Standalone Emulator.
+
+Picking how Cannoli launches a game can be set by platform or by individual game.
 
 **Content Management**
 
