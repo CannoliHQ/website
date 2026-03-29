@@ -28,6 +28,14 @@ If a save state exists for a game, press `X` to jump back in. Use `A` to start t
 
 The menu gives you access to save states, settings, achievements, and more.
 
+## Multiple Controllers
+
+Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is always Player 1. External controllers that connect after the game starts are assigned to Players 2-4 automatically.
+
+When a controller disconnects or reconnects you'll see a notification on screen.
+
+If 2 or more controllers are connected, the IGM Controls screen will show a controller picker so you can configure each one individually.
+
 ## In-Game Menu (IGM)
 
 ### Resume
@@ -84,8 +92,17 @@ Opens the in-game settings with six categories:
 
 - **Video** - Screen scaling, sharpness, shaders, overlays
 - **Emulator** - Core-specific options (varies per platform)
-- **Controls** - Remap buttons at the global, platform, or game level
-- **Shortcuts** - Assign button combos for quick save, quick load, fast forward, and more
+- **Controls** - Manage and assign button profiles
+- **Shortcuts** - Assign button combos to the following actions:
+    - Save State
+    - Load State
+    - Reset Game
+    - Save and Quit
+    - Cycle Scaling
+    - Cycle Shader
+    - Toggle Fast Forward
+    - Hold Fast Forward
+    - Open Guide
 - **Advanced** - Low latency mode, fast forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 

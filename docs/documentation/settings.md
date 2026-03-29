@@ -4,7 +4,7 @@
 
 Press `X` on the main menu to open settings.
 
-## Appearance
+## Display
 
 - **Auto Lock:** Set how long the screen stays on while idle. Only applies when in the launcher or when the IGM is open.
 - **Background Image:** Set a wallpaper
@@ -50,8 +50,8 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 ## Advanced
 
 - **Cannoli Root:** The root directory where Cannoli stores its files and the one you selected on first launch
-- **Core Mapping:** Choose which core or app handles each platform
-- **RetroArch Package:** Select which installed RetroArch APK Cannoli should launch
+- **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
+- **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
 
 ## About
 
