@@ -4,6 +4,10 @@
 
 Press `X` on the main menu to open settings.
 
+## Updating Cannoli
+
+If a new update has been detected for your [release channel](#advanced) you will see an option to update.
+
 ## Display
 
 - **Background Image:** Set a wallpaper
@@ -51,6 +55,7 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 - **Cannoli Root:** The root directory where Cannoli stores its files and the one you selected on first launch
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
+- **Release Channel:** Tells the updater what type of build you want; `Stable`, `Beta` and `Test`
 
 ## About
 
