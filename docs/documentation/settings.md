@@ -34,7 +34,7 @@ If a new update has been detected for your [release channel](#advanced) you will
 
 ## Input
 
-- **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game
+- **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game. Cannoli ships with two built-in profiles: **Cannoli Navigation** (controls the launcher menus) and **Default Controls** (used in-game). You can create additional custom profiles from this screen.
 - **Shortcuts:** Configure shortcut actions
 - **L1 / R1 Switches Platform:** Jump between platforms from the game list
 
@@ -55,7 +55,11 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 - **Cannoli Root:** The root directory where Cannoli stores its files and the one you selected on first launch
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
+- **Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package
 - **Release Channel:** Tells the updater what type of build you want; `Stable`, `Beta` and `Test`
+
+!!! warning
+    Installed Cores is in early preview as it requires a RetroArch nightly with [my pull request](https://github.com/libretro/RetroArch/pull/18870) for querying cores.
 
 ## About
 

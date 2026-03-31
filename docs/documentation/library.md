@@ -50,5 +50,8 @@ Highlight a game and press `Start` to open the context menu. From here you can:
 
 - Favorite / unfavorite
 - Manage collection membership
+- Emulator override (use a different core or app for this game)
+- RA Game ID (manually set the RetroAchievements game ID)
 - Rename the game
+- Delete art (only shown if box art exists)
 - Delete the game

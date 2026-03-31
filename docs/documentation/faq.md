@@ -40,6 +40,3 @@ hide:
     **Save states** are snapshots of the entire emulator at a moment in time, created by opening the IGM and selecting `Save State`. They're fast and can be made anywhere, but they're emulator-specific and can break if you switch cores.
 
     If you care about long-term portability, use in-game saves. Use save states for convenience, not as a replacement for a proper in-game save.
-
-??? question "What is the Accessibility Service for?"
-    See [Android TV Accessibility Service](quirks.md#android-tv-accessibility-service) in the Quirks page.

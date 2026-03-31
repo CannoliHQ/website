@@ -30,7 +30,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Game Boy Color                      | `GBC`        | `gambatte`                                                   | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Nintendo 64                         | `N64`        | `mupen64plus_next`                                           | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Game Boy Advance                    | `GBA`        | `mgba`                                                       | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Pokémon Mini                        | `POKEMINI`   | `pokemini`                                                   | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| Pokemon Mini                        | `POKEMINI`   | `pokemini`                                                   | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Nintendo DS                         | `NDS`        | `melonds`                                                    |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Nintendo DS                         | `NDS`        | [melonDS](https://github.com/rafaelvcaetano/melonDS-android) |    :material-android:{ .android } :material-trophy:{ .trophy } |
 | Nintendo 3DS                        | `3DS`        | [Azahar](https://github.com/azahar-emu/azahar)               |                                 :material-android:{ .android } |
@@ -56,7 +56,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 | Platform             | Folder   | Core / App                                                |                                                                |
 |----------------------|----------|-----------------------------------------------------------|---------------------------------------------------------------:|
-| PlayStation          | `PS`     | `PCSX-ReARMed` / `swanstation` (requires BIOS)            | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| PlayStation          | `PS`     | `PCSX-ReARMed` (default) / `swanstation` (requires BIOS)  | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | PlayStation Portable | `PSP`    | `ppsspp`                                                  |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) |    :material-android:{ .android } :material-trophy:{ .trophy } |
 | PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e)                   |                                 :material-android:{ .android } |

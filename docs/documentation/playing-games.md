@@ -17,16 +17,16 @@ You can configure which RetroArch core or standalone emulator handles a platform
 
 The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
 
+!!! danger
+    RetroArch support is very much a work in progress. Please see [RetroArch Integration](retroarch.md) for more details.
+
 ## Resuming a Game
 
 If a save state exists for a game, press `X` to jump back in. Use `A` to start the game without using the last save state.
 
 ## Opening the In-Game Menu
 
-- **Android handhelds:** press the `Menu` button.
-- **Android TV / Google TV:** press `Home` on your controller. You'll need to enable the [Accessibility Service](quirks.md#android-tv-accessibility-service) first so the button isn't intercepted by the OS.
-
-The menu gives you access to save states, settings, achievements, and more.
+Press the `Menu` button to open the In-Game Menu (IGM). It gives you access to save states, settings, achievements, and more.
 
 ## Multiple Controllers
 
@@ -67,12 +67,11 @@ Loads a previously saved snapshot. Same slot picker as Save State.
 - `Y` deletes a slot
 - `X` undoes the last load, again within a one-minute grace period
 
-### Switch Disc
+### Achievements
 
-Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
+Only appears if you're logged into [RetroAchievements](retroachievements.md) and the game has achievements.
 
-See [Multi-Disc Games](#multi-disc-games) below for how disc bundling works.
-
+See the [RetroAchievements](retroachievements.md) page for details.
 
 ### Guide
 
@@ -81,12 +80,6 @@ The IGM will allow you to view `.pdf`, `.txt`, `.png` and `.jpg / .jpeg` files. 
 This menu option will only appear if the game you are playing has at least one guide file.
 
 If you have one file this option will open it directly. If you have multiple files you will see a list. In both cases the IGM will remember the last page and position for each file.
-
-### Achievements
-
-Only appears if you're logged into [RetroAchievements](retroachievements.md) and the game has achievements. 
-
-See the [RetroAchievements](retroachievements.md) page for details.
 
 ### Settings
 
@@ -108,6 +101,12 @@ Opens the in-game settings with six categories:
 - **Advanced** - Low latency mode, fast forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 
+### Switch Disc
+
+Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
+
+See [Multi-Disc Games](#multi-disc-games) below for how disc bundling works.
+
 ### Reset
 
 Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within the one-minute grace period.
@@ -117,6 +116,9 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 Exits the game and returns to the launcher.
 
 ## Multi-Disc Games
+
+!!! warning
+    I am not happy with the current state of this feature and expect it to change.
 
 Cannoli automatically detects and bundles multi-disc games. If your ROM files follow standard naming conventions, they'll appear as a single entry in the game list.
 

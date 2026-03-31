@@ -27,7 +27,7 @@ No pesky passwords to remember here! The PIN changes every time the server start
 
 Once connected you'll see options to manage content across all supported platforms:
 
-- **BIOS:** Upload BIOS files required by certain platforms
+- **BIOS:** Upload BIOS files
 - **Box Art:** Upload artwork for your games
 - **Guides:** Upload `.pdf`, `.txt`, `.png` or `.jpg / .jpeg` files that you can view while in-game
 - **ROMs:** Upload, rename, and delete games

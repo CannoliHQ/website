@@ -41,7 +41,7 @@
 | Start           | Confirm selection      |
 | Select          | Exit multi-select mode |
 
-## Keyboard
+## On-Screen Keyboard
 
 | Button        | Action                          |
 |---------------|---------------------------------|
@@ -55,6 +55,31 @@
 | Start         | Confirm input                   |
 | Select (Tap)  | Toggle capslock                 |
 | Select (Hold) | Toggle symbols                  |
+
+## In-Game
+
+| Button          | Action                          |
+|-----------------|----------------------------------|
+| Menu            | Open / close In-Game Menu        |
+| D-Pad Up / Down | Navigate menu options            |
+| A               | Select option                    |
+| B               | Back / close menu                |
+
+### Save / Load State
+
+| Button      | Action                                  |
+|-------------|-----------------------------------------|
+| Left / Right | Cycle between slots                    |
+| A           | Save or load the selected slot          |
+| Y           | Delete selected slot                    |
+| X           | Undo last save / load (one-minute window) |
+
+### Switch Disc
+
+| Button       | Action              |
+|--------------|----------------------|
+| Left / Right | Pick disc            |
+| A            | Confirm disc switch  |
 
 ## Color Picker
 
