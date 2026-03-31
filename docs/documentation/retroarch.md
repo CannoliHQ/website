@@ -1,3 +1,10 @@
+!!! danger
+    Here be dragons!
+
+    I've spent most of my time working on the built-in core runner. 
+
+    Don't fret this is still a planned feature but know currently things may not work as you expect.
+
 ## RetroArch Integration
 
 When launching a game through RetroArch, Cannoli pulls the global `retroarch.cfg` from RetroArch's Scoped Storage and patches it with a set of overrides before passing it along.

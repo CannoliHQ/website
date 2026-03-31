@@ -18,11 +18,13 @@ Turn that on and hit the back arrow.
 
 Once enabled you will have the simplest setup question to answer.
 
-Store the Cannoli folder on internal storage or the SD Card? Really that's it!
+Do you want the Cannoli folder on internal storage, the SD Card (if present) or a custom location? Really that's it!
 
 ![Cannoli Folder](../resources/img/getting-started/first_launch_cannoli_folder.png)
 
-Make your choice and hit continue. You are off to the races!
+Make your choice and hit continue. 
+
+Cannoli will then do some light housekeeping make sure everything is put into place.
 
 ## Loading Content
 

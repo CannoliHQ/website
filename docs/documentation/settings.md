@@ -6,7 +6,6 @@ Press `X` on the main menu to open settings.
 
 ## Display
 
-- **Auto Lock:** Set how long the screen stays on while idle. Only applies when in the launcher or when the IGM is open.
 - **Background Image:** Set a wallpaper
 - **Background Tint:** Control the tint overlay on the wallpaper (only shown when a background image is set)
 - **Colors:** Customize highlight, text, highlight text, and accent colors
