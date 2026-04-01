@@ -62,6 +62,7 @@ nav:
     - Platforms: documentation/platforms.md
     - Directory Structure: documentation/directory-structure.md
     - Button Reference: documentation/button-reference.md
+    - Changelog: documentation/changelog.md
   - FAQ: documentation/faq.md
   - License: documentation/license.md
   - Credits: documentation/credits.md
