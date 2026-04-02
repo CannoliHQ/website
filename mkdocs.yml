@@ -22,7 +22,11 @@ theme:
 
 plugins:
   - search
-  - glightbox
+  - glightbox:
+      auto_caption: false
+      touchNavigation: true
+      effect: fade
+      manual: true
 
 markdown_extensions:
   - admonition
