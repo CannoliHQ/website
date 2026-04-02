@@ -1,3 +1,19 @@
+## [v1.0.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.6)
+
+| Feature / Fix                                                   | Issue                                                 |
+|-----------------------------------------------------------------|-------------------------------------------------------|
+| Add Tools and Ports to Favorites and Collections                | [#43](https://github.com/CannoliHQ/cannoli/issues/43) |
+| Option in advanced to set Cannoli as default launcher           | [#44](https://github.com/CannoliHQ/cannoli/issues/44) |
+| Reorder Tools and Ports                                         | [#25](https://github.com/CannoliHQ/cannoli/issues/25) |
+| Option to quit from main menu                                   | [#36](https://github.com/CannoliHQ/cannoli/issues/36) |
+| Font size uses scalable points with a range of options          | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
+| Button legends scale with font size                             | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
+| Fix: remove shortcut when a Tool or Port is uninstalled         | [#42](https://github.com/CannoliHQ/cannoli/issues/42) |
+| Fix: Flip Resume/Play no longer incorrectly impacts Tools/Ports | [#38](https://github.com/CannoliHQ/cannoli/issues/38) |
+| Fix: case-insensitive platform tag matching                     | [#40](https://github.com/CannoliHQ/cannoli/issues/40) |
+
+---
+
 ## [v1.0.5](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.5) - The No Joke Update
 
 | Feature / Fix                                                              | Issue                                                                                                        |
