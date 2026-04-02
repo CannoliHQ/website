@@ -22,6 +22,7 @@ theme:
 
 plugins:
   - search
+  - glightbox
 
 markdown_extensions:
   - admonition

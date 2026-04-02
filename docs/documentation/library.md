@@ -2,17 +2,21 @@
 
 ## Favorites
 
-Highlight a game, press `Start` to open the context menu, and select **Add To Favorites**. 
+Highlight a game, tool, or port and press `Start` to open the context menu. 
+
+Then select **Add To Favorites**. That's it.
 
 A `Favorites` option will now appear on the main menu.
 
-To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+Unfavoriting works the same: select **Remove From Favorites** in the context menu.
 
-Unfavoriting a game follows the same process. Press `Start` to open the context menu, and select **Remove From Favorites**.
+!!! tip
+    To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+
 
 ## Collections
 
-Collections let you group games across platforms. Think `RPGs` or `Puzzle Games`.
+Collections let you group anything that Cannoli can launch: games, tools, and ports. Think `RPGs` or `Puzzle Games` or `Cat Wallpaper Downloaders`.
 
 To create a collection:
 
@@ -23,9 +27,11 @@ Give it a name and press `Start` to save.
 
 When managing a game's membership, the checkboxes show which collections it belongs to. Toggle them to add or remove.
 
-To add multiple games to a collection at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to manage their collection membership together.
-
 To rename or delete a collection, highlight it on the Collections screen and press `Start`.
+
+!!! tip
+    Adding multiple games to a collection at once works just like favorites: press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to manage their collection membership together.
+
 
 ### Nested Collections
 
@@ -40,7 +46,7 @@ Child collections show up at the top of the parent collection with a `/` prefix.
 
 ## Reordering
 
-You can reorder platforms and collections to your liking.
+You can reorder platforms, collections, tools, and ports to your liking.
 
 Highlight the item you want to move, press `Select`, then use the `D-Pad` to reposition it. Press `Select` again to lock it in.
 

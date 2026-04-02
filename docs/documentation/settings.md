@@ -55,7 +55,8 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 
 - **Cannoli Root:** The root directory where Cannoli stores its files and the one you selected on first launch
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
-- **Main Menu Quit:** Enabled the ability to quit on the main menu. For when Cannoli is not your main launcher 😢
+- **Default Launcher:** Set Cannoli as your device's default launcher
+- **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher 😢
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
 - **Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package
 - **Release Channel:** Tells the updater what type of build you want

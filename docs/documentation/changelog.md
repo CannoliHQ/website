@@ -1,3 +1,12 @@
+## [v1.0.7](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.7)
+
+| Feature / Fix                                                  | Issue                                                 |
+|----------------------------------------------------------------|-------------------------------------------------------|
+| Fix: IGM does not respect font size                            | [#47](https://github.com/CannoliHQ/cannoli/issues/47) |
+| Fix: Make battery icon more consistent                         | [#46](https://github.com/CannoliHQ/cannoli/issues/46) |
+| Fix: Larger font sizes cause last visible item in list to pop  | [#45](https://github.com/CannoliHQ/cannoli/issues/45) |
+
+
 ## [v1.0.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.6)
 
 | Feature / Fix                                                   | Issue                                                 |
