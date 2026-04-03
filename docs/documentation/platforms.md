@@ -28,7 +28,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Super Nintendo Entertainment System | `SNES`       | `snes9x`                                                     | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb`                                                | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Game Boy Color                      | `GBC`        | `gambatte`                                                   | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
-| Nintendo 64                         | `N64`        | `mupen64plus_next`                                           | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| Nintendo 64                         | `N64`        | `mupen64plus_next`                                           |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Game Boy Advance                    | `GBA`        | `mgba`                                                       | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Pokemon Mini                        | `POKEMINI`   | `pokemini`                                                   | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | Nintendo DS                         | `NDS`        | `melonds`                                                    |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |

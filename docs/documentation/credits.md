@@ -22,7 +22,6 @@ I can only hope that Cannoli is half as good as MinUI.
 | Mednafen Virtual Boy    | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/mednafen-vb-GPLv2.txt)                |
 | Mednafen WonderSwan     | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/mednafen-wswan-GPLv2.txt)             |
 | mGBA                    | [MPLv2.0](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/mgba-MPLv2.txt)                     |
-| Mupen64Plus-Next        | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/mupen64plus-next-GPLv2.txt)           |
 | Nestopia                | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/nestopia-GPLv2.txt)                   |
 | PCSX ReARMed            | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/pcsx-rearmed-GPLv2.txt)               |
 | PokeMini                | [GPLv3](https://github.com/CannoliHQ/cannoli/blob/main/licenses/cores/pokemini-GPLv3.txt)                   |
