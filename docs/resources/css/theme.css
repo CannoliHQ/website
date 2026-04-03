@@ -421,3 +421,39 @@
     flex-direction: column;
   }
 }
+
+.platform-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.platform-filters-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.platform-filter {
+  padding: 0.4em 1em;
+  border: 2px solid var(--md-primary-fg-color);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  font-family: var(--md-text-font);
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.platform-filter:hover {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.platform-filter.active {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}

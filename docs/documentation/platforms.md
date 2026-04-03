@@ -18,6 +18,13 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 :material-trophy:{ .trophy } Supports [RetroAchievements](retroachievements.md)
 
+<div class="platform-filters">
+  <span class="platform-filters-label">Filter</span>
+  <button class="platform-filter active" data-filter="all">All</button>
+  <button class="platform-filter" data-filter="bundled">Bundled</button>
+  <button class="platform-filter" data-filter="external">External</button>
+</div>
+
 ### Nintendo
 
 | Platform                            | Folder       | Core / App                                                   |                                                                |
@@ -117,3 +124,32 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 | Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae`        |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | DOS                          | `DOS`     | `dosbox_pure` |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | ScummVM                      | `SCUMMVM` | `scummvm`     |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var buttons = document.querySelectorAll('.platform-filter');
+  var tables = document.querySelectorAll('.md-typeset table');
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+
+      tables.forEach(function(table) {
+        var rows = table.querySelectorAll('tbody tr');
+        rows.forEach(function(row) {
+          var isBundled = row.querySelector('.shipped') !== null;
+          if (filter === 'all') {
+            row.style.display = '';
+          } else if (filter === 'bundled') {
+            row.style.display = isBundled ? '' : 'none';
+          } else {
+            row.style.display = isBundled ? 'none' : '';
+          }
+        });
+      });
+    });
+  });
+});
+</script>
