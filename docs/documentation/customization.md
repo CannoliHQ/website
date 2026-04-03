@@ -122,10 +122,6 @@ Overlays/
 └── ...
 ```
 
-### Supported Formats
-
-PNG is recommended since it supports transparency. Just know Nonna might look at you funny if you use a JPG.
-
 ### Display
 
 Overlays are stretched to fill the entire screen. The game renders behind the overlay, visible through any transparent regions in the image. There are no positioning, scaling, or opacity controls -- what you see is what's in the image file.
