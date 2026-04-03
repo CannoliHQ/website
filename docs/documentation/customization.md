@@ -124,7 +124,7 @@ Overlays/
 
 ### Supported Formats
 
-PNG is recommended since it supports transparency. JPG is also supported but has no alpha channel, so the entire image will be opaque.
+PNG is recommended since it supports transparency. Just know Nonna might look at you funny if you use a JPG.
 
 ### Display
 
