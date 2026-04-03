@@ -8,18 +8,11 @@ Press `X` on the main menu to open settings.
 
 If a new update has been detected for your [release channel](#advanced) you will see an option to update.
 
-## Display
+## Appearance
 
-- **Background Image:** Set a wallpaper
-- **Background Tint:** Control the tint overlay on the wallpaper (only shown when a background image is set)
-- **Colors:** Customize highlight, text, highlight text, and accent colors
-- **Status Bar:** Control what appears in the status bar
-    - Battery, Bluetooth, Clock, Wi-Fi and VPN can be shown or hidden
-    - Set the clock to use 12 or 24 hour display
-- **Text Size:** Adjust the UI text size
+Colors, wallpapers, fonts, text size, status bar and more. 
 
-!!! important
-    The status bar battery indicator is not available on Android TV devices.
+See the [Customization](customization.md#appearance) page for details.
 
 ## Content
 

@@ -56,6 +56,7 @@ nav:
   - User Guide:
     - Library: documentation/library.md
     - Playing Games: documentation/playing-games.md
+    - Customization: documentation/customization.md
     - Settings: documentation/settings.md
     - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Integrations:
