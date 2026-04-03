@@ -1,11 +1,18 @@
+## [v1.0.8](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.8)
+
+| Feature / Fix                                         | Issue                                                 |
+|-------------------------------------------------------|-------------------------------------------------------|
+| Fix: Missing Confirm Quit when Quit option is enabled | [#52](https://github.com/CannoliHQ/cannoli/issues/52) |
+| Fix: Genesis Plus GX crashing                         | [#49](https://github.com/CannoliHQ/cannoli/issues/49) |
+| Fix: DualShock mode not enabling on PSX               | [#48](https://github.com/CannoliHQ/cannoli/issues/48) |
+
 ## [v1.0.7](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.7)
 
-| Feature / Fix                                                  | Issue                                                 |
-|----------------------------------------------------------------|-------------------------------------------------------|
-| Fix: IGM does not respect font size                            | [#47](https://github.com/CannoliHQ/cannoli/issues/47) |
-| Fix: Make battery icon more consistent                         | [#46](https://github.com/CannoliHQ/cannoli/issues/46) |
-| Fix: Larger font sizes cause last visible item in list to pop  | [#45](https://github.com/CannoliHQ/cannoli/issues/45) |
-
+| Feature / Fix                                                 | Issue                                                 |
+|---------------------------------------------------------------|-------------------------------------------------------|
+| Fix: IGM does not respect font size                           | [#47](https://github.com/CannoliHQ/cannoli/issues/47) |
+| Fix: Make battery icon more consistent                        | [#46](https://github.com/CannoliHQ/cannoli/issues/46) |
+| Fix: Larger font sizes cause last visible item in list to pop | [#45](https://github.com/CannoliHQ/cannoli/issues/45) |
 
 ## [v1.0.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.6)
 
