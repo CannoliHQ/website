@@ -73,17 +73,16 @@ Art/
 ├── SNES/
 │   ├── Super Mario World.png
 │   └── Zelda - A Link to the Past.webp
-└── ...
 ```
 
 ### Naming
 
 The art file must have the **exact same name** as the ROM file, minus the extension. Case matters.
 
-| ROM File                           | Art File                           |
-|------------------------------------|------------------------------------|
-| `Super Mario World.sfc`           | `Super Mario World.png`           |
-| `Pokémon - Recharged Yellow.gba`  | `Pokémon - Recharged Yellow.jpg`  |
+| ROM File                         | Art File                         |
+|----------------------------------|----------------------------------|
+| `Super Mario World.sfc`          | `Super Mario World.png`          |
+| `Pokémon - Recharged Yellow.gba` | `Pokémon - Recharged Yellow.jpg` |
 
 ### Supported Formats
 
@@ -118,8 +117,7 @@ Overlays/
 │   ├── gba_bezel.png
 │   └── gba_border.png
 ├── SNES/
-│   └── snes_crt.png
-└── ...
+│   └── snes_crt.png 
 ```
 
 ### Display
