@@ -46,7 +46,7 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 - **ROM Directory:** An optional second directory if you want to store your ROMs in a different location.
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher 😢
-- **RetroArch DIY Mode:** When on Cannoli will not inject values into your configuration and will act like a normal launcher.
+- **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
 - **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package. This requires a nightly release as this is a new feature in RetroArch.
 - **Release Channel:** Tells the updater what type of build you want

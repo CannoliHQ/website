@@ -1,3 +1,12 @@
+## [v1.0.9](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.9)
+
+| Feature / Fix                                                       | Issue                                                 |
+|---------------------------------------------------------------------|-------------------------------------------------------|
+| Feat: Add Aspect Screen Scaling Option                              | [#18](https://github.com/CannoliHQ/cannoli/issues/18) |
+| Fix: Address poor performance for large / highly nested collections | [#58](https://github.com/CannoliHQ/cannoli/issues/58) |
+
+---
+
 ## [v1.0.8](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.8)
 
 | Feature / Fix                                         | Issue                                                 |
@@ -6,6 +15,8 @@
 | Fix: Genesis Plus GX crashing                         | [#49](https://github.com/CannoliHQ/cannoli/issues/49) |
 | Fix: DualShock mode not enabling on PSX               | [#48](https://github.com/CannoliHQ/cannoli/issues/48) |
 
+---
+
 ## [v1.0.7](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.7)
 
 | Feature / Fix                                                 | Issue                                                 |
@@ -13,6 +24,8 @@
 | Fix: IGM does not respect font size                           | [#47](https://github.com/CannoliHQ/cannoli/issues/47) |
 | Fix: Make battery icon more consistent                        | [#46](https://github.com/CannoliHQ/cannoli/issues/46) |
 | Fix: Larger font sizes cause last visible item in list to pop | [#45](https://github.com/CannoliHQ/cannoli/issues/45) |
+
+---
 
 ## [v1.0.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.6)
 
