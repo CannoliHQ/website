@@ -1,9 +1,10 @@
 ## [v1.0.9](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.9)
 
-| Feature / Fix                                                       | Issue                                                 |
-|---------------------------------------------------------------------|-------------------------------------------------------|
-| Feat: Add Aspect Screen Scaling Option                              | [#18](https://github.com/CannoliHQ/cannoli/issues/18) |
-| Fix: Address poor performance for large / highly nested collections | [#58](https://github.com/CannoliHQ/cannoli/issues/58) |
+| Feature / Fix                                                                               | Issue                                                 |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| Feat: Add Aspect Screen Scaling Option                                                      | [#18](https://github.com/CannoliHQ/cannoli/issues/18) |
+| Feat: Add RetroArch DIY Mode (no config injection, makes Cannoli work like other launchers) | [#51](https://github.com/CannoliHQ/cannoli/issues/51) |
+| Fix: Address poor performance for large / highly nested collections                         | [#58](https://github.com/CannoliHQ/cannoli/issues/58) |
 
 ---
 
