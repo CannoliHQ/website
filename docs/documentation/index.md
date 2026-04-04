@@ -12,13 +12,13 @@ Android has a reputation for being tedious to set up. Cannoli looks to change th
 
 ## What does it look like?
 
-Cannoli, appearance-wise, is very minimal. At its core you get lists.
+Cannoli is very minimal. At its core you get lists.
 
 Nothing flashy here. No video previews and definitely no background music.
 
 You do get a few personalization options: a wallpaper and accent colors.
 
-It's barebones. Honestly, I don't want you in the menu. I want you playing games!
+That's intentional. I don't want you in the menu. I want you playing games!
 
 <div class="image-gallery">
   <a href="../resources/img/docs_home/main_menu.png" class="glightbox" data-description="The Cannoli Main Menu"><img src="../resources/img/docs_home/main_menu.png" alt="Main Menu"></a>
