@@ -24,6 +24,7 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Input
 
+- **Button Labels:** Choose which button label style is shown throughout the launcher. Options are **Plumber** (A/B/X/Y), **Redmond** (A/B/Y/X), and **Shapes** (✕/○/△/□). Default is Plumber. Redmond and Shapes swap confirm and back so that confirm is the south button and back is the east button.
 - **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game. Cannoli ships with two built-in profiles: **Cannoli Navigation** (controls the launcher menus) and **Default Controls** (used in-game). You can create additional custom profiles from this screen.
 - **Shortcuts:** Configure shortcut actions
 - **Platform Switching:** Jump between platforms from the game list

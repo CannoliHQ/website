@@ -138,16 +138,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
       tables.forEach(function(table) {
         var rows = table.querySelectorAll('tbody tr');
+        var visibleCount = 0;
         rows.forEach(function(row) {
           var isBundled = row.querySelector('.shipped') !== null;
           if (filter === 'all') {
             row.style.display = '';
+            visibleCount++;
           } else if (filter === 'bundled') {
             row.style.display = isBundled ? '' : 'none';
+            if (isBundled) visibleCount++;
           } else {
             row.style.display = isBundled ? 'none' : '';
+            if (!isBundled) visibleCount++;
           }
         });
+
+        var el = table;
+        while (el.parentElement && el.parentElement.classList.contains('md-typeset') === false) {
+          el = el.parentElement;
+        }
+        var heading = el.previousElementSibling;
+        while (heading && heading.tagName !== 'H3') {
+          heading = heading.previousElementSibling;
+        }
+        el.style.display = visibleCount === 0 ? 'none' : '';
+        if (heading) heading.style.display = visibleCount === 0 ? 'none' : '';
       });
     });
   });

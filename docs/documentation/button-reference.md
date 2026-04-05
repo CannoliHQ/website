@@ -2,6 +2,9 @@
 
 --8<-- "docs/documentation/snippets/early-preview.md"
 
+!!! tip
+    This reference uses the default **Plumber** button labels. If you've changed your [Button Labels](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south button and back is the east button.
+
 ## Platform List
 
 | Button | Action                              |

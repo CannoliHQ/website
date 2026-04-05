@@ -1,3 +1,16 @@
+## [v1.1.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.1.0)
+
+| Feature / Fix                                                                  | Issue                                                 |
+|--------------------------------------------------------------------------------|-------------------------------------------------------|
+| Feat: Recently Played list with show/hide toggle and clear option              | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
+| Feat: Title color setting                                                      | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
+| Feat: Platform specific button legends (Plumber, Redmond, Shapes)              | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
+| Feat: Filter file extensions from games list via `ignore_extensions_roms.txt`  | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
+| Feat: Ship `arcade_map.txt` for human-readable arcade game titles              | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
+| Feat: Organize Config folder                                                   | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
+
+---
+
 ## [v1.0.9](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.9)
 
 | Feature / Fix                                                                               | Issue                                                 |
@@ -44,7 +57,7 @@
 
 ---
 
-## [v1.0.5](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.5) - The No Joke Update
+## [v1.0.5](https://github.com/CannoliHQ/cannoli/releases/tag/v1.0.5)
 
 | Feature / Fix                                                              | Issue                                                                                                        |
 |----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
