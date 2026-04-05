@@ -12,6 +12,7 @@
 **Organization**
 
 - Opinionated [directory structure](directory-structure.md)
+- Recently Played
 - Favorites
 - Collections with nesting
 - Platform and collection reordering
