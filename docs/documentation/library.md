@@ -1,5 +1,16 @@
 # Library
 
+## Recently Played
+
+Cannoli tracks your 10 most recently played games. A `Recently Played` section appears on the main menu automatically after you play your first game.
+
+To remove a game from the list, highlight it and press `Start` → **Remove From Recents**.
+
+!!! tip
+    To remove multiple games at once, press `Select` on the Recently Played list to enter multi-select mode. Select the games you want, then press `Start` to remove them all.
+
+You can hide the Recently Played section entirely from Settings → Library → **Recently Played**.
+
 ## Favorites
 
 Highlight a game, tool, or port and press `Start` to open the context menu. 

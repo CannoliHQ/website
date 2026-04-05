@@ -12,6 +12,7 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Library
 
+- **Recently Played:** Show or hide the Recently Played section on the main menu
 - **Show Empty:** Show or hide platforms with no ROMs
 - **Manage Ports:** Select which Android apps appear in Ports.
 - **Manage Tools:** Select which Android apps appear in Tools.
