@@ -6,17 +6,17 @@ Press `X` on the main menu to open settings.
 
 ## Appearance
 
-Colors, wallpapers, fonts, text size, status bar, and more.
+Change art settings, pick a background image, set colors, and more.
 
 See the [Customization](customization.md#appearance) page for details.
 
-## Content
+## Library
 
-- **Empty Platforms:** Show or hide platforms with no ROMs
-- **Ports:** Show or hide a renamable `platform` meant to hold Android games.
+- **Show Empty:** Show or hide platforms with no ROMs
 - **Manage Ports:** Select which Android apps appear in Ports.
-- **Tools:** Show or hide a renamable `platform` meant to hold Android apps (non-games).
 - **Manage Tools:** Select which Android apps appear in Tools.
+- **SD Root:** The root directory where Cannoli stores its files and the one you selected on first launch
+- **ROM Directory:** An optional second directory if you want to store your ROMs in a different location.
 
 !!! important
     The `manage` options only appear if the corresponding setting is set to `show`.
@@ -25,8 +25,9 @@ See the [Customization](customization.md#appearance) page for details.
 
 - **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game. Cannoli ships with two built-in profiles: **Cannoli Navigation** (controls the launcher menus) and **Default Controls** (used in-game). You can create additional custom profiles from this screen.
 - **Shortcuts:** Configure shortcut actions
-- **L1 / R1 Switches Platform:** Jump between platforms from the game list
+- **Platform Switching:** Jump between platforms from the game list
 - **Swap Play and Resume:** Make `Resume` the primary action on games with save states
+- **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 
 ## Nonna's Kitchen
 
@@ -42,10 +43,7 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 
 ## Advanced
 
-- **Cannoli Root:** The root directory where Cannoli stores its files and the one you selected on first launch
-- **ROM Directory:** An optional second directory if you want to store your ROMs in a different location.
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
-- **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher 😢
 - **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
 - **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package. This requires a nightly release as this is a new feature in RetroArch.

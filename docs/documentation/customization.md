@@ -4,18 +4,18 @@
 
 All appearance settings are found under **Settings → Appearance**.
 
-### Colors
+### Art Width
 
-Cannoli has four customizable colors:
+Controls how much screen space the box art panel takes up on the game list. Options range from 35% to 65% in 5% steps, or 0 to hide it entirely. The default is 40%.
 
-- **Text:** The color used for all text in the launcher
-- **Highlight:** The background color of the currently selected item
-- **Highlight Text:** The text color of the currently selected item
-- **Accent:** Used for UI accents like the status bar background
+### Art Scale
 
-Each color can be picked from a grid of 16 presets or entered as a hex value. 
+Controls how box art is scaled within the art panel.
 
-See the [Color Picker](button-reference.md#color-picker) controls for details.
+- **Fit** (default) - scales the image to fit entirely within the panel
+- **Original** - displays the image at its original size
+- **Fit Width** - scales the image to fill the panel's width
+- **Fit Height** - scales the image to fill the panel's height
 
 ### Background
 
@@ -25,7 +25,21 @@ Set a wallpaper by placing images in the `Wallpapers/` folder and selecting one 
 
 You can also upload wallpapers through [Nonna's Kitchen](nonnas-kitchen.md).
 
-### Fonts
+### Colors
+
+Cannoli has four customizable colors:
+
+- **Accent:** Used for UI accents like the status bar background
+- **Highlight:** The background color of the currently selected item
+- **Highlight Text:** The text color of the currently selected item
+- **Text:** The color used for all text in the launcher
+- **Title:** The color used for all list titles (including IGM)
+
+Each color can be picked from a grid of 16 presets or entered as a hex value. 
+
+See the [Color Picker](button-reference.md#color-picker) controls for details.
+
+### Font
 
 Two fonts are built in:
 
@@ -33,18 +47,6 @@ Two fonts are built in:
 - **BP Replay**
 
 You can add your own fonts by placing `.ttf` or `.otf` files in `Config/Fonts/`. They'll show up alongside the built-in options.
-
-### Text Size
-
-Eight sizes are available, from compact (16) to large (30). The default is 24.
-
-### Art Width
-
-Controls how much screen space the box art panel takes up on the game list. Options range from 35% to 65% in 5% steps, or 0 to hide it entirely. The default is 40%.
-
-### Title
-
-Set a custom title that appears at the top of the launcher. Leave it empty for no title.
 
 ### Status Bar
 
@@ -56,6 +58,14 @@ Control what appears in the status bar:
 - **Wi-Fi** - shown by default
 - **VPN** - hidden by default
 - **Update** - shown by default, indicates when an update is available
+
+### Text Size
+
+Eight sizes are available, from compact (16) to large (30). The default is 24.
+
+### Title
+
+Set a custom title that appears at the top of the launcher. Leave it empty for no title.
 
 ## Box Art
 
