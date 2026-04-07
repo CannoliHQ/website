@@ -1,4 +1,9 @@
-# RicottaArch
+!!! danger
+    Concepts of a plan ahead!
+
+    RicottaArch is still being worked on and does not currently have a release.
+
+    Just wanted to have this placeholder if you saw the repo on GitHub and were curious.
 
 ## What is RicottaArch?
 
@@ -7,7 +12,7 @@
 !!! important
     You might be thinking, will using this replace / delete my RetroArch install?
     
-    Nope! This is packaged under a different package name / app name and can have both at the same time.
+    Nope! This is packaged under a different package name and both can be installed at the same time.
 
 
 It serves two main purposes. 

@@ -1,13 +1,33 @@
+## [v1.2.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.2.0)
+
+| Feature / Fix                                          | Issue                                                 |
+|--------------------------------------------------------|-------------------------------------------------------|
+| Feat: [Show / Hide Platforms](library.md#content-mode) for collection-only setups | [#69](https://github.com/CannoliHQ/cannoli/issues/69) |
+| Feat: [Five Game Handheld Mode](library.md#content-mode)                          | [#75](https://github.com/CannoliHQ/cannoli/issues/75) |
+
+---
+
+## [v1.1.1](https://github.com/CannoliHQ/cannoli/releases/tag/v1.1.1)
+
+| Feature / Fix                                             | Issue                                                 |
+|-----------------------------------------------------------|-------------------------------------------------------|
+| Fix: Ignore `systeminfo.txt` from games list              | [#73](https://github.com/CannoliHQ/cannoli/issues/73) |
+| Fix: PS2 app ID incorrect                                 | [#71](https://github.com/CannoliHQ/cannoli/issues/71) |
+| Fix: Random offline achievement synced message            | [#68](https://github.com/CannoliHQ/cannoli/issues/68) |
+| Fix: Tools show up in recently played                     | [#67](https://github.com/CannoliHQ/cannoli/issues/67) |
+
+---
+
 ## [v1.1.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.1.0)
 
 | Feature / Fix                                                                  | Issue                                                 |
 |--------------------------------------------------------------------------------|-------------------------------------------------------|
-| Feat: Recently Played list with show/hide toggle and clear option              | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
-| Feat: Title color setting                                                      | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
-| Feat: Platform specific button legends (Plumber, Redmond, Shapes)              | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
-| Feat: Filter file extensions from games list via `ignore_extensions_roms.txt`  | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
-| Feat: Ship `arcade_map.txt` for human-readable arcade game titles              | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
-| Feat: Organize Config folder                                                   | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
+| Feat: [Recently Played](library.md#recently-played) list with show/hide toggle and clear option | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
+| Feat: [Title color](customization.md#colors) setting                                            | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
+| Feat: Platform specific [button legends](settings.md#input) (Plumber, Redmond, Shapes)          | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
+| Feat: [Filter file extensions](directory-structure.md#config-files) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
+| Feat: Ship [`arcade_map.txt`](directory-structure.md#config-files) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
+| Feat: Organize Config folder                                                                     | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
 
 ---
 
@@ -15,8 +35,8 @@
 
 | Feature / Fix                                                                               | Issue                                                 |
 |---------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| Feat: Add Aspect Screen Scaling Option                                                      | [#18](https://github.com/CannoliHQ/cannoli/issues/18) |
-| Feat: Add RetroArch DIY Mode (no config injection, makes Cannoli work like other launchers) | [#51](https://github.com/CannoliHQ/cannoli/issues/51) |
+| Feat: Add [Aspect Screen](customization.md#art-scale) Scaling Option                                    | [#18](https://github.com/CannoliHQ/cannoli/issues/18) |
+| Feat: Add [RetroArch DIY Mode](settings.md#advanced) (no config injection, makes Cannoli work like other launchers) | [#51](https://github.com/CannoliHQ/cannoli/issues/51) |
 | Fix: Address poor performance for large / highly nested collections                         | [#58](https://github.com/CannoliHQ/cannoli/issues/58) |
 
 ---
@@ -45,12 +65,12 @@
 
 | Feature / Fix                                                   | Issue                                                 |
 |-----------------------------------------------------------------|-------------------------------------------------------|
-| Add Tools and Ports to Favorites and Collections                | [#43](https://github.com/CannoliHQ/cannoli/issues/43) |
-| Option in advanced to set Cannoli as default launcher           | [#44](https://github.com/CannoliHQ/cannoli/issues/44) |
-| Reorder Tools and Ports                                         | [#25](https://github.com/CannoliHQ/cannoli/issues/25) |
-| Option to quit from main menu                                   | [#36](https://github.com/CannoliHQ/cannoli/issues/36) |
-| Font size uses scalable points with a range of options          | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
-| Button legends scale with font size                             | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
+| Add Tools and Ports to [Favorites](library.md#favorites) and [Collections](library.md#collections) | [#43](https://github.com/CannoliHQ/cannoli/issues/43) |
+| Option in advanced to [set Cannoli as default launcher](settings.md#advanced)                       | [#44](https://github.com/CannoliHQ/cannoli/issues/44) |
+| [Reorder](library.md#reordering) Tools and Ports                                                    | [#25](https://github.com/CannoliHQ/cannoli/issues/25) |
+| Option to [quit from main menu](settings.md#input)                                                  | [#36](https://github.com/CannoliHQ/cannoli/issues/36) |
+| [Font size](customization.md#text-size) uses scalable points with a range of options                | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
+| Button legends scale with font size                                                                  | [#39](https://github.com/CannoliHQ/cannoli/issues/39) |
 | Fix: remove shortcut when a Tool or Port is uninstalled         | [#42](https://github.com/CannoliHQ/cannoli/issues/42) |
 | Fix: Flip Resume/Play no longer incorrectly impacts Tools/Ports | [#38](https://github.com/CannoliHQ/cannoli/issues/38) |
 | Fix: case-insensitive platform tag matching                     | [#40](https://github.com/CannoliHQ/cannoli/issues/40) |
@@ -66,11 +86,11 @@
 | Framerate fix attempt for 120 Hz devices                                   | [#17](https://github.com/CannoliHQ/cannoli/issues/17)                                                        |
 | Fix caching regression affecting art display and resume                    | [#22](https://github.com/CannoliHQ/cannoli/issues/22), [#24](https://github.com/CannoliHQ/cannoli/issues/24) |
 | Dot-prefixed files/folders are now hidden                                  | [#23](https://github.com/CannoliHQ/cannoli/issues/23)                                                        |
-| Resume works with any save slot, not just auto                             | [#28](https://github.com/CannoliHQ/cannoli/issues/28)                                                        |
+| [Resume](playing-games.md#resuming-a-game) works with any save slot, not just auto                  | [#28](https://github.com/CannoliHQ/cannoli/issues/28)                                                        |
 | Bundled OG MinUI font (not default)                                        | [#15](https://github.com/CannoliHQ/cannoli/issues/15)                                                        |
-| Load custom fonts from `Cannoli Root/Config/Fonts`                         | [#15](https://github.com/CannoliHQ/cannoli/issues/15)                                                        |
-| User-defined main menu title                                               | [#29](https://github.com/CannoliHQ/cannoli/issues/29)                                                        |
-| Roms folder can be split from Cannoli Root in Advanced                     | [#12](https://github.com/CannoliHQ/cannoli/issues/12)                                                        |
+| Load [custom fonts](customization.md#font) from `Cannoli Root/Config/Fonts`                         | [#15](https://github.com/CannoliHQ/cannoli/issues/15)                                                        |
+| User-defined [main menu title](customization.md#title)                                              | [#29](https://github.com/CannoliHQ/cannoli/issues/29)                                                        |
+| [Roms folder](settings.md#library) can be split from Cannoli Root in Advanced                       | [#12](https://github.com/CannoliHQ/cannoli/issues/12)                                                        |
 | Hack for vertical FBN games to display top-up                              | [#19](https://github.com/CannoliHQ/cannoli/issues/19), [#32](https://github.com/CannoliHQ/cannoli/issues/32) |
-| Toggle to flip Play and Resume buttons                                     | [#35](https://github.com/CannoliHQ/cannoli/issues/35)                                                        |
-| Unmap buttons for shortcuts                                                | [#31](https://github.com/CannoliHQ/cannoli/issues/31)                                                        |
+| Toggle to [flip Play and Resume](settings.md#input) buttons                                         | [#35](https://github.com/CannoliHQ/cannoli/issues/35)                                                        |
+| Unmap buttons for [shortcuts](settings.md#input)                                                     | [#31](https://github.com/CannoliHQ/cannoli/issues/31)                                                        |

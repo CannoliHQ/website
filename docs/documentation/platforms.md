@@ -63,7 +63,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 | Platform             | Folder   | Core / App                                                |                                                                |
 |----------------------|----------|-----------------------------------------------------------|---------------------------------------------------------------:|
-| PlayStation          | `PS`     | `PCSX-ReARMed` (default) / `swanstation` (requires BIOS)  | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
+| PlayStation          | `PS`     | `PCSX-ReARMed` (default)<br>`swanstation` (requires BIOS) | :material-check-bold:{ .shipped } :material-trophy:{ .trophy } |
 | PlayStation Portable | `PSP`    | `ppsspp`                                                  |  :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PlayStation 2        | `PS2`    | [NetherSX2](https://github.com/Trixarian/NetherSX2-patch) |    :material-android:{ .android } :material-trophy:{ .trophy } |
 | PlayStation 3        | `PS3`    | [aPS3e](https://github.com/aenu1/aps3e)                   |                                 :material-android:{ .android } |
