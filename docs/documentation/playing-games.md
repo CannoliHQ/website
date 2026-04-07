@@ -1,7 +1,5 @@
 # Playing Games
 
---8<-- "docs/documentation/snippets/early-preview.md"
-
 ## Built-In Core Runner
 
 Cannoli ships with a built-in libretro core runner. Press `A` on a game to play it. 

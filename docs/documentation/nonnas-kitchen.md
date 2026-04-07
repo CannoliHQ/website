@@ -1,7 +1,5 @@
 # Nonna's Kitchen
 
---8<-- "docs/documentation/snippets/early-preview.md"
-
 ## WTF is Nonna's Kitchen?
 
 Nonna's Kitchen is a built-in file server that lets you manage content on your device from a web browser. No cables, no file managers, no fuss.

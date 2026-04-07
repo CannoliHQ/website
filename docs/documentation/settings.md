@@ -60,7 +60,7 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 
 Shows Cannoli build information: version, date built, and commit hash.
 
-Press `X` to view the credits for the giants whose shoulders I am standing on.
+Press `X` to view the credits for everything that made making Cannoli possible.
 
 
 ## Updating Cannoli

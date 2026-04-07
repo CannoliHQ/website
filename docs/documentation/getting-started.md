@@ -1,7 +1,5 @@
 # Getting Started
 
---8<-- "docs/documentation/snippets/early-preview.md"
-
 ## Installing Cannoli
 
 You can snag the latest early preview from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).

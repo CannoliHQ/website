@@ -10,11 +10,11 @@ Once logged in you'll see your account status.
 
 To log out, press `X` from the account screen.
 
+!!! important
+You need a [RetroAchievements account](https://retroachievements.org) to use this feature. It's free to sign up.
+
 !!! tip
     You only need to log in once. Cannoli stores your session token so you stay logged in across launches.
-
-!!! important
-    You need a [RetroAchievements account](https://retroachievements.org) to use this feature. It's free to sign up.
 
 ## How It Works
 
@@ -56,11 +56,12 @@ If a game isn't being detected, you can manually set its RetroAchievements game 
 
 To clear an override, open the same menu and leave the field blank.
 
-!!! warning
+!!! important
     RetroAchievements uses specific memory locations to trigger unlocks. Regional differences and ROM Hacks can break these locations.
 
-    **This is not an approved feature and if you use it know achievements might not work.**
+    **This is not an approved feature and if you use it, know achievements might not work.**
 
+!!! danger
     **<u>Under no circumstances</u>** should you bother the developer of the achievements when using an override.
 
 ## Things to Know

@@ -1,5 +1,3 @@
---8<-- "docs/documentation/snippets/early-preview.md"
-
 ## Directory Structure
 
 Cannoli uses an opinionated directory structure heavily inspired by [MinUI](https://github.com/shauninman/MinUI).
