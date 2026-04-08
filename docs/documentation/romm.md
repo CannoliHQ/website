@@ -1,10 +1,14 @@
-!!! warning "Under Development"
-    This feature is actively being worked on but is not yet available.
+> [!WARNING]
+> This feature is actively being worked on but is not yet available.
+
+---
 
 ## What is RomM?
 
 [RomM](https://romm.app) is a self-hosted ROM manager that lets you curate your game collection, manage saves, and
 access everything through a web-based interface.
+
+---
 
 ## Why should I care?
 
@@ -22,6 +26,8 @@ _And the worst part_, if you happen to scrounge up the motivation to actually pl
 from too much choice.
 
 RomM handles all of this for you off device. A clean, web-based interface for your entire collection. Metadata, art, organization, all handled.
+
+---
 
 ## What will this integration do? { data-toc-label="What will this do?" }
 

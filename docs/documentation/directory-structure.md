@@ -30,10 +30,14 @@ Cannoli Root/
 └── Wallpapers/
 ```
 
+---
+
 ## Config Files
 
 - **`ignore_extensions_roms.txt`** - File extensions to filter out of the games list. One extension per line. Cannoli creates this file automatically with `.sav` and `.srm` as defaults.
 - **`arcade_map.txt`** - Maps arcade ROM filenames to human-readable game titles. Cannoli ships a default mapping, but you can edit this file to add or change entries.
+
+---
 
 ## Tags keep things organized!
 
@@ -49,6 +53,8 @@ The following folders expect subdirectories using the accepted platform tags.
 - Roms
 - Saves
 - Save States
+
+---
 
 ## Wait, What?
 
@@ -70,6 +76,8 @@ With those two pieces of info you know where everything has to go!
 | ROM Files   | `Cannoli/Roms/GBA/Pokémon - Recharged Yellow.gba`                                       |
 | Save Files  | `Cannoli/Saves/GBA/Pokémon - Recharged Yellow.sav`                                      |
 | Save States | `Cannoli/Save States/GBA/Pokémon - Recharged Yellow/Pokémon - Recharged Yellow.state.1` |
+
+---
 
 ## Multi-Disc Games
 

@@ -2,7 +2,9 @@
 
 ## Installing Cannoli
 
-You can snag the latest early preview from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).
+You can snag the latest APK from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).
+
+---
 
 ## First Launch
 
@@ -23,6 +25,8 @@ Do you want the Cannoli folder on internal storage, the SD Card (if present) or 
 Make your choice and hit continue. 
 
 Cannoli will then do some light housekeeping make sure everything is put into place.
+
+---
 
 ## Loading Content
 

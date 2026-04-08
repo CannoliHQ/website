@@ -1,14 +1,16 @@
-!!! warning
-    Cannoli is still figuring out who it wants to be when it grows up.
-
-    While the core vision of being a MinUI inspired launcher for Android won't change, menu structure, options, and features are in a state of flux.
-
-    Things will settle down in the near future but for now expect experimentation and change as nothing is bolted down.
+> [!WARNING]
+> Cannoli is still figuring out who it wants to be when it grows up.
+>
+> While the core vision of being a MinUI inspired launcher for Android won't change, menu structure, options, and features are in a state of flux.
+>
+> Things will settle down in the near future but for now expect experimentation and change as nothing is bolted down.
 ## What is Cannoli?
 
 Cannoli is an opinionated setup for Retro Emulation on Android.
 
 Android has a reputation for being tedious to set up. Cannoli looks to change this.
+
+---
 
 ## What does it look like?
 
@@ -26,10 +28,14 @@ That's intentional. I don't want you in the menu. I want you playing games!
   <a href="../resources/img/docs_home/igm.png" class="glightbox" data-description="Built-in Core Runner's In-Game Menu"><img src="../resources/img/docs_home/igm.png" alt="In-Game Menu"></a>
 </div>
 
+---
+
 ## What is Retro Emulation?
 
 Retro Emulation, or just emulation, is achieved by using software called an emulator to mimic gaming hardware. It allows your Android device
 to pretend to be a Game Boy, a SNES, a PlayStation, etc., and therefore lets you play games.
+
+---
 
 ## The Inspiration
 
@@ -43,6 +49,8 @@ Without his masterpiece, this pale imitation would not exist.
 
 For that, I thank him, and apologize for this bastardization of his creation.
 
+---
+
 ## Avoid the rolling pin!
 
 It has to be said. Nonna is too old for prison. And too gangster.
@@ -50,6 +58,8 @@ It has to be said. Nonna is too old for prison. And too gangster.
 **Cannoli does not provide copyrighted materials or advise you on how to get them.**
 
 If you ask for these anywhere (Discord, GitHub, etc.), say goodbye to your knuckles.
+
+---
 
 ## Don't be a stranger!
 

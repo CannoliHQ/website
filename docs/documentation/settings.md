@@ -4,11 +4,15 @@
 
 Press `X` on the main menu to open settings.
 
+---
+
 ## Appearance
 
 Change art settings, pick a background image, set colors, and more.
 
 See the [Customization](customization.md#appearance) page for details.
+
+---
 
 ## Library
 
@@ -19,8 +23,10 @@ See the [Customization](customization.md#appearance) page for details.
 - **SD Root:** The root directory where Cannoli stores its files and the one you selected on first launch
 - **ROM Directory:** An optional second directory if you want to store your ROMs in a different location.
 
-!!! important
-    The `manage` options only appear if the corresponding setting is set to `show`.
+> [!IMPORTANT]
+> The `manage` options only appear if the corresponding setting is set to `show`.
+
+---
 
 ## Input
 
@@ -31,9 +37,13 @@ See the [Customization](customization.md#appearance) page for details.
 - **Swap Play and Resume:** Make `Resume` the primary action on games with save states
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 
+---
+
 ## Nonna's Kitchen
 
 Opens the [Nonna's Kitchen](nonnas-kitchen.md) file manager.
+
+---
 
 ## RetroAchievements
 
@@ -43,18 +53,22 @@ Once signed in, you will see your current username and can log out with the `X` 
 
 See the [RetroAchievements](retroachievements.md) page for more details.
 
+---
+
 ## Advanced
 
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
-- **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package. This requires a nightly release as this is a new feature in RetroArch.
+- **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package.
 - **Release Channel:** Tells the updater what type of build you want
     - Choose from `Stable`, `Beta`, and `Test`
 - **Default Launcher:** Set Cannoli as your device's default launcher.
 
-!!! warning
-    Installed Cores is in early preview as it requires a RetroArch nightly with [my pull request](https://github.com/libretro/RetroArch/pull/18870) for querying cores.
+> [!WARNING]
+> The `Installed Cores` feature requires RetroArch nightly with [my pull request](https://github.com/libretro/RetroArch/pull/18870) built on or after 2026-03-30.
+
+---
 
 ## About
 
@@ -62,6 +76,8 @@ Shows Cannoli build information: version, date built, and commit hash.
 
 Press `X` to view the credits for everything that made making Cannoli possible.
 
+
+---
 
 ## Updating Cannoli
 

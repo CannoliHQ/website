@@ -1,18 +1,20 @@
-!!! danger
-    Concepts of a plan ahead!
+> [!CAUTION]
+> Concepts of a plan ahead!
+>
+> RicottaArch is still being worked on and does not currently have a release.
+>
+> Just wanted to have this placeholder if you saw the repo on GitHub and were curious.
 
-    RicottaArch is still being worked on and does not currently have a release.
-
-    Just wanted to have this placeholder if you saw the repo on GitHub and were curious.
+---
 
 ## What is RicottaArch?
 
 [RicottaArch](https://github.com/CannoliHQ/RicottaArch) is a fork of RetroArch updated to be specifically used with Cannoli. 
 
-!!! important
-    You might be thinking, will using this replace / delete my RetroArch install?
-    
-    Nope! This is packaged under a different package name and both can be installed at the same time.
+> [!IMPORTANT]
+> You might be thinking, will using this replace / delete my RetroArch install?
+>
+> Nope! This is packaged under a different package name and both can be installed at the same time.
 
 
 It serves two main purposes. 

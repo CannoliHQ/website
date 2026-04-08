@@ -22,6 +22,7 @@ theme:
 
 plugins:
   - search
+  - gh-admonitions
   - glightbox:
       auto_caption: false
       touchNavigation: true

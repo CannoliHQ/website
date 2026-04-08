@@ -7,6 +7,8 @@
 - Easy to add new games
 - Basic features baked in
 
+---
+
 ## What's In The Box
 
 **Organization**
@@ -45,6 +47,8 @@ Picking how Cannoli launches a game can be set by platform or by individual game
 - Android Apps / Games on Platform Screen
 - [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more
 - [RomM integration](romm.md) (coming soon)
+
+---
 
 ## Features That Will Not Be Considered Or Implemented { data-toc-label="Rejected Features" }
 

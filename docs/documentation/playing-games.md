@@ -4,8 +4,10 @@
 
 Cannoli ships with a built-in libretro core runner. Press `A` on a game to play it. 
 
-!!! tip
-    Some platforms are not available in the built-in core runner. See [Platforms](platforms.md) for details.
+> [!TIP]
+> Some platforms are not available in the built-in core runner. See [Platforms](platforms.md) for details.
+
+---
 
 ## RetroArch / Standalone Emulators
 
@@ -15,16 +17,22 @@ You can configure which RetroArch core or standalone emulator handles a platform
 
 The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
 
-!!! danger
-    RetroArch support is very much a work in progress. Please see [RetroArch Integration](retroarch.md) for more details.
+> [!CAUTION]
+> RetroArch support is very much a work in progress. Please see [RetroArch Integration](retroarch.md) for more details.
+
+---
 
 ## Resuming a Game
 
 If a save state exists for a game, press `X` to jump back in. Use `A` to start the game without using the last save state.
 
+---
+
 ## Opening the In-Game Menu
 
 Press the `Menu` button to open the In-Game Menu (IGM). It gives you access to save states, settings, achievements, and more.
+
+---
 
 ## Multiple Controllers
 
@@ -33,6 +41,8 @@ Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is 
 When a controller disconnects or reconnects you'll see a notification on screen.
 
 If 2 or more controllers are connected, the IGM Controls screen will show a controller picker so you can configure each one individually.
+
+---
 
 ## In-Game Menu (IGM)
 
@@ -54,8 +64,8 @@ Use `Left` / `Right` on the `D-Pad` to cycle between slots. Each slot shows a sc
 - `Y` deletes a slot
 - `X` undoes the last save, within a one-minute grace period
 
-!!! warning
-    When all 10 slots are full, saving to `AUTO` will cause the oldest slot to be deleted.
+> [!WARNING]
+> When all 10 slots are full, saving to `AUTO` will cause the oldest slot to be deleted.
 
 ### Load State
 
@@ -113,10 +123,12 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 
 Exits the game and returns to the launcher.
 
+---
+
 ## Multi-Disc Games
 
-!!! warning
-    I am not happy with the current state of this feature and expect it to change.
+> [!WARNING]
+> I am not happy with the current state of this feature and expect it to change.
 
 Cannoli automatically detects and bundles multi-disc games. If your ROM files follow standard naming conventions, they'll appear as a single entry in the game list.
 

@@ -1,9 +1,11 @@
-!!! danger
-    Here be dragons!
+> [!CAUTION]
+> Here be dragons!
+>
+> I've spent most of my time working on the built-in core runner. 
+>
+> Don't fret this is still a planned feature but know currently things may not work as you expect.
 
-    I've spent most of my time working on the built-in core runner. 
-
-    Don't fret this is still a planned feature but know currently things may not work as you expect.
+---
 
 ## RetroArch Integration
 
@@ -30,16 +32,16 @@ These values are patched into the RetroArch config every time, regardless of any
 | `config_save_on_exit`               | `false`                                |
 | `video_font_enable`                 | `false`                                |
 
-!!! tip
-    `{Cannoli Root}` is the Cannoli root directory that you picked during initial setup.
+> [!TIP]
+> `{Cannoli Root}` is the Cannoli root directory that you picked during initial setup.
+>
+> See [Directory Structure](directory-structure.md) for the full layout.
 
-    See [Directory Structure](directory-structure.md) for the full layout.
+> [!NOTE]
+> `config_save_on_exit` is forced to `false` so RetroArch doesn't overwrite these patched values when it exits.
 
-!!! note
-    `config_save_on_exit` is forced to `false` so RetroArch doesn't overwrite these patched values when it exits.
-
-!!! note
-    `sort_savefiles_by_content_enable` tells RetroArch to organize saves into subdirectories by platform, matching Cannoli's layout.
+> [!NOTE]
+> `sort_savefiles_by_content_enable` tells RetroArch to organize saves into subdirectories by platform, matching Cannoli's layout.
 
 ### Per-Game Config
 

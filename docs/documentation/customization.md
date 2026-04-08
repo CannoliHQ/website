@@ -67,6 +67,8 @@ Eight sizes are available, from compact (16) to large (30). The default is 24.
 
 Set a custom title that appears at the top of the launcher. Leave it empty for no title.
 
+---
+
 ## Box Art
 
 Box art is the artwork displayed alongside the game list.
@@ -112,6 +114,8 @@ Two ways:
 ### Removing Art
 
 Highlight a game, press `Start` to open the context menu, and select **Delete Art**. This option only appears if art exists for that game.
+
+---
 
 ## Overlays
 

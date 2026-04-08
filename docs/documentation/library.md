@@ -7,10 +7,12 @@ after you play your first game.
 
 To remove a game from the list, highlight it and press `Start` → **Remove From Recents**.
 
-!!! tip
-    To remove multiple games at once, press `Select` on the Recently Played list to enter multi-select mode. Select the games you want, then press `Start` to remove them all.
+> [!TIP]
+> To remove multiple games at once, press `Select` on the Recently Played list to enter multi-select mode. Select the games you want, then press `Start` to remove them all.
 
 You can hide the Recently Played section entirely from Settings → Library → **Recently Played**.
+
+---
 
 ## Favorites
 
@@ -22,8 +24,10 @@ A `Favorites` option will now appear on the main menu.
 
 Unfavoriting works the same: select **Remove From Favorites** in the context menu.
 
-!!! tip
-    To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+> [!TIP]
+> To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+
+---
 
 ## Collections
 
@@ -41,8 +45,8 @@ When managing a game's membership, the checkboxes show which collections it belo
 
 To rename or delete a collection, highlight it on the Collections screen and press `Start`.
 
-!!! tip
-    Adding multiple games to a collection at once works just like favorites: press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to manage their collection membership together.
+> [!TIP]
+> Adding multiple games to a collection at once works just like favorites: press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to manage their collection membership together.
 
 ### Nested Collections
 
@@ -53,8 +57,10 @@ there, toggle which collections should appear as children.
 
 Child collections show up at the top of the parent collection with a `/` prefix.
 
-!!! important
-    Child collections only appear inside their parent. They are removed from the top-level collections list.
+> [!IMPORTANT]
+> Child collections only appear inside their parent. They are removed from the top-level collections list.
+
+---
 
 ## Reordering
 
@@ -62,6 +68,8 @@ You can reorder platforms, collections, tools, and ports to your liking.
 
 Highlight the item you want to move, press `Select`, then use the `D-Pad` to reposition it. Press `Select` again to lock
 it in.
+
+---
 
 ## Managing Games
 
@@ -75,6 +83,8 @@ Highlight a game and press `Start` to open the context menu. From here you can:
 - Delete art (only shown if box art exists)
 - Delete the game
 
+---
+
 ## Content Mode
 
 Cannoli has three content modes that control how the main menu functions.
@@ -84,12 +94,12 @@ Cannoli has three content modes that control how the main menu functions.
 - Five Game Handheld: implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?v=t2rMB5z9dQw)
   concept. When enabled, a collection named `5GH` is created. Games in this collection will be hoisted up to the main menu.
 
-!!! tip
-    Five Game Handheld mode does not restrict you to five games nor does it modify your library.
-
-    Take comfort knowing that the thousands of games you'll never play are still on your device!
-
-    This feature is meant to help with the analysis paralysis so prevalent in the hobby.
+> [!TIP]
+> Five Game Handheld mode does not restrict you to five games nor does it modify your library.
+>
+> Take comfort knowing that the thousands of games you'll never play are still on your device!
+>
+> This feature is meant to help with the analysis paralysis so prevalent in the hobby.
     
     
 

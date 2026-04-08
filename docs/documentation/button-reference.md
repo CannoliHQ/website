@@ -1,7 +1,7 @@
 # Button Reference
 
-!!! tip
-    This reference uses the default **Plumber** button labels. If you've changed your [Button Labels](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south button and back is the east button.
+> [!TIP]
+> This reference uses the default **Plumber** button labels. If you've changed your [Button Labels](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south button and back is the east button.
 
 ## Platform List
 
@@ -19,10 +19,12 @@
 | D-Pad Up / Down | Move selected item |
 | Start           | Confirm reorder    |
 
+---
+
 ## Games List
 
-!!! tip
-    These controls apply to all three kinds of games list; platform, favorites and collections.
+> [!TIP]
+> These controls apply to all three kinds of games list; platform, favorites and collections.
 
 | Button | Action                                             |
 |--------|----------------------------------------------------|
@@ -42,6 +44,8 @@
 | Start           | Confirm selection      |
 | Select          | Exit multi-select mode |
 
+---
+
 ## On-Screen Keyboard
 
 | Button        | Action                          |
@@ -56,6 +60,8 @@
 | Start         | Confirm input                   |
 | Select (Tap)  | Toggle capslock                 |
 | Select (Hold) | Toggle symbols                  |
+
+---
 
 ## In-Game
 
@@ -81,6 +87,8 @@
 |--------------|----------------------|
 | Left / Right | Pick disc            |
 | A            | Confirm disc switch  |
+
+---
 
 ## Color Picker
 
