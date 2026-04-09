@@ -12,22 +12,12 @@
 [RicottaArch](https://github.com/CannoliHQ/RicottaArch) is a fork of RetroArch updated to be specifically used with Cannoli. 
 
 > [!IMPORTANT]
-> You might be thinking, will using this replace / delete my RetroArch install?
+> You might be thinking: will using this replace my RetroArch install?
 >
 > Nope! This is packaged under a different package name and both can be installed at the same time.
 
+This fork only contains one change. It injects the Cannoli IGM into the APK. 
 
-It serves two main purposes. 
+This means when you hit the bound menu button while running RicottaArch the Cannoli IGM will appear.
 
-First, this is where the custom cannoli menu driver lives. 
-
-This menu driver allows the main screen of RetroArch's IGM to look like Cannoli's IGM. All other screens fallback to use Ozone.
-
-You might be wondering why I only themed the main screen. Because I really don't want to maintain an entire menu driver!
-
-Second, this fork holds two pull requests that have not been accepted upstream.
-
-- [Add 'Menu Toggle Without Hotkey Enable' option](https://github.com/libretro/RetroArch/pull/18785)
-- [Query Installed Cores on Android](https://github.com/libretro/RetroArch/pull/18870)
-
-Everything else about RicottaArch is just RetroArch!
+The goal is to have everything other than settings have parity between the internal core runner and RicottaArch.
