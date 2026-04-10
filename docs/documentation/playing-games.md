@@ -106,7 +106,7 @@ Opens the in-game settings with six categories:
     - Toggle Fast Forward
     - Hold Fast Forward
     - Open Guide
-- **Advanced** - Low latency mode, fast forward speed, debug HUD
+- **Advanced** - Controller type (core dependant), fast-forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 
 ### Switch Disc
