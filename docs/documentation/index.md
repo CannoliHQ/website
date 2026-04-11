@@ -4,6 +4,15 @@
 > While the core vision of being a MinUI inspired launcher for Android won't change, menu structure, options, and features are in a state of flux.
 >
 > Things will settle down in the near future but for now expect experimentation and change as nothing is bolted down.
+
+## As seen on Retro Game Corps!
+
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/ihGr_rzpS0o?si=Z5ehHWAdRKKisDxr" title="Retro Game Corps - Cannoli" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+---
+
 ## What is Cannoli?
 
 Cannoli is an opinionated setup for Retro Emulation on Android.
