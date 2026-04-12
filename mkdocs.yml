@@ -53,6 +53,7 @@ markdown_extensions:
 nav:
   - Introduction: documentation/index.md
   - Features: documentation/features.md
+  - In The News: documentation/coverage.md
   - Getting Started: documentation/getting-started.md
   - User Guide:
     - Library: documentation/library.md
@@ -69,11 +70,10 @@ nav:
     - Platforms: documentation/platforms.md
     - Directory Structure: documentation/directory-structure.md
     - Button Reference: documentation/button-reference.md
-    - Changelog: documentation/changelog.md
+    - License: documentation/license.md
+    - Credits: documentation/credits.md
   - FAQ: documentation/faq.md
-  - In The News: documentation/coverage.md
-  - License: documentation/license.md
-  - Credits: documentation/credits.md
+  - Changelog: documentation/changelog.md
 
 copyright: "&copy; 2026 Cannoli"
 

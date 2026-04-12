@@ -1,6 +1,4 @@
-## FAQ
-
-### Why isn't my platform showing up?
+## Why isn't my platform showing up?
 
 By default, Cannoli only shows platforms that have ROMs. If a platform isn't appearing,
 make sure you have at least one ROM in the correct directory for that platform.
@@ -10,17 +8,17 @@ If you'd like to show empty folders, set `Empty Platforms` to `show` under Setti
 See [Directory Structure](directory-structure.md) for the expected folder layout
 and [Platforms](platforms.md) for everything that is supported.
 
-### How can I reorder platforms?
+## How can I reorder platforms?
 
 Highlight the platform you want to move and press `Select`.
 
 `↕` will appear next to the name. Use the `D-Pad` to move it into position. Press `Select` again to lock it in.
 
-### How do I add or remove Favorites?
+## How do I add or remove Favorites?
 
 Highlight a game, press `Start` to open the context menu, and toggle **Favorite**.
 
-### How do I make or edit a collection?
+## How do I make or edit a collection?
 
 There are two ways to create a collection:
 
@@ -33,7 +31,7 @@ When managing membership, the checkboxes next to each collection show which ones
 
 To **rename or delete** an existing collection, highlight it on the Collections screen and press `Start`.
 
-### What's the difference between save states and in-game saves?
+## What's the difference between save states and in-game saves?
 
 **In-game saves** are created by the game itself by using the game's built-in save feature. These act functionally identical to how you would save on real hardware. They're commonly stored as `.srm` files and work across any device or emulator that supports the game.
 
