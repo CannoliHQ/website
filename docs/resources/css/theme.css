@@ -394,14 +394,14 @@
 }
 
 .hero-social svg {
-  width: 24px;
-  height: 24px;
-  fill: #888;
-  transition: fill 0.2s;
+  width: 36px;
+  height: 36px;
+  fill: var(--md-accent-fg-color);
+  transition: opacity 0.2s;
 }
 
 .hero-social a:hover svg {
-  fill: #ccc;
+  opacity: 0.7;
 }
 
 .image-gallery {
