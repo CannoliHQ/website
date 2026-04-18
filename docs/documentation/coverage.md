@@ -19,6 +19,14 @@
 <p>The Cannoli segment starts at <a href="https://youtu.be/jWNXGyzLaPs?t=559">9:19</a></p>
 </div>
 
+<div class="featured-card">
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/0W6o6bOePz8" title="MinUI for Android" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<h3>Ryan Retro</h3>
+<em>MinUI for Android</em>
+</div>
+
 </div>
 
 ---

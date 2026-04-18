@@ -1,5 +1,12 @@
 # Getting Started
 
+> [!Important]
+> **Android Version Compatibility ≥ 9**
+>
+> Cannoli is developed and tested on Android 11 and newer. 
+>
+> Users have reported it working on Android 9, but I have not confirmed this myself.
+
 ## Installing Cannoli
 
 You can snag the latest APK from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).
