@@ -1,3 +1,37 @@
+## [v1.4.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.4.0)
+
+| Feature / Fix                                                     | Issue                                                                                                            |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Feat: Built-in directory browser for TV devices                   | [#108](https://github.com/CannoliHQ/cannoli/issues/108), [#137](https://github.com/CannoliHQ/cannoli/issues/137) |
+| Feat: Integer Overscale scaling                                   | [#140](https://github.com/CannoliHQ/cannoli/issues/140)                                                          |
+| Feat: Portrait Margin for clamp controllers                       | [#134](https://github.com/CannoliHQ/cannoli/issues/134)                                                          |
+| Feat: Auto TV Mode on supported TV boxes                          | [#80](https://github.com/CannoliHQ/cannoli/issues/80)                                                            |
+| Feat: Libretro v1 core options                                    | [#141](https://github.com/CannoliHQ/cannoli/issues/141)                                                          |
+| Feat: Kitchen code bypass toggle                                  | [#95](https://github.com/CannoliHQ/cannoli/issues/95)                                                            |
+| Feat: Cycle network interfaces in Nonna's Kitchen                 | [#91](https://github.com/CannoliHQ/cannoli/issues/91)                                                            |
+| Feat: Missing-BIOS warning before launch                          | [#130](https://github.com/CannoliHQ/cannoli/issues/130)                                                          |
+| Feat: Auto RetroAchievements token refresh                        | [#113](https://github.com/CannoliHQ/cannoli/issues/113)                                                          |
+| Feat: Debug logging toggle                                        | [#112](https://github.com/CannoliHQ/cannoli/issues/112)                                                          |
+| Feat: Input tester diagnostic screen                              | Was lazy!                                                                                                        |
+| Fix: Custom fonts and confirm button glyph                        | [#120](https://github.com/CannoliHQ/cannoli/issues/120), [#128](https://github.com/CannoliHQ/cannoli/issues/128) |
+| Fix: Resume button missing in 5GH and Recently Played             | [#99](https://github.com/CannoliHQ/cannoli/issues/99), [#119](https://github.com/CannoliHQ/cannoli/issues/119)   |
+| Fix: Box art clipping under status bar in 5GH                     | [#102](https://github.com/CannoliHQ/cannoli/issues/102)                                                          |
+| Fix: Stale Recently Played after ROM rename                       | [#136](https://github.com/CannoliHQ/cannoli/issues/136)                                                          |
+| Fix: Guide paths with filename tags                               | [#116](https://github.com/CannoliHQ/cannoli/issues/116)                                                          |
+| Fix: Shader params persisting across saves                        | [#111](https://github.com/CannoliHQ/cannoli/issues/111)                                                          |
+| Fix: CRT glitches when cycling shaders                            | [#139](https://github.com/CannoliHQ/cannoli/issues/139)                                                          |
+| Fix: Volume/media keys in IGM                                     | [#126](https://github.com/CannoliHQ/cannoli/issues/126)                                                          |
+| Fix: L2/R2 trigger detection                                      | [#89](https://github.com/CannoliHQ/cannoli/issues/89)                                                            |
+| Fix: Player 2 menu triggering Home                                | [#21](https://github.com/CannoliHQ/cannoli/issues/21)                                                            |
+| Fix: External emulator package names                              | [#85](https://github.com/CannoliHQ/cannoli/issues/85), [#94](https://github.com/CannoliHQ/cannoli/issues/94)     |
+| Fix: Arcade audio speed in FBNeo/MAME                             | [#125](https://github.com/CannoliHQ/cannoli/issues/125)                                                          |
+| Fix: Nonna's Kitchen large upload freezes                         | [#93](https://github.com/CannoliHQ/cannoli/issues/93)                                                            |
+| Fix: "Press any button" prompt                                    | [#90](https://github.com/CannoliHQ/cannoli/issues/90)                                                            |
+| Fix: XBOX controller layout                                       | [#92](https://github.com/CannoliHQ/cannoli/issues/92)                                                            |
+| Fix: 5GH setup jank                                               | [#84](https://github.com/CannoliHQ/cannoli/issues/84)                                                            |
+
+---
+
 ## [v1.3.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.3.0)
 
 | Feature / Fix                                                                | Issue                                                 |
