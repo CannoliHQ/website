@@ -83,6 +83,18 @@ Highlight a game and press `Start` to open the context menu. From here you can:
 - Delete art (only shown if box art exists)
 - Delete the game
 
+### Emulator Override
+
+By default, each game uses the core or app assigned to its platform in [Core Mapping](settings.md#advanced). An emulator override lets you override that choice for a single game, useful when one game runs better on a different core or needs a standalone app.
+
+Open the context menu on a game and select **Emulator Override** to pick from:
+
+- Cannoli's built-in cores
+- Any core installed in the selected RetroArch or RicottaArch package
+- Any compatible standalone Android app
+
+The picker shows the source of each option (Internal, RetroArch, RicottaArch, or Standalone). To clear an override and go back to the platform default, open the picker again and choose **Platform Default**.
+
 ---
 
 ## Content Mode

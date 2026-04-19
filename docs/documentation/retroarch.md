@@ -5,6 +5,9 @@
 >
 > Don't fret this is still a planned feature but know currently things may not work as you expect.
 
+> [!TIP]
+> If you'd rather keep full control of your RetroArch setup, enable **RetroArch DIY Mode** under [Settings → Advanced](settings.md#advanced). When on, Cannoli launches games into RetroArch without injecting any of the config values described below.
+
 ---
 
 ## RetroArch Integration

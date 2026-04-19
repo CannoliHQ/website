@@ -26,6 +26,8 @@ The [directory structure](directory-structure.md) for content (ROMs, saves, etc)
 
 If a save state exists for a game, press `X` to jump back in. Use `A` to start the game without using the last save state.
 
+Resume is only available for games handled by Cannoli's built-in core runner or by RetroArch when [RetroArch DIY Mode](settings.md#advanced) is off. When DIY Mode is enabled, RetroArch games always start fresh.
+
 ---
 
 ## Opening the In-Game Menu
@@ -157,3 +159,7 @@ Roms/PS/
 ### Switching Discs
 
 When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc** to pick the right one.
+
+### Deleting a Multi-Disc Game
+
+Deleting a multi-disc entry from the context menu removes all disc files in the bundle at once.

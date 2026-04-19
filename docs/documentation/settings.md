@@ -16,8 +16,10 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Library
 
+- **Content Mode:** Switch between Platforms, Collections, or Five Game Handheld modes. See [Content Mode](library.md#content-mode).
+- **FGH Collection:** The collection used when Content Mode is set to Five Game Handheld. Only shown in that mode.
 - **Recently Played:** Show or hide the Recently Played section on the main menu
-- **Show Empty:** Show or hide platforms with no ROMs
+- **Show Empty:** Show or hide platforms with no ROMs. Only shown in Platforms mode.
 - **Manage Ports:** Select which Android apps appear in Ports.
 - **Manage Tools:** Select which Android apps appear in Tools.
 - **SD Root:** The root directory where Cannoli stores its files and the one you selected on first launch
@@ -30,12 +32,14 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Input
 
-- **Button Labels:** Choose which button label style is shown throughout the launcher. Options are **Plumber** (A/B/X/Y), **Redmond** (A/B/Y/X), and **Shapes** (✕/○/△/□). Default is Plumber. Redmond and Shapes swap confirm and back so that confirm is the south button and back is the east button.
 - **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game. Cannoli ships with two built-in profiles: **Cannoli Navigation** (controls the launcher menus) and **Default Controls** (used in-game). You can create additional custom profiles from this screen.
 - **Shortcuts:** Configure shortcut actions
+- **Button Labels:** Choose which button label style is shown throughout the launcher. Options are **Plumber** (A/B/X/Y), **Redmond** (A/B/Y/X), and **Shapes** (✕/○/△/□). Default is Plumber.
+- **Confirm Button:** Choose which physical button confirms selections. **East** uses the east button (A on Plumber) to confirm. **South** uses the south button (A on Redmond, X on Shapes) to confirm.
 - **Platform Switching:** Jump between platforms from the game list
 - **Swap Play and Resume:** Make `Resume` the primary action on games with save states
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
+- **Input Tester:** Open a screen that shows live controller input so you can verify button and axis mappings.
 
 ---
 
@@ -58,7 +62,9 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 ## Advanced
 
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
+- **Debug Logging:** Write a detailed session log to `Cannoli/Logs/` on the SD card each time a game is launched. Useful for diagnosing core or launcher issues.
 - **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
+- **Kitchen Code Bypass:** Skip the PIN prompt when opening Nonna's Kitchen.
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch
 - **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package.
 - **Release Channel:** Tells the updater what type of build you want

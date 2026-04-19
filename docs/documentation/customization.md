@@ -48,6 +48,10 @@ Two fonts are built in:
 
 You can add your own fonts by placing `.ttf` or `.otf` files in `Config/Fonts/`. They'll show up alongside the built-in options.
 
+### Portrait Margin
+
+Adds bottom padding to the launcher and in-game overlay when the device is held in portrait orientation. Set in pixels; 0 disables the margin. Useful for portrait handhelds where the bottom edge of the screen sits under the device chassis or controls.
+
 ### Status Bar
 
 Control what appears in the status bar:
@@ -153,3 +157,41 @@ Overlay selection is saved at three levels:
 A game-level override takes priority over platform, which takes priority over global.
 
 Cannoli does not ship with any overlays. You'll need to provide your own.
+
+---
+
+## Shaders
+
+Shaders apply visual effects to emulated games (scanlines, CRT masks, LCD grid patterns, sharpening).
+
+### Bundled Shaders
+
+Cannoli ships with several shaders. They are copied into `Config/Shaders/` on launch:
+
+- **crt-cannoli** - 5-pass CRT with phosphor mask, scanlines, glow, curvature, vignette, and an optional phosphor sweep
+- **crt-easymode** - lightweight CRT preset
+- **lcd3x** - LCD grid pattern
+- **scanline-fract** - fractional scanlines
+- **sharp-bilinear** - integer-aware sharp pixel scaling
+- **zfast-crt** - lightweight CRT preset optimized for low-power GPUs
+- **zfast-lcd** - lightweight LCD preset
+
+You can add your own `.slangp` or `.glslp` presets to `Config/Shaders/`.
+
+### Applying Shaders
+
+Open the [In-Game Menu](playing-games.md#in-game-menu-igm) and go to **Settings → Video → Shader**. Use `Left` / `Right` to cycle through available presets. Changes apply immediately.
+
+### Shader Settings
+
+If the active preset exposes tunable parameters, a **Shader Settings** sub-screen becomes available under **Settings → Video**. Adjust values with `Left` / `Right`; changes apply live.
+
+### Override Hierarchy
+
+Shader selection and parameter values are saved at three levels:
+
+1. **Game** - applies to a single game
+2. **Platform** - applies to all games on a platform
+3. **Global** - applies everywhere
+
+A game-level override takes priority over platform, which takes priority over global.

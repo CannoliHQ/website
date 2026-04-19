@@ -336,7 +336,10 @@
 .md-typeset .shipped svg,
 .md-typeset .retroarch svg,
 .md-typeset .android svg,
-.md-typeset .trophy svg {
+.md-typeset .trophy svg,
+.md-typeset .bios-required svg,
+.md-typeset .bios-optional svg,
+.md-typeset .keys-required svg {
   height: 1.25em;
   width: 1.25em;
 }
@@ -355,6 +358,18 @@
 
 .md-typeset .trophy svg {
   fill: #FFD700;
+}
+
+.md-typeset .bios-required svg {
+  fill: #e74c3c;
+}
+
+.md-typeset .bios-optional svg {
+  fill: #b58863;
+}
+
+.md-typeset .keys-required svg {
+  fill: #e74c3c;
 }
 
 .hero .md-button--accent {
