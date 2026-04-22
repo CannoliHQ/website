@@ -33,7 +33,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Nintendo
 
 | Platform                            | Folder       | Core / App          |                                                                                                                                   |
-| ----------------------------------- | ------------ | ------------------- | --------------------------------------------------------------------------------------------------------------------------------: |
+|-------------------------------------|--------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------:|
 | Nintendo Entertainment System       | `NES`        | `nestopia`          |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Nintendo Entertainment System       | `NES`        | `fceumm`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Nintendo Entertainment System       | `NES`        | `mesen`             |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -126,7 +126,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Sega
 
 | Platform      | Folder   | Core / App             |                                                                                                                                   |
-| ------------- | -------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------: |
+|---------------|----------|------------------------|----------------------------------------------------------------------------------------------------------------------------------:|
 | Sega SG-1000  | `SG1000` | `genesis_plus_gx`      |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Sega SG-1000  | `SG1000` | `gearsystem`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Sega SG-1000  | `SG1000` | `bluemsx`              |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -173,7 +173,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Sony
 
 | Platform      | Folder   | Core / App            |                                                                                                                                   |
-| ------------- | -------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------: |
+|---------------|----------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------:|
 | PlayStation   | `PS`     | `pcsx_rearmed`        |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PlayStation   | `PS`     | `swanstation`         | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PlayStation   | `PS`     | `mednafen_psx`        |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -198,7 +198,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Atari
 
 | Platform     | Folder      | Core / App      |                                                                                                                                   |
-| ------------ | ----------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------: |
+|--------------|-------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------:|
 | Atari 2600   | `ATARI2600` | `stella`        |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Atari 2600   | `ATARI2600` | `stella2014`    |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Atari 2600   | `ATARI2600` | 2600.emu        |                                                                                                    :material-android:{ .android } |
@@ -214,7 +214,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### NEC
 
 | Platform             | Folder       | Core / App            |                                                                                                 |
-| -------------------- | ------------ | --------------------- | ----------------------------------------------------------------------------------------------: |
+|----------------------|--------------|-----------------------|------------------------------------------------------------------------------------------------:|
 | PC Engine            | `PCE`        | `mednafen_pce_fast`   | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PC Engine            | `PCE`        | `mednafen_pce`        |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | PC Engine            | `PCE`        | PCE.emu               |                                                                  :material-android:{ .android } |
@@ -227,7 +227,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### SNK
 
 | Platform             | Folder   | Core / App     |                                                                                                                                   |
-| -------------------- | -------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------: |
+|----------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------:|
 | Neo Geo Pocket       | `NGP`    | `mednafen_ngp` |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Neo Geo Pocket       | `NGP`    | `race`         |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Neo Geo Pocket       | `NGP`    | NGP.emu        |                                                                                                    :material-android:{ .android } |
@@ -242,7 +242,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Bandai
 
 | Platform         | Folder | Core / App       |                                                                                                 |
-| ---------------- | ------ | ---------------- | ----------------------------------------------------------------------------------------------: |
+|------------------|--------|------------------|------------------------------------------------------------------------------------------------:|
 | WonderSwan       | `WS`   | `mednafen_wswan` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | WonderSwan       | `WS`   | Swan.emu         |                                                                  :material-android:{ .android } |
 | WonderSwan Color | `WSC`  | `mednafen_wswan` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -251,7 +251,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Arcade
 
 | Platform | Folder | Core / App      |                                                                                                 |
-| -------- | ------ | --------------- | ----------------------------------------------------------------------------------------------: |
+|----------|--------|-----------------|------------------------------------------------------------------------------------------------:|
 | Arcade   | `MAME` | `mame2003_plus` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Arcade   | `MAME` | `mame`          |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Arcade   | `MAME` | `mame2000`      |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -265,7 +265,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Other
 
 | Platform      | Folder          | Core / App   |                                                                                                 |
-| ------------- | --------------- | ------------ | ----------------------------------------------------------------------------------------------: |
+|---------------|-----------------|--------------|------------------------------------------------------------------------------------------------:|
 | Intellivision | `INTELLIVISION` | `freeintv`   | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | ColecoVision  | `COLECOVISION`  | `bluemsx`    | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | ColecoVision  | `COLECOVISION`  | `gearcoleco` | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -277,7 +277,7 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 ### Computer
 
 | Platform                     | Folder    | Core / App    |                                                                                                 |
-| ---------------------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------: |
+|------------------------------|-----------|---------------|------------------------------------------------------------------------------------------------:|
 | Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae`        | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae2021`    | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 | DOS                          | `DOS`     | `dosbox_pure` |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
@@ -291,16 +291,16 @@ document.addEventListener('DOMContentLoaded', function() {
   var buttons = document.querySelectorAll('.platform-filter');
   var tables = document.querySelectorAll('.md-typeset table');
 
-  buttons.forEach(function {
+  buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
-      buttons.forEach(function { b.classList.remove('active'); });
+      buttons.forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
       var filter = btn.getAttribute('data-filter');
 
-      tables.forEach(function {
+      tables.forEach(function(table) {
         var rows = table.querySelectorAll('tbody tr');
         var visibleCount = 0;
-        rows.forEach(function {
+        rows.forEach(function(row) {
           var isBundled = row.querySelector('.shipped') !== null;
           var isRetroarch = row.querySelector('.retroarch') !== null;
           var isStandalone = row.querySelector('.android') !== null;
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
             match = isStandalone;
           }
           row.style.display = match ? '' : 'none';
-          if visibleCount++;
+          if (match) visibleCount++;
         });
 
         var el = table;
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
           heading = heading.previousElementSibling;
         }
         el.style.display = visibleCount === 0 ? 'none' : '';
-        if heading.style.display = visibleCount === 0 ? 'none' : '';
+        if (heading) heading.style.display = visibleCount === 0 ? 'none' : '';
       });
     });
   });
