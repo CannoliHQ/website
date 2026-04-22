@@ -7,8 +7,8 @@ repo_name: CannoliHQ/cannoli
 theme:
   name: material
   custom_dir: overrides/
-  logo: resources/img/logo.png
-  favicon: resources/img/logo.png
+  logo: resources/img/logo.svg
+  favicon: resources/img/favicon.svg
   language: en
   palette:
     scheme: slate

@@ -24,6 +24,7 @@
         { body: '#3a8a3a', accent: '#2a702a', line: '#267026', home: '#2a702a', speaker: '#1a501a' }, // kiwi
       ];
       var color = gbcColors[Math.floor(Math.random() * gbcColors.length)];
+      document.documentElement.style.setProperty('--device-color', color.body);
 
       // Inline the SVG and apply random color
       var frameImg = document.querySelector('.device-frame');

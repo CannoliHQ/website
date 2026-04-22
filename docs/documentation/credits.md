@@ -8,6 +8,14 @@ Again a special thanks to Shaun Inman for creating MinUI.
 
 I can only hope that Cannoli is half as good as MinUI.
 
+### Cannoli Branding
+
+The current smiling cannoli logo` was made by Abraham McCampbell (Tenseiren)!
+
+You can find their work and contact information over on [ArtStation](https://tenseiren.artstation.com).
+
+Absolute pleasure to work with! Thanks, Abraham, for making this into a real project!
+
 ### Cores
 
 | Name                    | License                                                                                                     |
