@@ -43,8 +43,8 @@ See the [Color Picker](button-reference.md#color-picker) controls for details.
 
 Two fonts are built in:
 
-- **M Plus 1 Code** (default)
-- **BP Replay**
+- **Default** (M PLUS 1 Code)
+- **The OG** (BPreplay)
 
 You can add your own fonts by placing `.ttf` or `.otf` files in `Config/Fonts/`. They'll show up alongside the built-in options.
 
@@ -168,15 +168,19 @@ Shaders apply visual effects to emulated games (scanlines, CRT masks, LCD grid p
 
 Cannoli ships with several shaders. They are copied into `Config/Shaders/` on launch:
 
+- **crt-aperture** - CRT preset with aperture-grille mask
 - **crt-cannoli** - 5-pass CRT with phosphor mask, scanlines, glow, curvature, vignette, and an optional phosphor sweep
 - **crt-easymode** - lightweight CRT preset
+- **crt-geom** - CRT preset with curvature and geometry correction
+- **crt-lottes-fast** - lightweight CRT preset by Timothy Lottes
+- **dot** - dot-matrix mask
 - **lcd3x** - LCD grid pattern
-- **scanline-fract** - fractional scanlines
-- **sharp-bilinear** - integer-aware sharp pixel scaling
+- **scanline** - scanline overlay
+- **sharp-bilinear-simple** - integer-aware sharp pixel scaling
 - **zfast-crt** - lightweight CRT preset optimized for low-power GPUs
 - **zfast-lcd** - lightweight LCD preset
 
-You can add your own `.slangp` or `.glslp` presets to `Config/Shaders/`.
+You can add your own `.glslp` presets to `Config/Shaders/`.
 
 ### Applying Shaders
 

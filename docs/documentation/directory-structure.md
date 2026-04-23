@@ -13,6 +13,7 @@ Cannoli Root/
 ├── Config/
 │   ├── arcade_map.txt
 │   ├── ignore_extensions_roms.txt
+│   ├── ignore_files_roms.txt
 │   ├── Launch Scripts/
 │   │   ├── Ports/
 │   │   └── Tools/
@@ -35,6 +36,7 @@ Cannoli Root/
 ## Config Files
 
 - **`ignore_extensions_roms.txt`** - File extensions to filter out of the games list. One extension per line. Cannoli creates this file automatically with `.sav` and `.srm` as defaults.
+- **`ignore_files_roms.txt`** - Specific filenames to filter out of the games list. One filename per line. Cannoli seeds it with common non-game files like `map.txt`, `systeminfo.txt`, `gamelist.xml`, and `gameslist.xml`.
 - **`arcade_map.txt`** - Maps arcade ROM filenames to human-readable game titles. Cannoli ships a default mapping, but you can edit this file to add or change entries.
 
 ---

@@ -5,7 +5,7 @@
 Cannoli tracks your 10 most recently played games. A `Recently Played` section appears on the main menu automatically
 after you play your first game.
 
-To remove a game from the list, highlight it and press `Start` → **Remove From Recents**.
+To remove a game from the list, highlight it and press `Start` → **Remove From Recently Played**.
 
 > [!TIP]
 > To remove multiple games at once, press `Select` on the Recently Played list to enter multi-select mode. Select the games you want, then press `Start` to remove them all.
@@ -42,6 +42,8 @@ To create a collection:
 Give it a name and press `Start` to save.
 
 When managing a game's membership, the checkboxes show which collections it belongs to. Toggle them to add or remove.
+
+When a game is highlighted while viewing a collection, `Start` also includes a **Remove From Collection** option to remove it without opening the membership screen.
 
 To rename or delete a collection, highlight it on the Collections screen and press `Start`.
 
@@ -85,7 +87,7 @@ Highlight a game and press `Start` to open the context menu. From here you can:
 
 ### Emulator Override
 
-By default, each game uses the core or app assigned to its platform in [Core Mapping](settings.md#advanced). An emulator override lets you override that choice for a single game, useful when one game runs better on a different core or needs a standalone app.
+By default, each game uses the core or app assigned to its platform in [Core Mapping](settings.md#emulation). An emulator override lets you override that choice for a single game, useful when one game runs better on a different core or needs a standalone app.
 
 Open the context menu on a game and select **Emulator Override** to pick from:
 

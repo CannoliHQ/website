@@ -42,3 +42,16 @@ You will then land on a pretty barren main menu.
 While you are free to add content however you'd like, the easiest way is with [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more from any browser on your network.
 
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
+
+---
+
+## Android TV
+
+On Android TV, Cannoli maps the TV remote's media keys to launcher navigation:
+
+- **Back** → Back
+- **Play / Pause** → Start
+- **Rewind** → West face button
+- **Fast-Forward** → North face button
+
+This only applies to launcher navigation. In-game input goes through your usual profile bindings.

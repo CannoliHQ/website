@@ -26,7 +26,6 @@ These values are patched into the RetroArch config every time, regardless of any
 | `savestate_directory`               | `{Cannoli Root}/Save States`           |
 | `screenshot_directory`              | `{Cannoli Root}/Media/Screenshots`     |
 | `recording_output_directory`        | `{Cannoli Root}/Media/Recordings`      |
-| `assets_directory`                  | `{Cannoli Root}/Config/Assets`         |
 | `sort_savefiles_by_content_enable`  | `true`                                 |
 | `savestate_file_compression`        | `false`                                |
 | `savestate_block_format`            | `false`                                |

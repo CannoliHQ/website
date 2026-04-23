@@ -99,6 +99,7 @@ Opens the in-game settings with six categories:
 - **Emulator** - Core-specific options (varies per platform)
 - **Controls** - Manage and assign button profiles
 - **Shortcuts** - Assign button combos to the following actions:
+    - Open In-Game Menu
     - Save State
     - Load State
     - Reset Game
@@ -108,6 +109,7 @@ Opens the in-game settings with six categories:
     - Toggle Fast Forward
     - Hold Fast Forward
     - Open Guide
+    - Open In-Game Menu
 - **Advanced** - Controller type (core dependant), fast-forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 
@@ -124,6 +126,8 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 ### Quit
 
 Exits the game and returns to the launcher.
+
+If **Always Save On Quit** is enabled in Settings → Emulation, this option is labeled **Save and Quit** and automatically writes a save state before exiting.
 
 ---
 

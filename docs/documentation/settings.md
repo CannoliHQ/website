@@ -32,7 +32,11 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Input
 
-- **Profiles:** Reusable button mappings that can be assigned globally, per platform or per game. Cannoli ships with two built-in profiles: **Cannoli Navigation** (controls the launcher menus) and **Default Controls** (used in-game). You can create additional custom profiles from this screen.
+- **Profiles:** Reusable button mappings stored as INI files in `Config/Profiles/`. Cannoli ships with two built-in profiles:
+    - **Cannoli Navigation** - controls the launcher menus. Cannot be assigned to games.
+    - **Default Controls** - the fallback profile used in-game when no more-specific profile is assigned.
+
+    Create additional custom profiles from this screen. A game profile can be assigned globally, per platform, or per game. The most specific assignment wins.
 - **Shortcuts:** Configure shortcut actions
 - **Button Labels:** Choose which button label style is shown throughout the launcher. Options are **Plumber** (A/B/X/Y), **Redmond** (A/B/Y/X), and **Shapes** (✕/○/△/□). Default is Plumber.
 - **Confirm Button:** Choose which physical button confirms selections. **East** uses the east button (A on Plumber) to confirm. **South** uses the south button (A on Redmond, X on Shapes) to confirm.
@@ -40,6 +44,13 @@ See the [Customization](customization.md#appearance) page for details.
 - **Swap Play and Resume:** Make `Resume` the primary action on games with save states
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 - **Input Tester:** Open a screen that shows live controller input so you can verify button and axis mappings.
+
+---
+
+## Emulation
+
+- **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
+- **Always Save On Quit:** When enabled, quitting a game from the In-Game Menu automatically saves state before exiting, and the Quit option is labeled "Save and Quit."
 
 ---
 
@@ -61,7 +72,6 @@ See the [RetroAchievements](retroachievements.md) page for more details.
 
 ## Advanced
 
-- **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **Debug Logging:** Write a detailed session log to `Cannoli/Logs/` on the SD card each time a game is launched. Useful for diagnosing core or launcher issues.
 - **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
 - **Kitchen Code Bypass:** Skip the PIN prompt when opening Nonna's Kitchen.
