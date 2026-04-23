@@ -1,3 +1,9 @@
+## [v1.5.1](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.1)
+
+Forgot to update the credits for bundled shaders and the new logo!
+
+---
+
 ## [v1.5.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.0)
 
 | Feature / Fix                                             | Issue                                                   |

@@ -40,21 +40,27 @@ Absolute pleasure to work with! Thanks, Abraham, for making this into a real pro
 
 ### Shaders
 
-| Name                      | What           | License                                                                                                           |
-|---------------------------|----------------|-------------------------------------------------------------------------------------------------------------------|
-| EasyMode                  | crt-easymode   | [GPL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-easymode-GPL.txt)                       |
-| Gigaherz                  | lcd3x          | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/lcd3x-PUBLIC-DOMAIN.txt)          |
-| hunterk                   | scanline-fract | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/scanline-fract-PUBLIC-DOMAIN.txt) |
-| SoltanGris42              | zfast-lcd      | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/zfast-lcd-GPLv2.txt)                      |
-| SoltanGris42 / metallic77 | zfast-crt      | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/zfast-crt-GPLv2.txt)                      |
-| Themaister                | sharp-bilinear | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/sharp-bilinear-PUBLIC-DOMAIN.txt) |
+| Name                        | What                  | License                                                                                                            |
+|-----------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------|
+| EasyMode                    | crt-aperture          | [GPL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-aperture-GPL.txt)                        |
+| Cannoli (based on EasyMode) | crt-cannoli           | [GPL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-cannoli-GPL.txt)                         |
+| EasyMode                    | crt-easymode          | [GPL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-easymode-GPL.txt)                        |
+| cgwg / Themaister / DOLLS   | crt-geom              | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-geom-GPLv2.txt)                        |
+| Timothy Lottes / hunterk    | crt-lottes-fast       | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/crt-lottes-fast-PUBLIC-DOMAIN.txt) |
+| Themaister                  | dot                   | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/dot-PUBLIC-DOMAIN.txt)             |
+| Gigaherz                    | lcd3x                 | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/lcd3x-PUBLIC-DOMAIN.txt)           |
+| hunterk                     | scanline              | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/scanline-fract-PUBLIC-DOMAIN.txt)  |
+| rsn8887                     | sharp-bilinear-simple | [Public domain](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/sharp-bilinear-PUBLIC-DOMAIN.txt)  |
+| SoltanGris42                | zfast-crt             | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/zfast-crt-GPLv2.txt)                       |
+| SoltanGris42                | zfast-lcd             | [GPLv2](https://github.com/CannoliHQ/cannoli/blob/main/licenses/shaders/zfast-lcd-GPLv2.txt)                       |
 
 ### Fonts
 
-| Name             | What          | License                                                                                  |
-|------------------|---------------|------------------------------------------------------------------------------------------|
-| M+ Fonts Project | M PLUS 1 Code | [OFL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/fonts/mplus1code-OFL.txt)  |
-| Nerd Fonts       | NerdSymbols   | [OFL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/fonts/nerdsymbols-OFL.txt) |
+| Name             | What              | License                                                                                            |
+|------------------|-------------------|----------------------------------------------------------------------------------------------------|
+| M+ Fonts Project | M PLUS 1 Code     | [OFL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/fonts/mplus1code-OFL.txt)            |
+| BPreplay         | BPreplay Unhinted | [OFL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/fonts/BPreplayBold-unhinted-OFL.txt) |
+| Nerd Fonts       | NerdSymbols       | [OFL](https://github.com/CannoliHQ/cannoli/blob/main/licenses/fonts/nerdsymbols-OFL.txt)           |
 
 ### Libraries
 
