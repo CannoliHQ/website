@@ -80,6 +80,7 @@
 }
 
 .hero-logo {
+  width: 200px;
   margin-bottom: 0.75rem;
 }
 
@@ -141,7 +142,7 @@
 }
 
 .device-screen-content img {
-  width: 80px;
+  width: 120px;
   height: auto;
 }
 
@@ -219,7 +220,7 @@
   }
 
   .device-screen-content img {
-    width: 80px;
+    width: 100px;
     height: auto;
   }
 

@@ -7,7 +7,7 @@ hide:
 
 <div class="hero">
   <div class="hero-content">
-    <img src="resources/img/logo.svg" class="hero-logo" width="200" alt="cannoli logo">
+    <img src="resources/img/logo_plated.svg" class="hero-logo" alt="cannoli logo">
     <h1>Cannoli</h1>
     <h3>Sweet Retro Gaming on Android</h3>
     <div class="hero-buttons">
@@ -29,7 +29,7 @@ hide:
       <source src="resources/videos/demo.mp4" type="video/mp4">
     </video>
     <div class="device-screen-content">
-      <img src="resources/img/logo.svg" width="80" alt="cannoli logo">
+      <img src="resources/img/logo.svg" alt="cannoli logo">
       <h1>Cannoli</h1>
       <h3>Sweet Retro Gaming on Android</h3>
       <a href="documentation/" class="md-button md-button--primary">Documentation</a>
