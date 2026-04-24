@@ -1,3 +1,12 @@
+## [v1.5.2](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.2)
+
+| Feature / Fix                           | Issue                                                   |
+|-----------------------------------------|---------------------------------------------------------|
+| Fix: Shortcuts regression with triggers | [#150](https://github.com/CannoliHQ/cannoli/issues/150) |
+| Fix: Missed a few old logos             | N/A                                                     |
+
+---
+
 ## [v1.5.1](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.1)
 
 Forgot to update the credits for bundled shaders and the new logo!
