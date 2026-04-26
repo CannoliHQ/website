@@ -1,3 +1,9 @@
+## [v1.5.3](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.3)
+
+Quick fix for shader regression when removing slang support.
+
+---
+
 ## [v1.5.2](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.2)
 
 | Feature / Fix                           | Issue                                                   |
