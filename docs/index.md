@@ -1,5 +1,6 @@
 ---
 template: home.html
+glightbox: false
 hide:
   - navigation
   - toc

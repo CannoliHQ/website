@@ -1,11 +1,11 @@
 {% extends "main.html" %}
 
-{% block header %}{% endblock %}
-
 {% block tabs %}{% endblock %}
 
 {% block extrahead %}
+{{ super() }}
 <style>
+  .md-header { display: none; }
   .md-main__inner { margin-top: 0; }
 </style>
 {% endblock %}
