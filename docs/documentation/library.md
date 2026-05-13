@@ -108,6 +108,9 @@ Cannoli has three content modes that control how the main menu functions.
 - Five Game Handheld: implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?v=t2rMB5z9dQw)
   concept. When enabled, a collection named `5GH` is created. Games in this collection will be hoisted up to the main menu.
 
+> [!NOTE]
+> When two games share the same display name in a list, their filename tags are appended after the title to tell them apart. In cross-platform lists (Collections, Favorites, and the Five Game Handheld main menu) the platform is appended as well so you can see which version is which.
+
 > [!TIP]
 > Five Game Handheld mode does not restrict you to five games nor does it modify your library.
 >

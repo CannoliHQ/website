@@ -27,13 +27,15 @@ You can also upload wallpapers through [Nonna's Kitchen](nonnas-kitchen.md).
 
 ### Colors
 
-Cannoli has four customizable colors:
+Cannoli has seven customizable colors:
 
-- **Accent:** Used for UI accents like the status bar background
-- **Highlight:** The background color of the currently selected item
-- **Highlight Text:** The text color of the currently selected item
-- **Text:** The color used for all text in the launcher
-- **Title:** The color used for all list titles (including IGM)
+- **Accent:** Used for UI accents (badges, indicators, focus glow).
+- **Background:** Fills the screen behind all content when no wallpaper is set.
+- **Highlight:** The background color of the currently selected item.
+- **Highlight Text:** The text color of the currently selected item.
+- **Status Bar:** The color of the icons and text in the top status bar.
+- **Text:** The color used for body text in the launcher.
+- **Title:** The color used for all list titles (including IGM).
 
 Each color can be picked from a grid of 16 presets or entered as a hex value. 
 
@@ -56,7 +58,7 @@ Adds bottom padding to the launcher and in-game overlay when the device is held 
 
 Control what appears in the status bar:
 
-- **Battery** - shown by default (not available on Android TV)
+- **Battery** - choose **Hide**, **Percent** (default), or **Icon**
 - **Bluetooth** - shown by default
 - **Clock** - shown by default, can be set to 12 or 24 hour
 - **Wi-Fi** - shown by default
@@ -69,7 +71,9 @@ Eight sizes are available, from compact (16) to large (30). The default is 24.
 
 ### Title
 
-Set a custom title that appears at the top of the launcher. Leave it empty for no title.
+Set a custom title that appears at the top of the launcher's platform screen.
+
+Leave it empty for no title.
 
 ---
 

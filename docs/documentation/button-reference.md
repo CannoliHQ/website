@@ -1,7 +1,7 @@
 # Button Reference
 
 > [!TIP]
-> This reference uses the default **Plumber** button labels. If you've changed your [Button Labels](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south button and back is the east button.
+> This reference uses the default **Plumber** button labels. If you've set a controller's [Glyph Style](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south button and back is the east button.
 
 ## Platform List
 

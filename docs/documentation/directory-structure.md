@@ -12,11 +12,16 @@ Cannoli Root/
 ├── Collections/
 ├── Config/
 │   ├── arcade_map.txt
+│   ├── cannoli.db
 │   ├── ignore_extensions_roms.txt
 │   ├── ignore_files_roms.txt
+│   ├── settings.json
+│   ├── Input/
+│   │   └── Mappings/
 │   ├── Launch Scripts/
 │   │   ├── Ports/
 │   │   └── Tools/
+│   ├── Ordering/
 │   ├── Overrides/
 │   └── Profiles/
 ├── Media/
@@ -31,6 +36,12 @@ Cannoli Root/
 └── Wallpapers/
 ```
 
+> [!TIP]
+> Are your eyes glazed over from looking at the above structure?
+>
+> Go use [Nonna's Kitchen](nonnas-kitchen.md) and get into your games faster!
+
+
 ---
 
 ## Config Files
@@ -38,6 +49,10 @@ Cannoli Root/
 - **`ignore_extensions_roms.txt`** - File extensions to filter out of the games list. One extension per line. Cannoli creates this file automatically with `.sav` and `.srm` as defaults.
 - **`ignore_files_roms.txt`** - Specific filenames to filter out of the games list. One filename per line. Cannoli seeds it with common non-game files like `map.txt`, `systeminfo.txt`, `gamelist.xml`, and `gameslist.xml`.
 - **`arcade_map.txt`** - Maps arcade ROM filenames to human-readable game titles. Cannoli ships a default mapping, but you can edit this file to add or change entries.
+- **`cannoli.db`** - Cannoli's library database (platforms, ROMs, collections, favorites, recently played, and overrides).
+- **`settings.json`** - Your launcher settings.
+- **`Input/Mappings/`** - One INI file per controller (named by Bluetooth MAC) holding its button mappings, glyph style, and other per-controller options.
+- **`Ordering/`** - Manual sort orders and `collection_parents.txt`, which defines collection nesting.
 
 ---
 

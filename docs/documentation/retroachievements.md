@@ -25,6 +25,8 @@ To log out, press `X` from the account screen.
 When you launch a game on a supported platform, Cannoli automatically identifies the ROM and loads its achievement set
 from RetroAchievements.
 
+When the game loads you'll see a brief notification telling you whether an achievement set was found.
+
 If the game has achievements, you'll earn them as you play.
 
 When an achievement unlocks you'll see a notification pop up on screen.
@@ -46,7 +48,7 @@ While playing a game that has achievements you will see a new option in the in-g
 From here you can:
 
 - Browse the full achievement list
-- Press `Y` to filter by **All** or **Unlocked**
+- Press `Y` to filter by **All**, **Unlocked**, or **Locked**
 - Press `A` on any achievement to see its description, point value, and unlock status
 
 The header shows your progress, something like `Achievements (5/15)` meaning 5 out of 15 unlocked.

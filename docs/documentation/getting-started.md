@@ -43,6 +43,8 @@ While you are free to add content however you'd like, the easiest way is with [N
 
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
 
+After you add ROMs, Cannoli scans them on the next launch (or when returning from Nonna's Kitchen).
+
 ---
 
 ## Android TV

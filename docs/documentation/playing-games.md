@@ -13,7 +13,7 @@ Cannoli ships with a built-in libretro core runner. Press `A` on a game to play 
 
 Cannoli can also launch your games using RetroArch or a standalone emulator.
 
-You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Advanced → Core Mapping**.
+You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Emulation → Core Mapping**.
 
 The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
 
@@ -42,7 +42,7 @@ Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is 
 
 When a controller disconnects or reconnects you'll see a notification on screen.
 
-If 2 or more controllers are connected, the IGM Controls screen will show a controller picker so you can configure each one individually.
+If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
 
 ---
 
@@ -97,7 +97,7 @@ Opens the in-game settings with six categories:
 
 - **Video** - Screen scaling, sharpness, shaders, overlays
 - **Emulator** - Core-specific options (varies per platform)
-- **Controls** - Manage and assign button profiles
+- **Buttons** - Remap the current game's controls. Mappings can be saved per platform or per game.
 - **Shortcuts** - Assign button combos to the following actions:
     - Open In-Game Menu
     - Save State
@@ -112,6 +112,10 @@ Opens the in-game settings with six categories:
     - Open In-Game Menu
 - **Advanced** - Controller type (core dependant), fast-forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
+
+### Reassign Players
+
+Only appears when 2 or more controllers are connected. Lets you change which controller is which player, including swapping two players' seats.
 
 ### Switch Disc
 
