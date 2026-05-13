@@ -110,7 +110,7 @@ Opens the in-game settings with six categories:
     - Hold Fast Forward
     - Open Guide
     - Open In-Game Menu
-- **Advanced** - Controller type (core dependant), fast-forward speed, debug HUD
+- **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, and save path
 
 ### Reassign Players

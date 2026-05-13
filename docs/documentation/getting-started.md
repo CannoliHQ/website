@@ -1,6 +1,6 @@
 # Getting Started
 
-> [!Important]
+> [!IMPORTANT]
 > **Android Version Compatibility ≥ 9**
 >
 > Cannoli requires Android 9 or newer. Development and testing happen on Android 11 and newer, so Android 9 and 10 may have rough edges.
@@ -29,7 +29,7 @@ Do you want the Cannoli folder on internal storage, the SD Card (if present) or 
 
 Make your choice and hit continue. 
 
-Cannoli will then do some light housekeeping make sure everything is put into place.
+Cannoli will then do some light housekeeping to make sure everything is put into place.
 
 ---
 
@@ -55,5 +55,3 @@ On Android TV, Cannoli maps the TV remote's media keys to launcher navigation:
 - **Play / Pause** → Start
 - **Rewind** → West face button
 - **Fast-Forward** → North face button
-
-This only applies to launcher navigation. In-game input goes through your usual profile bindings.
