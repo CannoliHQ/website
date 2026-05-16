@@ -98,13 +98,4 @@ With those two pieces of info you know where everything has to go!
 
 ## Multi-Disc Games
 
-Multi-disc games go in the same ROM folder. Cannoli auto-bundles them into a single entry.
-
-```
-Roms/PS/
-├── Final Fantasy VII (Disc 1).chd
-├── Final Fantasy VII (Disc 2).chd
-└── Final Fantasy VII (Disc 3).chd
-```
-
-This shows up as `Final Fantasy VII` in the game list. You can optionally include an `.m3u` file if you want to control disc order yourself. See [Multi-Disc Games](playing-games.md#multi-disc-games) for details.
+Drop the disc files into the platform's ROM folder. On the next scan Cannoli moves them into a per-game subfolder with a generated `.m3u` and shows a single entry. See [Multi-Disc Games](playing-games.md#multi-disc-games) for details.

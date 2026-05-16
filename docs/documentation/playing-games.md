@@ -137,37 +137,10 @@ If **Always Save On Quit** is enabled in Settings → Emulation, this option is 
 
 ## Multi-Disc Games
 
-> [!WARNING]
-> I am not happy with the current state of this feature and expect it to change.
+Drop the disc files into the platform's ROM folder. On the next scan, Cannoli moves them into a per-game subfolder, generates an `.m3u`, and shows a single entry in the game list.
 
-Cannoli automatically detects and bundles multi-disc games. If your ROM files follow standard naming conventions, they'll appear as a single entry in the game list.
+The following disc markers are recognized: `(Disc 1)`, `(Disk 1)`, `(CD1)`. Any disc image format works.
 
-### Supported Naming
+When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc**.
 
-Cannoli recognizes the following patterns (case-insensitive):
-
-- `Game Name (Disc 1).bin`, `Game Name (Disc 2).bin`
-- `Game Name (Disk 1).iso`, `Game Name (Disk 2).iso`
-- `Game Name (CD1).img`, `Game Name (CD2).img`
-
-The disc markers are stripped from the display name, so you'll just see `Game Name` in the list.
-
-### M3U Playlists
-
-If an `.m3u` file exists with the same base name as the disc set, Cannoli will use it instead of auto-bundling. This is useful if you need to control disc order or if your files don't follow the standard naming.
-
-```
-Roms/PS/
-├── Final Fantasy VII (Disc 1).bin
-├── Final Fantasy VII (Disc 2).bin
-├── Final Fantasy VII (Disc 3).bin
-└── Final Fantasy VII.m3u        ← optional, takes priority
-```
-
-### Switching Discs
-
-When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc** to pick the right one.
-
-### Deleting a Multi-Disc Game
-
-Deleting a multi-disc entry from the context menu removes all disc files in the bundle at once.
+Deleting a multi-disc entry removes the entire bundle.
