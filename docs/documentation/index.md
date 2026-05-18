@@ -41,8 +41,7 @@ That's intentional. I don't want you in the menu. I want you playing games!
 
 ## What is Retro Emulation?
 
-Retro Emulation, or just emulation, is achieved by using software called an emulator to mimic gaming hardware. It allows your Android device
-to pretend to be a Game Boy, a SNES, a PlayStation, etc., and therefore lets you play games.
+Retro emulation is the process of using software called an emulator to mimic gaming hardware. This lets you play your old favorites on a much more modern phone, tablet, or dedicated handheld.
 
 ---
 
