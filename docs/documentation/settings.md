@@ -39,7 +39,7 @@ See the [Customization](customization.md#appearance) page for details.
     - **Name** - rename the controller.
     - **Reset Defaults** - revert your changes (only shown once you've edited the controller).
 - **Shortcuts:** Configure shortcut actions
-- **L1 / R1 Switches Platform:** Jump between platforms from the game list with the shoulder buttons.
+- **L1 / R1 Switches Platform:** Jump between platforms from the game list with the shoulder buttons. **Off** by default.
 - **Swap Play and Resume:** Make `Resume` the primary action on games with save states
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 - **Input Tester:** Open a screen that shows live controller input so you can verify button and axis mappings.
@@ -50,7 +50,7 @@ See the [Customization](customization.md#appearance) page for details.
 
 - **Core Mapping:** Choose which core or app handles each platform. Cannoli scans all installed RetroArch and RicottaArch packages to discover available cores and shows each option's source (Internal, RetroArch, RicottaArch, or Standalone). Press `Y` to filter the list by All, Missing, Internal, or External. Cores that are no longer installed show as "Missing."
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch.
-- **RetroArch Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package.
+- **Installed Cores:** Lists all cores found in the selected RetroArch/RicottaArch package.
 - **Always Save On Quit:** When enabled, quitting a game from the In-Game Menu automatically saves state before exiting, and the Quit option is labeled "Save and Quit."
 
 > [!WARNING]
@@ -77,7 +77,7 @@ Opens the [Nonna's Kitchen](nonnas-kitchen.md) file manager.
 ## Advanced
 
 - **Logging:** Toggle detailed logging per subsystem - **ROM Scan**, **Input**, and **Game Session**. Logs are written to `Cannoli/Logs/`. Useful for diagnosing core, controller, or library issues.
-- **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch.
+- **RetroArch DIY Mode:** When enabled, Cannoli will not inject values into your configuration and will act like other launchers when they open RetroArch. **On** by default.
 - **Kitchen Code Bypass:** Skip the PIN prompt when opening Nonna's Kitchen.
 - **Release Channel:** Tells the updater what type of build you want
     - Choose from `Stable`, `Beta`, and `Test`

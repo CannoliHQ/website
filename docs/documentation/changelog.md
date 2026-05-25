@@ -7,7 +7,7 @@ SQLite-backed library.
 
 | Feature / Fix                                                                                                | Issue                                                   |
 |--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| Feat: Rebuilt input system with per-controller button mappings keyed by Bluetooth MAC                        | N/A                                                     |
+| Feat: Rebuilt input system                                                                                   | N/A                                                     |
 | Feat: Edit Buttons screen for per-platform / per-game remaps                                                 | N/A                                                     |
 | Feat: Per-controller settings (confirm button, exclude from gameplay) and rename from the Controllers screen | N/A                                                     |
 | Feat: Smoother video and audio with display refresh-rate matching and tighter frame pacing                   | N/A                                                     |
@@ -18,9 +18,16 @@ SQLite-backed library.
 | Feat: Background and Status Bar colors in Appearance > Colors                                                | [#153](https://github.com/CannoliHQ/cannoli/issues/153) |
 | Feat: Icon-only battery option for the status bar                                                            | [#154](https://github.com/CannoliHQ/cannoli/issues/154) |
 | Feat: Show filename and platform tags when duplicate game names exist                                        | [#77](https://github.com/CannoliHQ/cannoli/issues/77)   |
+| Feat: Auto-organize loose multi-disc sets into per-game subfolders with generated `.m3u`                     | [#117](https://github.com/CannoliHQ/cannoli/issues/117) |
+| Feat: Redesigned onboarding with a dedicated permissions step                                                | N/A                                                     |
+| Feat: inotify-driven library auto-rescan when ROMs change on disk                                            | N/A                                                     |
+| Feat: RA Locked filter on the achievement list and refreshed RA OSD timeouts                                 | N/A                                                     |
+| Feat: Honor the configured external ROMs folder in Nonna's Kitchen                                           | [#115](https://github.com/CannoliHQ/cannoli/issues/115) |
 | Fix: PS2 launch failed for NetherSX2 and ArmSX2                                                              | [#158](https://github.com/CannoliHQ/cannoli/issues/158) |
 | Fix: Stadia controller L2/R2 triggers detected as constant -1                                                | [#151](https://github.com/CannoliHQ/cannoli/issues/151) |
+| Fix: Disc swap for multi-disc PBP PlayStation games via the In-Game Menu                                     | [#78](https://github.com/CannoliHQ/cannoli/issues/78)   |
 | Fix: Show the save-state prompt when exiting IGM settings                                                    | [#16](https://github.com/CannoliHQ/cannoli/issues/16)   |
+| Fix: Mupen64Plus FZ splash screen handling                                                                   | [#149](https://github.com/CannoliHQ/cannoli/issues/149) |
 
 ---
 

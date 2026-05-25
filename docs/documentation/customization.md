@@ -56,14 +56,14 @@ Adds bottom padding to the launcher and in-game overlay when the device is held 
 
 ### Status Bar
 
-Control what appears in the status bar:
+Control what appears in the status bar. Icons render left-to-right in this order:
 
-- **Battery** - choose **Hide**, **Percent** (default), or **Icon**
+- **Update** - shown by default, indicates when an update is available
 - **Bluetooth** - shown by default
-- **Clock** - shown by default, can be set to 12 or 24 hour
 - **Wi-Fi** - shown by default
 - **VPN** - hidden by default
-- **Update** - shown by default, indicates when an update is available
+- **Battery** - choose **Hide**, **Percent** (default), or **Icon**
+- **Clock** - shown by default, can be set to 12 or 24 hour
 
 ### Text Size
 
@@ -170,7 +170,7 @@ Shaders apply visual effects to emulated games (scanlines, CRT masks, LCD grid p
 
 ### Bundled Shaders
 
-Cannoli ships with several shaders. They are copied into `Config/Shaders/` on launch:
+Cannoli ships with several shaders. They are copied into `Shaders/` on launch:
 
 - **crt-aperture** - CRT preset with aperture-grille mask
 - **crt-cannoli** - 5-pass CRT with phosphor mask, scanlines, glow, curvature, vignette, and an optional phosphor sweep
@@ -184,7 +184,7 @@ Cannoli ships with several shaders. They are copied into `Config/Shaders/` on la
 - **zfast-crt** - lightweight CRT preset optimized for low-power GPUs
 - **zfast-lcd** - lightweight LCD preset
 
-You can add your own `.glslp` presets to `Config/Shaders/`.
+You can add your own `.glslp` presets to `Shaders/`.
 
 ### Applying Shaders
 

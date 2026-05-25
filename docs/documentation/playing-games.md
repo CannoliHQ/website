@@ -99,7 +99,6 @@ Opens the in-game settings with six categories:
 - **Emulator** - Core-specific options (varies per platform)
 - **Buttons** - Remap the current game's controls. Mappings can be saved per platform or per game.
 - **Shortcuts** - Assign button combos to the following actions:
-    - Open In-Game Menu
     - Save State
     - Load State
     - Reset Game
@@ -111,7 +110,7 @@ Opens the in-game settings with six categories:
     - Open Guide
     - Open In-Game Menu
 - **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
-- **Info** - Displays the current core, ROM path, and save path
+- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, and RetroAchievements status, game ID, and detection details (when logged in)
 
 ### Reassign Players
 
@@ -119,13 +118,13 @@ Only appears when 2 or more controllers are connected. Lets you change which con
 
 ### Switch Disc
 
-Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
+Only appears for multi-disc games. With this row highlighted in the IGM, press `Left` / `Right` to cycle to the disc you want.
 
 See [Multi-Disc Games](#multi-disc-games) below for how disc bundling works.
 
 ### Reset
 
-Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within the one-minute grace period.
+Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within a 30-second grace period.
 
 ### Quit
 

@@ -12,6 +12,8 @@
 | Start  | Open context menu                   |
 | Select | Toggle reorder mode                 |
 
+In **Five Game Handheld** mode the buttons shift: `X` launches the highlighted game from its save state (when one exists), and `Y` opens Settings.
+
 ### Reorder Mode
 
 | Button          | Action             |
@@ -30,6 +32,7 @@
 |--------|----------------------------------------------------|
 | A      | Launch game or open folder                         |
 | X      | Resume game, if save state exists                  |
+| Y      | New collection (on the Collections list) or new child collection (inside a collection) |
 | L1     | Previous platform, [if enabled](settings.md#input) |
 | R1     | Next platform, [if enabled](settings.md#input)     |
 | Start  | Open context menu                                  |
@@ -83,10 +86,7 @@
 
 ### Switch Disc
 
-| Button       | Action              |
-|--------------|----------------------|
-| Left / Right | Pick disc            |
-| A            | Confirm disc switch  |
+For multi-disc games, a **Switch Disc** row appears in the In-Game Menu. With it highlighted, press `Left` / `Right` to cycle to the desired disc.
 
 ---
 
@@ -98,3 +98,14 @@
 | A      | Select color       |
 | B      | Cancel             |
 | X      | Open hex input     |
+
+---
+
+## Android TV
+
+On Android TV, Cannoli maps the TV remote's media keys to launcher navigation:
+
+- **Back** → Back
+- **Play / Pause** → Start
+- **Rewind** → West face button
+- **Fast-Forward** → North face button

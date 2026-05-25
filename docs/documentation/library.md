@@ -2,7 +2,7 @@
 
 ## Recently Played
 
-Cannoli tracks your 10 most recently played games. A `Recently Played` section appears on the main menu automatically
+Cannoli tracks your 15 most recently played games. A `Recently Played` section appears on the main menu automatically
 after you play your first game.
 
 To remove a game from the list, highlight it and press `Start` → **Remove From Recently Played**.
@@ -36,8 +36,8 @@ Collections let you group anything that Cannoli can launch: games, tools, and po
 
 To create a collection:
 
-- From the **Collections** screen, press `X`
-- Or highlight a game, press `Start` → `Manage Collections` → `X`
+- From the **Collections** screen, press `Y`
+- Or highlight a game, press `Start` → `Manage Collections` → `Y`
 
 Give it a name and press `Start` to save.
 
@@ -77,13 +77,15 @@ it in.
 
 Highlight a game and press `Start` to open the context menu. From here you can:
 
-- Favorite / unfavorite
-- Manage collection membership
-- Emulator override (use a different core or app for this game)
-- RA Game ID (manually set the RetroAchievements game ID)
-- Rename the game
-- Delete art (only shown if box art exists)
-- Delete the game
+- **Remove From Recently Played** (only on the Recently Played list)
+- **Add To Favorites** / **Remove From Favorites**
+- **Remove From Collection** (only when viewing a collection)
+- **Manage Collections**
+- **Emulator Override** - use a different core or app for this game
+- **RA Game ID** - manually set the RetroAchievements game ID
+- **Rename**
+- **Delete Art** (only shown if box art exists)
+- **Delete Game**
 
 ### Emulator Override
 
@@ -106,7 +108,7 @@ Cannoli has three content modes that control how the main menu functions.
 - Default: has all features for Cannoli's main menu enabled.
 - Collections Only: hides all platforms and hoists up collections to the main menu.
 - Five Game Handheld: implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?v=t2rMB5z9dQw)
-  concept. When enabled, a collection named `5GH` is created. Games in this collection will be hoisted up to the main menu.
+  concept. Pick any collection via the **5GH Collection** setting; the games in that collection are hoisted up to the main menu.
 
 > [!NOTE]
 > When two games share the same display name in a list, their filename tags are appended after the title to tell them apart. In cross-platform lists (Collections, Favorites, and the Five Game Handheld main menu) the platform is appended as well so you can see which version is which.

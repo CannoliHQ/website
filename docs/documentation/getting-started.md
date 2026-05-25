@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > **Android Version Compatibility ≥ 9**
 >
-> Cannoli requires Android 9 or newer. Development and testing happen on Android 11 and newer, so Android 9 and 10 may have rough edges.
+> Cannoli requires Android 9 (API 28) or newer.
 
 ## Installing Cannoli
 
@@ -15,7 +15,7 @@ You can snag the latest APK from the [GitHub Releases](https://github.com/Cannol
 
 After installing you will have the Cannoli app.
 
-On your first run you will be prompted for permission to manage all files.
+On your first run you will be prompted for permission to manage all files. Cannoli needs this `MANAGE_EXTERNAL_STORAGE` access to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
 
 Turn that on and hit the back arrow.
 
@@ -29,7 +29,11 @@ Do you want the Cannoli folder on internal storage, the SD Card (if present) or 
 
 Make your choice and hit continue. 
 
-Cannoli will then do some light housekeeping to make sure everything is put into place.
+Cannoli will then do some light housekeeping to make sure everything is put into place. You may see a progress screen for one of three phases:
+
+- **Updating your library** - migrating legacy data from a previous Cannoli install
+- **Setting up your library** - first-time scan when there's no existing database
+- **Refreshing library** - regular rescan that picks up any new content
 
 ---
 
@@ -44,14 +48,3 @@ While you are free to add content however you'd like, the easiest way is with [N
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
 
 After you add ROMs, Cannoli scans them on the next launch (or when returning from Nonna's Kitchen).
-
----
-
-## Android TV
-
-On Android TV, Cannoli maps the TV remote's media keys to launcher navigation:
-
-- **Back** → Back
-- **Play / Pause** → Start
-- **Rewind** → West face button
-- **Fast-Forward** → North face button
