@@ -16,7 +16,7 @@
     <path d="M8,8 H312 V440 Q312,452 300,452 H20 Q8,452 8,440 Z" fill="#1a8a8a"/>
 
     <!-- Screen bezel (squared top corners, thin teal frame visible on sides and top) -->
-    <rect x="12" y="12" width="296" height="250" fill="#111114"/>
+    <rect x="12" y="12" width="296" height="250" fill="#000000"/>
   </g>
 
   <!-- Screen glass reflection -->

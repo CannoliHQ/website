@@ -95,6 +95,18 @@
   min-width: 300px;
 }
 
+.hero-device::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 4%;
+  left: 9%;
+  width: 82%;
+  height: 48.5%;
+  background: #000;
+  pointer-events: none;
+}
+
 .device-frame {
   width: 100%;
   height: auto;
@@ -106,13 +118,15 @@
 
 .device-screen {
   position: absolute;
-  z-index: 1;
-  top: 4.1%;
-  left: 9.1%;
-  width: 81.8%;
-  height: 48.3%;
-  object-fit: cover;
-  border-radius: 6px;
+  z-index: 4;
+  top: 4.348%;
+  left: 9.375%;
+  width: 81.25%;
+  height: 47.826%;
+  object-fit: contain;
+  background: #000;
+  border: 0;
+  border-radius: 8px;
 }
 
 .device-screen-content {
@@ -126,7 +140,7 @@
   width: 81.8%;
   height: 48.3%;
   background: #000;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: opacity 0.6s ease;
 }
 
@@ -184,7 +198,7 @@
     left: 9.1%;
     width: 81.8%;
     height: 48.3%;
-    border-radius: 6px;
+    border-radius: 8px;
     background: #000;
     padding: 0;
     margin: 0;

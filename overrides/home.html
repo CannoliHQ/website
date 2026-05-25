@@ -29,7 +29,7 @@
       // Inline the SVG and apply random color
       var frameImg = document.querySelector('.device-frame');
       if (frameImg) {
-        fetch(frameImg.src)
+        fetch(frameImg.src, { cache: 'reload' })
           .then(function(r) { return r.text(); })
           .then(function(svgText) {
             svgText = svgText.replace(/#1a8a8a/g, color.body);
