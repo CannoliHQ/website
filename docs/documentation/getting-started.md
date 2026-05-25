@@ -13,27 +13,27 @@ You can snag the latest APK from the [GitHub Releases](https://github.com/Cannol
 
 ## First Launch
 
-After installing you will have the Cannoli app.
+After installing, you will have the Cannoli app.
 
-On your first run you will be prompted for permission to manage all files. Cannoli needs this `MANAGE_EXTERNAL_STORAGE` access to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
+On your first launch you will arrive at the setup screen. 
 
-Turn that on and hit the back arrow.
+![First Launch](../resources/img/getting-started/first_launch.png)
 
-![Allow file permissions](../resources/img/getting-started/first_launch_allow_file_permissions.png)
+Here you will be prompted for permission to manage all files and to select where to place the Cannoli Root Folder. 
+
+Cannoli needs this `MANAGE_EXTERNAL_STORAGE` access to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
+
+Let's grant this permission first.
+
+![Allow file permissions](../resources/img/getting-started/allow_file_permissions.png)
 
 Once enabled you will have the simplest setup question to answer.
 
 Do you want the Cannoli folder on internal storage, the SD Card (if present) or a custom location? Really that's it!
 
-![Cannoli Folder](../resources/img/getting-started/first_launch_cannoli_folder.png)
-
 Make your choice and hit continue. 
 
-Cannoli will then do some light housekeeping to make sure everything is put into place. You may see a progress screen for one of three phases:
-
-- **Updating your library** - migrating legacy data from a previous Cannoli install
-- **Setting up your library** - first-time scan when there's no existing database
-- **Refreshing library** - regular rescan that picks up any new content
+Cannoli will then do some light housekeeping to make sure everything is put into place.
 
 ---
 
