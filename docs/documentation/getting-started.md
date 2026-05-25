@@ -1,9 +1,9 @@
 # Getting Started
 
-> [!Important]
+> [!IMPORTANT]
 > **Android Version Compatibility ≥ 9**
 >
-> Cannoli requires Android 9 or newer. Development and testing happen on Android 11 and newer, so Android 9 and 10 may have rough edges.
+> Cannoli requires Android 9 (API 28) or newer.
 
 ## Installing Cannoli
 
@@ -13,23 +13,27 @@ You can snag the latest APK from the [GitHub Releases](https://github.com/Cannol
 
 ## First Launch
 
-After installing you will have the Cannoli app.
+After installing, you will have the Cannoli app.
 
-On your first run you will be prompted for permission to manage all files.
+On your first launch you will arrive at the setup screen. 
 
-Turn that on and hit the back arrow.
+![First Launch](../resources/img/getting-started/first_launch.png)
 
-![Allow file permissions](../resources/img/getting-started/first_launch_allow_file_permissions.png)
+Here you will be prompted for permission to manage all files and to select where to place the Cannoli Root Folder. 
+
+Cannoli needs this `MANAGE_EXTERNAL_STORAGE` access to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
+
+Let's grant this permission first.
+
+![Allow file permissions](../resources/img/getting-started/allow_file_permissions.png)
 
 Once enabled you will have the simplest setup question to answer.
 
 Do you want the Cannoli folder on internal storage, the SD Card (if present) or a custom location? Really that's it!
 
-![Cannoli Folder](../resources/img/getting-started/first_launch_cannoli_folder.png)
-
 Make your choice and hit continue. 
 
-Cannoli will then do some light housekeeping make sure everything is put into place.
+Cannoli will then do some light housekeeping to make sure everything is put into place.
 
 ---
 
@@ -43,15 +47,4 @@ While you are free to add content however you'd like, the easiest way is with [N
 
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
 
----
-
-## Android TV
-
-On Android TV, Cannoli maps the TV remote's media keys to launcher navigation:
-
-- **Back** → Back
-- **Play / Pause** → Start
-- **Rewind** → West face button
-- **Fast-Forward** → North face button
-
-This only applies to launcher navigation. In-game input goes through your usual profile bindings.
+After you add ROMs, Cannoli scans them on the next launch (or when returning from Nonna's Kitchen).

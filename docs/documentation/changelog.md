@@ -1,3 +1,36 @@
+## [v1.6.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.6.0)
+
+The "Fix All The Tech Debt" release!
+
+A good chunk of this release is internal rework, including a brand-new input system and a
+SQLite-backed library.
+
+| Feature / Fix                                                                                                | Issue                                                   |
+|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Feat: Rebuilt input system                                                                                   | N/A                                                     |
+| Feat: Edit Buttons screen for per-platform / per-game remaps                                                 | N/A                                                     |
+| Feat: Per-controller settings (confirm button, exclude from gameplay) and rename from the Controllers screen | N/A                                                     |
+| Feat: Smoother video and audio with display refresh-rate matching and tighter frame pacing                   | N/A                                                     |
+| Feat: SQLite-backed library with natural sorting                                                             | N/A                                                     |
+| Feat: Library scan progress shown on startup                                                                 | N/A                                                     |
+| Feat: Per-subsystem logging toggles (ROM Scan, Input, Game Session)                                          | N/A                                                     |
+| Feat: Reassign which controller is which player from the In-Game Menu                                        | [#155](https://github.com/CannoliHQ/cannoli/issues/155) |
+| Feat: Background and Status Bar colors in Appearance > Colors                                                | [#153](https://github.com/CannoliHQ/cannoli/issues/153) |
+| Feat: Icon-only battery option for the status bar                                                            | [#154](https://github.com/CannoliHQ/cannoli/issues/154) |
+| Feat: Show filename and platform tags when duplicate game names exist                                        | [#77](https://github.com/CannoliHQ/cannoli/issues/77)   |
+| Feat: Auto-organize loose multi-disc sets into per-game subfolders with generated `.m3u`                     | [#117](https://github.com/CannoliHQ/cannoli/issues/117) |
+| Feat: Redesigned onboarding with a dedicated permissions step                                                | N/A                                                     |
+| Feat: inotify-driven library auto-rescan when ROMs change on disk                                            | N/A                                                     |
+| Feat: RA Locked filter on the achievement list and refreshed RA OSD timeouts                                 | N/A                                                     |
+| Feat: Honor the configured external ROMs folder in Nonna's Kitchen                                           | [#115](https://github.com/CannoliHQ/cannoli/issues/115) |
+| Fix: PS2 launch failed for NetherSX2 and ArmSX2                                                              | [#158](https://github.com/CannoliHQ/cannoli/issues/158) |
+| Fix: Stadia controller L2/R2 triggers detected as constant -1                                                | [#151](https://github.com/CannoliHQ/cannoli/issues/151) |
+| Fix: Disc swap for multi-disc PBP PlayStation games via the In-Game Menu                                     | [#78](https://github.com/CannoliHQ/cannoli/issues/78)   |
+| Fix: Show the save-state prompt when exiting IGM settings                                                    | [#16](https://github.com/CannoliHQ/cannoli/issues/16)   |
+| Fix: Mupen64Plus FZ splash screen handling                                                                   | [#149](https://github.com/CannoliHQ/cannoli/issues/149) |
+
+---
+
 ## [v1.5.3](https://github.com/CannoliHQ/cannoli/releases/tag/v1.5.3)
 
 Quick fix for shader regression when removing slang support.

@@ -1,9 +1,7 @@
 ## Why isn't my platform showing up?
 
-By default, Cannoli only shows platforms that have ROMs. If a platform isn't appearing,
+Cannoli only shows platforms that have ROMs. If a platform isn't appearing,
 make sure you have at least one ROM in the correct directory for that platform.
-
-If you'd like to show empty folders, set `Empty Platforms` to `show` under Settings → Library.
 
 See [Directory Structure](directory-structure.md) for the expected folder layout
 and [Platforms](platforms.md) for everything that is supported.

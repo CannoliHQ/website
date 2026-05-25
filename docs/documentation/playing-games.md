@@ -13,7 +13,7 @@ Cannoli ships with a built-in libretro core runner. Press `A` on a game to play 
 
 Cannoli can also launch your games using RetroArch or a standalone emulator.
 
-You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Advanced → Core Mapping**.
+You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Emulation → Core Mapping**.
 
 The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
 
@@ -42,7 +42,7 @@ Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is 
 
 When a controller disconnects or reconnects you'll see a notification on screen.
 
-If 2 or more controllers are connected, the IGM Controls screen will show a controller picker so you can configure each one individually.
+If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
 
 ---
 
@@ -97,9 +97,8 @@ Opens the in-game settings with six categories:
 
 - **Video** - Screen scaling, sharpness, shaders, overlays
 - **Emulator** - Core-specific options (varies per platform)
-- **Controls** - Manage and assign button profiles
+- **Buttons** - Remap the current game's controls. Mappings can be saved per platform or per game.
 - **Shortcuts** - Assign button combos to the following actions:
-    - Open In-Game Menu
     - Save State
     - Load State
     - Reset Game
@@ -110,18 +109,22 @@ Opens the in-game settings with six categories:
     - Hold Fast Forward
     - Open Guide
     - Open In-Game Menu
-- **Advanced** - Controller type (core dependant), fast-forward speed, debug HUD
-- **Info** - Displays the current core, ROM path, and save path
+- **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
+- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, and RetroAchievements status, game ID, and detection details (when logged in)
+
+### Reassign Players
+
+Only appears when 2 or more controllers are connected. Lets you change which controller is which player, including swapping two players' seats.
 
 ### Switch Disc
 
-Only appears for multi-disc games. Use `Left` / `Right` to pick the disc, then `A` to confirm.
+Only appears for multi-disc games. With this row highlighted in the IGM, press `Left` / `Right` to cycle to the disc you want.
 
 See [Multi-Disc Games](#multi-disc-games) below for how disc bundling works.
 
 ### Reset
 
-Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within the one-minute grace period.
+Resets the game to its initial state. Return to the IGM and press `X` to undo the reset within a 30-second grace period.
 
 ### Quit
 
@@ -133,37 +136,10 @@ If **Always Save On Quit** is enabled in Settings → Emulation, this option is 
 
 ## Multi-Disc Games
 
-> [!WARNING]
-> I am not happy with the current state of this feature and expect it to change.
+Drop the disc files into the platform's ROM folder. On the next scan, Cannoli moves them into a per-game subfolder, generates an `.m3u`, and shows a single entry in the game list.
 
-Cannoli automatically detects and bundles multi-disc games. If your ROM files follow standard naming conventions, they'll appear as a single entry in the game list.
+The following disc markers are recognized: `(Disc 1)`, `(Disk 1)`, `(CD1)`. Any disc image format works.
 
-### Supported Naming
+When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc**.
 
-Cannoli recognizes the following patterns (case-insensitive):
-
-- `Game Name (Disc 1).bin`, `Game Name (Disc 2).bin`
-- `Game Name (Disk 1).iso`, `Game Name (Disk 2).iso`
-- `Game Name (CD1).img`, `Game Name (CD2).img`
-
-The disc markers are stripped from the display name, so you'll just see `Game Name` in the list.
-
-### M3U Playlists
-
-If an `.m3u` file exists with the same base name as the disc set, Cannoli will use it instead of auto-bundling. This is useful if you need to control disc order or if your files don't follow the standard naming.
-
-```
-Roms/PS/
-├── Final Fantasy VII (Disc 1).bin
-├── Final Fantasy VII (Disc 2).bin
-├── Final Fantasy VII (Disc 3).bin
-└── Final Fantasy VII.m3u        ← optional, takes priority
-```
-
-### Switching Discs
-
-When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc** to pick the right one.
-
-### Deleting a Multi-Disc Game
-
-Deleting a multi-disc entry from the context menu removes all disc files in the bundle at once.
+Deleting a multi-disc entry removes the entire bundle.

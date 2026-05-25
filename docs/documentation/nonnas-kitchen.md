@@ -35,6 +35,6 @@ Once connected you'll see options to manage content across all supported platfor
 - **Box Art:** Upload artwork for your games
 - **Guides:** Upload `.pdf`, `.txt`, `.png` or `.jpg / .jpeg` files that you can view while in-game
 - **ROMs:** Upload, rename, and delete games
-- **Save States:** Upload and download emulator save states (coming soon)
+- **Save States:** Upload and download emulator save states
 - **Saves:** Upload and download in-game save files
 - **Wallpapers:** Upload background images for the launcher
