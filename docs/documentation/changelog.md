@@ -5,7 +5,7 @@ Just a quickie to hold you over while I cook more stuff up.
 | Feature / Fix                                                                                           | Issue                                                   |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | Feat: PICO-8 support, [standalone](https://github.com/Macs75/pico8-android) and requires PICO-8 License | [#135](https://github.com/CannoliHQ/cannoli/issues/135) |
-| Feat: Press and hold the back/home button to save and exit                                              | [#168](https://github.com/CannoliHQ/cannoli/issues/168) |
+| Feat: Press and hold shortcut to save and exit                                                          | [#168](https://github.com/CannoliHQ/cannoli/issues/168) |
 | Fix: Core runner crash on PCE when pressing the menu button                                             | [#172](https://github.com/CannoliHQ/cannoli/issues/172) |
 
 ---
