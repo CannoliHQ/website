@@ -264,15 +264,22 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
 ### Other
 
-| Platform      | Folder          | Core / App   |                                                                                                 |
-|---------------|-----------------|--------------|------------------------------------------------------------------------------------------------:|
-| Intellivision | `INTELLIVISION` | `freeintv`   | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | `bluemsx`    | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | `gearcoleco` | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | ColEm Deluxe |                                                                  :material-android:{ .android } |
-| ColecoVision  | `COLECOVISION`  | ColEm        |                                                                  :material-android:{ .android } |
-| ColecoVision  | `COLECOVISION`  | MSX.emu      |                                                                  :material-android:{ .android } |
-| Vectrex       | `VECTREX`       | `vecx`       |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| Platform      | Folder          | Core / App                                               |                                                                                                 |
+|---------------|-----------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------:|
+| Intellivision | `INTELLIVISION` | `freeintv`                                               | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| ColecoVision  | `COLECOVISION`  | `bluemsx`                                                | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| ColecoVision  | `COLECOVISION`  | `gearcoleco`                                             | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| ColecoVision  | `COLECOVISION`  | ColEm Deluxe                                             |                                                                  :material-android:{ .android } |
+| ColecoVision  | `COLECOVISION`  | ColEm                                                    |                                                                  :material-android:{ .android } |
+| ColecoVision  | `COLECOVISION`  | MSX.emu                                                  |                                                                  :material-android:{ .android } |
+| Vectrex       | `VECTREX`       | `vecx`                                                   |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| PICO-8        | `PICO8`         | [pico8-android](https://github.com/Macs75/pico8-android) |                                :material-chip:{ .bios-required } :material-android:{ .android } |
+
+> [!IMPORTANT]
+> The standalone PICO-8 app requires the official [PICO-8](https://www.lexaloffle.com/pico-8.php) software as its "BIOS."
+>
+> Open the app and follow the onboarding steps to configure it with your own purchased copy of PICO-8.
+
 
 ### Computer
 
