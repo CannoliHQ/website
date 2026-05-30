@@ -1,3 +1,19 @@
+## [v1.7.3](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.3)
+
+| Feature / Fix                                                       | Issue |
+|---------------------------------------------------------------------|-------|
+| Fix: Battery indicator hidden on Android TV builds (e.g. GammaOS)   | N/A   |
+
+---
+
+## [v1.7.2](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.2)
+
+| Feature / Fix                                              | Issue |
+|------------------------------------------------------------|-------|
+| Fix: Slow PICO-8 cart list when scanning hundreds of carts | N/A   |
+
+---
+
 ## [v1.7.1](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.1)
 
 | Feature / Fix                                          | Issue                                                   |
