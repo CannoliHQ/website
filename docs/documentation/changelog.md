@@ -1,9 +1,9 @@
 ## [v1.7.5](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.5)
 
-| Feature / Fix                                          | Issue                                                   |
-|--------------------------------------------------------|---------------------------------------------------------|
-| Feat: Rename app shortcuts in Tools/Ports              | [#177](https://github.com/CannoliHQ/cannoli/issues/177) |
-| Fix: Archived-game saves now keyed on the library name | N/A                                                     |
+| Feature / Fix                                                                           | Issue                                                   |
+|-----------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Feat: Rename app shortcuts in Tools/Ports                                               | [#177](https://github.com/CannoliHQ/cannoli/issues/177) |
+| Fix: Game saves / save states to be keyed on display name rather than archived filename | N/A                                                     |
 
 ---
 
