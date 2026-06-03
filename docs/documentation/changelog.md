@@ -1,3 +1,13 @@
+## [v1.7.4](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.4)
+
+| Feature / Fix                                              | Issue                                                   |
+|------------------------------------------------------------|---------------------------------------------------------|
+| Feat: Rename platforms to their short code in the launcher | [#179](https://github.com/CannoliHQ/cannoli/issues/179) |
+| Fix: USB DAC crash by pinning Oboe output to 48kHz         | [#178](https://github.com/CannoliHQ/cannoli/issues/178) |
+| Fix: Storage wizard appearing before SD mount completes    | [#174](https://github.com/CannoliHQ/cannoli/issues/174) |
+
+---
+
 ## [v1.7.3](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.3)
 
 | Feature / Fix                                                       | Issue |
