@@ -1,3 +1,12 @@
+## [v1.7.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.6)
+
+| Feature / Fix                    | Issue                                                   |
+|----------------------------------|---------------------------------------------------------|
+| Fix: RetroArch DIY Mode behavior | N/A                                                     |
+| Fix: Vita3K `.psvita` files      | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
+
+---
+
 ## [v1.7.5](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.5)
 
 | Feature / Fix                                                                           | Issue                                                   |
@@ -19,9 +28,9 @@
 
 ## [v1.7.3](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.3)
 
-| Feature / Fix                                                       | Issue |
-|---------------------------------------------------------------------|-------|
-| Fix: Battery indicator hidden on Android TV builds (e.g. GammaOS)   | N/A   |
+| Feature / Fix                                                     | Issue |
+|-------------------------------------------------------------------|-------|
+| Fix: Battery indicator hidden on Android TV builds (e.g. GammaOS) | N/A   |
 
 ---
 
