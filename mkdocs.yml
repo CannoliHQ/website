@@ -1,14 +1,14 @@
 site_name: Cannoli
 docs_dir: docs
 site_url: https://cannoli.dev/
-site_description: Cannoli_OS Documentation
+site_description: Sweet Retro Gaming on Android
 repo_url: https://github.com/CannoliHQ/cannoli
 repo_name: CannoliHQ/cannoli
 theme:
   name: material
   custom_dir: overrides/
   logo: resources/img/logo.svg
-  favicon: resources/img/favicon.svg
+  favicon: resources/img/favicon.png
   language: en
   palette:
     scheme: slate
@@ -20,8 +20,17 @@ theme:
     - search.suggest
     - content.code.copy
 
+hooks:
+  - hooks/social_fonts.py
+
 plugins:
   - search
+  - social:
+      cards_layout_dir: layouts
+      cards_layout: cannoli
+      cards_layout_options:
+        background_color: "#4a9ab5"
+        color: "#000000"
   - gh-admonitions
   - glightbox:
       auto_caption: false

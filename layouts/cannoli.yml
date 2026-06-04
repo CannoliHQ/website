@@ -1,0 +1,106 @@
+definitions:
+
+  - &background_color >-
+    {%- if layout.background_color -%}
+      {{ layout.background_color }}
+    {%- else -%}
+      "#1f4f63"
+    {%- endif -%}
+
+  - &color >-
+    {%- if layout.color -%}
+      {{ layout.color }}
+    {%- else -%}
+      "#ffffff"
+    {%- endif -%}
+
+  - &font_family >-
+    {%- if layout.font_family -%}
+      {{ layout.font_family }}
+    {%- else -%}
+      MPlus1c-NerdFont
+    {%- endif -%}
+
+  - &site_name >-
+    {{ config.site_name }}
+
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ config.site_name }}
+    {%- endif -%}
+
+  - &brand_label >-
+    Cannoli Documentation
+
+  - &page_title >-
+    {%- if layout.title -%}
+      {{ layout.title }}
+    {%- else -%}
+      {{ page.meta.get("title", page.title) }}
+    {%- endif -%}
+
+  - &page_description >-
+    {%- if layout.description -%}
+      {{ layout.description }}
+    {%- else -%}
+      {{ page.meta.get("description", config.site_description) | x }}
+    {%- endif -%}
+
+  - &logo >-
+    {%- if layout.logo -%}
+      {{ layout.logo }}
+    {%- else -%}
+      {{ config.docs_dir }}/resources/img/logo_plated.svg
+    {%- endif -%}
+
+tags:
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+size: { width: 1200, height: 630 }
+layers:
+
+  - background:
+      color: *background_color
+
+  - size: { width: 400, height: 306 }
+    offset: { x: 760, y: 260 }
+    background:
+      image: *logo
+
+  - size: { width: 1140, height: 240 }
+    offset: { x: 60, y: 130 }
+    typography:
+      content: *page_title
+      align: start
+      overflow: shrink
+      color: *color
+      line:
+        amount: 2
+        height: 1.0
+      font:
+        family: *font_family
+        style: Bold
+
+  - size: { width: 600, height: 48 }
+    offset: { x: 60, y: 542 }
+    typography:
+      content: *brand_label
+      align: start
+      color: *color
+      font:
+        family: *font_family
+        style: Bold
