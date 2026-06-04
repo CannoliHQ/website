@@ -1,3 +1,12 @@
+## [v1.7.7](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.7)
+
+| Feature / Fix                                                              | Issue                                                   |
+|----------------------------------------------------------------------------|---------------------------------------------------------|
+| Fix: Renaming a game no longer copies the entire ROM file                  | [#180](https://github.com/CannoliHQ/cannoli/issues/180) |
+| Fix: Suppress "Game list updated" OSD after launcher-driven renames/delete | N/A                                                     |
+
+---
+
 ## [v1.7.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.6)
 
 | Feature / Fix                                   | Issue                                                    |
