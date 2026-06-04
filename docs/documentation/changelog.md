@@ -1,9 +1,9 @@
 ## [v1.7.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.6)
 
-| Feature / Fix                    | Issue                                                   |
-|----------------------------------|---------------------------------------------------------|
-| Fix: RetroArch DIY Mode behavior | N/A                                                     |
-| Fix: Vita3K `.psvita` files      | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
+| Feature / Fix                                   | Issue                                                    |
+|-------------------------------------------------|----------------------------------------------------------|
+| Fix: RetroArch DIY Mode behavior                | N/A                                                      |
+| Feature: Add support for Vita3K `.psvita` files | `[#165](https://github.com/CannoliHQ/cannoli/issues/165) |
 
 ---
 
