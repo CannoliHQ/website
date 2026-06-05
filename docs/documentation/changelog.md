@@ -213,8 +213,8 @@ Forgot to update the credits for bundled shaders and the new logo!
 | Feat: [Recently Played](library.md#recently-played) list with show/hide toggle and clear option                      | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
 | Feat: [Title color](customization.md#colors) setting                                                                 | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
 | Feat: Platform specific [button legends](settings.md#input) (Plumber, Redmond, Shapes)                               | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
-| Feat: [Filter file extensions](directory-structure.md#config-files) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
-| Feat: Ship [`arcade_map.txt`](directory-structure.md#config-files) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
+| Feat: [Filter file extensions](directory-structure.md#config-folder-reference) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
+| Feat: Ship [`arcade_map.txt`](directory-structure.md#config-folder-reference) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
 | Feat: Organize Config folder                                                                                         | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
 
 ---

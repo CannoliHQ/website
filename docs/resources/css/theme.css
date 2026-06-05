@@ -362,6 +362,13 @@
   border-spacing: 0;
 }
 
+/* Config reference tables: first column hugs its longest item */
+.config-tables td:first-child,
+.config-tables th:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
 .md-typeset .twemoji svg {
   vertical-align: middle;
 }
