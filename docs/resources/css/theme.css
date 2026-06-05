@@ -362,6 +362,13 @@
   border-spacing: 0;
 }
 
+/* Config reference tables: first column hugs its longest item */
+.config-tables td:first-child,
+.config-tables th:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
 .md-typeset .twemoji svg {
   vertical-align: middle;
 }
@@ -598,4 +605,30 @@
 .platform-filter.active {
   background: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
+}
+
+.md-typeset .platform-detail h1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.md-typeset .platform-detail h1 + table {
+  margin-top: 0.25rem !important;
+}
+
+.md-typeset .platform-detail table:not([class]) {
+  margin-bottom: 0 !important;
+}
+
+.md-typeset .platform-detail table:not([class]) + * {
+  margin-top: 0.25rem !important;
+}
+
+.md-typeset .platform-detail .platform-legend {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem !important;
+}
+
+.md-typeset .platform-detail .platform-legend p {
+  margin: 0 !important;
 }

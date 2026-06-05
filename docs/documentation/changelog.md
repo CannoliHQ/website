@@ -9,10 +9,10 @@
 
 ## [v1.7.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.6)
 
-| Feature / Fix                                   | Issue                                                    |
-|-------------------------------------------------|----------------------------------------------------------|
-| Fix: RetroArch DIY Mode behavior                | N/A                                                      |
-| Feature: Add support for Vita3K `.psvita` files | `[#165](https://github.com/CannoliHQ/cannoli/issues/165) |
+| Feature / Fix                                   | Issue                                                   |
+|-------------------------------------------------|---------------------------------------------------------|
+| Fix: RetroArch DIY Mode behavior                | N/A                                                     |
+| Feature: Add support for Vita3K `.psvita` files | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
 
 ---
 
@@ -66,7 +66,7 @@ Just a quickie to hold you over while I cook more stuff up.
 | Feature / Fix                                                                                           | Issue                                                   |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | Feat: PICO-8 support, [standalone](https://github.com/Macs75/pico8-android) and requires PICO-8 License | [#135](https://github.com/CannoliHQ/cannoli/issues/135) |
-| Feat: Press and hold shortcu to save and exit                                                           | [#168](https://github.com/CannoliHQ/cannoli/issues/168) |
+| Feat: Press and hold shortcut to save and exit                                                          | [#168](https://github.com/CannoliHQ/cannoli/issues/168) |
 | Fix: Core runner crash on PCE when pressing the menu button                                             | [#172](https://github.com/CannoliHQ/cannoli/issues/172) |
 
 ---
@@ -213,8 +213,8 @@ Forgot to update the credits for bundled shaders and the new logo!
 | Feat: [Recently Played](library.md#recently-played) list with show/hide toggle and clear option                      | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
 | Feat: [Title color](customization.md#colors) setting                                                                 | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
 | Feat: Platform specific [button legends](settings.md#input) (Plumber, Redmond, Shapes)                               | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
-| Feat: [Filter file extensions](directory-structure.md#config-files) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
-| Feat: Ship [`arcade_map.txt`](directory-structure.md#config-files) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
+| Feat: [Filter file extensions](directory-structure.md#config-folder-reference) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
+| Feat: Ship [`arcade_map.txt`](directory-structure.md#config-folder-reference) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
 | Feat: Organize Config folder                                                                                         | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
 
 ---

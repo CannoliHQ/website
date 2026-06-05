@@ -5,19 +5,17 @@
 >
 > Things will settle down in the near future but for now expect experimentation and change as nothing is bolted down.
 
-## As seen on Retro Game Corps!
-
-<div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/ihGr_rzpS0o?si=Z5ehHWAdRKKisDxr" title="Retro Game Corps - Cannoli" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
----
-
 ## What is Cannoli?
 
 Cannoli is an opinionated setup for Retro Emulation on Android.
 
 Android has a reputation for being tedious to set up. Cannoli looks to change this.
+
+---
+
+## What is Retro Emulation?
+
+Retro emulation is the process of using software called an emulator to mimic gaming hardware. This lets you play your old favorites on a much more modern phone, tablet, or dedicated handheld.
 
 ---
 
@@ -36,12 +34,6 @@ That's intentional. I don't want you in the menu. I want you playing games!
   <a href="../resources/img/docs_home/favorites.png" class="glightbox" data-description="Favorites with an Android Game mixed with Roms"><img src="../resources/img/docs_home/favorites.png" alt="Favorites"></a>
   <a href="../resources/img/docs_home/igm.png" class="glightbox" data-description="Built-in Core Runner's In-Game Menu"><img src="../resources/img/docs_home/igm.png" alt="In-Game Menu"></a>
 </div>
-
----
-
-## What is Retro Emulation?
-
-Retro emulation is the process of using software called an emulator to mimic gaming hardware. This lets you play your old favorites on a much more modern phone, tablet, or dedicated handheld.
 
 ---
 
@@ -72,3 +64,7 @@ If you ask for these anywhere (Discord, GitHub, etc.), say goodbye to your knuck
 ## Don't be a stranger!
 
 Come hang out with the rest of the Holy Cannoli on [Discord](https://discord.gg/QKTjTQ796q)!
+
+---
+
+[Ready to get started?](REPLACE_ME){ .md-button .md-button--primary }

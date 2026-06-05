@@ -61,8 +61,7 @@ markdown_extensions:
 
 nav:
   - Introduction: documentation/index.md
-  - Features: documentation/features.md
-  - In The News: documentation/coverage.md
+  - Project Philosophy: documentation/philosophy.md
   - Getting Started: documentation/getting-started.md
   - User Guide:
     - Library: documentation/library.md
@@ -81,7 +80,7 @@ nav:
     - Button Reference: documentation/button-reference.md
     - License: documentation/license.md
     - Credits: documentation/credits.md
-  - FAQ: documentation/faq.md
+  - In The Wild: documentation/coverage.md
   - Changelog: documentation/changelog.md
 
 copyright: "&copy; 2026 Cannoli"
