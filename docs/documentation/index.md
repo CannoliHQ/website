@@ -64,7 +64,3 @@ If you ask for these anywhere (Discord, GitHub, etc.), say goodbye to your knuck
 ## Don't be a stranger!
 
 Come hang out with the rest of the Holy Cannoli on [Discord](https://discord.gg/QKTjTQ796q)!
-
----
-
-[Ready to get started?](REPLACE_ME){ .md-button .md-button--primary }
