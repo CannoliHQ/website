@@ -1,18 +1,16 @@
 ## Supported Platforms
 
-Cannoli supports a wide range of retro platforms out of the box.
+Cannoli supports a wide range of retro platforms out of the box. Pick a platform below for the full list of supported cores, RetroArch cores, and standalone Android apps.
 
-The **Folder** column shows the accepted directory name for your ROMs.
+The **Folder** column shows the accepted directory name for your ROMs. Place your ROM files in `Cannoli/Roms/{Folder}`.
 
-Place your ROM files in `Cannoli/Roms/{Folder}`.
-
-For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
+For example, Game Boy Advance ROMs go in `Cannoli/Roms/GBA`.
 
 ---
 
 :material-check-bold:{ .shipped } Bundled with Cannoli and handled by the built-in core runner
 
-:custom-retroarch:{ .retroarch } Requires RetroArch and the appropriate core downloaded
+:custom-retroarch:{ .retroarch } Available as a RetroArch core
 
 :material-android:{ .android } Requires a standalone Android app
 
@@ -30,268 +28,107 @@ For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
   <button class="platform-filter" data-filter="standalone">Standalone</button>
 </div>
 
+<!-- When adding a platform or core, update BOTH the index row tags below AND the corresponding platforms/{slug}.md detail page. -->
+
 ### Nintendo
 
-| Platform                            | Folder       | Core / App          |                                                                                                                                   |
-|-------------------------------------|--------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------:|
-| Nintendo Entertainment System       | `NES`        | `nestopia`          |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo Entertainment System       | `NES`        | `fceumm`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo Entertainment System       | `NES`        | `mesen`             |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo Entertainment System       | `NES`        | `quicknes`          |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo Entertainment System       | `NES`        | NES.emu             |                                                                                                    :material-android:{ .android } |
-| Nintendo Entertainment System       | `NES`        | iNES                |                                                                                                    :material-android:{ .android } |
-| Nintendo Entertainment System       | `NES`        | Nesoid              |                                                                                                    :material-android:{ .android } |
-| Famicom Disk System                 | `FDS`        | `nestopia`          | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Famicom Disk System                 | `FDS`        | `fceumm`            |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Famicom Disk System                 | `FDS`        | `mesen`             |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Famicom Disk System                 | `FDS`        | NES.emu             |                                                                                                    :material-android:{ .android } |
-| Famicom Disk System                 | `FDS`        | iNES                |                                                                                                    :material-android:{ .android } |
-| Famicom Disk System                 | `FDS`        | Nesoid              |                                                                                                    :material-android:{ .android } |
-| Game Boy                            | `GB`         | `gambatte`          |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | `sameboy`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | `gearboy`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | `mgba`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | `tgbdual`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | `vbam`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | GBC.emu             |                                                                                                    :material-android:{ .android } |
-| Game Boy                            | `GB`         | My OldBoy!          |                                                                                                    :material-android:{ .android } |
-| Game Boy                            | `GB`         | Pizza Boy GBC       |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Game Boy                            | `GB`         | Linkboy             |                                                                                                    :material-android:{ .android } |
-| Game Boy Color                      | `GBC`        | `gambatte`          |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | `sameboy`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | `gearboy`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | `mgba`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | `tgbdual`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | `vbam`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | GBC.emu             |                                                                                                    :material-android:{ .android } |
-| Game Boy Color                      | `GBC`        | My OldBoy!          |                                                                                                    :material-android:{ .android } |
-| Game Boy Color                      | `GBC`        | Pizza Boy GBC       |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Game Boy Color                      | `GBC`        | Linkboy             |                                                                                                    :material-android:{ .android } |
-| Super Nintendo Entertainment System | `SNES`       | `snes9x`            |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Super Nintendo Entertainment System | `SNES`       | `bsnes`             |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Super Nintendo Entertainment System | `SNES`       | `mesen-s`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Super Nintendo Entertainment System | `SNES`       | `snes9x2010`        |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Super Nintendo Entertainment System | `SNES`       | `mednafen_snes`     |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Super Nintendo Entertainment System | `SNES`       | Snes9x EX+          |                                                                                                    :material-android:{ .android } |
-| Virtual Boy                         | `VIRTUALBOY` | `mednafen_vb`       |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Virtual Boy                         | `VIRTUALBOY` | Virtual Virtual Boy |                                                                                                    :material-android:{ .android } |
-| Nintendo 64                         | `N64`        | `mupen64plus_next`  |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo 64                         | `N64`        | `parallel_n64`      |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo 64                         | `N64`        | M64Plus FZ Pro      |                                                                                                    :material-android:{ .android } |
-| Nintendo 64                         | `N64`        | M64Plus FZ          |                                                                                                    :material-android:{ .android } |
-| Nintendo 64                         | `N64`        | Mupen64Plus AE      |                                                                                                    :material-android:{ .android } |
-| Game Boy Advance                    | `GBA`        | `mgba`              |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | `gpsp`              |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | `vba_next`          |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | `vbam`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | `mednafen_gba`      |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | GBA.emu             |                                                                                                    :material-android:{ .android } |
-| Game Boy Advance                    | `GBA`        | My Boy!             |                                                                                                    :material-android:{ .android } |
-| Game Boy Advance                    | `GBA`        | Pizza Boy GBA       |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Game Boy Advance                    | `GBA`        | SkyEmu              |                                                                                                    :material-android:{ .android } |
-| Game Boy Advance                    | `GBA`        | NooDS               |                                                                                                    :material-android:{ .android } |
-| Game Boy Advance                    | `GBA`        | Linkboy             |                                                                                                    :material-android:{ .android } |
-| Pokemon Mini                        | `POKEMINI`   | `pokemini`          |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | `melonds`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | `melondsds`         |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | `desmume`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | `desmume2015`       |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | melonDS             |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | melonDS Nightly     |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Nintendo DS                         | `NDS`        | DraStic             |                                                                                                    :material-android:{ .android } |
-| Nintendo DS                         | `NDS`        | melonDS DS          |                                                                                                    :material-android:{ .android } |
-| Nintendo DS                         | `NDS`        | SkyEmu              |                                                                                                    :material-android:{ .android } |
-| Nintendo DS                         | `NDS`        | NooDS               |                                                                                                    :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | `citra`             |                                                                 :material-key:{ .keys-required } :custom-retroarch:{ .retroarch } |
-| Nintendo 3DS                        | `3DS`        | Azahar              |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | AzaharPlus          |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | Citra               |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | Citra Canary        |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | Lime3DS             |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | Mandarine           |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo 3DS                        | `3DS`        | Panda3DS            |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| GameCube                            | `GC`         | `dolphin`           |                                                                                                  :custom-retroarch:{ .retroarch } |
-| GameCube                            | `GC`         | Dolphin             |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| GameCube                            | `GC`         | Dolphin MMJR        |                                                                                                    :material-android:{ .android } |
-| GameCube                            | `GC`         | Dolphin MMJR2       |                                                                                                    :material-android:{ .android } |
-| Wii                                 | `WII`        | `dolphin`           |                                                                                                  :custom-retroarch:{ .retroarch } |
-| Wii                                 | `WII`        | Dolphin             |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Wii                                 | `WII`        | Dolphin MMJR        |                                                                                                    :material-android:{ .android } |
-| Wii                                 | `WII`        | Dolphin MMJR2       |                                                                                                    :material-android:{ .android } |
-| Wii U                               | `WIIU`       | Cemu                |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo Switch                     | `NSW`        | Citron              |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo Switch                     | `NSW`        | Kenji-NX            |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
-| Nintendo Switch                     | `NSW`        | Skyline             |                                                                   :material-key:{ .keys-required } :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Nintendo Entertainment System](platforms/nes.md) | `NES` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Famicom Disk System](platforms/fds.md) | `FDS` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Game Boy](platforms/gb.md) | `GB` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Game Boy Color](platforms/gbc.md) | `GBC` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Super Nintendo Entertainment System](platforms/snes.md) | `SNES` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Virtual Boy](platforms/virtualboy.md) | `VIRTUALBOY` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Nintendo 64](platforms/n64.md) | `N64` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Game Boy Advance](platforms/gba.md) | `GBA` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Pokemon Mini](platforms/pokemini.md) | `POKEMINI` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| [Nintendo DS](platforms/nds.md) | `NDS` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Nintendo 3DS](platforms/3ds.md) | `3DS` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-key:{ .keys-required } |
+| [GameCube](platforms/gc.md) | `GC` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Wii](platforms/wii.md) | `WII` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Wii U](platforms/wiiu.md) | `WIIU` | :material-android:{ .android } :material-key:{ .keys-required } |
+| [Nintendo Switch](platforms/nsw.md) | `NSW` | :material-android:{ .android } :material-key:{ .keys-required } |
 
 ### Sega
 
-| Platform      | Folder   | Core / App             |                                                                                                                                   |
-|---------------|----------|------------------------|----------------------------------------------------------------------------------------------------------------------------------:|
-| Sega SG-1000  | `SG1000` | `genesis_plus_gx`      |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega SG-1000  | `SG1000` | `gearsystem`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega SG-1000  | `SG1000` | `bluemsx`              |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega SG-1000  | `SG1000` | `genesis_plus_gx_wide` |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega SG-1000  | `SG1000` | MasterGear             |                                                                                                    :material-android:{ .android } |
-| Master System | `SMS`    | `genesis_plus_gx`      |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Master System | `SMS`    | `picodrive`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Master System | `SMS`    | `gearsystem`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Master System | `SMS`    | `smsplus`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Master System | `SMS`    | `genesis_plus_gx_wide` |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Master System | `SMS`    | MD.emu                 |                                                                                                    :material-android:{ .android } |
-| Master System | `SMS`    | MasterGear             |                                                                                                    :material-android:{ .android } |
-| Master System | `SMS`    | Pizza Boy SC           |                                                                                                    :material-android:{ .android } |
-| Sega Genesis  | `MD`     | `genesis_plus_gx`      |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Genesis  | `MD`     | `picodrive`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Genesis  | `MD`     | `blastem`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Genesis  | `MD`     | `genesis_plus_gx_wide` |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Genesis  | `MD`     | MD.emu                 |                                                                                                    :material-android:{ .android } |
-| Sega Genesis  | `MD`     | Pizza Boy SC           |                                                                                                    :material-android:{ .android } |
-| Sega CD       | `SEGACD` | `genesis_plus_gx`      | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega CD       | `SEGACD` | `picodrive`            |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega CD       | `SEGACD` | `genesis_plus_gx_wide` |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega CD       | `SEGACD` | MD.emu                 |                                                                                                    :material-android:{ .android } |
-| Sega CD       | `SEGACD` | Pizza Boy SC           |                                                                                                    :material-android:{ .android } |
-| Game Gear     | `GG`     | `genesis_plus_gx`      |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Gear     | `GG`     | `picodrive`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Gear     | `GG`     | `gearsystem`           |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Gear     | `GG`     | `smsplus`              |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Gear     | `GG`     | `genesis_plus_gx_wide` |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Game Gear     | `GG`     | MasterGear             |                                                                                                    :material-android:{ .android } |
-| Game Gear     | `GG`     | Pizza Boy SC           |                                                                                                    :material-android:{ .android } |
-| Sega 32X      | `32X`    | `picodrive`            |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | `mednafen_saturn`      |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | `kronos`               |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | `yabasanshiro`         |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | YabaSanshiro2 Pro      |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | YabaSanshiro2          |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| Sega Saturn   | `SATURN` | Saturn.emu             |                                                                                                    :material-android:{ .android } |
-| Dreamcast     | `DC`     | `flycast`              |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Dreamcast     | `DC`     | `flycast_gles2`        |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Dreamcast     | `DC`     | Flycast                |                                                                                                    :material-android:{ .android } |
-| Dreamcast     | `DC`     | Redream                |                                                                                                    :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Sega SG-1000](platforms/sg1000.md) | `SG1000` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Master System](platforms/sms.md) | `SMS` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Sega Genesis](platforms/md.md) | `MD` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Sega CD](platforms/segacd.md) | `SEGACD` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Game Gear](platforms/gg.md) | `GG` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Sega 32X](platforms/32x.md) | `32X` | :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| [Sega Saturn](platforms/saturn.md) | `SATURN` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Dreamcast](platforms/dc.md) | `DC` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 ### Sony
 
-| Platform      | Folder   | Core / App            |                                                                                                                                   |
-|---------------|----------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------:|
-| PlayStation   | `PS`     | `pcsx_rearmed`        |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | `swanstation`         | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | `mednafen_psx`        |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | `mednafen_psx_hw`     |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | `duckstation`         |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | DuckStation           |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| PlayStation   | `PS`     | ePSXe                 |                                                                                                    :material-android:{ .android } |
-| PlayStation   | `PS`     | FPse                  |                                                                                                    :material-android:{ .android } |
-| PlayStation   | `PS`     | FPse64                |                                                                                                    :material-android:{ .android } |
-| PSP           | `PSP`    | `ppsspp`              |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PSP           | `PSP`    | PPSSPP                |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| PSP           | `PSP`    | PPSSPP Gold           |                                                                       :material-android:{ .android } :material-trophy:{ .trophy } |
-| PlayStation 2 | `PS2`    | AetherSX2 / NetherSX2 |                                     :material-chip:{ .bios-required } :material-android:{ .android } :material-trophy:{ .trophy } |
-| PlayStation 2 | `PS2`    | ARMSX2                |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PlayStation 2 | `PS2`    | EmuCoreX              |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PlayStation 2 | `PS2`    | Play!                 |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PlayStation 3 | `PS3`    | aPS3e Premium         |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PlayStation 3 | `PS3`    | aPS3e                 |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PS Vita       | `PSVITA` | Vita3K                |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
-| PS Vita       | `PSVITA` | Vita3K ikhoeyZX fork  |                                                                  :material-chip:{ .bios-required } :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [PlayStation](platforms/ps.md) | `PS` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [PSP](platforms/psp.md) | `PSP` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [PlayStation 2](platforms/ps2.md) | `PS2` | :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [PlayStation 3](platforms/ps3.md) | `PS3` | :material-android:{ .android } :material-chip:{ .bios-required } |
+| [PS Vita](platforms/psvita.md) | `PSVITA` | :material-android:{ .android } :material-chip:{ .bios-required } |
 
 ### Atari
 
-| Platform     | Folder      | Core / App      |                                                                                                                                   |
-|--------------|-------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------:|
-| Atari 2600   | `ATARI2600` | `stella`        |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari 2600   | `ATARI2600` | `stella2014`    |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari 2600   | `ATARI2600` | 2600.emu        |                                                                                                    :material-android:{ .android } |
-| Atari 5200   | `ATARI5200` | `atari800`      |                                                                :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } |
-| Atari 5200   | `ATARI5200` | `a5200`         |                                                                :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } |
-| Atari 7800   | `ATARI7800` | `prosystem`     | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari Jaguar | `JAGUAR`    | `virtualjaguar` |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari Jaguar | `JAGUAR`    | IrataJaguar     |                                                                                                    :material-android:{ .android } |
-| Atari Lynx   | `LYNX`      | `handy`         | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari Lynx   | `LYNX`      | `mednafen_lynx` |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Atari Lynx   | `LYNX`      | Lynx.emu        |                                                                                                    :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Atari 2600](platforms/atari2600.md) | `ATARI2600` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Atari 5200](platforms/atari5200.md) | `ATARI5200` | :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } |
+| [Atari 7800](platforms/atari7800.md) | `ATARI7800` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Atari Jaguar](platforms/jaguar.md) | `JAGUAR` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Atari Lynx](platforms/lynx.md) | `LYNX` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 ### NEC
 
-| Platform             | Folder       | Core / App            |                                                                                                 |
-|----------------------|--------------|-----------------------|------------------------------------------------------------------------------------------------:|
-| PC Engine            | `PCE`        | `mednafen_pce_fast`   | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PC Engine            | `PCE`        | `mednafen_pce`        |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PC Engine            | `PCE`        | PCE.emu               |                                                                  :material-android:{ .android } |
-| PC Engine SuperGrafx | `SUPERGRAFX` | `mednafen_supergrafx` |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PC Engine SuperGrafx | `SUPERGRAFX` | `mednafen_pce`        |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PC Engine SuperGrafx | `SUPERGRAFX` | `geargrafx`           |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PC Engine SuperGrafx | `SUPERGRAFX` | PCE.emu               |                                                                  :material-android:{ .android } |
-| PC-FX                | `PCFX`       | `mednafen_pcfx`       | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [PC Engine](platforms/pce.md) | `PCE` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [PC Engine SuperGrafx](platforms/supergrafx.md) | `SUPERGRAFX` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [PC-FX](platforms/pcfx.md) | `PCFX` | :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 ### SNK
 
-| Platform             | Folder   | Core / App     |                                                                                                                                   |
-|----------------------|----------|----------------|----------------------------------------------------------------------------------------------------------------------------------:|
-| Neo Geo Pocket       | `NGP`    | `mednafen_ngp` |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo Pocket       | `NGP`    | `race`         |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo Pocket       | `NGP`    | NGP.emu        |                                                                                                    :material-android:{ .android } |
-| Neo Geo Pocket Color | `NGPC`   | `mednafen_ngp` |                                   :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo Pocket Color | `NGPC`   | `race`         |                                                                     :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo Pocket Color | `NGPC`   | NGP.emu        |                                                                                                    :material-android:{ .android } |
-| Neo Geo              | `NEOGEO` | `fbneo`        | :material-check-bold:{ .shipped } :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo              | `NEOGEO` | `geolith`      |                                   :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Neo Geo              | `NEOGEO` | NEO.emu        |                                                                                                    :material-android:{ .android } |
-| Neo Geo              | `NEOGEO` | MAME4droid     |                                                                                                    :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Neo Geo Pocket](platforms/ngp.md) | `NGP` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Neo Geo Pocket Color](platforms/ngpc.md) | `NGPC` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Neo Geo](platforms/neogeo.md) | `NEOGEO` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 ### Bandai
 
-| Platform         | Folder | Core / App       |                                                                                                 |
-|------------------|--------|------------------|------------------------------------------------------------------------------------------------:|
-| WonderSwan       | `WS`   | `mednafen_wswan` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| WonderSwan       | `WS`   | Swan.emu         |                                                                  :material-android:{ .android } |
-| WonderSwan Color | `WSC`  | `mednafen_wswan` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| WonderSwan Color | `WSC`  | Swan.emu         |                                                                  :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [WonderSwan](platforms/ws.md) | `WS` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [WonderSwan Color](platforms/wsc.md) | `WSC` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
 
 ### Arcade
 
-| Platform | Folder | Core / App      |                                                                                                 |
-|----------|--------|-----------------|------------------------------------------------------------------------------------------------:|
-| Arcade   | `MAME` | `mame2003_plus` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `MAME` | `mame`          |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `MAME` | `mame2000`      |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `MAME` | `mame2003`      |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `MAME` | `mame2010`      |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `FBN`  | `fbneo`         | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Arcade   | `MAME` | MAME4droid      |                                                                  :material-android:{ .android } |
-| Arcade   | `MAME` | NEO.emu         |                                                                  :material-android:{ .android } |
-| Arcade   | `MAME` | Flycast         |                                                                  :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Arcade (MAME)](platforms/mame.md) | `MAME` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
+| [Arcade (FBN)](platforms/fbn.md) | `FBN` | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
 
 ### Other
 
-| Platform      | Folder          | Core / App                                               |                                                                                                 |
-|---------------|-----------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------:|
-| Intellivision | `INTELLIVISION` | `freeintv`                                               | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | `bluemsx`                                                | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | `gearcoleco`                                             | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ColecoVision  | `COLECOVISION`  | ColEm Deluxe                                             |                                                                  :material-android:{ .android } |
-| ColecoVision  | `COLECOVISION`  | ColEm                                                    |                                                                  :material-android:{ .android } |
-| ColecoVision  | `COLECOVISION`  | MSX.emu                                                  |                                                                  :material-android:{ .android } |
-| Vectrex       | `VECTREX`       | `vecx`                                                   |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| PICO-8        | `PICO8`         | [pico8-android](https://github.com/Macs75/pico8-android) |                                :material-chip:{ .bios-required } :material-android:{ .android } |
-
-> [!IMPORTANT]
-> The standalone PICO-8 app requires the official [PICO-8](https://www.lexaloffle.com/pico-8.php) software as its "BIOS."
->
-> Open the app and follow the onboarding steps to configure it with your own purchased copy of PICO-8.
-
+| Platform | Folder | Tags |
+|---|---|---|
+| [Intellivision](platforms/intellivision.md) | `INTELLIVISION` | :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [ColecoVision](platforms/colecovision.md) | `COLECOVISION` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [Vectrex](platforms/vectrex.md) | `VECTREX` | :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| [PICO-8](platforms/pico8.md) | `PICO8` | :material-android:{ .android } :material-chip:{ .bios-required } |
 
 ### Computer
 
-| Platform                     | Folder    | Core / App    |                                                                                                 |
-|------------------------------|-----------|---------------|------------------------------------------------------------------------------------------------:|
-| Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae`        | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| Amiga, Amiga 500, Amiga 1200 | `AMIGA`   | `puae2021`    | :material-chip:{ .bios-required } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| DOS                          | `DOS`     | `dosbox_pure` |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| DOS                          | `DOS`     | `dosbox_core` |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| DOS                          | `DOS`     | `dosbox_svn`  |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ScummVM                      | `SCUMMVM` | `scummvm`     |                                   :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
-| ScummVM                      | `SCUMMVM` | ScummVM       |                                                                  :material-android:{ .android } |
+| Platform | Folder | Tags |
+|---|---|---|
+| [Amiga](platforms/amiga.md) | `AMIGA` | :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| [DOS](platforms/dos.md) | `DOS` | :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy } |
+| [ScummVM](platforms/scummvm.md) | `SCUMMVM` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy } |
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
