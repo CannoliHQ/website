@@ -1,11 +1,11 @@
 # Features
 
-## Here Are Cannoli's Design Goals { data-toc-label="Design Goals" }
+## Cannoli has four key design goals { data-toc-label="Design Goals" }
 
-- Play some damn games!
-- Minimal configuration
-- Easy to add new games
-- Basic features baked in
+- Bake in the essentials
+- Skip the tedious config
+- Make adding games painless
+- Get you to play some damn games!
 
 ---
 
@@ -44,7 +44,7 @@ Picking how Cannoli launches a game can be set by platform or by individual game
 
 **Content Management**
 
-- Android Apps / Games on Platform Screen
+- Android Apps / Games on Main Launcher Screen
 - [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more
 - [RomM integration](romm.md) (coming soon)
 
