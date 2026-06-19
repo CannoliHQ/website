@@ -70,6 +70,19 @@
 
 ---
 
+## Articles
+
+<div class="featured-grid">
+
+<div class="featured-card">
+<a href="https://blog.tobographic.xyz/posts/cannoli-brings-the-magic-of-minui-to-android/" class="featured-article-link">
+<h3>Cannoli Brings the Magic of MinUI to Android</h3>
+</a>
+<p class="featured-series">Shared by our friend Jacob on their blog <a href="https://blog.tobographic.xyz">technically tobographic</a></p>
+</div>
+
+</div>
+
 ## Testimonials
 
 <div class="featured-grid">
