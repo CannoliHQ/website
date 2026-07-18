@@ -1,3 +1,12 @@
+## [v1.7.8](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.8)
+
+| Feature / Fix                                                                 | Issue                                                   |
+|-------------------------------------------------------------------------------|---------------------------------------------------------|
+| Fix: Core runner crash on NGP/PCE from incorrect libretro env command numbers | N/A                                                     |
+| Feat: Storage logging option to record at boot                                | [#181](https://github.com/CannoliHQ/cannoli/issues/181) |
+
+---
+
 ## [v1.7.7](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.7)
 
 | Feature / Fix                                                              | Issue                                                   |
