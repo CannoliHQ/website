@@ -1,0 +1,115 @@
+{
+  "platforms": [
+    {
+      "id": "gb",
+      "name": "Game Boy",
+      "games": [
+        "tetris-rosy",
+        "balatro"
+      ]
+    },
+    {
+      "id": "gbc",
+      "name": "Game Boy Color",
+      "games": []
+    },
+    {
+      "id": "gba",
+      "name": "Game Boy Advance",
+      "games": []
+    },
+    {
+      "id": "nes",
+      "name": "Nintendo Entertainment System",
+      "games": [
+        "super-mario-bros",
+        "the-legend-of-zelda",
+        "metroid",
+        "mega-man-2",
+        "castlevania",
+        "contra",
+        "tecmo-2025",
+        "duck-hunt"
+      ]
+    },
+    {
+      "id": "snes",
+      "name": "Super Nintendo Entertainment System",
+      "games": []
+    },
+    {
+      "id": "gc",
+      "name": "GameCube",
+      "games": []
+    },
+    {
+      "id": "ps",
+      "name": "PlayStation",
+      "games": []
+    }
+  ],
+  "games": {
+    "tetris-rosy": {
+      "title": "Tetris Rosy Retrospection",
+      "platform": "gb"
+    },
+    "balatro": {
+      "title": "Balatro",
+      "platform": "gb"
+    },
+    "super-mario-bros": {
+      "title": "Super Mario Bros.",
+      "platform": "nes"
+    },
+    "the-legend-of-zelda": {
+      "title": "The Legend of Zelda",
+      "platform": "nes"
+    },
+    "metroid": {
+      "title": "Metroid",
+      "platform": "nes"
+    },
+    "mega-man-2": {
+      "title": "Mega Man 2",
+      "platform": "nes"
+    },
+    "castlevania": {
+      "title": "Castlevania",
+      "platform": "nes"
+    },
+    "contra": {
+      "title": "Contra",
+      "platform": "nes"
+    },
+    "tecmo-2025": {
+      "title": "Tecmo Super Bowl 2025",
+      "platform": "nes",
+      "boxart": "boxart/tecmo-super-bowl-2025.png"
+    },
+    "duck-hunt": {
+      "title": "Duck Hunt",
+      "platform": "nes"
+    }
+  },
+  "collections": ["RPGs", "Puzzle Games", "Sports"],
+  "lists": {
+    "recently_played": {
+      "name": "Recently Played",
+      "games": [
+        "tecmo-2025",
+        "super-mario-bros",
+        "the-legend-of-zelda",
+        "balatro"
+      ]
+    },
+    "favorites": {
+      "name": "Favorites",
+      "games": [
+        "tetris-rosy",
+        "tecmo-2025",
+        "balatro"
+      ]
+    }
+  },
+  "romm": { "host": "romm.local", "account": "nonna", "serverVersion": "5.0" }
+}

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cannoli UI: Live Preview</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      background: #141414;
+      color: #ddd;
+      font-family: system-ui, sans-serif;
+      padding: 32px 24px 80px;
+    }
+    h1 { font-size: 20px; font-weight: 600; margin: 0 0 4px; }
+    p.sub { margin: 0 0 32px; color: #888; font-size: 14px; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+    .card { flex: 1 1 560px; max-width: 680px; }
+    .card.wide { flex-basis: 100%; max-width: 720px; }
+    .card h2 {
+      font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #9a9a9a; margin: 0 0 10px;
+    }
+    .frame { border: 1px solid #333; border-radius: 8px; overflow: hidden; background: #000; }
+    .frame cannoli-screen { display: block; width: 100%; }
+  </style>
+  <script>
+    // Tutorial: main menu (Recently Played highlighted) -> scroll down the list
+    // -> open Nintendo Entertainment System -> scroll through its games -> loop.
+    window.CANNOLI_TUTORIALS = {
+      "browse-and-scroll": {
+        start: { view: "system-list", selection: 0 },
+        loopDelay: 1600,
+        steps: [
+          { wait: 1100 },
+          { press: "down", wait: 620 },   // Favorites
+          { press: "down", wait: 560 },   // Game Boy
+          { press: "down", wait: 560 },   // Game Boy Color
+          { press: "down", wait: 560 },   // Game Boy Advance
+          { press: "down", wait: 820 },   // Nintendo Entertainment System
+          { press: "a",    wait: 1000 },  // open NES game list
+          { press: "down", wait: 620 },
+          { press: "down", wait: 600 },
+          { press: "down", wait: 600 },
+          { press: "down", wait: 600 },
+          { press: "down", wait: 600 },
+          { press: "down", wait: 600 },
+          { press: "down", wait: 1200 },  // last game
+        ],
+      },
+      // Tutorial: open a favorited game's context menu (title = game name) and
+      // run "Add To Favorites" -> back to the favorites list.
+      "add-to-favorites": {
+        start: { view: "game-list", list: "nes", selection: 3 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 1100 },  // context menu (title = game name)
+          { press: "a",     wait: 1500 },  // Add To Favorites -> gains a star, floats to top
+          { wait: 600 },
+        ],
+      },
+      // Tutorial: enter multi-select mode from the favorites list and move the
+      // cursor down to show the checkbox column.
+      "multi-favorite": {
+        start: { view: "game-list", list: "nes", selection: 1 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 900 },
+          { press: "select", wait: 900 },  // enter multi-select (checkboxes appear)
+          { press: "a",      wait: 800 },  // tick the highlighted game
+          { press: "down",   wait: 600 },
+          { press: "a",      wait: 800 },  // tick another
+          { press: "down",   wait: 600 },
+          { press: "a",      wait: 1100 }, // and a third
+        ],
+      },
+      // Tutorial: mirrors add-to-favorites but starts from Recently Played, where
+      // the highlighted game's first context action is "Remove From Recently Played".
+      "remove-recently-played": {
+        start: { view: "game-list", list: "recently_played", selection: 1 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 1100 },  // context menu
+          { press: "a",     wait: 1500 },  // Remove From Recently Played -> game disappears
+          { wait: 600 },
+        ],
+      },
+      // Shared themed library for the collections tutorials below: a small set
+      // of Game Boy Advance Pokemon ROM hacks, so "create a collection" and
+      // "add a game to a collection" tell one coherent story.
+      "create-collection": {
+        library: {
+          platforms: [{ id: "gba", name: "Game Boy Advance", games: ["recharged-yellow", "unbound", "gaia"] }],
+          games: {
+            "gaia":             { title: "Pokémon Gaia",             platform: "gba" },
+            "recharged-yellow": { title: "Pokémon Recharged Yellow", platform: "gba" },
+            "unbound":          { title: "Pokémon Unbound",          platform: "gba" },
+          },
+          collections: ["Favorites"],   // "ROM Hacks" does not exist yet
+        },
+        // Tutorial: on a game, Start -> Manage Collections -> Y (New) opens the
+        // on-screen keyboard; type "ROM Hacks" and Start to save. The new
+        // collection appears on the Manage Collections screen, selected.
+        start: { view: "game-list", list: "gba", selection: 1 },
+        loopDelay: 2400,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 900 },  // context menu
+          { press: "down",  wait: 700 },  // highlight Manage Collections
+          { press: "a",     wait: 900 },  // open Manage Collections
+          { press: "y",     wait: 900 },  // New -> keyboard
+          { typeText: "ROM Hacks" },      // name the collection
+          { wait: 500 },
+          { press: "start", wait: 1000 }, // save -> back to Manage Collections
+          { wait: 800 },
+        ],
+      },
+      "add-to-collection": {
+        library: {
+          platforms: [{ id: "gba", name: "Game Boy Advance", games: ["recharged-yellow", "unbound", "gaia"] }],
+          games: {
+            "gaia":             { title: "Pokémon Gaia",             platform: "gba" },
+            "recharged-yellow": { title: "Pokémon Recharged Yellow", platform: "gba" },
+            "unbound":          { title: "Pokémon Unbound",          platform: "gba" },
+          },
+          collections: ["ROM Hacks", "Favorites"],
+        },
+        // Tutorial: multi-select two Pokemon ROM hacks (Select, tick each), then
+        // Start -> Manage Collections -> tick "ROM Hacks" to add them together.
+        // The context menu must NOT show the multi-select checkboxes.
+        start: { view: "game-list", list: "gba", selection: 1 },
+        loopDelay: 2000,
+        steps: [
+          { wait: 1200 },
+          { press: "select", wait: 900 },  // enter multi-select
+          { press: "a",      wait: 1000 }, // tick the highlighted game
+          { press: "down",   wait: 1000 },
+          { press: "a",      wait: 1000 }, // tick a second game
+          { press: "start",  wait: 900 },  // context menu (clean: no checkboxes)
+          { press: "down",   wait: 700 },  // highlight Manage Collections
+          { press: "a",      wait: 1000 }, // open Manage Collections
+          { press: "a",      wait: 1200 }, // tick "ROM Hacks"
+        ],
+      },
+      // Tutorial: highlight a platform on the main menu, enter reorder mode
+      // (arrow appears), move it down twice, then lock it back in.
+      "reorder": {
+        library: {
+          // Extra platforms (NES and up) fill out the screen so the reorder demo
+          // does not look sparse; only the Game Boys are moved in the steps.
+          platforms: [
+            { id: "gb",   name: "Game Boy",                            games: [] },
+            { id: "gba",  name: "Game Boy Advance",                    games: [] },
+            { id: "gbc",  name: "Game Boy Color",                      games: [] },
+            { id: "nes",  name: "Nintendo Entertainment System",       games: [] },
+            { id: "snes", name: "Super Nintendo Entertainment System", games: [] },
+            { id: "gc",   name: "GameCube",                            games: [] },
+            { id: "ps",   name: "PlayStation",                         games: [] },
+          ],
+        },
+        start: { view: "system-list", selection: 4 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 1200 },
+          { press: "select", wait: 900 },  // enter reorder on Game Boy Color
+          { press: "up",     wait: 800 },  // move it above Game Boy Advance
+          { press: "select", wait: 700 },  // lock it in
+          { wait: 600 }
+        ]
+      },
+      // Tutorial: highlight RPG on the Collections screen, press Start to open
+      // its "Child Collections" toggle, tick JRPGs and CRPGs so they nest
+      // underneath, back out, then open RPG to show its nested children.
+      "nested-collections": {
+        library: {
+          collections: ["RPG", "JRPGs", "CRPGs"],
+          collectionGames: { "RPG": ["chrono", "ff6"] },
+          games: {
+            "chrono": { title: "Chrono Trigger",    platform: "snes", boxart: "boxart/placeholder.svg" },
+            "ff6":    { title: "Final Fantasy VI",  platform: "snes", boxart: "boxart/placeholder.svg" },
+          },
+        },
+        start: { view: "collections", selection: 0 },
+        loopDelay: 2400,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 900 },  // RPG context menu (Rename / Child Collections / Delete)
+          { press: "down",  wait: 700 },  // highlight Child Collections
+          { press: "a",     wait: 800 },  // open the Child Collections toggle
+          { press: "a",     wait: 700 },  // tick JRPGs as a child of RPG
+          { press: "down",  wait: 600 },
+          { press: "a",     wait: 900 },  // tick CRPGs as a child of RPG
+          { press: "b",     wait: 700 },  // back to the RPG menu
+          { press: "b",     wait: 900 },  // back to Collections (JRPGs/CRPGs now hidden)
+          { press: "a",     wait: 1200 }, // open RPG -> shows /JRPGs, /CRPGs at top
+          { wait: 800 },
+        ],
+      },
+      // Static previews (no play button) of the three content modes.
+      "mode-default": {
+        static: true,
+        library: {
+          platforms: [
+            { id: "gb",   name: "Game Boy",                            games: [] },
+            { id: "gba",  name: "Game Boy Advance",                    games: [] },
+            { id: "nes",  name: "Nintendo Entertainment System",       games: [] },
+            { id: "snes", name: "Super Nintendo Entertainment System", games: [] },
+            { id: "ps",   name: "PlayStation",                         games: [] },
+          ],
+          collections: ["RPGs", "Puzzle Games", "Sports"],
+        },
+        start: { view: "system-list", contentmode: "default", selection: 0 },
+      },
+      "mode-collections-only": {
+        static: true,
+        library: { collections: ["RPGs", "Puzzle Games", "Sports", "Handhelds"] },
+        start: { view: "system-list", contentmode: "collections-only", selection: 0 },
+      },
+      "mode-5gh": {
+        static: true,
+        library: {
+          ports: true,
+          tools: true,
+          fiveGameHandheld: ["chrono", "smetroid", "celeste", "hollow", "links-awakening"],
+          games: {
+            "chrono":          { title: "Chrono Trigger", platform: "snes" },
+            "smetroid":        { title: "Super Metroid",  platform: "snes" },
+            "celeste":         { title: "Celeste",        platform: "ports" },
+            "hollow":          { title: "Hollow Knight",  platform: "ports" },
+            "links-awakening": { title: "Link's Awakening", platform: "gb" },
+          },
+        },
+        start: { view: "system-list", contentmode: "five-game-handheld", selection: 0 },
+      },
+    };
+  </script>
+  <script type="module" src="./cannoli-ui.js"></script>
+</head>
+<body>
+  <h1>Cannoli UI: Live Preview</h1>
+  <p class="sub">Data comes from library.json. Refresh to see the component update as it's built.</p>
+
+  <div class="gallery">
+    <div class="card wide">
+      <h2>Animated tutorial: browse &amp; scroll (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="browse-and-scroll"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: add to favorites (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="add-to-favorites"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: multi-select favorites (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="multi-favorite"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: remove from recently played (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="remove-recently-played"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: create a collection (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="create-collection"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: add to a collection (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="add-to-collection"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: reorder a platform (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="reorder"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: nested collections (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="nested-collections"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Content mode: Default</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="mode-default"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Content mode: Collections Only</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="mode-collections-only"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Content mode: Five Game Handheld</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="mode-5gh"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Main menu (system-list)</h2>
+      <div class="frame">
+        <cannoli-screen view="system-list" selection="0"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Favorites (game-list + box art)</h2>
+      <div class="frame">
+        <cannoli-screen view="game-list" list="favorites" selection="1"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>In-Game Menu (igm)</h2>
+      <div class="frame">
+        <cannoli-screen view="igm" game="tecmo-2025" backdrop="../img/guide/in_game_tecmo.png" selection="0"></cannoli-screen>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

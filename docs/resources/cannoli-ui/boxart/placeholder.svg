@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="Game cover placeholder">
+  <defs>
+    <linearGradient id="pl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2f3a"/>
+      <stop offset="1" stop-color="#15171e"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="640" fill="url(#pl-bg)"/>
+  <rect x="18" y="18" width="444" height="604" rx="18" fill="none" stroke="#3c4150" stroke-width="3"/>
+  <g transform="translate(240 286)" fill="none" stroke="#565c6e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-96 -26 q-30 0 -38 34 l-20 84 q-8 40 26 40 q22 0 34 -20 l14 -24 h160 l14 24 q12 20 34 20 q34 0 26 -40 l-20 -84 q-8 -34 -38 -34 z"/>
+    <line x1="-70" y1="24" x2="-30" y2="24"/>
+    <line x1="-50" y1="4" x2="-50" y2="44"/>
+    <circle cx="52" cy="8" r="9" fill="#565c6e" stroke="none"/>
+    <circle cx="80" cy="36" r="9" fill="#565c6e" stroke="none"/>
+  </g>
+  <text x="240" y="430" text-anchor="middle" font-family="'M PLUS Rounded 1c', sans-serif" font-size="30" fill="#565c6e" letter-spacing="1">No Cover Art</text>
+</svg>
