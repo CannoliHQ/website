@@ -111,5 +111,5 @@
       ]
     }
   },
-  "romm": { "host": "romm.local", "account": "nonna", "serverVersion": "5.0" }
+  "romm": { "host": "romm.local", "account": "nonna", "serverVersion": "5.0.0" }
 }

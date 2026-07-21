@@ -62,6 +62,7 @@ const HINTS = {
   "keyboard":          { left: [["X", "CANCEL"]], right: [["START", "CONFIRM"]] },
   "romm-settings": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "romm-pair": { left: [["B", "BACK"]], right: [] },
+  "romm-connected": { left: [["B", "BACK"]], right: [["X", "DISCONNECT"]] },
 };
 
 // On-screen keyboard: the KEYBOARD_ALPHA layout (rows top to bottom), matching
@@ -74,6 +75,27 @@ const KEYBOARD_ROWS = [
   [" "], // space bar (wide key)
 ];
 const KEYBOARD_SPECIAL_KEYS = new Set(["⇧", "↵", "←", "⌨"]);
+
+// The symbols layer (KEYBOARD_SYMBOLS from KeyboardController.kt), reached by the
+// ⌨ key. "." lives here (row 3), so typing a host like "romm.local" toggles to
+// this layer for the dot and back, exactly like the launcher.
+const KEYBOARD_SYMBOLS = [
+  ["~", "`", "|", "\\", "<", ">", "{", "}", "[", "]", "←"],
+  ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"],
+  ["-", "_", "=", "+", ";", ":", "'", "\"", "?", "↵"],
+  ["⇧", ",", ".", "/", "\\", "|", "~", "`", "⌨"],
+  [" "],
+];
+
+// The caps layer (KEYBOARD_ALPHA_SHIFTED), reached by the ⇧ key: uppercase
+// letters (and shifted number-row symbols). Typing a capital toggles caps on.
+const KEYBOARD_ALPHA_SHIFTED = [
+  ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "←"],
+  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+  ["A", "S", "D", "F", "G", "H", "J", "K", "L", "↵"],
+  ["⇧", "Z", "X", "C", "V", "B", "N", "M", "⌨"],
+  [" "],
+];
 
 // Nerd Font (M PLUS 1c) glyphs: bluetooth (plain rune), wifi, charging bolt.
 const STATUS_GLYPHS = "\uf294 \uf1eb \uf0e7";
@@ -268,12 +290,14 @@ class CannoliScreen extends HTMLElement {
   // DialogInputHandler.buildGameContextOptions): a couple are conditional on the
   // list and on whether the game is favorited / has box art. The `fullmenu`
   // attribute forces every option on, for the documentation reference screenshot
-  // (a single real game never surfaces the whole set at once).
+  // (a single real game never surfaces the whole set at once). "Remove From
+  // Recently Played" stays contextual even under fullmenu: it only appears when
+  // the menu is opened from the Recently Played list.
   _contextActions(gameId) {
     const full = this.hasAttribute("fullmenu");
     const game = this._library.games[gameId] || {};
     const actions = [];
-    if (full || this._contextList === "recently_played") actions.push("Remove From Recently Played");
+    if (this._contextList === "recently_played") actions.push("Remove From Recently Played");
     actions.push(!full && this._fav.has(gameId) ? "Remove From Favorites" : "Add To Favorites");
     actions.push("Manage Collections", "Emulator Override", "RA Game ID");
     if (full) actions.push("Preload Achievements");
@@ -333,6 +357,8 @@ class CannoliScreen extends HTMLElement {
       return ["Rename", "Child Collections", "Delete"];
     }
     if (s.view === "collection-toggle") {
+      // Manage Collections lists every collection in library order (the launcher
+      // orders by sort_order then name; a newly created collection lands last).
       return (this._collections || this._library.collections || []).slice();
     }
     if (s.view === "child-toggle") {
@@ -421,15 +447,20 @@ class CannoliScreen extends HTMLElement {
     const body =
       s.view === "keyboard"
         ? this._keyboardHtml()
-        : s.view === "romm-pair"
-          ? this._rommPairHtml(s)
-          : s.view === "romm-settings"
-            ? this._rommSettingsHtml(s)
-            : this._listHtml(items, s.selection, s) +
-              (boxart ? `<div class="boxart"><img alt="" src="${boxart}"></div>` : "");
+        : s.view === "romm-connected"
+          ? this._rommConnectedHtml()
+          : s.view === "romm-pair"
+            ? this._rommPairHtml(s)
+            : s.view === "romm-settings"
+              ? this._rommSettingsHtml(s)
+              : this._listHtml(items, s.selection, s) +
+                (boxart ? `<div class="boxart"><img alt="" src="${boxart}"></div>` : "");
+    // The pairing and connected screens are full-screen black dialogs in the
+    // launcher (RommPairingOverlay / RommConnectedOverlay) with no status bar.
+    const overlay = s.view === "romm-pair" || s.view === "romm-connected";
     this._canvas.innerHTML =
       (backdrop ? `<div class="backdrop" style="background-image:url('${backdrop}')"></div>` : "") +
-      this._statusbarHtml({ battery: s.battery, time: s.time }) +
+      (overlay ? "" : this._statusbarHtml({ battery: s.battery, time: s.time })) +
       (title ? `<h1 class="title">${escapeHtml(title)}</h1>` : "") +
       `<div class="body">${body}</div>` +
       this._buttonbarHtml(s.view);
@@ -506,8 +537,11 @@ class CannoliScreen extends HTMLElement {
     const items = rows
       .map((label, i) => {
         const val = valueFor(label);
+        // Rows with a value fill the width (PillRowKeyValue is fillMaxWidth) so
+        // the value sits at the right edge; plain rows keep their content width.
+        const kv = val != null ? " list__item--kv" : "";
         const value = val != null ? `<span class="list__value">${escapeHtml(val)}</span>` : "";
-        return `<div class="list__item ${i === s.selection ? "is-selected" : ""}">` +
+        return `<div class="list__item${kv} ${i === s.selection ? "is-selected" : ""}">` +
           `<span class="list__label">${escapeHtml(label)}</span>${value}</div>`;
       })
       .join("");
@@ -527,6 +561,28 @@ class CannoliScreen extends HTMLElement {
     return `<div class="pair">` +
       `<div class="pair__caption">Connecting to RomM</div>` +
       `<div class="pair__host">${escapeHtml(host)}</div>` +
+      `</div>`;
+  }
+
+  // The Connected dialog shown after a successful pair. Mirrors
+  // RommConnectedOverlay: a centered title over a bordered card of label/value
+  // rows (label uppercased + dimmed, value right-aligned), dividers between rows.
+  _rommConnectedHtml() {
+    const r = this._library.romm || {};
+    const rows = [
+      ["Host", r.host || "romm.local"],
+      ["Account", r.account || ""],
+      ["Server", r.serverVersion || ""],
+    ];
+    const rowsHtml = rows
+      .map(([label, value]) =>
+        `<div class="conn__row">` +
+        `<span class="conn__label">${escapeHtml(label.toUpperCase())}</span>` +
+        `<span class="conn__value">${escapeHtml(value)}</span></div>`)
+      .join(`<div class="conn__divider"></div>`);
+    return `<div class="conn">` +
+      `<div class="conn__title">RomM Connection Info</div>` +
+      `<div class="conn__card">${rowsHtml}</div>` +
       `</div>`;
   }
 
@@ -566,10 +622,15 @@ class CannoliScreen extends HTMLElement {
     }
   }
 
-  // The on-screen keyboard layout: KEYBOARD_ALPHA from KeyboardController.kt,
-  // ported as-is (no shift/symbols layouts needed for this demo).
+  // The live keyboard layer (KeyboardController.getKeyboardRows): symbols wins,
+  // then caps (shifted), else the plain alpha layout.
   _keyboardRows() {
-    return KEYBOARD_ROWS;
+    return this._layoutRows(this._kbdCaps, this._kbdSymbols);
+  }
+
+  _layoutRows(caps, symbols) {
+    if (symbols) return KEYBOARD_SYMBOLS;
+    return caps ? KEYBOARD_ALPHA_SHIFTED : KEYBOARD_ROWS;
   }
 
   // Renders the text field (typed text + blinking caret) and the key grid for
@@ -606,6 +667,9 @@ class CannoliScreen extends HTMLElement {
         const classes = ["kbd__key"];
         if (ri === this._keyRow && ci === this._keyCol) classes.push("is-selected");
         if (KEYBOARD_SPECIAL_KEYS.has(key)) classes.push("kbd__key--special");
+        // Shift shows a half-highlight while caps is held (KeyboardOverlay's
+        // isShiftActive), so capitals visibly use SHIFT.
+        if (key === "⇧" && this._kbdCaps) classes.push("kbd__key--active");
         return `<span class="${classes.join(" ")}">${escapeHtml(key)}</span>`;
       })
       .join("");
@@ -671,6 +735,8 @@ class CannoliScreen extends HTMLElement {
     this._keyRow = 2;
     this._keyCol = 0;
     this._kbdText = "";
+    this._kbdSymbols = false;
+    this._kbdCaps = false;
     this._applyState({ view: "keyboard", selection: 0 });
   }
 
@@ -683,6 +749,8 @@ class CannoliScreen extends HTMLElement {
     this._keyRow = 2;
     this._keyCol = 0;
     this._kbdText = this._rommHost || "";
+    this._kbdSymbols = false;
+    this._kbdCaps = false;
     this._applyState({ view: "keyboard", selection: 0 });
   }
 
@@ -721,8 +789,13 @@ class CannoliScreen extends HTMLElement {
     else if (key === "↵") {
       this._confirmKeyboard();
       return;
-    } else if (key === "⇧" || key === "⌨") {
-      // no-op: shift/symbols behavior is out of scope for this demo.
+    } else if (key === "⌨") {
+      // Toggle the symbols layer (KEY_SYMBOLS in KeyboardController). Row lengths
+      // match between layers, so the focused column never needs re-clamping.
+      this._kbdSymbols = !this._kbdSymbols;
+    } else if (key === "⇧") {
+      // Toggle caps (KEY_SHIFT). Sticky, like KeyboardController.toggleCaps.
+      this._kbdCaps = !this._kbdCaps;
     } else this._kbdText += key;
     this._render();
   }
@@ -737,6 +810,9 @@ class CannoliScreen extends HTMLElement {
     if (purpose === "new-collection" && text) {
       this._collections.push(text);
       const origin = this._returnState || { view: "collection-toggle", selection: 0 };
+      // Created from a game's Manage Collections: the new collection includes
+      // that game, so it comes back checked.
+      if (origin.view === "collection-toggle") this._collectionMembership.add(text);
       const items = this._itemsForView({ ...origin, selection: 0 });
       const sel = items.indexOf(text);
       this._applyState({ view: origin.view, list: origin.list, selection: sel >= 0 ? sel : 0 });
@@ -765,22 +841,19 @@ class CannoliScreen extends HTMLElement {
     this._render();
   }
 
-  // Grid position of the key that produces `ch` (letters match case-insensitively;
-  // " " is the space key). Null if the character has no key on the alpha layout.
-  _keyPosFor(ch) {
-    const rows = this._keyboardRows();
-    const target = ch === " " ? " " : ch.toLowerCase();
+  // Grid position of `ch` on a specific layer (case-SENSITIVE now that caps has
+  // its own layer; " " is the space key). Null if the char is not on that layer.
+  _keyPosInRows(ch, rows) {
     for (let row = 0; row < rows.length; row++) {
-      const col = rows[row].indexOf(target);
+      const col = rows[row].indexOf(ch);
       if (col !== -1) return { row, col };
     }
     return null;
   }
 
-  // One D-pad step from `pos`, applying the same wrap + column-clamp rules as
-  // _pressKeyboard (the launcher's KeyboardController.moveSelection).
-  _kbdStep(pos, dir) {
-    const rows = this._keyboardRows();
+  // One D-pad step from `pos` on a specific layer, applying the same wrap +
+  // column-clamp rules as _pressKeyboard (KeyboardController.moveSelection).
+  _kbdStepRows(pos, dir, rows) {
     let { row, col } = pos;
     if (dir === "up" || dir === "down") {
       row = (row + (dir === "down" ? 1 : -1) + rows.length) % rows.length;
@@ -791,23 +864,22 @@ class CannoliScreen extends HTMLElement {
     return { row, col };
   }
 
-  // A step-by-step path from `from` to `target`: move to the target row, then
-  // along it, each axis taking the shorter wrapped direction. Returns the ordered
-  // moves and the final focus position.
-  _planKeyPath(from, target) {
-    const rows = this._keyboardRows();
+  // A step-by-step path from `from` to `target` on a specific layer: move to the
+  // target row, then along it, each axis taking the shorter wrapped direction.
+  // Returns the ordered moves and the final focus position.
+  _planKeyPathRows(from, target, rows) {
     const moves = [];
     let pos = { row: from.row, col: from.col };
     const R = rows.length;
     const down = (target.row - pos.row + R) % R;
     const up = (pos.row - target.row + R) % R;
     const vDir = down <= up ? "down" : "up";
-    for (let n = Math.min(down, up); n > 0; n--) { moves.push(vDir); pos = this._kbdStep(pos, vDir); }
+    for (let n = Math.min(down, up); n > 0; n--) { moves.push(vDir); pos = this._kbdStepRows(pos, vDir, rows); }
     const L = rows[pos.row].length;
     const right = (target.col - pos.col + L) % L;
     const left = (pos.col - target.col + L) % L;
     const hDir = right <= left ? "right" : "left";
-    for (let n = Math.min(right, left); n > 0; n--) { moves.push(hDir); pos = this._kbdStep(pos, hDir); }
+    for (let n = Math.min(right, left); n > 0; n--) { moves.push(hDir); pos = this._kbdStepRows(pos, hDir, rows); }
     return { moves, pos };
   }
 
@@ -858,12 +930,17 @@ class CannoliScreen extends HTMLElement {
       return;
     }
     if (s.view !== "system-list") return;
-    let listId;
-    if (s.selection === 0) listId = "recently_played";
-    else if (s.selection === 1) listId = "favorites";
-    else listId = (this._library.platforms[this._platformIndices()[s.selection - 2]] || {}).id;
-    if (!listId) return;
+    // Map by label, not a fixed offset: the head varies (Recently Played,
+    // Favorites, and a Collections folder in default mode), so `selection - 2`
+    // mis-indexes the platforms whenever Collections is present.
+    const label = this._itemsForView(s)[s.selection];
     this._returnSelection = s.selection;
+    if (label === "Collections") { this._applyState({ view: "collections", selection: 0 }); return; }
+    let listId;
+    if (label === "Recently Played") listId = "recently_played";
+    else if (label === "Favorites") listId = "favorites";
+    else listId = (this._library.platforms.find((p) => p.name === label) || {}).id;
+    if (!listId) return;
     this._applyState({ view: "game-list", list: listId, selection: 0 });
   }
 
@@ -1014,26 +1091,53 @@ class CannoliScreen extends HTMLElement {
   _expandSteps(steps) {
     const out = [];
     let focus = { row: 2, col: 0 }; // keyboard's default focus (KeyboardState)
+    let caps = false, symbols = false; // which layer the planner is currently on
     for (const step of steps) {
       if (step.typeText != null) {
         const perChar = step.perChar != null ? step.perChar : 240;
         const perMove = step.perMove != null ? step.perMove : 90;
         for (const ch of step.typeText) {
-          const target = this._keyPosFor(ch);
-          if (!target) continue;
-          const { moves, pos } = this._planKeyPath(focus, target);
-          for (const m of moves) out.push({ press: m, wait: perMove });
+          // Pick the layer for ch, staying put if the current layer already has
+          // it (so space never forces a needless toggle).
+          let tCaps = caps, tSymbols = symbols;
+          if (!this._keyPosInRows(ch, this._layoutRows(caps, symbols))) {
+            if (this._keyPosInRows(ch, KEYBOARD_ROWS)) { tCaps = false; tSymbols = false; }
+            else if (this._keyPosInRows(ch, KEYBOARD_ALPHA_SHIFTED)) { tCaps = true; tSymbols = false; }
+            else if (this._keyPosInRows(ch, KEYBOARD_SYMBOLS)) { tSymbols = true; }
+            else continue; // char on no layer (shouldn't happen)
+          }
+          // Switch layers by walking onto ⌨ (symbols) and/or ⇧ (caps) and
+          // pressing, exactly like the launcher. Both keys sit at the same cell
+          // on every layer, so focus is that cell after the switch.
+          if (tSymbols !== symbols) { focus = this._toggleTo(out, focus, "⌨", caps, symbols, perMove); symbols = tSymbols; }
+          if (tCaps !== caps) { focus = this._toggleTo(out, focus, "⇧", caps, symbols, perMove); caps = tCaps; }
+          const rows = this._layoutRows(caps, symbols);
+          const target = this._keyPosInRows(ch, rows);
+          const path = this._planKeyPathRows(focus, target, rows);
+          for (const m of path.moves) out.push({ press: m, wait: perMove });
           out.push({ typeChar: ch, wait: perChar });
-          focus = pos;
+          focus = target;
         }
       } else {
         const p = step.press;
-        if (p === "up" || p === "down" || p === "left" || p === "right") focus = this._kbdStep(focus, p);
-        else if (p === "y") focus = { row: 2, col: 0 }; // opening the keyboard resets focus
+        if (p === "up" || p === "down" || p === "left" || p === "right") {
+          focus = this._kbdStepRows(focus, p, this._layoutRows(caps, symbols));
+        } else if (p === "y") { focus = { row: 2, col: 0 }; caps = false; symbols = false; } // keyboard opens on alpha
         out.push(step);
       }
     }
     return out;
+  }
+
+  // Walk the planner focus onto toggle key `key` (⇧/⌨) on the current layer and
+  // "press" it; returns the toggle key's cell (same on every layer).
+  _toggleTo(out, focus, key, caps, symbols, perMove) {
+    const rows = this._layoutRows(caps, symbols);
+    const keyPos = this._keyPosInRows(key, rows);
+    const path = this._planKeyPathRows(focus, keyPos, rows);
+    for (const m of path.moves) out.push({ press: m, wait: perMove });
+    out.push({ press: "a", wait: perMove });
+    return keyPos;
   }
 
   // script = { start: {state}, steps: [{press?, typeChar?, typeText?, wait?}], loop?: bool, loopDelay?: ms }

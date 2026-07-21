@@ -343,6 +343,10 @@
   background: var(--cannoli-accent);
   color: #111;
 }
+/* Shift held (caps on): a half-highlight, like KeyboardOverlay's isShiftActive. */
+.kbd__key--active {
+  background: rgba(255, 255, 255, 0.4);
+}
 .kbd__key--wide {
   width: 100%;
   max-width: 560px;
@@ -357,16 +361,19 @@
 }
 
 /* RomM settings sub-list: full-width rows with a dimmed right-aligned value. */
-.list--settings .list__item {
+.list--settings .list__item--kv {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   width: 100%;
-  max-width: 1040px;
+  /* border-box so the pill's horizontal padding is included in the 100% width
+     and the row stays within the list bounds (screenPadding inset) instead of
+     overflowing to the screen edge. */
+  box-sizing: border-box;
 }
 .list__label { position: relative; z-index: 1; }
-.list__value { position: relative; z-index: 1; opacity: 0.55; }
+.list__value { position: relative; z-index: 1; font-size: 0.72em; opacity: 0.6; }
 
 /* RomM pairing overlay: centered caption over host or QR. */
 .pair {
@@ -389,3 +396,46 @@
   box-sizing: border-box;
   display: block;
 }
+
+/* RomM Connected dialog (RommConnectedOverlay): centered title over a bordered
+   card of rows. Full-screen black overlay (no status bar). */
+.conn {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.conn__title {
+  font-size: 58px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 44px;
+}
+.conn__card {
+  width: 82%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.conn__row {
+  display: flex;
+  align-items: center;
+  padding: 20px 34px;
+}
+.conn__label {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+}
+.conn__value {
+  flex: 1;
+  text-align: right;
+  font-size: 42px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.conn__divider { height: 1px; background: rgba(255, 255, 255, 0.12); }
