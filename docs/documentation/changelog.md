@@ -1,3 +1,42 @@
+## [v1.8.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.8.0) - The [RomM](https://romm.app) Release
+
+| Feature / Fix                                                                                                                                   | Issue                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Feat: [Browse and download games](romm.md#browsing-your-romm-library) from your RomM server, with streamed downloads and on-device tracking     | N/A                                                     |
+| Feat: RomM [cover art](romm.md#box-art) with selectable art types, plus Download Missing Art for games already on device                        | N/A                                                     |
+| Feat: Browse RomM [Collections](romm.md#browsing-your-romm-library) (user, virtual, and smart) with per-collection toggles                      | N/A                                                     |
+| Feat: Download [firmware and BIOS files](romm.md#firmware) per system from RomM                                                                 | [#169](https://github.com/CannoliHQ/cannoli/issues/169) |
+| Feat: Download game [manuals](romm.md#browsing-your-romm-library) from RomM straight into the guides folder                                     | N/A                                                     |
+| Feat: [RomM Save Sync](romm.md#save-sync) (automatic SRAM sync, conflict resolution, and backup/restore)                                        | N/A                                                     |
+| Feat: [Pair with a RomM server](romm.md#pairing) by scanning a QR code or entering a pair code                                                  | N/A                                                     |
+| Feat: [Browse RomM offline](romm.md#offline-browsing) from a cached metadata mirror that syncs when connected                                                               | N/A                                                     |
+| Feat: Game cheats: drop in .cht files and toggle them from a new Cheats screen (RetroArch-compatible)                                           | N/A                                                     |
+| Feat: [Guides viewer](playing-games.md#guide) to read PDF guides and manuals from the game context menu and in-game                             | N/A                                                     |
+| Feat: [Offline RetroAchievements](retroachievements.md#offline-play): preload sets while online, then earn and view them offline                | N/A                                                     |
+| Feat: [Nonna's Kitchen](nonnas-kitchen.md) rebuilt on a new file server with a game-centric web UI for ROMs, saves, states, guides, and box art | N/A                                                     |
+| Feat: Install APKs and browse device storage volumes from [Nonna's Kitchen](nonnas-kitchen.md#tools)                                            | [#122](https://github.com/CannoliHQ/cannoli/issues/122) |
+| Feat: Nonna's Kitchen now lets you manage cheats and shaders                                                                                    | N/A                                                     |
+| Feat: Core Mapping redesigned as a source-first [Emulator Mapping](settings.md#emulation) screen (Source, Emulator, BIOS, per-game overrides)   | N/A                                                     |
+| Feat: Screen Geometry display calibration to fit the whole app into a custom rectangle (e.g. CRT-via-converter setups)                          | N/A                                                     |
+| Feat: [On-screen keyboard help overlay](button-reference.md#on-screen-keyboard), opened by pressing MENU for a controls cheat sheet             | N/A                                                     |
+| Feat: 4-Way D-Pad mode to suppress diagonals for 4-way games, behind Experimental Features                                                      | N/A                                                     |
+| Feat: Left stick as D-Pad toggle, with Button Mappings and Shortcuts grouped under a new [Settings > Input](settings.md#input) screen           | N/A                                                     |
+| Feat: [Hold the resume button](playing-games.md#resuming-a-game) to open the save-state picker                                                  | [#98](https://github.com/CannoliHQ/cannoli/issues/98)   |
+| Feat: Diacritic-insensitive global search so accented titles match plain letters                                                                | N/A                                                     |
+| Fix: Guard newer-API calls that crashed on Android 9 (input device, foreground services, display)                                               | N/A                                                     |
+| Fix: Smoother frame pacing so the game no longer runs fast on high-refresh panels                                                               | N/A                                                     |
+
+---
+
+## [v1.7.9](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.9)
+
+| Feature / Fix                                                                                                   | Issue |
+|-----------------------------------------------------------------------------------------------------------------|-------|
+| Feat: Onboarding Continue button, and reinstalls pre-select your existing storage with its Cannoli folder shown | N/A   |
+| Fix: Setup screen appears immediately after granting storage permission instead of a brief black screen         | N/A   |
+
+---
+
 ## [v1.7.8](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.8)
 
 | Feature / Fix                                                                 | Issue                                                   |
@@ -199,8 +238,8 @@ Forgot to update the credits for bundled shaders and the new logo!
 
 | Feature / Fix                                                                     | Issue                                                 |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------|
-| Feat: [Show / Hide Platforms](library.md#content-mode) for collection-only setups | [#69](https://github.com/CannoliHQ/cannoli/issues/69) |
-| Feat: [Five Game Handheld Mode](library.md#content-mode)                          | [#75](https://github.com/CannoliHQ/cannoli/issues/75) |
+| Feat: [Show / Hide Platforms](library.md#content-modes) for collection-only setups | [#69](https://github.com/CannoliHQ/cannoli/issues/69) |
+| Feat: [Five Game Handheld Mode](library.md#content-modes)                          | [#75](https://github.com/CannoliHQ/cannoli/issues/75) |
 
 ---
 

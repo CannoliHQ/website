@@ -1,40 +1,49 @@
 # Nonna's Kitchen
 
-## WTF is Nonna's Kitchen?
+## What is Nonna's Kitchen?
 
-Nonna's Kitchen is a built-in file server that lets you manage content on your device from a web browser. No cables, no file managers, no fuss.
+Nonna's Kitchen is a built-in file server that allows you to manage content on your device from a web browser. No additional software or cables are required!
 
-It's organized by platform, so you pick a system and upload ROMs, box art, saves, or save states right into it. Everything lands in the correct folder automatically following the [directory structure](directory-structure.md) Cannoli expects. No need to think about where files go.
+Everything is organized by platform and lands in the [right spot](directory-structure.md) automatically.
 
 ---
 
 ## Starting the Server
 
-You can toggle the server on and off from **Settings → Nonna's Kitchen**.
+From the launcher's main menu, open the **Quick Menu** and select **Nonna's Kitchen**. Cannoli starts the server and shows an overlay with a QR code and URL.
 
-When the server is running, pressing `Y` on the main menu will open the Kitchen overlay showing a QR code and URL.
+While the server is running:
+
+- A knife and fork icon appears in the [status bar](customization.md#status-bar).
+- Reopening **Quick Menu → Nonna's Kitchen** brings the overlay back so you can see the URL again.
+- From the overlay itself, press `X` to stop the server.
 
 ---
 
 ## Connecting
 
-From any device on the same Wi-Fi network:
+Scan the QR code or open the URL from a device on the same Wi-Fi, then enter the 6-character PIN shown on screen. The PIN changes every time the server starts.
 
-1. Scan the QR code or enter the URL shown on screen
-2. Enter the 6-character PIN displayed on the device
+If the device is on multiple networks, use `Left` / `Right` on the overlay to cycle URLs.
 
-No pesky passwords to remember here! The PIN changes every time the server starts. 
+> [!TIP]
+> Enable **Kitchen Code Bypass** under [Settings → Advanced](settings.md#advanced) to skip PIN entry.
 
 ---
 
 ## What You Can Do
 
-Once connected you'll see options to manage content across all supported platforms:
+The dashboard has three tabs.
 
-- **BIOS:** Upload BIOS files
-- **Box Art:** Upload artwork for your games
-- **Guides:** Upload `.pdf`, `.txt`, `.png` or `.jpg / .jpeg` files that you can view while in-game
-- **ROMs:** Upload, rename, and delete games
-- **Save States:** Upload and download emulator save states
-- **Saves:** Upload and download in-game save files
-- **Wallpapers:** Upload background images for the launcher
+### Platforms
+
+Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk box art upload), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, and **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`).
+
+### Customization
+
+Global content: **Wallpapers**, **Shaders**, and fallback **Overlays**.
+
+### Tools
+
+- **File Manager** - browse the device's storage volumes.
+- **APK Installer** - drop an APK to install. Confirm on the device.

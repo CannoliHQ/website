@@ -6,17 +6,14 @@ Cannoli's built-in core runner has [RetroAchievements](https://retroachievements
 
 ## Logging In
 
-Head to **Settings → RetroAchievements** and enter your credentials. 
+Head to **Settings → Integrations → RetroAchievements** and enter your credentials. 
 
 Once logged in you'll see your account status. 
 
-To log out, press `X` from the account screen.
+From the account screen, press `Y` to log out or `X` to browse your [Offline Achievement Sets](#offline-play).
 
 > [!IMPORTANT]
-> You need a [RetroAchievements account](https://retroachievements.org) to use this feature. It's free to sign up.
-
-> [!TIP]
-> You only need to log in once. Cannoli stores your session token so you stay logged in across launches.
+> You need a free [RetroAchievements account](https://retroachievements.org) to use this feature.
 
 ---
 
@@ -78,10 +75,34 @@ To clear an override, open the same menu and leave the field blank.
 
 ---
 
+## Offline Play
+
+Cannoli can play a game's achievement set without an internet connection if you've cached it ahead of time. Unlocks earned offline are queued and synced when you're back online.
+
+### Preloading a Game
+
+To cache a game's achievement set:
+
+1. Highlight the game and press `Start` to open the context menu
+2. Select **Preload Achievements**
+
+Cannoli downloads the set, the icon assets, and the metadata. You'll see a confirmation like `Cached 47 achievements (635 pts) for offline play`. The context menu shows **Preload Achievements (Cached)** once the game is ready for offline use.
+
+**Preload Achievements** only appears when you're logged in and the platform supports native ROM hashing.
+
+### Browsing Cached Sets
+
+From the RA account screen (**Settings → Integrations → RetroAchievements** while signed in), press `X` to open **Offline Achievement Sets**. The screen groups your cached games by platform.
+
+### Offline Status
+
+When playing offline, the in-game RetroAchievements status reads `Offline` (or `Offline • N Pending Sync` if you have unlocks waiting to be uploaded). The next time Cannoli has internet, pending unlocks sync automatically.
+
+---
+
 ## Things to Know
 
 - **Softcore only.** Hardcore mode will never be implemented. Don't bother asking. If you need hardcore, use an approved emulator setup.
-- **Works offline.** Cannoli caches achievement data so games load without internet. Achievements earned offline are queued and automatically synced when connectivity returns.
 - **Loading a save state resets tracking.** When you load a save state, achievement progress resets to avoid false
   triggers. This is the same behavior used by RetroArch.
 - **ROM must be in the database.** If your ROM doesn't match anything on RetroAchievements, you won't get achievements

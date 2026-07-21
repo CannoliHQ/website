@@ -46,5 +46,3 @@ You will then land on a pretty barren main menu.
 While you are free to add content however you'd like, the easiest way is with [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more from any browser on your network.
 
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
-
-After you add ROMs, Cannoli scans them on the next launch (or when returning from Nonna's Kitchen).

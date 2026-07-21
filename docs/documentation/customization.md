@@ -56,14 +56,20 @@ Adds bottom padding to the launcher and in-game overlay when the device is held 
 
 ### Status Bar
 
-Control what appears in the status bar. Icons render left-to-right in this order:
+Control what items appear in the status bar. 
 
-- **Update** - shown by default, indicates when an update is available
-- **Bluetooth** - shown by default
-- **Wi-Fi** - shown by default
-- **VPN** - hidden by default
-- **Battery** - choose **Hide**, **Percent** (default), or **Icon**
-- **Clock** - shown by default, can be set to 12 or 24 hour
+Items render left-to-right in the order listed:
+
+| Item             |                 Icon                 | Behavior                                                            |
+|------------------|:------------------------------------:|---------------------------------------------------------------------|
+| Kitchen Running  |                                     | Appears while [Nonna's Kitchen](nonnas-kitchen.md) is serving files |
+| Downloads        |                                     | Appears while downloading                                           |
+| Update Available |                  󰚰                  | Appears when an update is available                                 |
+| Bluetooth        |                  󰂯                  | Appears when Bluetooth is on                                        |
+| Wi-Fi            |                  󰖩                  | Appears when connected                                              |
+| VPN              |                  󰯄                  | Hidden by default; appears when a VPN is active                     |
+| Battery          |                  󰁹                  | Choose **Hide**, **Percent**, or **Icon**                           |
+| Clock            | <span class="live-clock">9:41</span> | Renders as text; choose 12 or 24 hour                               |
 
 ### Text Size
 
@@ -106,11 +112,7 @@ The art file must have the **exact same name** as the ROM file, minus the extens
 
 ### Supported Formats
 
-PNG, JPG and WebP.
-
-### Dimensions
-
-There are no enforced dimensions. Use whatever size you want. Images larger than 1024px on their longest side are downsampled automatically, and the aspect ratio is always preserved.
+PNG, JPG, WebP, Static GIFs and BMP.
 
 ### Adding Art
 
@@ -128,6 +130,8 @@ Highlight a game, press `Start` to open the context menu, and select **Delete Ar
 ## Overlays
 
 Overlays are images displayed on top of gameplay to simulate screen bezels or borders. The transparent areas of the image let the game show through.
+
+Cannoli only supports PNGs as overlays.
 
 ### Folder Structure
 
@@ -203,3 +207,16 @@ Shader selection and parameter values are saved at three levels:
 3. **Global** - applies everywhere
 
 A game-level override takes priority over platform, which takes priority over global.
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var clocks = document.querySelectorAll('.live-clock');
+  if (!clocks.length) return;
+  function tick() {
+    var now = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true });
+    clocks.forEach(function(el) { el.textContent = now; });
+  }
+  tick();
+  setInterval(tick, 1000);
+});
+</script>
