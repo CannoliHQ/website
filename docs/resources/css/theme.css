@@ -664,11 +664,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 26px;
-  align-items: center; /* vertically center the steps alongside the screen */
+  align-items: flex-start; /* top-align the steps with the top of the screen */
   margin: 1rem 0 1.5rem;
 }
 .task__visual { flex: 1 1 360px; min-width: 260px; }
-.task__steps  { flex: 1 1 280px; min-width: 240px; }
+/* padding-top is a % of the row width, so it scales with the screen: it drops
+   step 1 to roughly the screen's first list row when side-by-side, and shrinks
+   to a small gap under the screen when the layout stacks on mobile. */
+.task__steps  { flex: 1 1 280px; min-width: 240px; padding-top: 6%; }
 .task__visual cannoli-screen { display: block; width: 100%; }
 .task__visual img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .task__steps ol { margin: 0; padding-left: 1.4em; }
