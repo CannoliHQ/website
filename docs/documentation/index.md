@@ -40,8 +40,6 @@ I've been yearning for this type of experience on Android.
 
 Without his masterpiece, this pale imitation would not exist.
 
-For that, I thank him, and apologize for this bastardization of his creation.
-
 ---
 
 ## Project Philosophy
@@ -66,11 +64,11 @@ Cannoli has five key design goals:
 
 ### But I need that feature!
 
-No you don't. And if you do you have other amazing options on Android!
+No you don't. And if you do, you have other amazing options on Android!
 
-It has become a meme in this hobby to spend all this time curating and tinkering.
+I won't yuck your yum; if curating and tinkering brings you joy, it brings me joy.
 
-The end result is you never play a damn thing.
+It just means Cannoli probably isn't for you, and that is totally okay.
 
 ---
 
