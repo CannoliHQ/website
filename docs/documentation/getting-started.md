@@ -1,9 +1,7 @@
 # Getting Started
 
 > [!IMPORTANT]
-> **Android Version Compatibility ≥ 9**
->
-> Cannoli requires Android 9 (API 28) or newer.
+> Cannoli requires Android 9 or newer.
 
 ## Installing Cannoli
 

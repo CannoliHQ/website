@@ -2,6 +2,9 @@
 
 Cannoli's built-in core runner has [RetroAchievements](https://retroachievements.org) support!
 
+> [!IMPORTANT]
+> You need a free [RetroAchievements account](https://retroachievements.org) to use this feature.
+
 ---
 
 ## Logging In
@@ -11,9 +14,6 @@ Head to **Settings → Integrations → RetroAchievements** and enter your crede
 Once logged in you'll see your account status. 
 
 From the account screen, press `Y` to log out or `X` to browse your [Offline Achievement Sets](#offline-play).
-
-> [!IMPORTANT]
-> You need a free [RetroAchievements account](https://retroachievements.org) to use this feature.
 
 ---
 
