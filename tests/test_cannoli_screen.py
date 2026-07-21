@@ -207,7 +207,9 @@ def test_context_menu_back_hint_only(screen):
 
 def test_context_menu_fullmenu_lists_every_action(screen):
     # The `fullmenu` attribute (used by the docs reference screenshot) forces the
-    # complete set of context actions, in the launcher's order.
+    # complete set of context actions, in the launcher's order. "Remove From
+    # Recently Played" stays contextual (Recently Played list only), so it is not
+    # forced on here.
     screen.eval_on_selector(
         "cannoli-screen",
         "el => { el.setAttribute('fullmenu',''); el.setAttribute('view','context-menu'); "
@@ -215,7 +217,6 @@ def test_context_menu_fullmenu_lists_every_action(screen):
     )
     items = screen.locator(".list__item").all_inner_texts()
     assert items == [
-        "Remove From Recently Played",
         "Add To Favorites",
         "Manage Collections",
         "Emulator Override",
