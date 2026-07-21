@@ -6,11 +6,12 @@
 <script>
 window.CANNOLI_TUTORIALS = {
   "browse-and-scroll": {
-    start: { view: "system-list", selection: 0 },
+    start: { view: "system-list", contentmode: "default", selection: 0 },
     loopDelay: 1600,
     steps: [
       { wait: 1100 },
       { press: "down", wait: 620 },   // Favorites
+      { press: "down", wait: 560 },   // Collections
       { press: "down", wait: 560 },   // Game Boy
       { press: "down", wait: 560 },   // Game Boy Color
       { press: "down", wait: 560 },   // Game Boy Advance
@@ -49,7 +50,7 @@ window.CANNOLI_TUTORIALS = {
           },
           collections: ["Sportsball"],   // "ROM Hacks" does not exist yet
         },
-        start: { view: "game-list", list: "gba", selection: 1 },
+        start: { view: "game-list", list: "gba", selection: 0 },
         loopDelay: 2400,
         steps: [
           { wait: 1200 },
@@ -71,7 +72,7 @@ window.CANNOLI_TUTORIALS = {
             "recharged-yellow": { title: "Pokémon Recharged Yellow", platform: "gba"},
             "unbound":     { title: "Pokémon Unbound",     platform: "gba"},
           },
-          collections: ["ROM Hacks", "Favorites"],
+          collections: ["ROM Hacks", "Platformers"],
         },
         start: { view: "game-list", list: "gba", selection: 0 },
         loopDelay: 2000,
@@ -184,7 +185,7 @@ window.CANNOLI_TUTORIALS = {
 <cannoli-screen tutorial="browse-and-scroll"></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
-1. Use `↑` / `↓` on the main menu to highlight a system, `Favorites`, or `Recently Played`.
+1. Use `↑` / `↓` on the main menu to highlight a system, `Recently Played`, `Favorites`, or `Collections`.
 2. Press `A` to open it and see its games.
 3. Use `↑` / `↓` to scroll through the game list.
 4. Press `B` to go back to the main menu.
@@ -200,7 +201,7 @@ after you play your first game.
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
-<cannoli-screen tutorial="remove-recently-played"></cannoli-screen>
+<cannoli-screen tutorial="remove-recently-played" fullmenu></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game in Recently Played and press `Start` to open the context menu.
@@ -211,16 +212,13 @@ after you play your first game.
 > [!TIP]
 > To remove multiple games at once, press `Select` on the Recently Played list to enter multi-select mode. Select the games you want, then press `Start` to remove them all.
 
-> [!NOTE]
-> Don't want this? You can hide the Recently Played section in Settings → Library → **Recently Played**.
-
 ---
 
 ## Favorites
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
-<cannoli-screen tutorial="add-to-favorites"></cannoli-screen>
+<cannoli-screen tutorial="add-to-favorites" fullmenu></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game, tool, or port and press `Start` to open the context menu.
@@ -231,8 +229,6 @@ after you play your first game.
 
 > [!TIP]
 > To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
-
-
 
 ---
 
@@ -245,7 +241,7 @@ Collections let you group anything that Cannoli can launch: games, tools, and po
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
-<cannoli-screen tutorial="create-collection"></cannoli-screen>
+<cannoli-screen tutorial="create-collection" fullmenu></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game and press `Start` → **Manage Collections**.
@@ -257,7 +253,7 @@ Collections let you group anything that Cannoli can launch: games, tools, and po
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
-<cannoli-screen tutorial="add-to-collection"></cannoli-screen>
+<cannoli-screen tutorial="add-to-collection" fullmenu></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game, press `Start` → **Manage Collections**.
@@ -347,29 +343,8 @@ Implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?
 </div>
 </div>
 
-> [!NOTE]
-> When two games share the same display name in a list, their filename tags are appended after the title to tell them apart. In cross-platform lists (Collections, Favorites, and the Five Game Handheld main menu) the platform is appended as well so you can see which version is which.
-
-> [!TIP]
+> [!IMPORTANT]
 > Five Game Handheld mode does not restrict you to five games nor does it modify your library.
->
-> Take comfort knowing that the thousands of games you'll never play are still on your device!
->
-> This feature is meant to help with the analysis paralysis so prevalent in the hobby.
-
-### Feature By Mode
-
-| Feature               | Default                  | Collections Only | Five Game Handheld |
-|-----------------------|--------------------------|------------------|--------------------|
-| Recently Played       | ✓ (if enabled)           | ✓ (if enabled)   | ✗                  |
-| Favorites             | ✓ (if non-empty)         | ✓ (if non-empty) | ✗                  |
-| Collections           | ✓ (if collections exist) | ✗                | ✗                  |
-| Top-level Collections | ✗                        | ✓ (reorderable)  | ✗                  |
-| Platforms             | ✓ (reorderable)          | ✗                | ✗                  |
-| Tools                 | ✓ (reorderable)          | ✓ (reorderable)  | ✓                  |
-| Ports                 | ✓ (reorderable)          | ✓ (reorderable)  | ✓                  |
-
----
 
 ## Game Context Menu
 
@@ -382,25 +357,13 @@ Press `Start` on any game to open its context menu.
 </div>
 </div>
 
-- **Remove From Recently Played** (only on the Recently Played list)
-- **Add To Favorites** / **Remove From Favorites**
-- **Remove From Collection** (only when viewing a collection)
-- **Manage Collections**
-- **Emulator Override** - use a different core or app for this game
-- **RA Game ID** - manually set the RetroAchievements game ID
-- **Preload Achievements** - cache this game's RetroAchievements set for offline use
+- [**Remove From Recently Played**](#recently-played) (only on the Recently Played list)
+- [**Add To Favorites** / **Remove From Favorites**](#favorites)
+- [**Remove From Collection**](#collections) (only when viewing a collection)
+- [**Manage Collections**](#collections)
+- [**Emulator Override**](playing-games.md#emulator-override) - use a different core or app for this game
+- [**RA Game ID**](retroachievements.md) - manually set the RetroAchievements game ID
+- [**Preload Achievements**](retroachievements.md) - cache this game's RetroAchievements set for offline use
 - **Rename**
 - **Delete Art** (if present)
 - **Delete Game**
-
-### Emulator Override
-
-By default, each game uses the core or app assigned to its platform in [Emulator Mapping](settings.md#emulation). An emulator override lets you override that choice for a single game, useful when one game runs better on a different core or needs a standalone app.
-
-Open the context menu on a game and select **Emulator Override** to pick from:
-
-- Cannoli's built-in cores
-- Any core installed in the selected RetroArch or RicottaArch package
-- Any compatible standalone Android app
-
-The picker shows the source of each option (Internal, RetroArch, RicottaArch, or Standalone). To clear an override and go back to the platform default, open the picker again and choose **Platform Default**.
