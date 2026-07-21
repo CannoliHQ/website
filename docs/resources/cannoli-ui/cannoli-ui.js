@@ -50,8 +50,8 @@ function loadLibrary() {
 
 // Bottom button-hint bar, per view.
 const HINTS = {
-  "system-list":  { left: [["X", "SETTINGS"]], right: [["A", "SELECT"]] },
-  "game-list":    { left: [["B", "BACK"]],     right: [["X", "PLAY"], ["A", "RESUME"]] },
+  "system-list":  { left: [["X", "SETTINGS"]], right: [["R1", "SEARCH"], ["A", "SELECT"]] },
+  "game-list":    { left: [["B", "BACK"]],     right: [["R1", "SEARCH"], ["X", "PLAY"], ["A", "RESUME"]] },
   "igm":          { left: [["B", "BACK"]],     right: [["A", "SELECT"]] },
   "context-menu": { left: [["B", "BACK"]],     right: [] },
   "collections":         { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
@@ -63,6 +63,7 @@ const HINTS = {
   "romm-settings": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "romm-pair": { left: [["B", "BACK"]], right: [] },
   "romm-connected": { left: [["B", "BACK"]], right: [["X", "DISCONNECT"]] },
+  "search-results": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
 };
 
 // On-screen keyboard: the KEYBOARD_ALPHA layout (rows top to bottom), matching
@@ -248,6 +249,12 @@ class CannoliScreen extends HTMLElement {
     // RomM pairing demo state: the host typed on the RomM settings screen.
     // Empty means "Not set" (only Host + Allow Self-Signed Cert rows show).
     this._rommHost = "";
+    // R1 search demo state: the scope ("global" or a platform id), the matched
+    // game ids, and the raw term shown in the results header (see
+    // _openSearchKeyboard / _confirmKeyboard).
+    this._searchScope = null;
+    this._searchResults = [];
+    this._searchTerm = "";
     this.removeAttribute("multimode");
     this.removeAttribute("multiselect");
     this.removeAttribute("reordermode");
@@ -314,6 +321,14 @@ class CannoliScreen extends HTMLElement {
     return listId !== "favorites" && this._fav.has(id) ? `★ ${title}` : title;
   }
 
+  // The platform tag shown after a global-search result, matching the launcher's
+  // globalOriginTag (rom.platformTag.uppercase()). Styled small/dimmed via .list__tag.
+  _platformTagFor(id) {
+    const g = id && this._library.games[id];
+    if (!g || !g.platform) return "";
+    return `<span class="list__tag">${escapeHtml(g.platform.toUpperCase())}</span>`;
+  }
+
   _itemsForView(s) {
     if (s.view === "system-list") {
       // Content mode controls how the main menu is composed (ContentMode in the
@@ -342,6 +357,9 @@ class CannoliScreen extends HTMLElement {
     }
     if (s.view === "game-list") {
       return this._gamesForList(s.list).map((id) => this._gameLabel(id, s.list));
+    }
+    if (s.view === "search-results") {
+      return (this._searchResults || []).map((id) => this._gameLabel(id, "search"));
     }
     if (s.view === "igm") return IGM_ITEMS;
     if (s.view === "context-menu") return this._contextActions(s.game);
@@ -396,11 +414,19 @@ class CannoliScreen extends HTMLElement {
     return out;
   }
 
+  _platformName(listId) {
+    if (this._library.lists && this._library.lists[listId]) return this._library.lists[listId].name;
+    const p = this._library.platforms.find((pl) => pl.id === listId);
+    return p ? p.name : "";
+  }
+
   _titleForView(s) {
-    if (s.view === "game-list") {
-      if (this._library.lists && this._library.lists[s.list]) return this._library.lists[s.list].name;
-      const p = this._library.platforms.find((pl) => pl.id === s.list);
-      return p ? p.name : "";
+    if (s.view === "game-list") return this._platformName(s.list);
+    if (s.view === "search-results") {
+      const term = this._searchTerm || "";
+      return this._searchScope === "global"
+        ? `Search: "${term}"`
+        : `${this._platformName(this._searchScope)}: "${term}"`;
     }
     if (s.view === "igm") {
       const game = s.game && this._library.games[s.game];
@@ -461,7 +487,7 @@ class CannoliScreen extends HTMLElement {
     this._canvas.innerHTML =
       (backdrop ? `<div class="backdrop" style="background-image:url('${backdrop}')"></div>` : "") +
       (overlay ? "" : this._statusbarHtml({ battery: s.battery, time: s.time })) +
-      (title ? `<h1 class="title">${escapeHtml(title)}</h1>` : "") +
+      (title ? `<h1 class="title"><span class="title__text">${escapeHtml(title)}</span></h1>` : "") +
       `<div class="body">${body}</div>` +
       this._buttonbarHtml(s.view);
     this._builtKey = this._viewKey();
@@ -473,27 +499,61 @@ class CannoliScreen extends HTMLElement {
     });
   }
 
-  // Title is 1.3x the list font (like the launcher's ScreenTitle). If that would
-  // run under the status bar, shrink it to fit, down to the list font size.
+  // Fit the title like the launcher's ScreenTitle: render at 1.3x the list font,
+  // shrink toward 1x if it would run under the status bar, and if it is still too
+  // wide at 1x, clip to the available width and marquee it (MarqueeEffect).
   _fitTitle() {
+    // Cancel any prior marquee first, so a re-render (or a switch to a title-less
+    // view like the keyboard) never leaves a stale animation running.
+    if (this._marqueeAnim) { this._marqueeAnim.cancel(); this._marqueeAnim = null; }
     const title = this._canvas.querySelector(".title");
-    if (!title) return;
+    const text = title && title.querySelector(".title__text");
+    if (!title || !text) return;
     const LIST = 45;
     const MAX = Math.round(LIST * 1.3); // 58, matches the launcher's 1.3x
     const GAP = 40; // clearance to keep before the status bar
     const PAD_LEFT = 26;
     const statusbar = this._canvas.querySelector(".statusbar");
-    // Measure the real element (offset* are in the unscaled 1240px layout space,
-    // independent of the canvas transform), so the font metrics are exact.
+    // Reset before measuring. offset* are in the unscaled 1240px layout space
+    // (independent of the canvas transform), so the metrics are exact.
     title.style.fontSize = `${MAX}px`;
+    title.style.maxWidth = "";
+    text.style.transform = "";
     const limit = (statusbar ? statusbar.offsetLeft : CANVAS_W - 40) - GAP;
-    const rightEdge = title.offsetLeft + title.offsetWidth;
-    if (rightEdge > limit) {
-      const textW = title.offsetWidth - PAD_LEFT;
-      const availText = limit - title.offsetLeft - PAD_LEFT;
+    const availText = Math.max(0, limit - title.offsetLeft - PAD_LEFT);
+    let textW = text.offsetWidth - PAD_LEFT;
+    if (textW > availText) {
+      // Shrink from 1.3x toward the list font, never below it.
       const size = Math.max(LIST, Math.floor((MAX * availText) / textW));
       title.style.fontSize = `${size}px`;
+      textW = text.offsetWidth - PAD_LEFT;
     }
+    if (textW > availText) {
+      // Still too wide at the floor size: clip to the status bar and scroll.
+      title.style.maxWidth = `${Math.round(availText + PAD_LEFT)}px`;
+      this._startTitleMarquee(text, Math.ceil(textW - availText));
+    }
+  }
+
+  // Scroll the (already clipped) title text left and back, matching the
+  // launcher's MarqueeEffect: an 800ms pause, a linear scroll over
+  // clamp(distance*4, 500, 8000)ms, an 800ms pause, then scroll back, looping.
+  _startTitleMarquee(textEl, distance) {
+    if (distance <= 0 || typeof textEl.animate !== "function") return;
+    const dur = Math.min(8000, Math.max(500, distance * 4));
+    const PAUSE = 800;
+    const total = 2 * dur + 2 * PAUSE;
+    const end = `translateX(${-distance}px)`;
+    this._marqueeAnim = textEl.animate(
+      [
+        { transform: "translateX(0)", offset: 0 },
+        { transform: "translateX(0)", offset: PAUSE / total },
+        { transform: end, offset: (PAUSE + dur) / total },
+        { transform: end, offset: (PAUSE + dur + PAUSE) / total },
+        { transform: "translateX(0)", offset: 1 },
+      ],
+      { duration: total, iterations: Infinity, easing: "linear" }
+    );
   }
 
   _listHtml(items, selection, s) {
@@ -518,7 +578,12 @@ class CannoliScreen extends HTMLElement {
         const reorder = s && s.reordermode && s.view === "system-list" && i === selection && i >= 2
           ? `<span class="list__reorder">↕</span>`
           : "";
-        return `<div class="list__item ${i === selection ? "is-selected" : ""}">${reorder}${check}${escapeHtml(t)}</div>`;
+        // Global-search rows show the game's platform as a smaller suffix, like
+        // the launcher's globalOriginTag; in-platform search omits it.
+        const tag = s && s.view === "search-results" && this._searchScope === "global"
+          ? this._platformTagFor(this._searchResults[i])
+          : "";
+        return `<div class="list__item ${i === selection ? "is-selected" : ""}">${reorder}${check}${escapeHtml(t)}${tag}</div>`;
       })
       .join("");
     // The cursor is a single moving pill drawn behind the selected row so it can
@@ -718,6 +783,9 @@ class CannoliScreen extends HTMLElement {
     else if (input === "start") this._openContext();
     else if (input === "y") {
       if (s.view === "collection-toggle") this._openKeyboard();
+    } else if (input === "r1") {
+      if (s.view === "system-list") this._openSearchKeyboard("global");
+      else if (s.view === "game-list") this._openSearchKeyboard(s.list);
     } else if (input === "select") {
       if (s.view === "system-list") this._toggleReorderMode();
       else this._toggleMulti();
@@ -752,6 +820,29 @@ class CannoliScreen extends HTMLElement {
     this._kbdSymbols = false;
     this._kbdCaps = false;
     this._applyState({ view: "keyboard", selection: 0 });
+  }
+
+  // Open the keyboard to type a search term, mirroring the launcher's R1 search.
+  // scope is "global" (opened from the system list) or a platform id (opened from
+  // a game list); confirming builds the filtered results screen (_confirmKeyboard).
+  _openSearchKeyboard(scope) {
+    this._returnState = { view: this.state.view, list: this.state.list, selection: this.state.selection };
+    this._keyboardPurpose = "search";
+    this._searchScope = scope;
+    this._kbdTitle = scope === "global" ? "Global Search" : `${this._platformName(scope)} Search`;
+    this._keyRow = 2;
+    this._keyCol = 0;
+    this._kbdText = "";
+    this._kbdSymbols = false;
+    this._kbdCaps = false;
+    this._applyState({ view: "keyboard", selection: 0 });
+  }
+
+  // Accent- and case-insensitive fold, matching the launcher's TextNormalizer
+  // (NFD decompose, strip combining marks, lowercase) so plain letters match
+  // accented titles.
+  _normalize(text) {
+    return text.normalize("NFD").replace(/\p{Mn}+/gu, "").toLowerCase().trim();
   }
 
   // up/down/left/right move the focused key (wrapping within the grid,
@@ -821,6 +912,18 @@ class CannoliScreen extends HTMLElement {
     if (purpose === "romm-host" && text) {
       this._rommHost = text;
       this._applyState({ view: "romm-settings", selection: 0 });
+      return;
+    }
+    if (purpose === "search") {
+      const term = this._normalize(text);
+      const ids = this._searchScope === "global"
+        ? Object.keys(this._library.games)
+        : this._gamesForList(this._searchScope);
+      this._searchResults = term
+        ? ids.filter((id) => this._normalize(this._library.games[id].title).includes(term))
+        : [];
+      this._searchTerm = text;
+      this._applyState({ view: "search-results", selection: 0 });
       return;
     }
     this._applyState(this._returnState || { view: "collection-toggle", selection: 0 });
@@ -1122,7 +1225,7 @@ class CannoliScreen extends HTMLElement {
         const p = step.press;
         if (p === "up" || p === "down" || p === "left" || p === "right") {
           focus = this._kbdStepRows(focus, p, this._layoutRows(caps, symbols));
-        } else if (p === "y") { focus = { row: 2, col: 0 }; caps = false; symbols = false; } // keyboard opens on alpha
+        } else if (p === "y" || p === "r1") { focus = { row: 2, col: 0 }; caps = false; symbols = false; } // keyboard opens on alpha (Y = new collection, R1 = search)
         out.push(step);
       }
     }

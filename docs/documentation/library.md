@@ -20,6 +20,30 @@ window.CANNOLI_TUTORIALS = {
       { press: "b", wait: 1200 },  // back to platform screen
     ],
   },
+  "search-global": {
+    start: { view: "system-list", contentmode: "default", selection: 0 },
+    loopDelay: 1800,
+    steps: [
+      { wait: 1100 },
+      { press: "r1", wait: 900 },      // open Global Search
+      { typeText: "pokemon" },         // plain letters, no accent
+      { wait: 700 },
+      { press: "start", wait: 1300 },  // results: Pokémon Red / Blue matched
+      { wait: 700 },
+    ],
+  },
+  "search-in-platform": {
+    start: { view: "game-list", list: "nes", selection: 0 },
+    loopDelay: 1800,
+    steps: [
+      { wait: 1100 },
+      { press: "r1", wait: 900 },      // open the NES search
+      { typeText: "mario" },
+      { wait: 700 },
+      { press: "start", wait: 1300 },  // list filters to Super Mario Bros.
+      { wait: 700 },
+    ],
+  },
   "add-to-favorites": {
         start: { view: "game-list", list: "nes", selection: 3 },
         loopDelay: 1800,
@@ -192,6 +216,34 @@ window.CANNOLI_TUTORIALS = {
 </div>
 </div>
 
+### Search
+
+Press `R1` to search. From the main menu it runs a **Global Search** across your whole library; from inside a platform, collection, or favorites list it searches just that list.
+
+Search ignores case and accent marks, so typing `pokemon` matches `Pokémon`.
+
+<div class="task" markdown>
+<div class="task__visual" markdown>
+<cannoli-screen tutorial="search-global"></cannoli-screen>
+</div>
+<div class="task__steps" markdown>
+1. From the main menu, press `R1` to open **Global Search**.
+2. Type your term, for example `pokemon`.
+3. Press `Start`. Results come from your whole library.
+</div>
+</div>
+
+<div class="task" markdown>
+<div class="task__visual" markdown>
+<cannoli-screen tutorial="search-in-platform"></cannoli-screen>
+</div>
+<div class="task__steps" markdown>
+1. Inside a system's game list, press `R1` to search just that system.
+2. Type your term, for example `mario`.
+3. Press `Start` to filter the list to matching games.
+</div>
+</div>
+
 ---
 
 ## Recently Played
@@ -345,25 +397,3 @@ Implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?
 
 > [!IMPORTANT]
 > Five Game Handheld mode does not restrict you to five games nor does it modify your library.
-
-## Game Context Menu
-
-<div class="task" markdown>
-<div class="task__visual" markdown>
-<cannoli-screen view="context-menu" game="tecmo-2025" list="nes" fullmenu></cannoli-screen>
-</div>
-<div class="task__steps" markdown>
-Press `Start` on any game to open its context menu.
-</div>
-</div>
-
-- [**Remove From Recently Played**](#recently-played) (only on the Recently Played list)
-- [**Add To Favorites** / **Remove From Favorites**](#favorites)
-- [**Remove From Collection**](#collections) (only when viewing a collection)
-- [**Manage Collections**](#collections)
-- [**Emulator Override**](playing-games.md#emulator-override) - use a different core or app for this game
-- [**RA Game ID**](retroachievements.md) - manually set the RetroAchievements game ID
-- [**Preload Achievements**](retroachievements.md) - cache this game's RetroAchievements set for offline use
-- **Rename**
-- **Delete Art** (if present)
-- **Delete Game**

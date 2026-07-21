@@ -78,16 +78,36 @@ This menu option will only appear if the game you are playing has at least one g
 
 If you have one file this option will open it directly. If you have multiple files you will see a list. In both cases the IGM will remember the last page and position for each file.
 
+### Cheats
+
+Cannoli can apply RetroArch-style `.cht` cheat files to games running in the [built-in core runner](#built-in-core-runner).
+
+Place your `.cht` files in `Cheats/<Platform>/<Game>/`, mirroring the platform folder and ROM file name Cannoli already uses for box art and guides. You can also upload them through [Nonna's Kitchen](nonnas-kitchen.md). Files with no readable cheats are ignored.
+
+This menu option only appears when the current game has at least one cheat file.
+
+Open **Cheats** to see every cheat, grouped by file. Highlight one and press `A` to toggle it **On** or **Off**; the change applies to the running game right away. Cheats your core does not support are dimmed and cannot be toggled.
+
+Cannoli remembers which cheats you had enabled for each game. The next time you play it, press `X` on the Cheats screen to **Restore Last Session** and switch them back on.
+
 ### Settings
 
-Opens the in-game settings with six categories:
+Opens the in-game settings with five categories:
 
 - **Video** - Screen scaling, sharpness, shaders, overlays
 - **Emulator** - Core-specific options (varies per platform)
-- **Buttons** - Remap the current game's controls. Mappings can be saved per platform or per game.
-- **Shortcuts** - Assign button combos to in-game actions like Save State, Fast Forward, and Open Guide. See [Shortcuts](shortcuts.md) for the full list.
+- **Input** - Button mappings, shortcuts, and D-Pad behavior (see below)
 - **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
 - **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, and RetroAchievements status, game ID, and detection details (when logged in)
+
+#### Input
+
+The **Input** category gathers everything about how your controller drives the game:
+
+- **Button Mappings** - remap the current game's controls. Mappings can be saved per platform or per game.
+- **Shortcuts** - assign button combos to in-game actions like Save State, Fast Forward, and Open Guide. See [Shortcuts](shortcuts.md) for the full list.
+- **Left Stick as D-Pad** - send left-stick movement as D-Pad presses, for games that only read the D-Pad.
+- **D-Pad Mode (BETA)** - switch between **8-Way** (the default) and **4-Way**, which suppresses diagonals for games built for a 4-way pad. This row only appears when **Experimental Features** is turned on in [Settings > Advanced](settings.md#advanced), and your choice is remembered per platform and per game.
 
 ### Reassign Players
 

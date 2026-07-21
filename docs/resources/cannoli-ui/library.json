@@ -5,18 +5,20 @@
       "name": "Game Boy",
       "games": [
         "tetris-rosy",
-        "balatro"
+        "balatro",
+        "pokemon-red",
+        "pokemon-blue"
       ]
     },
     {
       "id": "gbc",
       "name": "Game Boy Color",
-      "games": []
+      "games": ["pokemon-crystal"]
     },
     {
       "id": "gba",
       "name": "Game Boy Advance",
-      "games": []
+      "games": ["pokemon-emerald"]
     },
     {
       "id": "nes",
@@ -89,6 +91,22 @@
     "duck-hunt": {
       "title": "Duck Hunt",
       "platform": "nes"
+    },
+    "pokemon-red": {
+      "title": "Pokémon Red Version",
+      "platform": "gb"
+    },
+    "pokemon-blue": {
+      "title": "Pokémon Blue Version",
+      "platform": "gb"
+    },
+    "pokemon-crystal": {
+      "title": "Pokémon Crystal Version",
+      "platform": "gbc"
+    },
+    "pokemon-emerald": {
+      "title": "Pokémon Emerald Version",
+      "platform": "gba"
     }
   },
   "collections": ["RPGs", "Puzzle Games", "Sports"],

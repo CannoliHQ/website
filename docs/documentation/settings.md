@@ -87,6 +87,10 @@ See the [RomM](romm.md) page for more details.
 ## Advanced
 
 - **Logging:** Toggle detailed logging per subsystem - **ROM Scan**, **Input**, and **Game Session**. Logs are written to `Cannoli/Logs/`. Useful for diagnosing core, controller, or library issues.
+- **Screen Geometry:** Shrink and reposition Cannoli's entire interface so it fits displays that crop the edges, such as a CRT through an HDMI converter or a TV with overscan. Opens a calibration screen:
+    - **Width** and **Height** scale the interface from **100%** down to **50%**.
+    - **Horizontal Position** and **Vertical Position** nudge the picture once you have shrunk it (they stay disabled at full size).
+    - Adjust the selected row with `Left` / `Right`, and press `X` to reset everything to default.
 - **Regenerate System Folders:** Recreate any missing platform folders under your ROM directory based on the current platform list. Reports how many folders were created (or that all were already present).
 - **Kitchen Code Bypass:** Skip the PIN prompt when opening Nonna's Kitchen.
 - **Release Channel:** Tells the updater what type of build you want

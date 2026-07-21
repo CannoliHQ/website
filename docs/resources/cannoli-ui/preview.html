@@ -49,6 +49,33 @@
           { press: "down", wait: 1200 },  // last game
         ],
       },
+      // Tutorial: R1 Global Search from the main menu; typing plain letters
+      // matches the accented Pokémon titles.
+      "search-global": {
+        start: { view: "system-list", selection: 0 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 1100 },
+          { press: "r1", wait: 900 },
+          { typeText: "pokemon" },
+          { wait: 700 },
+          { press: "start", wait: 1300 },
+          { wait: 700 },
+        ],
+      },
+      // Tutorial: R1 search inside one system's game list.
+      "search-in-platform": {
+        start: { view: "game-list", list: "nes", selection: 0 },
+        loopDelay: 1800,
+        steps: [
+          { wait: 1100 },
+          { press: "r1", wait: 900 },
+          { typeText: "mario" },
+          { wait: 700 },
+          { press: "start", wait: 1300 },
+          { wait: 700 },
+        ],
+      },
       // Tutorial: open a favorited game's context menu (title = game name) and
       // run "Add To Favorites" -> back to the favorites list.
       "add-to-favorites": {
@@ -235,6 +262,24 @@
         },
         start: { view: "system-list", contentmode: "five-game-handheld", selection: 0 },
       },
+      // Tutorial: set the RomM host, save, select Pair with Another Device,
+      // show the QR pairing screen, then simulate approval -> connected.
+      "romm-pair": {
+        start: { view: "romm-settings", selection: 0 },
+        loopDelay: 2000,
+        steps: [
+          { wait: 1000 },
+          { press: "a", wait: 700 },     // Host -> keyboard
+          { typeText: "romm.local" },
+          { press: "start", wait: 900 }, // save host -> back to romm-settings (4 rows)
+          { press: "down", wait: 500 },  // -> Allow Self-Signed Cert
+          { press: "down", wait: 500 },  // -> Pair with Another Device
+          { press: "a", wait: 900 },     // enter pairing (connecting)
+          { set: { view: "romm-pair", phase: "waiting" }, wait: 2200 }, // QR
+          { set: { view: "romm-connected" }, wait: 2200 },              // simulated approval
+          { wait: 800 },
+        ],
+      },
     };
   </script>
   <script type="module" src="./cannoli-ui.js"></script>
@@ -248,6 +293,20 @@
       <h2>Animated tutorial: browse &amp; scroll (loops)</h2>
       <div class="frame">
         <cannoli-screen tutorial="browse-and-scroll"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: global search (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="search-global"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: in-platform search (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="search-in-platform"></cannoli-screen>
       </div>
     </div>
 
@@ -318,6 +377,13 @@
       <h2>Content mode: Five Game Handheld</h2>
       <div class="frame">
         <cannoli-screen tutorial="mode-5gh"></cannoli-screen>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Animated tutorial: RomM pairing (loops)</h2>
+      <div class="frame">
+        <cannoli-screen tutorial="romm-pair"></cannoli-screen>
       </div>
     </div>
 

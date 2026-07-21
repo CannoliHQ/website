@@ -56,15 +56,24 @@
   /* top margin drops the title so its text top lines up with the status-bar
      icon tops, matching the real Cannoli Android UI. */
   margin: 19px 0 6px;
-  /* align the title text with the list item text (items are inset by their
-     horizontal padding; the selected pill extends left of this line). */
-  padding-left: 26px;
   /* 1.3x the list font, matching the launcher (ScreenTitle scales the list size
-     by 1.3). _fitTitle() shrinks long titles so they clear the status bar. */
+     by 1.3). _fitTitle() shrinks long titles, then marquees any that are still
+     too wide, so they clear the status bar. */
   font-size: 58px;
   line-height: 1.05;
   white-space: nowrap;
   width: max-content; /* size to the text so _fitTitle can measure it exactly */
+  overflow: hidden;   /* clips the marquee scroll; harmless when the title fits */
+}
+
+/* The scrolling inner text. The list-item alignment inset lives here (not on
+   .title) so it travels with the marquee, exactly like the launcher's
+   ScreenTitle padding sitting inside its horizontalScroll. */
+.title__text {
+  display: inline-block;
+  padding-left: 26px;
+  white-space: nowrap;
+  will-change: transform;
 }
 
 .body {
@@ -374,6 +383,11 @@
 }
 .list__label { position: relative; z-index: 1; }
 .list__value { position: relative; z-index: 1; font-size: 0.72em; opacity: 0.6; }
+
+/* Platform suffix on global-search rows, matching the launcher's PillRowText
+   tagSuffix (0.75x font, dimmed). Inherits the row color so it flips dark when
+   the row is selected. */
+.list__tag { margin-left: 14px; font-size: 0.75em; opacity: 0.6; }
 
 /* RomM pairing overlay: centered caption over host or QR. */
 .pair {

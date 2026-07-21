@@ -37,7 +37,7 @@ The dashboard has three tabs.
 
 ### Platforms
 
-Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk box art upload), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, and **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`).
+Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk box art upload), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`), and **Cheats** (`.cht`).
 
 ### Customization
 
