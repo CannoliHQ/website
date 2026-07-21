@@ -6,3 +6,5 @@ __pycache__/
 /.envrc
 superpowers/
 .superpowers/
+.DS_Store
+.idea/
