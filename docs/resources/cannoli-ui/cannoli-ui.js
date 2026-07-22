@@ -59,10 +59,16 @@ const HINTS = {
   "collection-toggle":   { left: [["B", "BACK"]], right: [["Y", "NEW"], ["A", "TOGGLE"]] },
   "child-toggle":        { left: [["B", "BACK"]], right: [["A", "TOGGLE"]] },
   "collection-contents": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
+  "app-picker":          { left: [["B", "BACK"]], right: [["A", "TOGGLE"]] },
+  "tools-menu":          { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "keyboard":          { left: [["X", "CANCEL"]], right: [["START", "CONFIRM"]] },
   "romm-settings": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "romm-pair": { left: [["B", "BACK"]], right: [] },
   "romm-connected": { left: [["B", "BACK"]], right: [["X", "DISCONNECT"]] },
+  "romm-platforms": { left: [["B", "BACK"]], right: [["R1", "SEARCH"], ["A", "SELECT"]] },
+  "romm-games": { left: [["B", "BACK"]], right: [["R1", "SEARCH"], ["A", "DOWNLOAD"]] },
+  "romm-firmware": { left: [["B", "BACK"]], right: [["A", "DOWNLOAD"]] },
+  "romm-search": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "search-results": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
 };
 
@@ -240,6 +246,13 @@ class CannoliScreen extends HTMLElement {
     // currently being edited).
     this._childOf = new Map();
     this._contextCollection = null;
+    // Tools/Ports demo state: installed-app assignments per category, the
+    // (renamable) category labels, and which folder a context menu is editing.
+    this._toolsApps = new Set((this._library.apps && this._library.apps.tools) || []);
+    this._portsApps = new Set((this._library.apps && this._library.apps.ports) || []);
+    this._toolsName = "Tools";
+    this._portsName = "Ports";
+    this._contextFolder = null;
     // On-screen keyboard runtime state (not attribute-backed; see _openKeyboard).
     this._keyRow = 2;
     this._keyCol = 0;
@@ -249,6 +262,16 @@ class CannoliScreen extends HTMLElement {
     // RomM pairing demo state: the host typed on the RomM settings screen.
     // Empty means "Not set" (only Host + Allow Self-Signed Cert rows show).
     this._rommHost = "";
+    // RomM browse demo state: the platform currently opened, and the set of
+    // "<platformId>:<gameIndex>" keys that have been downloaded in this run (so a
+    // download makes the on-device dot appear). Reset each replay.
+    this._rommPlatform = null;
+    this._rommDownloaded = new Set();
+    // Firmware files downloaded this run (indices into romm.firmware), and the
+    // RomM search term + matched result rows. All reset each replay.
+    this._rommFwDownloaded = new Set();
+    this._rommSearchTerm = "";
+    this._rommSearchResults = [];
     // R1 search demo state: the scope ("global" or a platform id), the matched
     // game ids, and the raw term shown in the results header (see
     // _openSearchKeyboard / _confirmKeyboard).
@@ -340,8 +363,11 @@ class CannoliScreen extends HTMLElement {
       // Tools and Ports stay reachable on the main menu in every mode (including
       // five-game-handheld); the demo library opts in via `ports` / `tools`.
       const folders = [];
-      if (this._library.ports) folders.push("Ports");
-      if (this._library.tools) folders.push("Tools");
+      // A category's row shows when a static demo opts in (library.ports/tools)
+      // or when apps have been assigned at runtime; the label is its (renamable)
+      // custom name. Ports before Tools, matching the launcher's default order.
+      if (this._library.ports || this._portsApps.size) folders.push(this._portsName);
+      if (this._library.tools || this._toolsApps.size) folders.push(this._toolsName);
       if (mode === "collections-only") {
         return ["Recently Played", "Favorites", ...collections, ...folders];
       }
@@ -394,13 +420,94 @@ class CannoliScreen extends HTMLElement {
       const games = (this._library.collectionGames && this._library.collectionGames[name]) || [];
       return [...children, ...games.map((id) => this._gameLabel(id, name))];
     }
+    if (s.view === "app-picker") {
+      // Manage Tools / Manage Ports: the full installed-app list; a checkbox
+      // marks the ones assigned to this category (s.list = "tools" | "ports").
+      return ((this._library.apps && this._library.apps.installed) || []).slice();
+    }
+    if (s.view === "tools-menu") {
+      // Context menu for a Tools/Ports row on the main menu: only Rename.
+      return ["Rename"];
+    }
     if (s.view === "romm-settings") {
       const rows = ["Host", "Allow Self-Signed Cert"];
       // The launcher reveals the pair actions only once a host is set.
       if (this._rommHost) rows.push("Pair with Another Device", "Pair with Code");
       return rows;
     }
+    if (s.view === "romm-platforms") return this._rommPlatformRows();
+    if (s.view === "romm-games") return this._rommGameRows();
+    if (s.view === "romm-firmware") return this._rommFirmwareRows();
+    if (s.view === "romm-search") return this._rommSearchResults;
     return [];
+  }
+
+  // ----- RomM browse helpers -----
+  _rommPlatforms() {
+    return (this._library.romm && this._library.romm.platforms) || [];
+  }
+
+  // Rows for the RomM Platforms screen: an optional Collections row, then each
+  // platform with its remote ROM count (label + right-aligned value).
+  _rommPlatformRows() {
+    const romm = this._library.romm || {};
+    const rows = [];
+    if (romm.collectionsCount != null) {
+      rows.push({ kind: "collections", label: "Collections", value: String(romm.collectionsCount) });
+    }
+    for (const p of this._rommPlatforms()) {
+      rows.push({ kind: "platform", id: p.id, label: p.name, value: String(p.romCount) });
+    }
+    return rows;
+  }
+
+  // Rows for the opened platform's game list. A dot marks games already on the
+  // device (from the data, or downloaded during this run).
+  _rommGameRows() {
+    const p = this._rommPlatforms().find((x) => x.id === this._rommPlatform);
+    const games = (p && p.games) || [];
+    return games.map((g, i) => ({
+      kind: "game",
+      label: g.name,
+      dot: !!g.onDevice || this._rommDownloaded.has(`${this._rommPlatform}:${i}`),
+    }));
+  }
+
+  _rommFirmwarePresent(i) {
+    const fw = (this._library.romm && this._library.romm.firmware) || [];
+    return !!(fw[i] && fw[i].onDevice) || this._rommFwDownloaded.has(i);
+  }
+
+  // Firmware rows split into "Not on Device" then "On Device" sections. Each row
+  // carries its section label (the renderer inserts a header on change) and its
+  // index into romm.firmware. Selection indexes these rows only (not headers).
+  _rommFirmwareRows() {
+    const fw = (this._library.romm && this._library.romm.firmware) || [];
+    const all = fw.map((f, i) => ({ kind: "firmware", label: f.name, i, present: this._rommFirmwarePresent(i) }));
+    const notOn = all.filter((f) => !f.present).map((f) => ({ ...f, section: "Not on Device" }));
+    const on = all.filter((f) => f.present).map((f) => ({ ...f, section: "On Device", dot: true }));
+    return [...notOn, ...on];
+  }
+
+  // Every RomM game across all platforms whose title matches `term`, tagged with
+  // its platform (shown on the right, like the launcher's globalOriginTag).
+  _rommSearch(term) {
+    const t = (term || "").trim().toLowerCase();
+    if (!t) return [];
+    const out = [];
+    for (const p of this._rommPlatforms()) {
+      (p.games || []).forEach((g, i) => {
+        if (g.name.toLowerCase().includes(t)) {
+          out.push({
+            kind: "game",
+            label: g.name,
+            value: p.name,
+            dot: !!g.onDevice || this._rommDownloaded.has(`${p.id}:${i}`),
+          });
+        }
+      });
+    }
+    return out;
   }
 
   // Every collection whose _childOf entry points at `name` (i.e. every child
@@ -441,7 +548,16 @@ class CannoliScreen extends HTMLElement {
     if (s.view === "collection-toggle") return "Manage Collections";
     if (s.view === "child-toggle") return "Child Collections";
     if (s.view === "collection-contents") return s.list;
+    if (s.view === "app-picker") return s.list === "ports" ? "Manage Ports" : "Manage Tools";
+    if (s.view === "tools-menu") return this._contextFolder === "ports" ? this._portsName : this._toolsName;
     if (s.view === "romm-settings") return "RomM";
+    if (s.view === "romm-platforms") return "RomM";
+    if (s.view === "romm-games") {
+      const p = this._rommPlatforms().find((x) => x.id === this._rommPlatform);
+      return p ? p.name : "";
+    }
+    if (s.view === "romm-firmware") return "Firmware";
+    if (s.view === "romm-search") return `RomM: "${this._rommSearchTerm}"`;
     return "";
   }
 
@@ -479,8 +595,18 @@ class CannoliScreen extends HTMLElement {
             ? this._rommPairHtml(s)
             : s.view === "romm-settings"
               ? this._rommSettingsHtml(s)
-              : this._listHtml(items, s.selection, s) +
-                (boxart ? `<div class="boxart"><img alt="" src="${boxart}"></div>` : "");
+              : s.view === "romm-firmware"
+                ? this._rommFirmwareHtml(s)
+                : s.view === "romm-platforms" || s.view === "romm-games" || s.view === "romm-search"
+                  ? this._rommBrowseHtml(s)
+                  : this._listHtml(items, s.selection, s) +
+                    (boxart ? `<div class="boxart"><img alt="" src="${boxart}"></div>` : "");
+    // The RomM browse screens carry the launcher's purple screen-edge border
+    // (ROMM_BORDER_COLOR) to signal you are browsing the remote server.
+    this._canvas.classList.toggle(
+      "is-romm-browse",
+      ["romm-platforms", "romm-games", "romm-firmware", "romm-search"].includes(s.view)
+    );
     // The pairing and connected screens are full-screen black dialogs in the
     // launcher (RommPairingOverlay / RommConnectedOverlay) with no status bar.
     const overlay = s.view === "romm-pair" || s.view === "romm-connected";
@@ -566,6 +692,9 @@ class CannoliScreen extends HTMLElement {
         } else if (s && s.view === "child-toggle") {
           const checked = this._childOf.get(t) === this._contextCollection;
           check = `<span class="list__check">${checked ? "☑" : "☐"}</span>`;
+        } else if (s && s.view === "app-picker") {
+          const checked = this._appsFor(s.list).has(t);
+          check = `<span class="list__check">${checked ? "☑" : "☐"}</span>`;
         } else if (s && s.multimode && s.view === "game-list") {
           // Multi-select checkboxes belong to the game list only. The multimode
           // attribute persists as you open the context menu / Manage Collections
@@ -611,6 +740,41 @@ class CannoliScreen extends HTMLElement {
       })
       .join("");
     return `<div class="list list--settings"><div class="list__cursor"></div>${items}</div>`;
+  }
+
+  // RomM browse list (Platforms / a platform's games). Reuses the KV row + moving
+  // cursor: platform rows show a remote ROM count on the right; game rows show a
+  // leading dot when the title is already on the device.
+  _rommBrowseHtml(s) {
+    const rows = this._itemsForView(s);
+    const items = rows
+      .map((row, i) => {
+        const dot = row.dot ? `<span class="list__dot" aria-hidden="true"></span>` : "";
+        const value = row.value != null
+          ? `<span class="list__value">${escapeHtml(row.value)}</span>` : "";
+        return `<div class="list__item list__item--kv ${i === s.selection ? "is-selected" : ""}">` +
+          `<span class="list__label">${dot}${escapeHtml(row.label)}</span>${value}</div>`;
+      })
+      .join("");
+    return `<div class="list list--settings"><div class="list__cursor"></div>${items}</div>`;
+  }
+
+  // RomM Firmware: a sectioned list ("Not on Device" then "On Device"). A header
+  // is drawn whenever the section changes; firmware rows carry a dot when present.
+  _rommFirmwareHtml(s) {
+    const rows = this._itemsForView(s);
+    let last = null;
+    let html = "";
+    rows.forEach((row, i) => {
+      if (row.section !== last) {
+        html += `<div class="list__section">${escapeHtml(row.section)}</div>`;
+        last = row.section;
+      }
+      const dot = row.present ? `<span class="list__dot" aria-hidden="true"></span>` : "";
+      html += `<div class="list__item list__item--kv ${i === s.selection ? "is-selected" : ""}">` +
+        `<span class="list__label">${dot}${escapeHtml(row.label)}</span></div>`;
+    });
+    return `<div class="list list--settings"><div class="list__cursor"></div>${html}</div>`;
   }
 
   // Full-screen pairing overlay. `connecting` shows the host being reached;
@@ -786,6 +950,7 @@ class CannoliScreen extends HTMLElement {
     } else if (input === "r1") {
       if (s.view === "system-list") this._openSearchKeyboard("global");
       else if (s.view === "game-list") this._openSearchKeyboard(s.list);
+      else if (s.view === "romm-platforms" || s.view === "romm-games") this._openRommSearchKeyboard();
     } else if (input === "select") {
       if (s.view === "system-list") this._toggleReorderMode();
       else this._toggleMulti();
@@ -822,6 +987,21 @@ class CannoliScreen extends HTMLElement {
     this._applyState({ view: "keyboard", selection: 0 });
   }
 
+  // Open the keyboard to rename a Tools/Ports category, pre-filled with the
+  // current name (the launcher's "Rename Folder"). Confirming sets the custom
+  // label; a blank submission keeps the current name.
+  _openRenameFolderKeyboard() {
+    this._returnState = { view: "system-list", selection: this._returnSelection || 0 };
+    this._keyboardPurpose = "rename-folder";
+    this._kbdTitle = "Rename Folder";
+    this._keyRow = 2;
+    this._keyCol = 0;
+    this._kbdText = this._contextFolder === "ports" ? this._portsName : this._toolsName;
+    this._kbdSymbols = false;
+    this._kbdCaps = false;
+    this._applyState({ view: "keyboard", selection: 0 });
+  }
+
   // Open the keyboard to type a search term, mirroring the launcher's R1 search.
   // scope is "global" (opened from the system list) or a platform id (opened from
   // a game list); confirming builds the filtered results screen (_confirmKeyboard).
@@ -830,6 +1010,20 @@ class CannoliScreen extends HTMLElement {
     this._keyboardPurpose = "search";
     this._searchScope = scope;
     this._kbdTitle = scope === "global" ? "Global Search" : `${this._platformName(scope)} Search`;
+    this._keyRow = 2;
+    this._keyCol = 0;
+    this._kbdText = "";
+    this._kbdSymbols = false;
+    this._kbdCaps = false;
+    this._applyState({ view: "keyboard", selection: 0 });
+  }
+
+  // R1 search from a RomM browse screen: searches the whole server and shows the
+  // matches on a purple-bordered results screen (_confirmKeyboard, "romm-search").
+  _openRommSearchKeyboard() {
+    this._returnState = { view: this.state.view, list: this.state.list, selection: this.state.selection };
+    this._keyboardPurpose = "romm-search";
+    this._kbdTitle = "RomM Search";
     this._keyRow = 2;
     this._keyCol = 0;
     this._kbdText = "";
@@ -912,6 +1106,25 @@ class CannoliScreen extends HTMLElement {
     if (purpose === "romm-host" && text) {
       this._rommHost = text;
       this._applyState({ view: "romm-settings", selection: 0 });
+      return;
+    }
+    if (purpose === "rename-folder") {
+      // Blank keeps the current name (the launcher no-ops an empty rename);
+      // otherwise set the custom label. Return to the main menu, row reselected.
+      if (text) {
+        if (this._contextFolder === "ports") this._portsName = text;
+        else this._toolsName = text;
+      }
+      const name = this._contextFolder === "ports" ? this._portsName : this._toolsName;
+      const items = this._itemsForView({ view: "system-list", contentmode: this.state.contentmode });
+      const idx = items.indexOf(name);
+      this._applyState({ view: "system-list", selection: idx >= 0 ? idx : 0 });
+      return;
+    }
+    if (purpose === "romm-search") {
+      this._rommSearchTerm = text;
+      this._rommSearchResults = this._rommSearch(text);
+      this._applyState({ view: "romm-search", selection: 0 });
       return;
     }
     if (purpose === "search") {
@@ -1010,6 +1223,11 @@ class CannoliScreen extends HTMLElement {
     const s = this.state;
     if (s.view === "collection-toggle") { this._toggleCollection(s.selection); return; }
     if (s.view === "child-toggle") { this._toggleChild(s.selection); return; }
+    if (s.view === "app-picker") { this._toggleApp(s.selection); return; }
+    if (s.view === "tools-menu") {
+      if (this._itemsForView(s)[s.selection] === "Rename") this._openRenameFolderKeyboard();
+      return;
+    }
     if (s.view === "context-menu") { this._runContextAction(); return; }
     if (s.view === "collection-menu") {
       // Only "Child Collections" is wired for this demo; Rename/Delete are shown
@@ -1032,6 +1250,37 @@ class CannoliScreen extends HTMLElement {
         this._applyState({ view: "romm-pair", phase: "connecting" });
       return;
     }
+    if (s.view === "romm-platforms") {
+      const row = this._itemsForView(s)[s.selection];
+      // Collections row is shown for fidelity but not wired in this demo.
+      if (row && row.kind === "platform") {
+        this._rommPlatform = row.id;
+        this._applyState({ view: "romm-games", selection: 0 });
+      }
+      return;
+    }
+    if (s.view === "romm-games") {
+      const p = this._rommPlatforms().find((x) => x.id === this._rommPlatform);
+      const g = p && p.games && p.games[s.selection];
+      // Download a not-on-device game: mark it downloaded so its dot appears.
+      if (g && !g.onDevice) {
+        this._rommDownloaded.add(`${this._rommPlatform}:${s.selection}`);
+        this._render();
+      }
+      return;
+    }
+    if (s.view === "romm-firmware") {
+      const row = this._rommFirmwareRows()[s.selection];
+      // Download a not-on-device file: it moves into the On Device section; keep
+      // it selected so the cursor follows it down.
+      if (row && !row.present) {
+        this._rommFwDownloaded.add(row.i);
+        const idx = this._rommFirmwareRows().findIndex((r) => r.i === row.i);
+        this._applyState({ view: "romm-firmware", selection: idx >= 0 ? idx : s.selection });
+      }
+      return;
+    }
+    if (s.view === "romm-search") return; // results are display-only in this demo
     if (s.view !== "system-list") return;
     // Map by label, not a fixed offset: the head varies (Recently Played,
     // Favorites, and a Collections folder in default mode), so `selection - 2`
@@ -1082,6 +1331,21 @@ class CannoliScreen extends HTMLElement {
     if (!name) return;
     if (this._collectionMembership.has(name)) this._collectionMembership.delete(name);
     else this._collectionMembership.add(name);
+    this._render();
+  }
+
+  _appsFor(cat) {
+    return cat === "ports" ? this._portsApps : this._toolsApps;
+  }
+
+  // Toggle the highlighted app's membership in the current category (s.list).
+  // Live like the launcher's picker (Back commits); re-render since it's a Set.
+  _toggleApp(i) {
+    const name = this._itemsForView(this.state)[i];
+    if (!name) return;
+    const set = this._appsFor(this.state.list);
+    if (set.has(name)) set.delete(name);
+    else set.add(name);
     this._render();
   }
 
@@ -1137,6 +1401,35 @@ class CannoliScreen extends HTMLElement {
       this._applyState({ view: "collections", selection: this._collectionsIndex(name) });
       return;
     }
+    if (v === "tools-menu") {
+      this._applyState({ view: "system-list", selection: this._returnSelection || 0 });
+      return;
+    }
+    if (v === "app-picker") {
+      // Back commits the checked apps (toggled live); land on the main menu with
+      // the now-visible category row selected.
+      const name = this.state.list === "ports" ? this._portsName : this._toolsName;
+      const items = this._itemsForView({ view: "system-list", contentmode: this.state.contentmode });
+      const idx = items.indexOf(name);
+      this._applyState({ view: "system-list", selection: idx >= 0 ? idx : 0 });
+      return;
+    }
+    if (v === "romm-games") {
+      // Back to the Platforms list with the platform we came from highlighted.
+      const rows = this._rommPlatformRows();
+      const idx = rows.findIndex((r) => r.kind === "platform" && r.id === this._rommPlatform);
+      this._applyState({ view: "romm-platforms", selection: Math.max(0, idx) });
+      return;
+    }
+    if (v === "romm-search") {
+      // Back to the browse screen the search was opened from.
+      this._applyState(this._returnState || { view: "romm-platforms", selection: 0 });
+      return;
+    }
+    if (v === "romm-firmware") {
+      this._applyState({ view: "romm-platforms", selection: 0 });
+      return;
+    }
     this._applyState({ view: "system-list", selection: this._returnSelection || 0 });
   }
 
@@ -1149,6 +1442,16 @@ class CannoliScreen extends HTMLElement {
       if (!name) return;
       this._contextCollection = name;
       this._applyState({ view: "collection-menu", selection: 0 });
+      return;
+    }
+    if (s.view === "system-list") {
+      // Start on a Tools/Ports row opens its context menu (Rename only).
+      const label = this._itemsForView(s)[s.selection];
+      if (label === this._toolsName || label === this._portsName) {
+        this._contextFolder = label === this._portsName ? "ports" : "tools";
+        this._returnSelection = s.selection;
+        this._applyState({ view: "tools-menu", selection: 0 });
+      }
       return;
     }
     if (s.view !== "game-list") return;
@@ -1225,7 +1528,7 @@ class CannoliScreen extends HTMLElement {
         const p = step.press;
         if (p === "up" || p === "down" || p === "left" || p === "right") {
           focus = this._kbdStepRows(focus, p, this._layoutRows(caps, symbols));
-        } else if (p === "y" || p === "r1") { focus = { row: 2, col: 0 }; caps = false; symbols = false; } // keyboard opens on alpha (Y = new collection, R1 = search)
+        } else if (p === "y" || p === "r1" || step.opensKeyboard) { focus = { row: 2, col: 0 }; caps = false; symbols = false; } // keyboard opens on alpha (Y = new collection, R1 = search, or a flagged rename)
         out.push(step);
       }
     }

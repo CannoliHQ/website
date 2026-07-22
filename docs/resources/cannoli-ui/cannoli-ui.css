@@ -384,6 +384,34 @@
 .list__label { position: relative; z-index: 1; }
 .list__value { position: relative; z-index: 1; font-size: 0.72em; opacity: 0.6; }
 
+/* RomM browse screens carry the launcher's purple screen-edge border
+   (ROMM_BORDER_COLOR #553E98, ~2dp). Drawn as an inset shadow so it hugs the
+   screen edge without shifting the content box. */
+.screen.is-romm-browse {
+  box-shadow: inset 0 0 0 4px #553e98;
+}
+/* On-device dot before a downloaded game's title (the launcher's dotIndicator).
+   currentColor so it flips dark on the selected (light) pill. */
+.list__dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+}
+/* Section header on the RomM Firmware list ("Not on Device" / "On Device").
+   A dimmed, non-selectable label above its group. */
+.list__section {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  opacity: 0.5;
+  padding: 12px 28px 2px;
+}
+.list--settings .list__section:first-child { padding-top: 0; }
+
 /* Platform suffix on global-search rows, matching the launcher's PillRowText
    tagSuffix (0.75x font, dimmed). Inherits the row color so it flips dark when
    the row is selected. */

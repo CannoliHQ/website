@@ -45,7 +45,7 @@ def test_status_bar_respects_attribute_overrides(screen):
 
 def test_system_list_button_hints(screen):
     labels = screen.locator(".hint__label").all_inner_texts()
-    assert labels == ["SETTINGS", "SELECT"]
+    assert labels == ["SETTINGS", "SEARCH", "SELECT"]
 
 
 def test_system_list_items_prepend_specials(screen):
@@ -504,3 +504,88 @@ def test_reorder_shows_arrow_and_moves(screen):
     items = screen.locator(".list__item").all_inner_texts()
     assert items[2] == "Game Boy Color"
     assert items[3] == "\u2195Game Boy"
+
+
+# ----- RomM browse (purple-bordered server browsing) -----
+
+_ROMM_LIB = (
+    "el._library = Object.assign({}, el._library, { romm: {"
+    " host:'romm.local', collectionsCount:3, platforms:["
+    "  {id:'gba', name:'Game Boy Advance', romCount:214, games:["
+    "    {name:'Advance Wars', onDevice:true}, {name:'Golden Sun', onDevice:false} ]},"
+    "  {id:'snes', name:'Super Nintendo', romCount:388, games:[]} ] } });"
+)
+
+
+def test_romm_platforms_lists_counts(screen):
+    screen.eval_on_selector(
+        "cannoli-screen",
+        "el => { " + _ROMM_LIB + " el.setAttribute('view','romm-platforms'); "
+        "el.setAttribute('selection','0'); el._render(); }",
+    )
+    assert screen.locator(".title").inner_text() == "RomM"
+    assert screen.locator(".list__label").all_inner_texts() == [
+        "Collections", "Game Boy Advance", "Super Nintendo",
+    ]
+    assert screen.locator(".list__value").all_inner_texts() == ["3", "214", "388"]
+
+
+def test_romm_browse_has_purple_border(screen):
+    screen.eval_on_selector(
+        "cannoli-screen",
+        "el => { " + _ROMM_LIB + " el.setAttribute('view','romm-platforms'); el._render(); }",
+    )
+    has = screen.eval_on_selector(
+        "cannoli-screen",
+        "el => el.shadowRoot.querySelector('.screen').classList.contains('is-romm-browse')",
+    )
+    assert has is True
+    shadow = screen.eval_on_selector(
+        "cannoli-screen",
+        "el => getComputedStyle(el.shadowRoot.querySelector('.screen')).boxShadow",
+    )
+    assert "85, 62, 152" in shadow  # ROMM_BORDER_COLOR #553E98
+
+
+def test_romm_download_adds_on_device_dot(screen):
+    # Open Game Boy Advance games with Golden Sun (index 1, not on device) selected.
+    screen.eval_on_selector(
+        "cannoli-screen",
+        "el => { " + _ROMM_LIB + " el._rommPlatform='gba'; el.setAttribute('view','romm-games'); "
+        "el.setAttribute('selection','1'); el._render(); }",
+    )
+    golden = screen.locator(".list__item").nth(1)
+    assert golden.locator(".list__dot").count() == 0   # not on device yet
+    screen.eval_on_selector("cannoli-screen", "el => el._press('a')")  # download
+    assert screen.locator(".list__item").nth(1).locator(".list__dot").count() == 1
+
+
+def test_romm_firmware_sections_and_download(screen):
+    screen.eval_on_selector(
+        "cannoli-screen",
+        "el => { el._library = Object.assign({}, el._library, { romm: { firmware: ["
+        " {name:'a.bin', onDevice:false}, {name:'b.bin', onDevice:true} ] } });"
+        " el.setAttribute('view','romm-firmware'); el.setAttribute('selection','0'); el._render(); }",
+    )
+    assert screen.locator(".list__section").all_inner_texts() == ["Not on Device", "On Device"]
+    assert screen.locator(".list__dot").count() == 1   # only b.bin is on device
+    screen.eval_on_selector("cannoli-screen", "el => el._press('a')")  # download a.bin
+    assert screen.locator(".list__dot").count() == 2   # a.bin now on device too
+
+
+def test_romm_search_from_browse_finds_matches(screen):
+    screen.eval_on_selector(
+        "cannoli-screen",
+        "el => { el._library = Object.assign({}, el._library, { romm: { platforms: ["
+        "  {id:'nes', name:'NES', romCount:1, games:[{name:'Super Mario Bros.', onDevice:true}, {name:'Zelda', onDevice:false}]},"
+        "  {id:'snes', name:'Super Nintendo', romCount:1, games:[{name:'Super Mario World', onDevice:false}]} ] } });"
+        " el.setAttribute('view','romm-platforms'); el.setAttribute('selection','1'); el._render(); }",
+    )
+    screen.eval_on_selector("cannoli-screen", "el => el._press('r1')")  # open RomM search
+    assert screen.get_attribute("cannoli-screen", "view") == "keyboard"
+    screen.eval_on_selector("cannoli-screen", "el => { el._kbdText='mario'; el._press('start'); }")
+    assert screen.get_attribute("cannoli-screen", "view") == "romm-search"
+    assert screen.locator(".title").inner_text() == 'RomM: "mario"'
+    assert screen.locator(".list__label").all_inner_texts() == ["Super Mario Bros.", "Super Mario World"]
+    assert screen.locator(".list__value").all_inner_texts() == ["NES", "Super Nintendo"]
+    assert screen.locator(".list__item").nth(0).locator(".list__dot").count() == 1  # on device

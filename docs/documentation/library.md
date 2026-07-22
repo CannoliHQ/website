@@ -54,6 +54,22 @@ window.CANNOLI_TUTORIALS = {
           { wait: 600 },
         ],
       },
+  "game-context-menu": {
+        start: { view: "game-list", list: "nes", selection: 2 },
+        loopDelay: 2400,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 1100 },  // open the full context menu
+          { press: "down",  wait: 650 },   // Manage Collections
+          { press: "down",  wait: 650 },   // Emulator Override
+          { press: "down",  wait: 650 },   // RA Game ID
+          { press: "down",  wait: 650 },   // Preload Achievements
+          { press: "down",  wait: 650 },   // Rename
+          { press: "down",  wait: 650 },   // Delete Art
+          { press: "down",  wait: 1000 },  // Delete Game
+          { wait: 900 },
+        ],
+      },
   "remove-recently-played": {
         start: { view: "game-list", list: "recently_played", selection: 1 },
         loopDelay: 1800,
@@ -163,6 +179,60 @@ window.CANNOLI_TUTORIALS = {
           { wait: 800 },
         ],
       },
+  "manage-apps": {
+        library: {
+          platforms: [
+            { id: "nes",  name: "NES",              games: [] },
+            { id: "snes", name: "Super Nintendo",   games: [] },
+            { id: "gba",  name: "Game Boy Advance", games: [] },
+          ],
+          collections: [],
+          apps: { installed: ["RetroArch", "Dolphin", "Moonlight", "Vita3K", "Files"] },
+        },
+        start: { view: "app-picker", list: "tools", selection: 0 },
+        loopDelay: 2600,
+        steps: [
+          { wait: 1200 },
+          { press: "a",    wait: 800 },   // check RetroArch
+          { press: "down", wait: 550 },
+          { press: "a",    wait: 800 },   // check Dolphin
+          { press: "down", wait: 550 },
+          { press: "a",    wait: 900 },   // check Moonlight
+          { press: "b",    wait: 1300 },  // Back commits -> main menu gains a Tools row
+          { wait: 1200 },
+        ],
+      },
+  "rename-category": {
+        library: {
+          platforms: [
+            { id: "nes",  name: "NES",              games: [] },
+            { id: "snes", name: "Super Nintendo",   games: [] },
+            { id: "gba",  name: "Game Boy Advance", games: [] },
+          ],
+          collections: [],
+          apps: { installed: ["RetroArch", "Dolphin"], tools: ["RetroArch", "Dolphin"] },
+        },
+        start: { view: "system-list", selection: 5 }, // the Tools row
+        loopDelay: 2800,
+        steps: [
+          { wait: 1200 },
+          { press: "start", wait: 900 },                  // Tools context menu (Rename)
+          { press: "a", opensKeyboard: true, wait: 900 }, // Rename -> keyboard pre-filled "Tools"
+          { wait: 700 },
+          { press: "up",   wait: 260 },                   // walk focus to the backspace key
+          { press: "up",   wait: 260 },
+          { press: "left", wait: 320 },
+          { press: "a", wait: 230 },                      // clear "Tools"
+          { press: "a", wait: 230 },
+          { press: "a", wait: 230 },
+          { press: "a", wait: 230 },
+          { press: "a", wait: 380 },
+          { typeText: "Emulators" },                      // type the new name
+          { wait: 500 },
+          { press: "start", wait: 1000 },                 // save -> main-menu row renamed
+          { wait: 1200 },
+        ],
+      },
   // Static previews (no play button) of the three content modes.
   "mode-default": {
         static: true,
@@ -180,7 +250,7 @@ window.CANNOLI_TUTORIALS = {
       },
   "mode-collections-only": {
         static: true,
-        library: { collections: ["RPGs", "Puzzle Games", "Sports", "Handhelds"] },
+        library: { collections: ["RPGs", "Puzzle Games", "Sports", "Handhelds", "Ports", "Tools"] },
         start: { view: "system-list", contentmode: "collections-only", selection: 0 },
       },
   "mode-5gh": {
@@ -218,7 +288,7 @@ window.CANNOLI_TUTORIALS = {
 
 ### Search
 
-Press `R1` to search. From the main menu it runs a **Global Search** across your whole library; from inside a platform, collection, or favorites list it searches just that list.
+Press `R1` to search. Where you search depends on the screen you open it from. If you are on the main menu, it runs a **Global Search** across your whole library. If launched from inside a platform, collection, or favorites list, it searches just that list.
 
 Search ignores case and accent marks, so typing `pokemon` matches `Pokémon`.
 
@@ -228,8 +298,8 @@ Search ignores case and accent marks, so typing `pokemon` matches `Pokémon`.
 </div>
 <div class="task__steps" markdown>
 1. From the main menu, press `R1` to open **Global Search**.
-2. Type your term, for example `pokemon`.
-3. Press `Start`. Results come from your whole library.
+2. Type your search query.
+3. Press `Start`.
 </div>
 </div>
 
@@ -239,8 +309,8 @@ Search ignores case and accent marks, so typing `pokemon` matches `Pokémon`.
 </div>
 <div class="task__steps" markdown>
 1. Inside a system's game list, press `R1` to search just that system.
-2. Type your term, for example `mario`.
-3. Press `Start` to filter the list to matching games.
+2. Type your search query.
+3. Press `Start`.
 </div>
 </div>
 
@@ -274,13 +344,43 @@ after you play your first game.
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game, tool, or port and press `Start` to open the context menu.
-2. Select `Add To Favorites`
+2. Select `Add To Favorites`.
 3. The favorited game will now be pinned to the top and appear in the `Favorites` list.
 </div>
 </div>
 
 > [!TIP]
 > To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
+
+---
+
+## Managing Games
+
+If you have a game highlighted and press `Start` you will open the context menu. Here you can perform a variety of actions.
+
+<div class="task" markdown>
+<div class="task__visual" markdown>
+<cannoli-screen tutorial="game-context-menu" fullmenu></cannoli-screen>
+</div>
+<div class="task__steps" markdown>
+1. Highlight a game, tool, or port and press `Start` to open its context menu.
+2. Use `↑` / `↓` to highlight an action.
+3. Press `A` to perform the action.
+</div>
+</div>
+From this menu you can:
+
+- **Add To Favorites:** pin the game to the top of its list and to `Favorites`.
+- **Manage Collections:** add or remove the game from your [collections](#collections). It is also the only way to take a single game out of one.
+- **Emulator Override:** run this game with a specific core or emulator instead of the platform default. See [Emulator Override](playing-games.md#emulator-override) for more details.
+- **RA Game ID:** manually set the game's [RetroAchievements](retroachievements.md) ID.
+- **Preload Achievements:** cache the game's achievement set for [offline play](retroachievements.md#offline-play).
+- **Rename:** change the display name. For a ROM this also renames the file on disk and brings its saves and box art along.
+- **Delete Art:** remove the game's box art.
+- **Delete Game:** delete the ROM from storage after a confirmation prompt. This cannot be undone.
+
+> [!TIP]
+> Most of these actions work in bulk. Press `Select` when in a list to enter multi-select mode. Check several games and then press `Start`. The action you choose from the context menu will be applied to all items you selected.
 
 ---
 
@@ -297,7 +397,9 @@ Collections let you group anything that Cannoli can launch: games, tools, and po
 </div>
 <div class="task__steps" markdown>
 1. Highlight a game and press `Start` → **Manage Collections**.
-2. Press `Y` (**New**), give the collection a name, and press `Start` to save.
+2. Press `Y` to create a new collection.
+3. Give the collection a name.
+4. Press `Start` to save.
 </div>
 </div>
 
@@ -316,10 +418,6 @@ Collections let you group anything that Cannoli can launch: games, tools, and po
 > [!TIP]
 > To add several games at once, press `Select` on the game list to enter multi-select mode, tick the games you want, then press `Start` → **Manage Collections** to manage them together.
 
-When a game is highlighted while viewing a collection, `Start` also includes a **Remove From Collection** option to remove it without opening the membership screen.
-
-To rename or delete a collection, highlight it on the Collections screen and press `Start`.
-
 ### Nested Collections
 
 Collections can be nested inside other collections. This lets you organize things like `RPGs` → `JRPGs`, `CRPGs`.
@@ -337,6 +435,49 @@ Collections can be nested inside other collections. This lets you organize thing
 
 > [!IMPORTANT]
 > Child collections only appear inside their parent. They are removed from the top-level collections list.
+
+### Rename or delete a collection
+
+Highlight a collection on the **Collections** screen and press `Start` to open the context menu. Here you can choose **Rename** or **Delete**.
+
+---
+
+## Tools and Ports
+
+**Tools** and **Ports** are two "buckets" for accessing installed Android apps to the main menu. They are perfect for anything you alongside your games; emulators, Android games, streaming clients, file managers, etc. 
+
+Both buckets behave identically. The two names just let you group things how you like, and the same app can sit in both.
+
+### Adding apps to a bucket
+
+<div class="task" markdown>
+<div class="task__visual" markdown>
+<cannoli-screen tutorial="manage-apps"></cannoli-screen>
+</div>
+<div class="task__steps" markdown>
+1. Open **Settings → [Library](settings.md#library) → Manage Tools** (or **Manage Ports**).
+2. Every installed app appears with a checkbox. Press `A` to tick the ones you want.
+3. Press `B` to save. The bucket now shows up as a row on the main menu.
+</div>
+</div>
+
+These buckets will appear on the main menu once they have a single app added to it.
+
+Inside the list, highlight an app and press `Start` to access the context menu. Here you can favorite it, add it to a collection, rename it, or remove the shortcut.
+
+### Renaming a bucket
+
+Rename either category right from the main menu, the same way you rename a platform.
+
+<div class="task" markdown>
+<div class="task__visual" markdown>
+<cannoli-screen tutorial="rename-category"></cannoli-screen>
+</div>
+<div class="task__steps" markdown>
+1. Highlight the **Tools** or **Ports** row and press `Start`.
+2. Choose **Rename**, type the new name, and press `Start` to save.
+</div>
+</div>
 
 ---
 
@@ -360,7 +501,7 @@ You can reorder platforms, collections, tools, and ports to your liking.
 
 ## Content Modes
 
-Cannoli has three content modes that control how the main menu functions.
+Cannoli has three modes that control how content is organized on the main menu.
 
 ### Default
 
@@ -396,4 +537,4 @@ Implements Retro Game Corps' [Five Game Handheld](https://www.youtube.com/watch?
 </div>
 
 > [!IMPORTANT]
-> Five Game Handheld mode does not restrict you to five games nor does it modify your library.
+> Five Game Handheld mode does not restrict you to five games, nor does it modify your library.
