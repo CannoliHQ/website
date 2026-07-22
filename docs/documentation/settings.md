@@ -32,12 +32,12 @@ See the [Customization](customization.md#appearance) page for details.
 - **Controllers:** Manage your controllers. The screen lists controllers **Connected Now** (with their player port) and previously-seen **Saved Mappings**.
     - **Edit Buttons** - launch the button-remap wizard. Mappings can be global, per platform, or per game; the most specific assignment wins.
     - **Confirm Button** - choose whether the East or South face button confirms selections (per controller).
-    - **Glyph Style** - choose the button-label style for that controller: **Plumber** (A/B/X/Y), **Redmond** (A/B/Y/X), or **Shapes** (✕/○/△/□).
+    - **Glyph Style** - choose the button-label style for that controller: **Plumber** (B/A/X/Y), **Redmond** (A/B/Y/X), or **Shapes** (✕/○/△/□).
     - **Exclude From Gameplay** - keep the controller usable for menus but ignore it during games.
     - **Name** - rename the controller.
     - **Reset Defaults** - revert your changes (only shown once you've edited the controller).
-- **Shortcuts:** Configure shortcut actions
-- **Swap Play and Resume:** Make `Resume` the primary action on games with save states
+- **Shortcuts:** Configure shortcut actions.
+- **Swap Play and Resume:** Make `Resume` the primary action on games with save states.
 - **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 - **Input Tester:** Open a screen that shows live controller input so you can verify button and axis mappings.
 
@@ -93,8 +93,9 @@ See the [RomM](romm.md) page for more details.
     - Adjust the selected row with `Left` / `Right`, and press `X` to reset everything to default.
 - **Regenerate System Folders:** Recreate any missing platform folders under your ROM directory based on the current platform list. Reports how many folders were created (or that all were already present).
 - **Kitchen Code Bypass:** Skip the PIN prompt when opening Nonna's Kitchen.
-- **Release Channel:** Tells the updater what type of build you want
-    - Choose from `Stable`, `Beta`, and `Test`
+- **Experimental Features:** Unlocks experimental options elsewhere in Cannoli, such as **D-Pad Mode** in the in-game Input settings.
+- **Release Channel:** Tells the updater what type of build you want.
+    - Choose from `Stable`, `Beta`, and `Test`.
 - **Default Launcher:** Set Cannoli as your device's default launcher.
 
 ---
@@ -103,7 +104,7 @@ See the [RomM](romm.md) page for more details.
 
 Shows Cannoli build information: version, date built, and commit hash.
 
-Press `X` to view the credits for everything that made making Cannoli possible.
+Press `X` to view the credits for everything that made Cannoli possible.
 
 
 ---

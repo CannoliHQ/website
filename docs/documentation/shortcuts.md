@@ -4,7 +4,7 @@ Shortcuts bind a button combo to an in-game action, so you can trigger it instan
 
 ## Assigning a shortcut
 
-While playing, open the In-Game Menu and go to **Settings → Shortcuts**. Highlight an action, then press the button combo you want to bind to it.
+While playing, open the In-Game Menu and go to **Settings → Input → Shortcuts**. Highlight an action, then press the button combo you want to bind to it.
 
 ## Available actions
 

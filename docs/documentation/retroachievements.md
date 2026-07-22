@@ -1,6 +1,6 @@
 ## RetroAchievements Integration
 
-Cannoli's built-in core runner has [RetroAchievements](https://retroachievements.org) support!
+Cannoli's built-in core runner has **softcore** [RetroAchievements](https://retroachievements.org) support!
 
 > [!IMPORTANT]
 > You need a free [RetroAchievements account](https://retroachievements.org) to use this feature.
@@ -88,8 +88,6 @@ To cache a game's achievement set:
 
 Cannoli downloads the set, the icon assets, and the metadata. You'll see a confirmation like `Cached 47 achievements (635 pts) for offline play`. The context menu shows **Preload Achievements (Cached)** once the game is ready for offline use.
 
-**Preload Achievements** only appears when you're logged in and the platform supports native ROM hashing.
-
 ### Browsing Cached Sets
 
 From the RA account screen (**Settings → Integrations → RetroAchievements** while signed in), press `X` to open **Offline Achievement Sets**. The screen groups your cached games by platform.
@@ -97,13 +95,3 @@ From the RA account screen (**Settings → Integrations → RetroAchievements** 
 ### Offline Status
 
 When playing offline, the in-game RetroAchievements status reads `Offline` (or `Offline • N Pending Sync` if you have unlocks waiting to be uploaded). The next time Cannoli has internet, pending unlocks sync automatically.
-
----
-
-## Things to Know
-
-- **Softcore only.** Hardcore mode will never be implemented. Don't bother asking. If you need hardcore, use an approved emulator setup.
-- **Loading a save state resets tracking.** When you load a save state, achievement progress resets to avoid false
-  triggers. This is the same behavior used by RetroArch.
-- **ROM must be in the database.** If your ROM doesn't match anything on RetroAchievements, you won't get achievements
-  unless you set up a [Game ID override](#game-id-overrides).

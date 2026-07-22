@@ -10,7 +10,7 @@ Everything is organized by platform and lands in the [right spot](directory-stru
 
 ## Starting the Server
 
-From the launcher's main menu, open the **Quick Menu** and select **Nonna's Kitchen**. Cannoli starts the server and shows an overlay with a QR code and URL.
+Open the **Quick Menu** and select **Nonna's Kitchen**. Cannoli starts the server and shows an overlay with a QR code and URL.
 
 While the server is running:
 
@@ -37,7 +37,7 @@ The dashboard has three tabs.
 
 ### Platforms
 
-Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk box art upload), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`), and **Cheats** (`.cht`).
+Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk-upload box art), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`), and **Cheats** (`.cht`).
 
 ### Customization
 

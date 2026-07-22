@@ -25,16 +25,6 @@ Press the `Menu` button to open the In-Game Menu (IGM). It gives you access to s
 
 ---
 
-## Multiple Controllers
-
-Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is always Player 1. External controllers that connect after the game starts are assigned to Players 2-4 automatically.
-
-When a controller disconnects or reconnects you'll see a notification on screen.
-
-If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
-
----
-
 ## In-Game Menu (IGM)
 
 ### Resume
@@ -98,7 +88,7 @@ Opens the in-game settings with five categories:
 - **Emulator** - Core-specific options (varies per platform)
 - **Input** - Button mappings, shortcuts, and D-Pad behavior (see below)
 - **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
-- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, and RetroAchievements status, game ID, and detection details (when logged in)
+- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, RetroAchievements status, game ID, and detection details (when logged in)
 
 #### Input
 
@@ -107,7 +97,7 @@ The **Input** category gathers everything about how your controller drives the g
 - **Button Mappings** - remap the current game's controls. Mappings can be saved per platform or per game.
 - **Shortcuts** - assign button combos to in-game actions like Save State, Fast Forward, and Open Guide. See [Shortcuts](shortcuts.md) for the full list.
 - **Left Stick as D-Pad** - send left-stick movement as D-Pad presses, for games that only read the D-Pad.
-- **D-Pad Mode (BETA)** - switch between **8-Way** (the default) and **4-Way**, which suppresses diagonals for games built for a 4-way pad. This row only appears when **Experimental Features** is turned on in [Settings > Advanced](settings.md#advanced), and your choice is remembered per platform and per game.
+- **D-Pad Mode (BETA)** - switch between **8-Way** (the default) and **4-Way**, which suppresses diagonals for games built for a 4-way pad. This row only appears when **Experimental Features** is turned on in [Settings → Advanced](settings.md#advanced), and your choice is remembered per platform and per game.
 
 ### Reassign Players
 
@@ -128,6 +118,16 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 Exits the game and returns to the launcher.
 
 If **Save State On Quit** is enabled in Settings → Emulation, this option is labeled **Save and Quit** and automatically writes a save state before exiting.
+
+---
+
+## Multiple Controllers
+
+Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is always Player 1. External controllers that connect after the game starts are assigned to Players 2-4 automatically.
+
+When a controller disconnects or reconnects you'll see a notification on screen.
+
+If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
 
 ---
 

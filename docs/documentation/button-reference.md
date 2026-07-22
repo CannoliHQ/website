@@ -1,8 +1,8 @@
 # Button Reference
 
 > [!TIP]
-> This reference uses the default **Plumber** button labels. If you've set a controller'
-> s [Glyph Style](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south
+> This reference uses the default **Plumber** button labels. If you've set a controller's
+> [Glyph Style](settings.md#input) to **Redmond** or **Shapes**, confirm and back are swapped: confirm is the south
 > button and back is the east button.
 
 ## Platform List
@@ -10,7 +10,7 @@
 | Button | Action                              |
 |--------|-------------------------------------|
 | X      | Open settings                       |
-| Y      | Open Nonna's Kitchen (when running) |
+| Y      | Open Nonna's Kitchen (when the list is empty) |
 | R1     | Global search                       |
 | Start  | Open context menu                   |
 | Select | Toggle reorder mode                 |
@@ -30,7 +30,7 @@ exists), and `Y` opens Settings.
 ## Games List
 
 > [!TIP]
-> These controls apply to all three kinds of games list; platform, favorites and collections.
+> These controls apply to all three kinds of games list: platform, favorites, and collections.
 
 | Button | Action                                                                                 |
 |--------|----------------------------------------------------------------------------------------|

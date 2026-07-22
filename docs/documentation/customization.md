@@ -56,7 +56,7 @@ Adds bottom padding to the launcher and in-game overlay when the device is held 
 
 ### Status Bar
 
-Control what items appear in the status bar. 
+Controls what items appear in the status bar. 
 
 Items render left-to-right in the order listed:
 
@@ -112,7 +112,7 @@ The art file must have the **exact same name** as the ROM file, minus the extens
 
 ### Supported Formats
 
-PNG, JPG, WebP, Static GIFs and BMP.
+PNG, JPG, WebP, Static GIFs, and BMP.
 
 ### Adding Art
 
@@ -148,7 +148,7 @@ Overlays/
 
 ### Display
 
-Overlays are stretched to fill the entire screen. The game renders behind the overlay, visible through any transparent regions in the image. There are no positioning, scaling, or opacity controls -- what you see is what's in the image file.
+Overlays are stretched to fill the entire screen. The game renders behind the overlay, visible through any transparent regions in the image. There are no positioning, scaling, or opacity controls. What you see is what's in the image file.
 
 ### Applying Overlays
 

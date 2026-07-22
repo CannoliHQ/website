@@ -58,7 +58,6 @@ Cannoli has five key design goals:
 - Game Switcher
 - Game Time Tracker
 - Menu Music
-- Netplay
 - Themes
 - Video Previews
 

@@ -35,7 +35,7 @@
 
 <div class="featured-card">
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/jWNXGyzLaPs?si=Z5ehHWAdRKKisDxr&start=559" title="Retro Handhelds Weekly - Cannoli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/jWNXGyzLaPs?si=Z5ehHWAdRKKisDxr&start=559" title="Retro Gaming With Deadfred - Cannoli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <h3>Retro Gaming With Deadfred</h3>
     <p>The Cannoli segment starts at <a href="https://youtu.be/jWNXGyzLaPs?t=559">9:19</a></p>
@@ -75,7 +75,7 @@
 
 <div class="featured-card">
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/4m_nT0SFFPM" title="The Cleanest Android Game Launcher" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/4m_nT0SFFPM" title="I Tried Cannoli on the AYN Thor" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <h3>RetroPup</h3>
     <em>I Tried Cannoli on the AYN Thor</em>

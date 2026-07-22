@@ -9,21 +9,21 @@
 | Feat: Download game [manuals](romm.md#browsing-your-romm-library) from RomM straight into the guides folder                                     | N/A                                                     |
 | Feat: [RomM Save Sync](romm.md#save-sync) (automatic SRAM sync, conflict resolution, and backup/restore)                                        | N/A                                                     |
 | Feat: [Pair with a RomM server](romm.md#pairing) by scanning a QR code or entering a pair code                                                  | N/A                                                     |
-| Feat: [Browse RomM offline](romm.md#offline-browsing) from a cached metadata mirror that syncs when connected                                                               | N/A                                                     |
-| Feat: [Game cheats](playing-games.md#cheats): drop in .cht files and toggle them from a new Cheats screen (RetroArch-compatible)                                           | N/A                                                     |
+| Feat: [Browse RomM offline](romm.md#offline-browsing) from a cached metadata mirror that syncs when connected                                   | N/A                                                     |
+| Feat: [Game cheats](playing-games.md#cheats): drop in .cht files and toggle them from a new Cheats screen (RetroArch-compatible)                | N/A                                                     |
 | Feat: [Guides viewer](playing-games.md#guide) to read PDF guides and manuals from the game context menu and in-game                             | N/A                                                     |
 | Feat: [Offline RetroAchievements](retroachievements.md#offline-play): preload sets while online, then earn and view them offline                | N/A                                                     |
 | Feat: [Nonna's Kitchen](nonnas-kitchen.md) rebuilt on a new file server with a game-centric web UI for ROMs, saves, states, guides, and box art | N/A                                                     |
 | Feat: Install APKs and browse device storage volumes from [Nonna's Kitchen](nonnas-kitchen.md#tools)                                            | [#122](https://github.com/CannoliHQ/cannoli/issues/122) |
-| Feat: [Nonna's Kitchen](nonnas-kitchen.md#what-you-can-do) now lets you manage cheats and shaders                                                                                    | N/A                                                     |
+| Feat: [Nonna's Kitchen](nonnas-kitchen.md#what-you-can-do) now lets you manage cheats and shaders                                               | N/A                                                     |
 | Feat: Core Mapping redesigned as a source-first [Emulator Mapping](settings.md#emulation) screen (Source, Emulator, BIOS, per-game overrides)   | N/A                                                     |
-| Feat: [Screen Geometry](settings.md#advanced) display calibration to fit the whole app into a custom rectangle (e.g. CRT-via-converter setups)                          | N/A                                                     |
+| Feat: [Screen Geometry](settings.md#advanced) display calibration to fit the whole app into a custom rectangle (e.g. CRT-via-converter setups)  | N/A                                                     |
 | Feat: [On-screen keyboard help overlay](button-reference.md#on-screen-keyboard), opened by pressing MENU for a controls cheat sheet             | N/A                                                     |
-| Feat: [4-Way D-Pad mode](playing-games.md#input) to suppress diagonals for 4-way games, behind Experimental Features                                                      | N/A                                                     |
-| Feat: Left stick as D-Pad toggle, with Button Mappings and Shortcuts grouped under a new [Settings > Input](playing-games.md#input) screen           | N/A                                                     |
+| Feat: [4-Way D-Pad mode](playing-games.md#input) to suppress diagonals for 4-way games, behind Experimental Features                            | N/A                                                     |
+| Feat: Left stick as D-Pad toggle, with Button Mappings and Shortcuts grouped under a new [Settings > Input](playing-games.md#input) screen      | N/A                                                     |
 | Feat: [Hold the resume button](playing-games.md#resuming-a-game) to open the save-state picker                                                  | [#98](https://github.com/CannoliHQ/cannoli/issues/98)   |
-| Feat: [Diacritic-insensitive global search](library.md#search) so accented titles match plain letters                                                                | N/A                                                     |
-| Fix: Guard newer-API calls that crashed on Android 9 (input device, foreground services, display)                                               | N/A                                                     |
+| Feat: [Diacritic-insensitive global search](library.md#search) so accented titles match plain letters                                           | N/A                                                     |
+| Fix: Guard newer-API calls that crashed on Android 9                                                                                            | N/A                                                     |
 | Fix: Smoother frame pacing so the game no longer runs fast on high-refresh panels                                                               | N/A                                                     |
 
 ---
@@ -60,7 +60,7 @@
 | Feature / Fix                                   | Issue                                                   |
 |-------------------------------------------------|---------------------------------------------------------|
 | Fix: RetroArch DIY Mode behavior                | N/A                                                     |
-| Feature: Add support for Vita3K `.psvita` files | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
+| Feat: Add support for Vita3K `.psvita` files | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
 
 ---
 
@@ -103,7 +103,7 @@
 
 | Feature / Fix                                          | Issue                                                   |
 |--------------------------------------------------------|---------------------------------------------------------|
-| Feat: PICO-8 fallback to built in art (`.p8.png` only) | [#173](https://github.com/CannoliHQ/cannoli/issues/173) |
+| Feat: PICO-8 fallback to built-in art (`.p8.png` only) | [#173](https://github.com/CannoliHQ/cannoli/issues/173) |
 
 ---
 
