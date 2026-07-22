@@ -123,7 +123,14 @@
 .hero-device::before {
   content: '';
   position: absolute;
-  z-index: 0;
+  /* Above the frame (z2) so this opaque black square always covers the SVG
+     cutout's bleeding edge, even mid-crossfade when the logo and the video are
+     both semi-transparent. The logo (z4) and video (z5) sit on top of it. */
+  z-index: 3;
+  /* Slightly LARGER than the SVG's screen cutout (9.375%/4.348%/81.25%/47.826%)
+     so it overlaps the cutout's anti-aliased edge, where the body color
+     otherwise bleeds through ~1px. The overlap lands on the black screen bezel,
+     so it stays invisible. .device-screen and .device-screen-content match. */
   top: 4%;
   left: 9%;
   width: 82%;
@@ -143,12 +150,18 @@
 
 .device-screen {
   position: absolute;
-  z-index: 4;
-  top: 4.348%;
-  left: 9.375%;
-  width: 81.25%;
-  height: 47.826%;
-  object-fit: contain;
+  z-index: 5;
+  /* Overlap the SVG screen cutout by ~0.4% on every side (see .hero-device
+     ::before) so the video covers the cutout's anti-aliased edge and no body
+     color bleeds through during playback. */
+  top: 4%;
+  left: 9%;
+  width: 82%;
+  height: 48.5%;
+  /* The demo video is 1240x1080 (~1.148:1) but the screen box is wider, so
+     `contain` would pillarbox it. `cover` fills the box edge to edge (the small
+     top/bottom crop clears the status bar and hint bar). */
+  object-fit: cover;
   background: #000;
   border: 0;
   border-radius: 8px;
@@ -159,11 +172,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 3;
-  top: 4.1%;
-  left: 9.1%;
-  width: 81.8%;
-  height: 48.3%;
+  z-index: 4;
+  /* Match .device-screen (overlaps the SVG cutout edge; see .hero-device::before). */
+  top: 4%;
+  left: 9%;
+  width: 82%;
+  height: 48.5%;
   background: #000;
   border-radius: 8px;
   transition: opacity 0.6s ease;
@@ -218,11 +232,11 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 3;
-    top: 4.1%;
-    left: 9.1%;
-    width: 81.8%;
-    height: 48.3%;
+    z-index: 4;
+    top: 4%;
+    left: 9%;
+    width: 82%;
+    height: 48.5%;
     border-radius: 8px;
     background: #000;
     padding: 0;
