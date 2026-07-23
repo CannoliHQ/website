@@ -84,6 +84,58 @@ def test_no_row_when_bucket_empty(screen):
     assert "Tools" not in screen.locator(".list__item").all_inner_texts()
 
 
+def test_x_opens_settings(screen):
+    _setup(screen)
+    screen.eval_on_selector(
+        "cannoli-screen", "el => el._applyState({ view: 'system-list', selection: 0 })"
+    )
+    screen.eval_on_selector("cannoli-screen", "el => el._press('x')")
+    assert screen.get_attribute("cannoli-screen", "view") == "settings"
+    assert screen.locator(".title").inner_text() == "Settings"
+    assert "Library" in screen.locator(".list__item").all_inner_texts()
+
+
+def test_settings_library_to_picker(screen):
+    _setup(screen)
+    screen.eval_on_selector(
+        "cannoli-screen", "el => el._applyState({ view: 'settings', selection: 1 })"
+    )  # Library
+    screen.eval_on_selector("cannoli-screen", "el => el._press('a')")
+    assert screen.get_attribute("cannoli-screen", "view") == "settings-library"
+    assert screen.locator(".title").inner_text() == "Library"
+    labels = screen.locator(".list__item").all_inner_texts()
+    assert "Manage Tools" in labels and "Manage Ports" in labels
+    # Manage Tools is index 3 (Content Mode, Recently Played, Manage Ports, Manage Tools).
+    screen.eval_on_selector(
+        "cannoli-screen", "el => el._applyState({ view: 'settings-library', selection: 3 })"
+    )
+    screen.eval_on_selector("cannoli-screen", "el => el._press('a')")
+    assert screen.get_attribute("cannoli-screen", "view") == "app-picker"
+    assert screen.get_attribute("cannoli-screen", "list") == "tools"
+
+
+def test_settings_back_path(screen):
+    _setup(screen)
+    screen.eval_on_selector(
+        "cannoli-screen", "el => el._applyState({ view: 'settings-library', selection: 0 })"
+    )
+    screen.eval_on_selector("cannoli-screen", "el => el._press('b')")
+    assert screen.get_attribute("cannoli-screen", "view") == "settings"
+    screen.eval_on_selector("cannoli-screen", "el => el._press('b')")
+    assert screen.get_attribute("cannoli-screen", "view") == "system-list"
+
+
+def test_picker_from_settings_backs_to_library(screen):
+    # Opened via Settings, Back returns to the Library settings (not the main menu).
+    _setup(screen)
+    screen.eval_on_selector(
+        "cannoli-screen", "el => el._applyState({ view: 'settings-library', selection: 3 })"
+    )  # Manage Tools
+    screen.eval_on_selector("cannoli-screen", "el => el._press('a')")  # -> app-picker
+    screen.eval_on_selector("cannoli-screen", "el => el._press('b')")  # Back
+    assert screen.get_attribute("cannoli-screen", "view") == "settings-library"
+
+
 def _to_tools_menu(page):
     _setup(page, tools="['RetroArch','Dolphin']")
     page.eval_on_selector(
@@ -160,25 +212,35 @@ def test_rename_tutorial_clears_and_types_new_name(screen):
     assert "Emulators" in screen.locator(".list__item").all_inner_texts()
 
 
-def test_manage_apps_tutorial_adds_row(screen):
-    # The add-apps choreography: tick two apps in the picker, Back commits, and a
-    # Tools row appears on the main menu.
+def test_manage_apps_tutorial_full_flow(screen):
+    # The full choreography: from the home screen, X into Settings, down to
+    # Library, into Manage Tools, tick apps, Back commits, and a Tools row
+    # appears on the main menu.
     _setup(screen)
     screen.eval_on_selector(
         "cannoli-screen",
         """el => el.play({
-            start: { view: 'app-picker', list: 'tools', selection: 0 },
+            start: { view: 'system-list', selection: 0 },
             loop: false,
             steps: [
-              { press: 'a', wait: 5 },
-              { press: 'down', wait: 5 },
-              { press: 'a', wait: 5 },
-              { press: 'b', wait: 5 },
+              { press: 'x', wait: 5 },                                   // Settings
+              { press: 'down', wait: 5 }, { press: 'a', wait: 5 },       // Library
+              { press: 'down', wait: 5 }, { press: 'down', wait: 5 },
+              { press: 'down', wait: 5 }, { press: 'a', wait: 5 },       // Manage Tools -> picker
+              { press: 'a', wait: 5 }, { press: 'down', wait: 5 },
+              { press: 'a', wait: 5 },                                   // tick two apps
+              { press: 'b', wait: 5 }, { press: 'b', wait: 5 },
+              { press: 'b', wait: 5 },                                   // back out to the main menu
             ],
         })""",
     )
+    # Start view is already system-list, so wait for the flow to actually finish:
+    # apps ticked and back on the main menu.
     screen.wait_for_function(
-        "() => document.querySelector('cannoli-screen').getAttribute('view') === 'system-list'",
+        "() => { const el = document.querySelector('cannoli-screen');"
+        " return el._toolsApps.size > 0 && el.getAttribute('view') === 'system-list'; }",
         timeout=8000,
     )
     assert "Tools" in screen.locator(".list__item").all_inner_texts()
+    # Backed out through Settings, landing on the original position (not the Tools row).
+    assert screen.get_attribute("cannoli-screen", "selection") == "0"

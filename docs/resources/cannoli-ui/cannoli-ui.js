@@ -59,6 +59,8 @@ const HINTS = {
   "collection-toggle":   { left: [["B", "BACK"]], right: [["Y", "NEW"], ["A", "TOGGLE"]] },
   "child-toggle":        { left: [["B", "BACK"]], right: [["A", "TOGGLE"]] },
   "collection-contents": { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
+  "settings":            { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
+  "settings-library":    { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "app-picker":          { left: [["B", "BACK"]], right: [["A", "TOGGLE"]] },
   "tools-menu":          { left: [["B", "BACK"]], right: [["A", "SELECT"]] },
   "keyboard":          { left: [["X", "CANCEL"]], right: [["START", "CONFIRM"]] },
@@ -108,6 +110,12 @@ const KEYBOARD_ALPHA_SHIFTED = [
 const STATUS_GLYPHS = "\uf294 \uf1eb \uf0e7";
 
 const IGM_ITEMS = ["Resume", "Save State", "Load State", "Guide", "Settings", "Reset", "Quit"];
+
+// Settings screen (SettingsViewModel.buildCategoryList): the top-level categories,
+// then the Library category's items. "5GH Collection" only shows in Five Game
+// Handheld mode, so it is omitted from this default-mode list.
+const SETTINGS_CATEGORIES = ["Appearance", "Library", "Input", "Emulation", "Integrations", "Advanced", "About"];
+const LIBRARY_SETTINGS = ["Content Mode", "Recently Played", "Manage Ports", "Manage Tools", "Scan Mode", "Cannoli Root", "ROM Directory"];
 
 // Play-overlay icons: a play triangle before the first run, a restart glyph after.
 const ICON_PLAY =
@@ -253,6 +261,9 @@ class CannoliScreen extends HTMLElement {
     this._toolsName = "Tools";
     this._portsName = "Ports";
     this._contextFolder = null;
+    // Where the app picker returns on Back (set when opened from Settings, so it
+    // walks back to the Library settings instead of jumping to the main menu).
+    this._pickerReturn = null;
     // On-screen keyboard runtime state (not attribute-backed; see _openKeyboard).
     this._keyRow = 2;
     this._keyCol = 0;
@@ -420,6 +431,8 @@ class CannoliScreen extends HTMLElement {
       const games = (this._library.collectionGames && this._library.collectionGames[name]) || [];
       return [...children, ...games.map((id) => this._gameLabel(id, name))];
     }
+    if (s.view === "settings") return SETTINGS_CATEGORIES;
+    if (s.view === "settings-library") return LIBRARY_SETTINGS;
     if (s.view === "app-picker") {
       // Manage Tools / Manage Ports: the full installed-app list; a checkbox
       // marks the ones assigned to this category (s.list = "tools" | "ports").
@@ -548,6 +561,8 @@ class CannoliScreen extends HTMLElement {
     if (s.view === "collection-toggle") return "Manage Collections";
     if (s.view === "child-toggle") return "Child Collections";
     if (s.view === "collection-contents") return s.list;
+    if (s.view === "settings") return "Settings";
+    if (s.view === "settings-library") return "Library";
     if (s.view === "app-picker") return s.list === "ports" ? "Manage Ports" : "Manage Tools";
     if (s.view === "tools-menu") return this._contextFolder === "ports" ? this._portsName : this._toolsName;
     if (s.view === "romm-settings") return "RomM";
@@ -951,6 +966,11 @@ class CannoliScreen extends HTMLElement {
       if (s.view === "system-list") this._openSearchKeyboard("global");
       else if (s.view === "game-list") this._openSearchKeyboard(s.list);
       else if (s.view === "romm-platforms" || s.view === "romm-games") this._openRommSearchKeyboard();
+    } else if (input === "x") {
+      if (s.view === "system-list") {
+        this._returnSelection = s.selection;
+        this._applyState({ view: "settings", selection: 0 });
+      }
     } else if (input === "select") {
       if (s.view === "system-list") this._toggleReorderMode();
       else this._toggleMulti();
@@ -1223,6 +1243,22 @@ class CannoliScreen extends HTMLElement {
     const s = this.state;
     if (s.view === "collection-toggle") { this._toggleCollection(s.selection); return; }
     if (s.view === "child-toggle") { this._toggleChild(s.selection); return; }
+    if (s.view === "settings") {
+      // Only "Library" is wired for this demo; the other categories are shown
+      // for context but do nothing here.
+      if (this._itemsForView(s)[s.selection] === "Library") {
+        this._applyState({ view: "settings-library", selection: 0 });
+      }
+      return;
+    }
+    if (s.view === "settings-library") {
+      const item = this._itemsForView(s)[s.selection];
+      if (item === "Manage Tools" || item === "Manage Ports") {
+        this._pickerReturn = { view: "settings-library", selection: s.selection };
+        this._applyState({ view: "app-picker", list: item === "Manage Ports" ? "ports" : "tools", selection: 0 });
+      }
+      return;
+    }
     if (s.view === "app-picker") { this._toggleApp(s.selection); return; }
     if (s.view === "tools-menu") {
       if (this._itemsForView(s)[s.selection] === "Rename") this._openRenameFolderKeyboard();
@@ -1401,13 +1437,29 @@ class CannoliScreen extends HTMLElement {
       this._applyState({ view: "collections", selection: this._collectionsIndex(name) });
       return;
     }
+    if (v === "settings") {
+      this._applyState({ view: "system-list", selection: this._returnSelection || 0 });
+      return;
+    }
+    if (v === "settings-library") {
+      // Back to the Settings categories with "Library" (index 1) highlighted.
+      this._applyState({ view: "settings", selection: 1 });
+      return;
+    }
     if (v === "tools-menu") {
       this._applyState({ view: "system-list", selection: this._returnSelection || 0 });
       return;
     }
     if (v === "app-picker") {
-      // Back commits the checked apps (toggled live); land on the main menu with
-      // the now-visible category row selected.
+      // Back commits the checked apps (toggled live). If opened from Settings,
+      // return there (the caller walks the rest of the way out); otherwise land
+      // on the main menu with the now-visible category row selected.
+      if (this._pickerReturn) {
+        const r = this._pickerReturn;
+        this._pickerReturn = null;
+        this._applyState(r);
+        return;
+      }
       const name = this.state.list === "ports" ? this._portsName : this._toolsName;
       const items = this._itemsForView({ view: "system-list", contentmode: this.state.contentmode });
       const idx = items.indexOf(name);

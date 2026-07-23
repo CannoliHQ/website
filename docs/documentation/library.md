@@ -189,16 +189,25 @@ window.CANNOLI_TUTORIALS = {
           collections: [],
           apps: { installed: ["RetroArch", "Dolphin", "Moonlight", "Vita3K", "Files"] },
         },
-        start: { view: "app-picker", list: "tools", selection: 0 },
-        loopDelay: 2600,
+        start: { view: "system-list", selection: 0 },
+        loopDelay: 2800,
         steps: [
           { wait: 1200 },
-          { press: "a",    wait: 800 },   // check RetroArch
-          { press: "down", wait: 550 },
-          { press: "a",    wait: 800 },   // check Dolphin
-          { press: "down", wait: 550 },
-          { press: "a",    wait: 900 },   // check Moonlight
-          { press: "b",    wait: 1300 },  // Back commits -> main menu gains a Tools row
+          { press: "x",    wait: 1000 },  // open Settings
+          { press: "down", wait: 700 },   // highlight Library
+          { press: "a",    wait: 900 },   // open the Library settings
+          { press: "down", wait: 450 },   // Recently Played
+          { press: "down", wait: 450 },   // Manage Ports
+          { press: "down", wait: 700 },   // Manage Tools
+          { press: "a",    wait: 900 },   // open the app picker
+          { press: "a",    wait: 700 },   // check RetroArch
+          { press: "down", wait: 450 },
+          { press: "a",    wait: 700 },   // check Dolphin
+          { press: "down", wait: 450 },
+          { press: "a",    wait: 800 },   // check Moonlight
+          { press: "b",    wait: 750 },   // save -> back to Library settings
+          { press: "b",    wait: 600 },   // -> Settings
+          { press: "b",    wait: 1000 },  // -> main menu (Tools now listed)
           { wait: 1200 },
         ],
       },
@@ -444,9 +453,7 @@ Highlight a collection on the **Collections** screen and press `Start` to open t
 
 ## Tools and Ports
 
-**Tools** and **Ports** are two "buckets" for accessing installed Android apps to the main menu. They are perfect for anything you alongside your games; emulators, Android games, streaming clients, file managers, etc. 
-
-Both buckets behave identically. The two names just let you group things how you like, and the same app can sit in both.
+**Tools** and **Ports** are two "buckets" for accessing installed Android apps to the main menu. They are perfect for anything you use alongside your games; standalone emulators, Android games, streaming clients, file managers, etc. 
 
 ### Adding apps to a bucket
 
@@ -457,7 +464,7 @@ Both buckets behave identically. The two names just let you group things how you
 <div class="task__steps" markdown>
 1. Open **Settings → [Library](settings.md#library) → Manage Tools** (or **Manage Ports**).
 2. Every installed app appears with a checkbox. Press `A` to tick the ones you want.
-3. Press `B` to save. The bucket now shows up as a row on the main menu.
+3. Press `B` to save. The bucket now shows up as an option on the main menu.
 </div>
 </div>
 
@@ -474,8 +481,10 @@ Rename either category right from the main menu, the same way you rename a platf
 <cannoli-screen tutorial="rename-category"></cannoli-screen>
 </div>
 <div class="task__steps" markdown>
-1. Highlight the **Tools** or **Ports** row and press `Start`.
-2. Choose **Rename**, type the new name, and press `Start` to save.
+1. Highlight **Tools** or **Ports** and press `Start`.
+2. Choose **Rename**.
+3. Change the name.
+4. Press `Start` to save.
 </div>
 </div>
 
