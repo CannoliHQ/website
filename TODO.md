@@ -2,7 +2,7 @@
 
 ### To Document
 - [ ] `map.txt` feature for custom game display names (tab-separated filename mapping in ROM directories)
-- [ ] Graphics Backend setting (GLES/Vulkan) — once exposed in settings UI
+- [ ] Graphics Backend setting (GLES/Vulkan), once exposed in settings UI
 
 ### To Consider
 - [ ] Config files reference page for power users (settings.json, platforms.ini, cores.json, overrides, etc.)
@@ -12,4 +12,4 @@
 
 ### Code Items Affecting Docs
 - [ ] Expose Graphics Backend picker in settings UI
-- [ ] RomM integration — update docs when merged from dev branch
+- [ ] RomM integration, update docs when merged from dev branch

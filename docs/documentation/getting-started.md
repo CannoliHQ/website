@@ -1,9 +1,7 @@
 # Getting Started
 
 > [!IMPORTANT]
-> **Android Version Compatibility ≥ 9**
->
-> Cannoli requires Android 9 (API 28) or newer.
+> Cannoli requires Android 9 or newer.
 
 ## Installing Cannoli
 
@@ -13,15 +11,15 @@ You can snag the latest APK from the [GitHub Releases](https://github.com/Cannol
 
 ## First Launch
 
-After installing, you will have the Cannoli app.
+Once you have the Cannoli APK installed open it up.
 
-On your first launch you will arrive at the setup screen. 
+You will be greeted by this screen on first launch.
 
 ![First Launch](../resources/img/getting-started/first_launch.png)
 
 Here you will be prompted for permission to manage all files and to select where to place the Cannoli Root Folder. 
 
-Cannoli needs this `MANAGE_EXTERNAL_STORAGE` access to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
+Cannoli needs this `All Files Access` to read your ROMs and write saves, box art, guides, and the rest of the directory tree it manages on shared storage. Without it the launcher can't do anything.
 
 Let's grant this permission first.
 
@@ -46,5 +44,3 @@ You will then land on a pretty barren main menu.
 While you are free to add content however you'd like, the easiest way is with [Nonna's Kitchen](nonnas-kitchen.md), a built-in web client for uploading ROMs, box art, saves, and more from any browser on your network.
 
 If you prefer to manage files manually, see the [Directory Structure](directory-structure.md) page for where everything goes.
-
-After you add ROMs, Cannoli scans them on the next launch (or when returning from Nonna's Kitchen).

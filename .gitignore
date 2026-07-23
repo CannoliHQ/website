@@ -4,3 +4,7 @@ __pycache__/
 *.iml
 /.cache/*
 /.envrc
+superpowers/
+.superpowers/
+.DS_Store
+.idea/

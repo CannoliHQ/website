@@ -9,3 +9,10 @@ dependencies = [
     "mkdocs-glightbox>=0.5.2",
     "mkdocs-github-admonitions-plugin>=0.1.1",
 ]
+
+[dependency-groups]
+dev = [
+    "pillow>=12.2.0",
+    "pytest>=9.1.1",
+    "pytest-playwright>=0.8.0",
+]

@@ -1,10 +1,3 @@
-> [!WARNING]
-> Cannoli is still figuring out who it wants to be when it grows up.
->
-> While the core vision of being a MinUI inspired launcher for Android won't change, menu structure, options, and features are in a state of flux.
->
-> Things will settle down in the near future but for now expect experimentation and change as nothing is bolted down.
-
 ## What is Cannoli?
 
 Cannoli is an opinionated setup for Retro Emulation on Android.
@@ -47,7 +40,34 @@ I've been yearning for this type of experience on Android.
 
 Without his masterpiece, this pale imitation would not exist.
 
-For that, I thank him, and apologize for this bastardization of his creation.
+---
+
+## Project Philosophy
+
+Cannoli has five key design goals:
+
+- Bake in the essentials
+- Skip the tedious config
+- Make adding games painless
+- Eliminate distractions
+- Get you to play some damn games!
+
+### Features That Will Not Be Considered Or Implemented { data-toc-label="Rejected Features" }
+
+- Art Scraper
+- Game Switcher
+- Game Time Tracker
+- Menu Music
+- Themes
+- Video Previews
+
+### But I need that feature!
+
+No you don't. And if you do, you have other amazing options on Android!
+
+I won't yuck your yum; if curating and tinkering brings you joy, it brings me joy.
+
+It just means Cannoli probably isn't for you, and that is totally okay.
 
 ---
 

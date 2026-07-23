@@ -33,6 +33,31 @@
   font-size: 0.9rem;
 }
 
+/*
+ * Heading permalink icon.
+ * The permalink glyph used to be a Nerd Font codepoint from the 5.7MB MPlus1c
+ * font, which only appeared once that font swapped in on load (the "pop-in").
+ * Instead we collapse the default permalink character and draw a chain-link
+ * SVG via a CSS mask, so it renders instantly and inherits Material's built-in
+ * opacity/color hover behaviour through currentColor.
+ */
+.md-typeset .headerlink {
+  font-size: 0;
+}
+
+.md-typeset .headerlink::after {
+  content: "";
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  vertical-align: -0.1rem;
+  background-color: currentColor;
+  transition: background-color 0.25s;
+  -webkit-mask: var(--cannoli-link-icon) center / contain no-repeat;
+          mask: var(--cannoli-link-icon) center / contain no-repeat;
+  --cannoli-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23fff' d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C81.9 372 81.9 321 113.4 289.5L225.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z'/%3E%3C/svg%3E");
+}
+
 .md-nav--primary > .md-nav__title {
   display: none;
 }
@@ -98,7 +123,14 @@
 .hero-device::before {
   content: '';
   position: absolute;
-  z-index: 0;
+  /* Above the frame (z2) so this opaque black square always covers the SVG
+     cutout's bleeding edge, even mid-crossfade when the logo and the video are
+     both semi-transparent. The logo (z4) and video (z5) sit on top of it. */
+  z-index: 3;
+  /* Slightly LARGER than the SVG's screen cutout (9.375%/4.348%/81.25%/47.826%)
+     so it overlaps the cutout's anti-aliased edge, where the body color
+     otherwise bleeds through ~1px. The overlap lands on the black screen bezel,
+     so it stays invisible. .device-screen and .device-screen-content match. */
   top: 4%;
   left: 9%;
   width: 82%;
@@ -118,12 +150,18 @@
 
 .device-screen {
   position: absolute;
-  z-index: 4;
-  top: 4.348%;
-  left: 9.375%;
-  width: 81.25%;
-  height: 47.826%;
-  object-fit: contain;
+  z-index: 5;
+  /* Overlap the SVG screen cutout by ~0.4% on every side (see .hero-device
+     ::before) so the video covers the cutout's anti-aliased edge and no body
+     color bleeds through during playback. */
+  top: 4%;
+  left: 9%;
+  width: 82%;
+  height: 48.5%;
+  /* The demo video is 1240x1080 (~1.148:1) but the screen box is wider, so
+     `contain` would pillarbox it. `cover` fills the box edge to edge (the small
+     top/bottom crop clears the status bar and hint bar). */
+  object-fit: cover;
   background: #000;
   border: 0;
   border-radius: 8px;
@@ -134,11 +172,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 3;
-  top: 4.1%;
-  left: 9.1%;
-  width: 81.8%;
-  height: 48.3%;
+  z-index: 4;
+  /* Match .device-screen (overlaps the SVG cutout edge; see .hero-device::before). */
+  top: 4%;
+  left: 9%;
+  width: 82%;
+  height: 48.5%;
   background: #000;
   border-radius: 8px;
   transition: opacity 0.6s ease;
@@ -193,11 +232,11 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 3;
-    top: 4.1%;
-    left: 9.1%;
-    width: 81.8%;
-    height: 48.3%;
+    z-index: 4;
+    top: 4%;
+    left: 9%;
+    width: 82%;
+    height: 48.5%;
     border-radius: 8px;
     background: #000;
     padding: 0;
@@ -632,3 +671,22 @@
 .md-typeset .platform-detail .platform-legend p {
   margin: 0 !important;
 }
+
+/* Guided-tutorial task section: screen + steps side-by-side on desktop,
+   stacked (screen first) on mobile. */
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  align-items: flex-start; /* top-align the steps with the top of the screen */
+  margin: 1rem 0 1.5rem;
+}
+.task__visual { flex: 1 1 360px; min-width: 260px; }
+/* padding-top is a % of the row width, so it scales with the screen: it drops
+   step 1 to roughly the screen's first list row when side-by-side, and shrinks
+   to a small gap under the screen when the layout stacks on mobile. */
+.task__steps  { flex: 1 1 280px; min-width: 240px; padding-top: 6%; }
+.task__visual cannoli-screen { display: block; width: 100%; }
+.task__visual img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.task__steps ol { margin: 0; padding-left: 1.4em; }
+.task__steps li { margin: 0 0 0.6em; }

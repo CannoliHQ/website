@@ -1,6 +1,6 @@
 ## Supported Platforms
 
-Cannoli supports a wide range of retro platforms out of the box. Pick a platform below for the full list of supported cores, RetroArch cores, and standalone Android apps.
+Cannoli supports a wide range of retro platforms out of the box. Pick a platform below for the full list of bundled cores, RetroArch cores, and standalone Android apps.
 
 The **Folder** column shows the accepted directory name for your ROMs. Place your ROM files in `Cannoli/Roms/{Folder}`.
 

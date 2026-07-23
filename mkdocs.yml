@@ -58,10 +58,13 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+  - toc:
+      # Visible mark is drawn as an inline SVG in theme.css (.md-typeset .headerlink);
+      # this character is collapsed with font-size:0 so it never renders directly.
+      permalink: true
 
 nav:
   - Introduction: documentation/index.md
-  - Project Philosophy: documentation/philosophy.md
   - Getting Started: documentation/getting-started.md
   - User Guide:
     - Library: documentation/library.md
@@ -70,14 +73,14 @@ nav:
     - Settings: documentation/settings.md
     - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Integrations:
-    - RetroArch: documentation/retroarch.md
-    - RicottaArch: documentation/ricotta.md
+#    - RicottaArch: documentation/ricotta.md
     - RetroAchievements: documentation/retroachievements.md
     - RomM: documentation/romm.md
   - Reference:
     - Platforms: documentation/platforms.md
     - Directory Structure: documentation/directory-structure.md
     - Button Reference: documentation/button-reference.md
+    - Shortcuts: documentation/shortcuts.md
     - License: documentation/license.md
     - Credits: documentation/credits.md
   - In The Wild: documentation/coverage.md
@@ -95,6 +98,10 @@ extra:
 
 extra_css:
   - resources/css/theme.css
+
+extra_javascript:
+  - path: resources/cannoli-ui/cannoli-ui.js
+    type: module
 
 watch:
   - docs

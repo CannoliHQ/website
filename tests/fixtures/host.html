@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+  <script>
+    window.CANNOLI_LIBRARY = {
+      platforms: [
+        { id: "gb",  name: "Game Boy" },
+        { id: "gbc", name: "Game Boy Color" },
+        { id: "nes", name: "Nintendo Entertainment System" }
+      ],
+      games: {
+        "tetris":     { title: "Tetris Rosy Retrospection", platform: "gb",  boxart: "boxart/tetris.png" },
+        "tecmo-2025": { title: "Tecmo Super Bowl 2025",     platform: "nes", boxart: "boxart/tecmo-2025.png" },
+        "balatro":    { title: "Balatro",                   platform: "gb",  boxart: "boxart/balatro.png" }
+      },
+      lists: {
+        favorites: { name: "Favorites", games: ["tetris", "tecmo-2025", "balatro"] }
+      },
+      collections: ["RPGs", "Puzzle Games", "Sports"],
+      romm: { host: "romm.local", account: "nonna", serverVersion: "5.0" }
+    };
+  </script>
+  <script type="module" src="/docs/resources/cannoli-ui/cannoli-ui.js"></script>
+  <cannoli-screen view="system-list" selection="0"></cannoli-screen>
+</body>
+</html>

@@ -12,10 +12,10 @@
 
 <div class="featured-card">
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/jWNXGyzLaPs?si=Z5ehHWAdRKKisDxr&start=559" title="Retro Handhelds Weekly - Cannoli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/YIdldHkSCdo" title="The UNDERGROUND App Turns A $25 Box Into Retro Gaming GOLD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <h3>Retro Gaming With Deadfred</h3>
-    <p>The Cannoli segment starts at <a href="https://youtu.be/jWNXGyzLaPs?t=559">9:19</a></p>
+    <h3>Tech It Before You Wreck It</h3>
+    <em>The UNDERGROUND App Turns A $25 Box Into Retro Gaming GOLD</em>
 </div>
 
 <div class="featured-card">
@@ -25,22 +25,20 @@
     <h3>Ryan Retro</h3>
     <em>The Cleanest Android Game Launcher</em>
 </div>
-
 <div class="featured-card">
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/4m_nT0SFFPM" title="The Cleanest Android Game Launcher" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/7M6YipCp4qQ" title="The RG Rotate Has One Serious Downside" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <h3>Retro Pup</h3>
-    <em>I Tried Cannoli on the AYN Thor</em>
-    <p>Got some stuff to clean up pointed out in this one! 😅</p>
+    <h3>Retro Gaming With Deadfred</h3>
+    <em>The RG Rotate Has One Serious Downside</em>
 </div>
 
 <div class="featured-card">
     <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/YIdldHkSCdo" title="The UNDERGROUND App Turns A $25 Box Into Retro Gaming GOLD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/jWNXGyzLaPs?si=Z5ehHWAdRKKisDxr&start=559" title="Retro Gaming With Deadfred - Cannoli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <h3>Tech It Before You Wreck It</h3>
-    <em>The UNDERGROUND App Turns A $25 Box Into Retro Gaming GOLD</em>
+    <h3>Retro Gaming With Deadfred</h3>
+    <p>The Cannoli segment starts at <a href="https://youtu.be/jWNXGyzLaPs?t=559">9:19</a></p>
 </div>
 
 <div class="featured-card">
@@ -49,6 +47,54 @@
     </div>
     <h3>A-Zone</h3>
     <em>Play 90s Games on Your Smart TV 😳 No Console Needed</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/zOK2zVAS-vc" title="Najlakši način za retro igre na Android TV-u (Cannoli Tutorial)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>DoubleA Tutorijali</h3>
+    <em>Najlakši način za retro igre na Android TV-u (Cannoli Tutorial)</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/3D_-ztW3-us" title="Melhor Emulador de Games para Sua Android TV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>Brinco android Tutoriais</h3>
+    <em>Melhor Emulador de Games para Sua Android TV</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/85YjUr6lQW0" title="Esse APP do Android é PERFEITO pra EMULAÇÃO! - Cannoli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>Que Fita É Essa?</h3>
+    <em>Esse APP do Android é PERFEITO pra EMULAÇÃO! - Cannoli</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/4m_nT0SFFPM" title="I Tried Cannoli on the AYN Thor" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>RetroPup</h3>
+    <em>I Tried Cannoli on the AYN Thor</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/igZwAoRvkXA" title="I Tried Android Frontends on the Anbernic RG Rotate" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>RetroPup</h3>
+    <em>I Tried Android Frontends on the Anbernic RG Rotate</em>
+</div>
+
+<div class="featured-card">
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/hhdqwcM34FI" title="Cannoli on the AYN Thor - Minimal but effective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h3>RetroPup</h3>
+    <em>Cannoli on the AYN Thor - Minimal but effective</em>
 </div>
 
 </div>
@@ -79,6 +125,13 @@
 <h3>Cannoli Brings the Magic of MinUI to Android</h3>
 </a>
 <p class="featured-series">Shared by our friend Jacob on their blog <a href="https://blog.tobographic.xyz">technically tobographic</a></p>
+</div>
+
+<div class="featured-card">
+<a href="https://kennethreitz.org/essays/2026-07-18-teaching_cannoli_which_screen_is_home" class="featured-article-link">
+<h3>Teaching Cannoli Which Screen Is Home</h3>
+</a>
+<p class="featured-series">Shared by our friend Kenneth on their <a href="https://kennethreitz.org">personal website</a></p>
 </div>
 
 </div>

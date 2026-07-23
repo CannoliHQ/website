@@ -9,40 +9,19 @@ Cannoli ships with a built-in libretro core runner. Press `A` on a game to play 
 
 ---
 
-## RetroArch / Standalone Emulators
-
-Cannoli can also launch your games using RetroArch or a standalone emulator.
-
-You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Emulation → Core Mapping**.
-
-The [directory structure](directory-structure.md) for content (ROMs, saves, etc) is the same regardless of whether you use the built-in runner, RetroArch or a standalone emulator.
-
-> [!CAUTION]
-> RetroArch support is very much a work in progress. Please see [RetroArch Integration](retroarch.md) for more details.
-
----
-
 ## Resuming a Game
 
-If a save state exists for a game, press `X` to jump back in. Use `A` to start the game without using the last save state.
+If a save state exists for a game, press the **Resume** button to jump back in, or the **Play** button to start the game without using the last save state. By default `A` plays and `X` resumes; if [Swap Play and Resume](settings.md#input) is enabled, `X` plays and `A` resumes.
 
-Resume is only available for games handled by Cannoli's built-in core runner or by RetroArch when [RetroArch DIY Mode](settings.md#advanced) is off. When DIY Mode is enabled, RetroArch games always start fresh.
+**Hold** the Resume button to open the Save State Picker. Cycle through your slots with `Left` / `Right` and press the Resume button again to load the selected slot. Empty slots show as blank.
+
+Resume is only available for games handled by Cannoli's built-in core runner.
 
 ---
 
 ## Opening the In-Game Menu
 
 Press the `Menu` button to open the In-Game Menu (IGM). It gives you access to save states, settings, achievements, and more.
-
----
-
-## Multiple Controllers
-
-Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is always Player 1. External controllers that connect after the game starts are assigned to Players 2-4 automatically.
-
-When a controller disconnects or reconnects you'll see a notification on screen.
-
-If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
 
 ---
 
@@ -57,8 +36,6 @@ Closes the menu and returns to gameplay.
 Saves a snapshot of the game to the selected slot. There's an `AUTO` slot plus 10 slots.
 
 The `AUTO` slot is a dedicated save file, separate from the slots. When you save to it, the previous auto save is placed into the first slot. All existing save states are then pushed back by one slot. This means your slots also double as auto save history.
-
-The slots use the same file format as RetroArch, so save states are compatible between Cannoli and RetroArch.
 
 Use `Left` / `Right` on the `D-Pad` to cycle between slots. Each slot shows a screenshot of what's saved in it.
 
@@ -91,26 +68,36 @@ This menu option will only appear if the game you are playing has at least one g
 
 If you have one file this option will open it directly. If you have multiple files you will see a list. In both cases the IGM will remember the last page and position for each file.
 
+### Cheats
+
+Cannoli can apply RetroArch-style `.cht` cheat files to games running in the [built-in core runner](#built-in-core-runner).
+
+Place your `.cht` files in `Cheats/<Platform>/<Game>/`, mirroring the platform folder and ROM file name Cannoli already uses for box art and guides. You can also upload them through [Nonna's Kitchen](nonnas-kitchen.md). Files with no readable cheats are ignored.
+
+This menu option only appears when the current game has at least one cheat file.
+
+Open **Cheats** to see every cheat, grouped by file. Highlight one and press `A` to toggle it **On** or **Off**; the change applies to the running game right away. Cheats your core does not support are dimmed and cannot be toggled.
+
+Cannoli remembers which cheats you had enabled for each game. The next time you play it, press `X` on the Cheats screen to **Restore Last Session** and switch them back on.
+
 ### Settings
 
-Opens the in-game settings with six categories:
+Opens the in-game settings with five categories:
 
 - **Video** - Screen scaling, sharpness, shaders, overlays
 - **Emulator** - Core-specific options (varies per platform)
-- **Buttons** - Remap the current game's controls. Mappings can be saved per platform or per game.
-- **Shortcuts** - Assign button combos to the following actions:
-    - Save State
-    - Load State
-    - Reset Game
-    - Save and Quit
-    - Cycle Scaling
-    - Cycle Shader
-    - Toggle Fast Forward
-    - Hold Fast Forward
-    - Open Guide
-    - Open In-Game Menu
+- **Input** - Button mappings, shortcuts, and D-Pad behavior (see below)
 - **Advanced** - Controller type (core dependent), fast-forward speed, debug HUD
-- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, and RetroAchievements status, game ID, and detection details (when logged in)
+- **Info** - Displays the current core, ROM path, extracted ROM path (when the game was unpacked from an archive), save path, renderer, RetroAchievements status, game ID, and detection details (when logged in)
+
+#### Input
+
+The **Input** category gathers everything about how your controller drives the game:
+
+- **Button Mappings** - remap the current game's controls. Mappings can be saved per platform or per game.
+- **Shortcuts** - assign button combos to in-game actions like Save State, Fast Forward, and Open Guide. See [Shortcuts](shortcuts.md) for the full list.
+- **Left Stick as D-Pad** - send left-stick movement as D-Pad presses, for games that only read the D-Pad.
+- **D-Pad Mode (BETA)** - switch between **8-Way** (the default) and **4-Way**, which suppresses diagonals for games built for a 4-way pad. This row only appears when **Experimental Features** is turned on in [Settings → Advanced](settings.md#advanced), and your choice is remembered per platform and per game.
 
 ### Reassign Players
 
@@ -130,7 +117,17 @@ Resets the game to its initial state. Return to the IGM and press `X` to undo th
 
 Exits the game and returns to the launcher.
 
-If **Always Save On Quit** is enabled in Settings → Emulation, this option is labeled **Save and Quit** and automatically writes a save state before exiting.
+If **Save State On Quit** is enabled in Settings → Emulation, this option is labeled **Save and Quit** and automatically writes a save state before exiting.
+
+---
+
+## Multiple Controllers
+
+Cannoli supports up to 4 controllers. The built-in controller (on handhelds) is always Player 1. External controllers that connect after the game starts are assigned to Players 2-4 automatically.
+
+When a controller disconnects or reconnects you'll see a notification on screen.
+
+If 2 or more controllers are connected, the IGM **Reassign Players** screen lets you change which controller is which player, including swapping two players.
 
 ---
 
@@ -143,3 +140,25 @@ The following disc markers are recognized: `(Disc 1)`, `(Disk 1)`, `(CD1)`. Any 
 When a game prompts you to insert the next disc, open the [In-Game Menu](#opening-the-in-game-menu) and use **Switch Disc**.
 
 Deleting a multi-disc entry removes the entire bundle.
+
+---
+
+## RetroArch / Standalone Emulators
+
+Cannoli can also launch your games using RetroArch or a standalone emulator.
+
+You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Emulation → Emulator Mapping**.
+
+---
+
+## Emulator Override
+
+By default, each game uses the core or app assigned to its platform in [Emulator Mapping](settings.md#emulation). An emulator override lets you set a different choice for a single game, useful when one game runs better on a different core or needs a standalone app.
+
+Open a game's context menu (`Start`) and select **Emulator Override** to pick from:
+
+- Cannoli's built-in cores
+- Any core installed in the selected RetroArch or RicottaArch package
+- Any compatible standalone Android app
+
+The picker shows the source of each option (Internal, RetroArch, RicottaArch, or Standalone). To clear an override and return to the platform default, open the picker again and choose **Platform Default**.
