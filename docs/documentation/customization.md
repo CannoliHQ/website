@@ -129,7 +129,9 @@ Highlight a game, press `Start` to open the context menu, and select **Delete Ar
 
 ## Overlays
 
-Overlays are images displayed on top of gameplay to simulate screen bezels or borders. The transparent areas of the image let the game show through.
+Overlays are images displayed on top of gameplay to simulate screen bezels or borders.
+
+Overlays are stretched to fill the entire screen. The game renders behind the overlay, visible through any transparent regions in the image. There are no positioning, scaling, or opacity controls. What you see is what's in the image file.
 
 Cannoli only supports PNGs as overlays.
 
@@ -140,29 +142,17 @@ Like box art, overlays are organized by platform:
 ```
 Overlays/
 ├── GBA/
-│   ├── gba_bezel.png
-│   └── gba_border.png
+│   ├── pokemon_bezel.png
+│   └── gba_bezel.png
 ├── SNES/
-│   └── snes_crt.png 
+│   └── trinitron_crt.png 
 ```
-
-### Display
-
-Overlays are stretched to fill the entire screen. The game renders behind the overlay, visible through any transparent regions in the image. There are no positioning, scaling, or opacity controls. What you see is what's in the image file.
 
 ### Applying Overlays
 
-Open the [In-Game Menu](playing-games.md#in-game-menu-igm) and go to **Settings → Video**. Use `Left` / `Right` to cycle through the overlays available for the current platform. Changes apply immediately.
+Open the [In-Game Menu](playing-games.md#in-game-menu-igm) and go to **Settings → Video**. Use `Left` / `Right` to cycle through the overlays available for the current platform. 
 
-### Override Hierarchy
-
-Overlay selection is saved at three levels:
-
-1. **Game** - applies to a single game
-2. **Platform** - applies to all games on a platform
-3. **Global** - applies everywhere
-
-A game-level override takes priority over platform, which takes priority over global.
+When you leave settings, you will be able to choose if these changes apply for the entire platform or just that game.
 
 Cannoli does not ship with any overlays. You'll need to provide your own.
 
@@ -200,13 +190,7 @@ If the active preset exposes tunable parameters, a **Shader Settings** sub-scree
 
 ### Override Hierarchy
 
-Shader selection and parameter values are saved at three levels:
-
-1. **Game** - applies to a single game
-2. **Platform** - applies to all games on a platform
-3. **Global** - applies everywhere
-
-A game-level override takes priority over platform, which takes priority over global.
+Like overlays, shader selection and parameter values are saved for the platform or the current game.
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
