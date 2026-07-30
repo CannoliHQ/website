@@ -112,6 +112,14 @@
 <p class="featured-series">The Bryant Review's Developer Interview Series</p>
 </div>
 
+<div class="featured-card">
+<a href="https://gardinerbryant.com/a-few-months-later-talking-with-cannoli/" class="featured-article-link">
+<h3>A Few Months Later: Talking with Cannoli's Creator</h3>
+</a>
+<p class="featured-series">The Bryant Review's Developer Interview Series</p>
+</div>
+
+
 </div>
 
 ---
