@@ -84,6 +84,7 @@ nav:
     - License: documentation/license.md
     - Credits: documentation/credits.md
   - In The Wild: documentation/coverage.md
+  - Hardware Partners: documentation/hardware-partners.md
   - Changelog: documentation/changelog.md
 
 copyright: "&copy; 2026 Cannoli"
