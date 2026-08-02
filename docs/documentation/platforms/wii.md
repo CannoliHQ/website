@@ -8,12 +8,10 @@ title: "Wii"
 
 # Wii `WII`
 
-| Name | Type |  |
-|---|---|---|
-| `dolphin` | RetroArch |  |
-| Dolphin | Standalone | :material-trophy:{ .trophy } |
-| Dolphin MMJR | Standalone |  |
-| Dolphin MMJR2 | Standalone |  |
+| Name          | Type       |                              |
+|---------------|------------|------------------------------|
+| Dolphin       | Standalone | :material-trophy:{ .trophy } |
+| Dolphin MMJR2 | Standalone |                              |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

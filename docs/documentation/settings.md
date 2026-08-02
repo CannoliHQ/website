@@ -6,6 +6,41 @@ Press `X` on the main menu to open settings.
 
 ---
 
+## General
+
+- **Language:** The language Cannoli's interface is displayed in. Cycle through the options with `Left` / `Right`. See [Available Languages](#available-languages).
+- **Title:** Set a custom title that appears at the top of the launcher's platform screen. See [Title](customization.md#title).
+- **Swap Play and Resume:** Make `Resume` the primary action on games with save states.
+- **Main Menu Quit:** Enable the ability to quit on the main menu. This is handy for Android TV devices or For when Cannoli is not your main launcher.
+- **Set as Default Launcher:** Set Cannoli as your device's default launcher. Only shown when Cannoli isn't already the default.
+
+### Available Languages
+
+The Language picker lists each language under its own name:
+
+| Language               | As shown in Cannoli     |
+|------------------------|-------------------------|
+| English (default)      | English                 |
+| Chinese, Simplified    | 简体中文                    |
+| French                 | Français                |
+| German                 | Deutsch                 |
+| Greek                  | Ελληνικά                |
+| Italian                | Italiano                |
+| Japanese               | 日本語                     |
+| Portuguese             | Português (Portugal)    |
+| Portuguese, Brazilian  | Português (Brasil)      |
+| Spanish                | Español (España)        |
+| Spanish, Latin America | Español (Latinoamérica) |
+| Ukrainian              | Українська              |
+
+> [!TIP]
+> If a language uses characters your selected [font](customization.md#font) can't draw, Cannoli falls back to its default font for that language so nothing renders as blank boxes.
+
+> [!NOTE]
+> Cannoli is translated by the community. If you'd like to help, or want to see your language added, visit the [Cannoli project on Crowdin](https://l10n.cannoli.dev).
+
+---
+
 ## Appearance
 
 Change art settings, pick a background image, set colors, and more.
@@ -19,6 +54,7 @@ See the [Customization](customization.md#appearance) page for details.
 - **Content Mode:** Switch between Default, Collections Only, or Five Game Handheld modes. See [Content Modes](library.md#content-modes).
 - **5GH Collection:** The collection used when Content Mode is set to Five Game Handheld. Only shown in that mode.
 - **Recently Played:** Show or hide the Recently Played section on the main menu. Not shown in Five Game Handheld mode.
+- **Favorites:** Show or hide the Favorites section on the main menu. Hiding it only removes the main menu entry. Favorited games keep their star and still sort to the top of their own lists. Not shown in Five Game Handheld mode.
 - **Manage Ports:** Select which Android apps appear in Ports.
 - **Manage Tools:** Select which Android apps appear in Tools.
 - **Scan Mode:** Choose whether the library rescans automatically on boot (**Automatic**) or only when triggered (**Manual**). Manual is useful on slow storage or when using very large collections.
@@ -37,15 +73,13 @@ See the [Customization](customization.md#appearance) page for details.
     - **Name** - rename the controller.
     - **Reset Defaults** - revert your changes (only shown once you've edited the controller).
 - **Shortcuts:** Configure shortcut actions.
-- **Swap Play and Resume:** Make `Resume` the primary action on games with save states.
-- **Main Menu Quit:** Enable the ability to quit on the main menu. For when Cannoli is not your main launcher.
 - **Input Tester:** Open a screen that shows live controller input so you can verify button and axis mappings.
 
 ---
 
 ## Emulation
 
-- **Emulator Mapping:** Open a per-platform screen to choose which core or app handles each platform. The new source-first picker lists every emulator option grouped by source (Internal, RetroArch, RicottaArch, Standalone) and defaults to showing only what's installed; press `Y` to **Show All**. Selections are transactional: `START` commits your changes to `cores.json`, `B` discards them.
+- **Emulator Mapping:** Open a per-platform screen to choose which core or app handles each platform. The picker lists every emulator option grouped by source (Internal, RetroArch, RicottaArch, Standalone) and defaults to showing only what's installed.
 - **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch.
 - **Installed Cores:** Lists all cores for the selected RetroArch/RicottaArch package.
 - **Save State On Quit:** When enabled, quitting a game from the In-Game Menu automatically saves state before exiting.
@@ -96,7 +130,6 @@ See the [RomM](romm.md) page for more details.
 - **Experimental Features:** Unlocks experimental options elsewhere in Cannoli, such as **D-Pad Mode** in the in-game Input settings.
 - **Release Channel:** Tells the updater what type of build you want.
     - Choose from `Stable`, `Beta`, and `Test`.
-- **Default Launcher:** Set Cannoli as your device's default launcher.
 
 ---
 

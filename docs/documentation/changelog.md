@@ -1,3 +1,33 @@
+## [v1.9.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.9.0) - The Localization Release
+
+Cannoli speaks more than English now! If you want to get involved with the localization effort, please visit
+the [Cannoli Project on Crowdfin](https://l10n.cannoli.dev).
+
+Also included is a hodge podge of simple QoL features and cleanup.
+
+| Feature / Fix                                                                                                                                    | Issue                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Feat: **Localization** - Cannoli's interface is translatable, with a Language picker in the new Settings > General category                      | [#280](https://github.com/CannoliHQ/cannoli/issues/208) |
+| Feat: New [PC platform](platforms/pc.md) that launches your GameNative or GameHub Lite library from shortcut files in `Roms/PC`                  | [#100](https://github.com/CannoliHQ/cannoli/issues/100) |
+| Feat: [Box art for Tools and Ports](customization.md#box-art), with Delete Box Art in the context menu and art that follows a rename             | N/A                                                     |
+| Feat: GameCube and Wii emulators launch intent cleanup [Emulator Mapping](settings.md#emulation)                                                 | [#170](https://github.com/CannoliHQ/cannoli/issues/170) |
+| Feat: Eden Nightly added, and the standalone emulator lists trimmed down to maintained apps                                                      | [#206](https://github.com/CannoliHQ/cannoli/issues/206) |
+| Feat: [RomM Download Queue](romm.md#romm-quick-menu) entry in the quick menu while downloads are pending                                         | N/A                                                     |
+| Feat: RomM cache sync status shown in the status bar                                                                                             | N/A                                                     |
+| Feat: [Favorites](library.md#favorites) row can be hidden from Settings > Library, same as Recently Played                                       | N/A                                                     |
+| Fix: Multi-file RomM downloads arriving as empty 0 KB files, now fetched file by file                                                            | [#215](https://github.com/CannoliHQ/cannoli/issues/215) |
+| Fix: Multi-part RomM games (Switch and friends) failing to install                                                                               | [#213](https://github.com/CannoliHQ/cannoli/issues/213) |
+| Fix: Azahar failing to launch 3DS games; the ROM is handed over as a content URI now                                                             | [#171](https://github.com/CannoliHQ/cannoli/issues/171) |
+| Fix: Dolphin MMJR2 dropping to its own menu instead of booting the game                                                                          | [#204](https://github.com/CannoliHQ/cannoli/issues/204) |
+| Fix: Games launching in the first installed emulator instead of the one you picked                                                               | N/A                                                     |
+| Fix: Arcade CHD subfolders showing up as separate games                                                                                          | [#129](https://github.com/CannoliHQ/cannoli/issues/129) |
+| Fix: Box art vanishing after a rename until something else forced a rebuild                                                                      | N/A                                                     |
+| Fix: "Core not installed: unknown" on app-only platforms, which now names the missing app and offers Change Emulator                             | N/A                                                     |
+| Fix: A failed launch from a per-game override rewriting the global mapping and failing again next time                                           | N/A                                                     |
+| Fix: Tool and Port box art missing on the home screen in [Five Game Handheld](library.md#five-game-handheld) mode                                | N/A                                                     |
+
+---
+
 ## [v1.8.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.8.0) - The [RomM](https://romm.app) Release
 
 | Feature / Fix                                                                                                                                   | Issue                                                   |
@@ -57,9 +87,9 @@
 
 ## [v1.7.6](https://github.com/CannoliHQ/cannoli/releases/tag/v1.7.6)
 
-| Feature / Fix                                   | Issue                                                   |
-|-------------------------------------------------|---------------------------------------------------------|
-| Fix: RetroArch DIY Mode behavior                | N/A                                                     |
+| Feature / Fix                                | Issue                                                   |
+|----------------------------------------------|---------------------------------------------------------|
+| Fix: RetroArch DIY Mode behavior             | N/A                                                     |
 | Feat: Add support for Vita3K `.psvita` files | [#165](https://github.com/CannoliHQ/cannoli/issues/165) |
 
 ---
@@ -236,8 +266,8 @@ Forgot to update the credits for bundled shaders and the new logo!
 
 ## [v1.2.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.2.0)
 
-| Feature / Fix                                                                     | Issue                                                 |
-|-----------------------------------------------------------------------------------|-------------------------------------------------------|
+| Feature / Fix                                                                      | Issue                                                 |
+|------------------------------------------------------------------------------------|-------------------------------------------------------|
 | Feat: [Show / Hide Platforms](library.md#content-modes) for collection-only setups | [#69](https://github.com/CannoliHQ/cannoli/issues/69) |
 | Feat: [Five Game Handheld Mode](library.md#content-modes)                          | [#75](https://github.com/CannoliHQ/cannoli/issues/75) |
 
@@ -256,14 +286,14 @@ Forgot to update the credits for bundled shaders and the new logo!
 
 ## [v1.1.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.1.0)
 
-| Feature / Fix                                                                                                        | Issue                                                 |
-|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| Feat: [Recently Played](library.md#recently-played) list with show/hide toggle and clear option                      | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
-| Feat: [Title color](customization.md#colors) setting                                                                 | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
-| Feat: Platform specific [button legends](settings.md#input) (Plumber, Redmond, Shapes)                               | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
+| Feature / Fix                                                                                                                   | Issue                                                 |
+|---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| Feat: [Recently Played](library.md#recently-played) list with show/hide toggle and clear option                                 | [#59](https://github.com/CannoliHQ/cannoli/issues/59) |
+| Feat: [Title color](customization.md#colors) setting                                                                            | [#61](https://github.com/CannoliHQ/cannoli/issues/61) |
+| Feat: Platform specific [button legends](settings.md#input) (Plumber, Redmond, Shapes)                                          | [#41](https://github.com/CannoliHQ/cannoli/issues/41) |
 | Feat: [Filter file extensions](directory-structure.md#config-folder-reference) from games list via `ignore_extensions_roms.txt` | [#50](https://github.com/CannoliHQ/cannoli/issues/50) |
 | Feat: Ship [`arcade_map.txt`](directory-structure.md#config-folder-reference) for human-readable arcade game titles             | [#20](https://github.com/CannoliHQ/cannoli/issues/20) |
-| Feat: Organize Config folder                                                                                         | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
+| Feat: Organize Config folder                                                                                                    | [#66](https://github.com/CannoliHQ/cannoli/issues/66) |
 
 ---
 

@@ -8,13 +8,14 @@ title: "PlayStation 2"
 
 # PlayStation 2 `PS2`
 
-| Name | Type |  |
-|---|---|---|
+| Name                  | Type       |                                                                |
+|-----------------------|------------|----------------------------------------------------------------|
 | AetherSX2 / NetherSX2 | Standalone | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| ARMSX2 | Standalone | :material-chip:{ .bios-required } |
-| EmuCoreX | Standalone | :material-chip:{ .bios-required } |
-| Play! | Standalone | :material-chip:{ .bios-required } |
+| ARMSX2                | Standalone | :material-chip:{ .bios-required }                              |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
-
 </div>
+
+> [!NOTE]
+> AetherSX2 and NetherSX2 share the same package name and cannot be installed side by side.
+

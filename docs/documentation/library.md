@@ -361,6 +361,9 @@ after you play your first game.
 > [!TIP]
 > To favorite multiple games at once, press `Select` on the game list to enter multi-select mode. Select the games you want, then press `Start` to apply the action to all of them.
 
+> [!NOTE]
+> The `Favorites` main menu entry can be hidden from [Settings → Library](settings.md#library). Hiding this menu option does not unfavorite anything and your games keep their star and still sort to the top of the list.
+
 ---
 
 ## Managing Games

@@ -8,18 +8,20 @@ title: "PlayStation"
 
 # PlayStation `PS`
 
-| Name | Type |  |
-|---|---|---|
-| `pcsx_rearmed` | Bundled | :material-trophy:{ .trophy } |
-| `swanstation` | Bundled | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `mednafen_psx` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `mednafen_psx_hw` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `duckstation` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| DuckStation | Standalone | :material-trophy:{ .trophy } |
-| ePSXe | Standalone |  |
-| FPse | Standalone |  |
-| FPse64 | Standalone |  |
+| Name              | Type       |                                                                |
+|-------------------|------------|----------------------------------------------------------------|
+| `pcsx_rearmed`    | Bundled    | :material-trophy:{ .trophy }                                   |
+| `swanstation`     | Bundled    | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `mednafen_psx`    | RetroArch  | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `mednafen_psx_hw` | RetroArch  | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `duckstation`     | RetroArch  | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| DuckStation       | Standalone | :material-trophy:{ .trophy }                                   |
+| FPse              | Standalone |                                                                |
+| FPse64            | Standalone |                                                                |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 
 </div>
+
+> [!NOTE]
+> DuckStation stopped supporting Android in March 2026.

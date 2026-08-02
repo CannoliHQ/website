@@ -37,13 +37,15 @@ The dashboard has three tabs.
 
 ### Platforms
 
-Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk-upload box art), **Overlays**, **BIOS**, and **Samples**. Open a game to upload or download its **Saves**, **Save States**, **Guides** (`.pdf`, `.txt`, `.png`, `.jpg`), and **Cheats** (`.cht`).
+Pick a platform to manage its **Games** (upload ROMs, folders, rename, move, delete, bulk-upload box art), **Overlays**, **BIOS**, and more.
+
+Open a game to upload or download its **Saves**, **Save States**, **Guides**, and **Cheats**.
 
 ### Customization
 
-Global content: **Wallpapers**, **Shaders**, and fallback **Overlays**.
+Global content: **Wallpapers**, **Shaders**, and **Overlays**.
 
 ### Tools
 
-- **File Manager** - browse the device's storage volumes.
 - **APK Installer** - drop an APK to install. Confirm on the device.
+- **File Manager** - browse the device's storage volumes.

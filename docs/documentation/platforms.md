@@ -42,7 +42,7 @@ For example, Game Boy Advance ROMs go in `Cannoli/Roms/GBA`.
 | [Game Boy Advance](platforms/gba.md)                     | `GBA`        | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 | [Pokemon Mini](platforms/pokemini.md)                    | `POKEMINI`   | :material-check-bold:{ .shipped } :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy }                                                                  |
 | [Nintendo DS](platforms/nds.md)                          | `NDS`        | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy }                                                                     |
-| [Nintendo 3DS](platforms/3ds.md)                         | `3DS`        | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-key:{ .keys-required }                                                                 |
+| [Nintendo 3DS](platforms/3ds.md)                         | `3DS`        | :material-android:{ .android } :material-key:{ .keys-required }                                                                                                  |
 | [GameCube](platforms/gc.md)                              | `GC`         | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy }                                                                     |
 | [Wii](platforms/wii.md)                                  | `WII`        | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy }                                                                     |
 | [Wii U](platforms/wiiu.md)                               | `WIIU`       | :material-android:{ .android } :material-key:{ .keys-required }                                                                                                  |
@@ -126,6 +126,7 @@ For example, Game Boy Advance ROMs go in `Cannoli/Roms/GBA`.
 |---------------------------------|-----------|-------------------------------------------------------------------------------------------------|
 | [Amiga](platforms/amiga.md)     | `AMIGA`   | :custom-retroarch:{ .retroarch } :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 | [DOS](platforms/dos.md)         | `DOS`     | :custom-retroarch:{ .retroarch } :material-trophy:{ .trophy }                                   |
+| [PC](platforms/pc.md)           | `PC`      | :material-android:{ .android }                                                                  |
 | [ScummVM](platforms/scummvm.md) | `SCUMMVM` | :custom-retroarch:{ .retroarch } :material-android:{ .android } :material-trophy:{ .trophy }    |
 
 <script>

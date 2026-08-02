@@ -14,7 +14,7 @@ I am extremely grateful for the following manufacturers who have provided develo
 
 ### AYN
 
-[![AYN](../resources/img/partners/ayn.png)](https://www.ayn.hk/){ .partner-logo }
+[![AYN](../resources/img/partners/ayn.png)](https://www.ayntec.com){ .partner-logo }
 
 <p class="partner-device">Thor</p>
 

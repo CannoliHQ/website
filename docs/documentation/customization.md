@@ -2,7 +2,7 @@
 
 ## Appearance
 
-All appearance settings are found under **Settings → Appearance**.
+These settings are found under **Settings → Appearance**, except [Title](#title), which lives under **Settings → General**.
 
 ### Art Width
 
@@ -80,6 +80,8 @@ Eight sizes are available, from compact (16) to large (30). The default is 24.
 Set a custom title that appears at the top of the launcher's platform screen.
 
 Leave it empty for no title.
+
+Found under **Settings → [General](settings.md#general)**.
 
 ---
 

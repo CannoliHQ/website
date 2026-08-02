@@ -113,7 +113,7 @@ window.CANNOLI_TUTORIALS = {
 
 ## Pairing
 
-Pair Cannoli to a RomM server from **Settings → Integrations → RomM**. RomM **5.0 or newer** is required.
+Pair Cannoli to a RomM server from **Settings → Integrations → RomM**.
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
@@ -123,7 +123,7 @@ Pair Cannoli to a RomM server from **Settings → Integrations → RomM**. RomM 
 1. Set the server **Host**.
 2. If your server uses a self-signed certificate, turn on **Allow Self-Signed Cert**.
 3. Select **Pair with Another Device**.
-4. Scan the QR code with any device signed in to your RomM server and approve the request there.
+4. Scan the QR code, authenticate with RomM and approve the device request.
 </div>
 </div>
 
@@ -131,7 +131,9 @@ Pair Cannoli to a RomM server from **Settings → Integrations → RomM**. RomM 
 
 ## Browsing your RomM library
 
-Once paired, **RomM** appears in the launcher's Quick Menu. Browse the whole server; nothing lives on your device until you download it. The screens are **Platforms**, **Collections**, **Firmware**, and **Search**. Highlight a game and press `A` to download it (and its manual, if any).
+Once paired, a **RomM** option appears in the Quick Menu. 
+
+Select this option, and you will be brought into the RomM integration. From here you can download content to your device.
 
 <div class="task" markdown>
 <div class="task__visual" markdown>
@@ -145,7 +147,7 @@ Once paired, **RomM** appears in the launcher's Quick Menu. Browse the whole ser
 </div>
 
 > [!NOTE]
-> A purple border frames every RomM browse screen, so you always know when you are looking at the server rather than your local library.
+> A purple border frames every RomM screen to indicate you are browsing your instance rather than your local device.
 
 ### Searching
 
@@ -164,13 +166,16 @@ Press `R1` on any RomM browse screen to search the whole server.
 
 ### Offline browsing
 
-Your library is mirrored to a local cache, so browsing is instant and works offline (**Could not reach RomM. Showing cached library.**). Cannoli builds it on first open and refreshes in the background; rebuild it from **RomM Settings → Advanced → Rebuild Cache**. Downloading still needs a connection.
+Your RomM library is mirrored to a local cache. This allows browsing to be instant and available offline. 
+
+The cache will be built the first time you launch the RomM integration. All subsequent launches will do a delta update in the background.
 
 ### RomM Settings
 
 Press `X` on any browse screen to open **RomM Settings**:
 
-- **Cover Art** - art type from RomM (Default, Off, Box 2D, Box 3D, Mix, Title, Screenshot, Marquee).
+- **Cover Art** - art type from RomM 
+    - Choose from Default, Off, Box 2D, Box 3D, Mix, Title, Screenshot, and Marquee.
 - **Concurrent Downloads**
 - **Save Sync** - see [Save Sync](#save-sync).
 - **Show / Hide Platforms**
@@ -194,7 +199,8 @@ Lists BIOS and firmware per platform (**On Device** / **Not on Device**).
 </div>
 <div class="task__steps" markdown>
 1. Files are grouped into **Not on Device** and **On Device**.
-2. Highlight one under **Not on Device** and press `A`; it downloads and moves into **On Device**.
+2. Highlight one under **Not on Device** and press `A`.
+3. The BIOS will be placed into the corresponding platform's BIOS folder in the Cannoli Root.
 </div>
 </div>
 
@@ -204,10 +210,8 @@ Lists BIOS and firmware per platform (**On Device** / **Not on Device**).
 
 Pull box art for your **local** games from RomM:
 
-- **Per platform** - press `Start` on a platform, select **Download Missing Art** (shown when RomM is configured).
+- **Per platform** - press `Start` on a platform, select **Download Missing Art**.
 - **Bulk** - **RomM Settings → Advanced → Download Missing Art**.
-
-Art follows your **Cover Art** setting; Cannoli shows a summary when done.
 
 ---
 
@@ -215,19 +219,16 @@ Art follows your **Cover Art** setting; Cannoli shows a summary when done.
 
 Save Sync mirrors your in-game saves with your RomM server.
 
-Turn it on at **RomM Settings → Save Sync** (name your device when asked):
+Turn it on at **RomM Settings → Save Sync**. You can choose how many **Save Backups** you want kept per game: **Off**, **3**, **5**, **10** (default **5**).
 
-- **Save Sync** - **On** / **Off**.
-- **Save Backups** - backups kept per game: **Off**, **3**, **5**, **10** (default **5**).
-
-Syncing is automatic: on launch, on exit, and on a background sweep (every 30 minutes or when back online). A cloud icon in the [status bar](customization.md#status-bar) shows the state.
+Syncing is automatic. It happens every 30 minutes, when the device reports it is back online, on game launch and on game exit. A cloud icon in the [status bar](customization.md#status-bar) shows the state.
 
 ### Conflicts
 
 If a save changed in both places, launching prompts **Keep This Device** or **Use Server**. Background sync conflicts collect under **Sync Conflicts** found in the quick menu. Here you can pick to **Keep Local**, **Use Server**, or **Skip**.
 
-### Backups and slots
+### Backups and Save Slots
 
-- **Restore a backup** - **Save Sync → Restore from Backup**, or a game's **RomM Saves → Restore from Backup**.
-- **Save Slots** - named per-game saves for separate playthroughs (**RomM Saves → Save Slots**); every game keeps an `autosave` slot, plus **Switch**, **New Slot**, **Rename**, **Delete**.
-- **History and errors** - **Save Sync History** and **Sync Errors**.
+To restore a backup, navigate to  **Save Sync → Restore from Backup**. You can also restore via a game's context menu with **RomM Saves → Restore from Backup**.
+
+A Save Slot is a way to have mulitiple named playthroughs in a single game. You can manage these from a game's context menu in the launcher.

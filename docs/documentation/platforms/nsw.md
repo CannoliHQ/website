@@ -8,11 +8,10 @@ title: "Nintendo Switch"
 
 # Nintendo Switch `NSW`
 
-| Name | Type |  |
-|---|---|---|
-| Citron | Standalone | :material-key:{ .keys-required } |
-| Kenji-NX | Standalone | :material-key:{ .keys-required } |
-| Skyline | Standalone | :material-key:{ .keys-required } |
+| Name         | Type       |                                  |
+|--------------|------------|----------------------------------|
+| Eden         | Standalone | :material-key:{ .keys-required } |
+| Eden Nightly | Standalone | :material-key:{ .keys-required } |
 
 <div class="platform-legend" markdown="span">:material-key:{ .keys-required } Encryption keys required</div>
 
