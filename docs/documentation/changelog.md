@@ -7,7 +7,7 @@ Also included is a hodge podge of simple QoL features and cleanup.
 
 | Feature / Fix                                                                                                                                    | Issue                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| Feat: **Localization** - Cannoli's interface is translatable, with a Language picker in the new Settings > General category                      | [#280](https://github.com/CannoliHQ/cannoli/issues/208) |
+| Feat: **Localization** - Cannoli's interface is translatable, with a Language picker in the new Settings > General category                      | [#208](https://github.com/CannoliHQ/cannoli/issues/208) |
 | Feat: New [PC platform](platforms/pc.md) that launches your GameNative or GameHub Lite library from shortcut files in `Roms/PC`                  | [#100](https://github.com/CannoliHQ/cannoli/issues/100) |
 | Feat: [Box art for Tools and Ports](customization.md#box-art), with Delete Box Art in the context menu and art that follows a rename             | N/A                                                     |
 | Feat: GameCube and Wii emulators launch intent cleanup [Emulator Mapping](settings.md#emulation)                                                 | [#170](https://github.com/CannoliHQ/cannoli/issues/170) |
