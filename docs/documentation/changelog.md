@@ -1,3 +1,14 @@
+## [v1.9.1](https://github.com/CannoliHQ/cannoli/releases/tag/v1.9.1)
+
+| Feature / Fix                                                                                 | Issue |
+|-----------------------------------------------------------------------------------------------|-------|
+| Fix: Make emulator mapping more robust and consistent across plaform and single game override | N/A   |
+| Fix: Sluggish Nonna's Kitchen performance with large libraries                                | N/A   |
+| Fix: More work on list padding calculations at various font sizes                             | N/A   |
+| Kudos: Add localization contributors to credits screen + reorganize credits screen            | N/A   |
+
+---
+
 ## [v1.9.0](https://github.com/CannoliHQ/cannoli/releases/tag/v1.9.0) - The Localization Release
 
 Cannoli speaks more than English now! If you want to get involved with the localization effort, please visit
