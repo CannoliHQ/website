@@ -3,6 +3,11 @@
 > [!IMPORTANT]
 > Cannoli requires Android 9 or newer.
 
+> [!IMPORTANT]
+> Cannoli needs about 600 MB of free space to install or update. Once installed it uses about 500 MB.
+> 
+> I am working on reducing this for devices with limited storage.
+
 ## Installing Cannoli
 
 You can snag the latest APK from the [GitHub Releases](https://github.com/CannoliHQ/cannoli/releases/latest).
