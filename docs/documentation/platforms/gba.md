@@ -10,17 +10,11 @@ title: "Game Boy Advance"
 
 | Name | Type |  |
 |---|---|---|
-| `mgba` | Bundled | :material-trophy:{ .trophy } |
-| `gpsp` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `vba_next` | RetroArch | :material-trophy:{ .trophy } |
-| `vbam` | RetroArch | :material-trophy:{ .trophy } |
-| `mednafen_gba` | RetroArch | :material-trophy:{ .trophy } |
-| GBA.emu | Standalone |  |
-| My Boy! | Standalone |  |
-| Pizza Boy GBA | Standalone | :material-trophy:{ .trophy } |
-| SkyEmu | Standalone |  |
-| NooDS | Standalone |  |
-| Linkboy | Standalone |  |
+| `mgba` | Internal | :material-trophy:{ .trophy } |
+| `gpsp` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `vba_next` | Internal | :material-trophy:{ .trophy } |
+| `vbam` | Internal | :material-trophy:{ .trophy } |
+| `mednafen_gba` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

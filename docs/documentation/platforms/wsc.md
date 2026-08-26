@@ -10,8 +10,7 @@ title: "WonderSwan Color"
 
 | Name | Type |  |
 |---|---|---|
-| `mednafen_wswan` | Bundled | :material-trophy:{ .trophy } |
-| Swan.emu | Standalone |  |
+| `mednafen_wswan` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

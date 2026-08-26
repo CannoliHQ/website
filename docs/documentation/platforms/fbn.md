@@ -10,7 +10,7 @@ title: "Arcade (FBN)"
 
 | Name | Type |  |
 |---|---|---|
-| `fbneo` | Bundled | :material-trophy:{ .trophy } |
+| `fbneo` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

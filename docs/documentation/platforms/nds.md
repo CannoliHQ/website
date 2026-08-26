@@ -10,16 +10,13 @@ title: "Nintendo DS"
 
 | Name | Type |  |
 |---|---|---|
-| `melonds` | RetroArch | :material-trophy:{ .trophy } |
-| `melondsds` | RetroArch | :material-trophy:{ .trophy } |
-| `desmume` | RetroArch | :material-trophy:{ .trophy } |
-| `desmume2015` | RetroArch | :material-trophy:{ .trophy } |
+| `melonds` | Internal | :material-trophy:{ .trophy } |
+| `melondsds` | Internal | :material-trophy:{ .trophy } |
+| `desmume` | Internal | :material-trophy:{ .trophy } |
+| `desmume2015` | Internal | :material-trophy:{ .trophy } |
 | melonDS | Standalone | :material-trophy:{ .trophy } |
-| melonDS Nightly | Standalone | :material-trophy:{ .trophy } |
+| WatermelonDS | Standalone |  |
 | DraStic | Standalone |  |
-| melonDS DS | Standalone |  |
-| SkyEmu | Standalone |  |
-| NooDS | Standalone |  |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

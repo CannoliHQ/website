@@ -15,7 +15,7 @@ title: "PICO-8"
 
 | Name | Type |  |
 |---|---|---|
-| [pico8-android](https://github.com/Macs75/pico8-android) | Standalone | :material-chip:{ .bios-required } |
+| [PICO-8 for Android](https://github.com/Macs75/pico8-android) | Standalone | :material-chip:{ .bios-required } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required</div>
 

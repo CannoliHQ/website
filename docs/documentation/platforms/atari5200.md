@@ -10,8 +10,8 @@ title: "Atari 5200"
 
 | Name | Type |  |
 |---|---|---|
-| `atari800` | RetroArch | :material-chip:{ .bios-required } |
-| `a5200` | RetroArch | :material-chip:{ .bios-required } |
+| `atari800` | Internal | :material-chip:{ .bios-required } |
+| `a5200` | Internal | :material-chip:{ .bios-required } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required</div>
 

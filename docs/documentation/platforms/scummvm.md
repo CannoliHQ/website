@@ -10,8 +10,7 @@ title: "ScummVM"
 
 | Name | Type |  |
 |---|---|---|
-| `scummvm` | RetroArch | :material-trophy:{ .trophy } |
-| ScummVM | Standalone |  |
+| `scummvm` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

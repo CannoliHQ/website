@@ -10,16 +10,12 @@ title: "Game Boy Color"
 
 | Name | Type |  |
 |---|---|---|
-| `gambatte` | Bundled | :material-trophy:{ .trophy } |
-| `sameboy` | RetroArch | :material-trophy:{ .trophy } |
-| `gearboy` | RetroArch | :material-trophy:{ .trophy } |
-| `mgba` | RetroArch | :material-trophy:{ .trophy } |
-| `tgbdual` | RetroArch | :material-trophy:{ .trophy } |
-| `vbam` | RetroArch | :material-trophy:{ .trophy } |
-| GBC.emu | Standalone |  |
-| My OldBoy! | Standalone |  |
-| Pizza Boy GBC | Standalone | :material-trophy:{ .trophy } |
-| Linkboy | Standalone |  |
+| `gambatte` | Internal | :material-trophy:{ .trophy } |
+| `sameboy` | Internal | :material-trophy:{ .trophy } |
+| `gearboy` | Internal | :material-trophy:{ .trophy } |
+| `mgba` | Internal | :material-trophy:{ .trophy } |
+| `tgbdual` | Internal | :material-trophy:{ .trophy } |
+| `DoubleCherryGB` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

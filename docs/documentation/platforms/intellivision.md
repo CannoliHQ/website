@@ -10,7 +10,7 @@ title: "Intellivision"
 
 | Name | Type |  |
 |---|---|---|
-| `freeintv` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `freeintv` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

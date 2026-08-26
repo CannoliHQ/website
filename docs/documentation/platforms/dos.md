@@ -10,9 +10,9 @@ title: "DOS"
 
 | Name | Type |  |
 |---|---|---|
-| `dosbox_pure` | RetroArch | :material-trophy:{ .trophy } |
-| `dosbox_core` | RetroArch | :material-trophy:{ .trophy } |
-| `dosbox_svn` | RetroArch | :material-trophy:{ .trophy } |
+| `dosbox_pure` | Internal | :material-trophy:{ .trophy } |
+| `dosbox_core` | Internal | :material-trophy:{ .trophy } |
+| `dosbox_svn` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

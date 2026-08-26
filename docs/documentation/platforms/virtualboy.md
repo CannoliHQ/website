@@ -10,8 +10,7 @@ title: "Virtual Boy"
 
 | Name | Type |  |
 |---|---|---|
-| `mednafen_vb` | Bundled | :material-trophy:{ .trophy } |
-| Virtual Virtual Boy | Standalone |  |
+| `mednafen_vb` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

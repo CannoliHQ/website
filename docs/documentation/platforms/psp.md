@@ -10,7 +10,7 @@ title: "PSP"
 
 | Name | Type |  |
 |---|---|---|
-| `ppsspp` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `ppsspp` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 | PPSSPP | Standalone | :material-trophy:{ .trophy } |
 | PPSSPP Gold | Standalone | :material-trophy:{ .trophy } |
 

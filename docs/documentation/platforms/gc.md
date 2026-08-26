@@ -12,6 +12,7 @@ title: "GameCube"
 |---------------|------------|------------------------------|
 | Dolphin       | Standalone | :material-trophy:{ .trophy } |
 | Dolphin MMJR2 | Standalone |                              |
+| Delfino       | Standalone |                              |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

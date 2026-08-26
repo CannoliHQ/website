@@ -11,7 +11,6 @@ title: "PS Vita"
 | Name | Type |  |
 |---|---|---|
 | Vita3K | Standalone | :material-chip:{ .bios-required } |
-| Vita3K ikhoeyZX fork | Standalone | :material-chip:{ .bios-required } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required</div>
 

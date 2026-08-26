@@ -10,9 +10,9 @@ title: "Atari 2600"
 
 | Name | Type |  |
 |---|---|---|
-| `stella` | Bundled | :material-trophy:{ .trophy } |
-| `stella2014` | RetroArch | :material-trophy:{ .trophy } |
-| 2600.emu | Standalone |  |
+| `stella` | Internal | :material-trophy:{ .trophy } |
+| `stella2014` | Internal | :material-trophy:{ .trophy } |
+| `stella2023` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

@@ -10,7 +10,7 @@ title: "Pokemon Mini"
 
 | Name | Type |  |
 |---|---|---|
-| `pokemini` | Bundled | :material-trophy:{ .trophy } |
+| `pokemini` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

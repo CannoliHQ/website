@@ -10,10 +10,9 @@ title: "PC Engine SuperGrafx"
 
 | Name | Type |  |
 |---|---|---|
-| `mednafen_supergrafx` | RetroArch | :material-trophy:{ .trophy } |
-| `mednafen_pce` | RetroArch | :material-trophy:{ .trophy } |
-| `geargrafx` | RetroArch | :material-trophy:{ .trophy } |
-| PCE.emu | Standalone |  |
+| `mednafen_supergrafx` | Internal | :material-trophy:{ .trophy } |
+| `mednafen_pce` | Internal | :material-trophy:{ .trophy } |
+| `geargrafx` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

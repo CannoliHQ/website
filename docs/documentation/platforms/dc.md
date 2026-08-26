@@ -10,8 +10,7 @@ title: "Dreamcast"
 
 | Name | Type |  |
 |---|---|---|
-| `flycast` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `flycast_gles2` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `flycast` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 | Flycast | Standalone |  |
 | Redream | Standalone |  |
 

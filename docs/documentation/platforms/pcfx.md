@@ -10,7 +10,7 @@ title: "PC-FX"
 
 | Name | Type |  |
 |---|---|---|
-| `mednafen_pcfx` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `mednafen_pcfx` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

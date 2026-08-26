@@ -10,11 +10,8 @@ title: "ColecoVision"
 
 | Name | Type |  |
 |---|---|---|
-| `bluemsx` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| `gearcoleco` | RetroArch | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
-| ColEm Deluxe | Standalone |  |
-| ColEm | Standalone |  |
-| MSX.emu | Standalone |  |
+| `bluemsx` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
+| `gearcoleco` | Internal | :material-chip:{ .bios-required } :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-chip:{ .bios-required } BIOS required &nbsp;·&nbsp; :material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

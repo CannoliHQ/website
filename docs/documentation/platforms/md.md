@@ -10,12 +10,9 @@ title: "Sega Genesis"
 
 | Name | Type |  |
 |---|---|---|
-| `genesis_plus_gx` | Bundled | :material-trophy:{ .trophy } |
-| `picodrive` | RetroArch | :material-trophy:{ .trophy } |
-| `blastem` | RetroArch | :material-trophy:{ .trophy } |
-| `genesis_plus_gx_wide` | RetroArch | :material-trophy:{ .trophy } |
-| MD.emu | Standalone |  |
-| Pizza Boy SC | Standalone |  |
+| `genesis_plus_gx` | Internal | :material-trophy:{ .trophy } |
+| `picodrive` | Internal | :material-trophy:{ .trophy } |
+| `genesis_plus_gx_wide` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

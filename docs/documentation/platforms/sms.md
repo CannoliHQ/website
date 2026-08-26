@@ -10,14 +10,11 @@ title: "Master System"
 
 | Name | Type |  |
 |---|---|---|
-| `genesis_plus_gx` | Bundled | :material-trophy:{ .trophy } |
-| `picodrive` | RetroArch | :material-trophy:{ .trophy } |
-| `gearsystem` | RetroArch | :material-trophy:{ .trophy } |
-| `smsplus` | RetroArch | :material-trophy:{ .trophy } |
-| `genesis_plus_gx_wide` | RetroArch | :material-trophy:{ .trophy } |
-| MD.emu | Standalone |  |
-| MasterGear | Standalone |  |
-| Pizza Boy SC | Standalone |  |
+| `genesis_plus_gx` | Internal | :material-trophy:{ .trophy } |
+| `picodrive` | Internal | :material-trophy:{ .trophy } |
+| `gearsystem` | Internal | :material-trophy:{ .trophy } |
+| `smsplus` | Internal | :material-trophy:{ .trophy } |
+| `genesis_plus_gx_wide` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 
