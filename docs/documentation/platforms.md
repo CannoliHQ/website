@@ -1,6 +1,6 @@
 ## Supported Platforms
 
-Cannoli supports a wide range of retro platforms out of the box. Pick a platform below for the full list of internal cores and standalone Android apps.
+Cannoli supports a wide range of retro platforms out of the box. Pick a platform below for the full list of embedded cores and standalone Android apps.
 
 The **Folder** column shows the accepted directory name for your ROMs. Place your ROM files in `Cannoli/Roms/{Folder}`.
 
@@ -8,7 +8,7 @@ For example, Game Boy Advance ROMs go in `Cannoli/Roms/GBA`.
 
 ---
 
-:material-check-bold:{ .shipped } Plays on Cannoli's internal emulator
+:material-check-bold:{ .shipped } Plays on Cannoli's embedded RetroArch
 
 :material-android:{ .android } Requires a standalone Android app
 

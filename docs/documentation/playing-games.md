@@ -1,11 +1,8 @@
 # Playing Games
 
-## Built-In Core Runner
+## Embedded RetroArch
 
-Cannoli ships with a built-in libretro core runner. Press `A` on a game to play it. 
-
-> [!TIP]
-> Some platforms are not available in the built-in core runner. See [Platforms](platforms.md) for details.
+Starting in v2, Cannoli ships with an embedded copy of RetroArch. Press `A` on a game to play it. 
 
 ---
 
@@ -15,7 +12,7 @@ If a save state exists for a game, press the **Resume** button to jump back in, 
 
 **Hold** the Resume button to open the Save State Picker. Cycle through your slots with `Left` / `Right` and press the Resume button again to load the selected slot. Empty slots show as blank.
 
-Resume is only available for games handled by Cannoli's built-in core runner.
+Resume is only available for games handled by Cannoli's embedded RetroArch and if hardcore RetroAchievements are disabled.
 
 ---
 
@@ -70,7 +67,7 @@ If you have one file this option will open it directly. If you have multiple fil
 
 ### Cheats
 
-Cannoli can apply RetroArch-style `.cht` cheat files to games running in the [built-in core runner](#built-in-core-runner).
+You can supply Cannoli with RetroArch `.cht` cheat files.
 
 Place your `.cht` files in `Cheats/<Platform>/<Game>/`, mirroring the platform folder and ROM file name Cannoli already uses for box art and guides. You can also upload them through [Nonna's Kitchen](nonnas-kitchen.md). Files with no readable cheats are ignored.
 
@@ -143,11 +140,11 @@ Deleting a multi-disc entry removes the entire bundle.
 
 ---
 
-## RetroArch / Standalone Emulators
+## Standalone Emulators
 
-Cannoli can also launch your games using RetroArch or a standalone emulator.
+Cannoli can also launch your games using a standalone emulator.
 
-You can configure which RetroArch core or standalone emulator handles a platform under **Settings → Emulation → Emulator Mapping**.
+You can configure what each platform uses for its emulator under **Settings → Emulation → Emulator Mapping**.
 
 ---
 
@@ -158,7 +155,6 @@ By default, each game uses the core or app assigned to its platform in [Emulator
 Open a game's context menu (`Start`) and select **Emulator Override** to pick from:
 
 - Cannoli's built-in cores
-- Any core installed in the selected RetroArch or RicottaArch package
 - Any compatible standalone Android app
 
 The picker shows the source of each option (Internal, RetroArch, RicottaArch, or Standalone). To clear an override and return to the platform default, open the picker again and choose **Platform Default**.
