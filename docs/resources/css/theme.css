@@ -417,7 +417,6 @@
 }
 
 .md-typeset .shipped svg,
-.md-typeset .retroarch svg,
 .md-typeset .android svg,
 .md-typeset .trophy svg,
 .md-typeset .bios-required svg,
@@ -429,10 +428,6 @@
 
 .md-typeset .shipped svg {
   fill: #4a9ab5;
-}
-
-.md-typeset .retroarch svg {
-  fill: #9b59b6;
 }
 
 .md-typeset .android svg {
