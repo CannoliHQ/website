@@ -13,8 +13,6 @@ title: "Nintendo Entertainment System"
 | `nestopia` | Internal | :material-trophy:{ .trophy } |
 | `fceumm` | Internal | :material-trophy:{ .trophy } |
 | `mesen` | Internal | :material-trophy:{ .trophy } |
-| `quicknes` | Internal | :material-trophy:{ .trophy } |
-| `rustynes` | Internal | :material-trophy:{ .trophy } |
 
 <div class="platform-legend" markdown="span">:material-trophy:{ .trophy } [RetroAchievements Supported](../retroachievements.md)</div>
 

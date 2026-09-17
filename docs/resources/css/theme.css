@@ -85,7 +85,10 @@
 .hero {
   text-align: center;
   margin: 0 auto;
-  min-height: calc(100vh - 7rem);
+  /* The homepage hides the header and drops the footer, so the hero only has to
+     clear .md-content__inner's own margins. */
+  min-height: calc(100vh - 40px);
+  min-height: calc(100svh - 40px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -116,11 +119,22 @@
 .hero-device {
   position: relative;
   flex-shrink: 1;
-  width: 590px;
-  min-width: 300px;
+  /* The frame art is 320x460, so its height is always width / 0.6957. Cap the
+     width by what the viewport height can fit as well, otherwise a short window
+     (a laptop, a landscape phone) crops the device instead of scaling it. */
+  width: 480px;
+  width: min(480px, (100svh - 120px) * 320 / 460);
 }
 
-.hero-device::before {
+.device-stage {
+  position: relative;
+  width: 100%;
+  /* Everything inside the screen sizes in cqw, so the mock UI keeps its
+     proportions at any device width without per-breakpoint font sizes. */
+  container-type: inline-size;
+}
+
+.device-stage::before {
   content: '';
   position: absolute;
   /* Above the frame (z2) so this opaque black square always covers the SVG
@@ -151,7 +165,7 @@
 .device-screen {
   position: absolute;
   z-index: 5;
-  /* Overlap the SVG screen cutout by ~0.4% on every side (see .hero-device
+  /* Overlap the SVG screen cutout by ~0.4% on every side (see .device-stage
      ::before) so the video covers the cutout's anti-aliased edge and no body
      color bleeds through during playback. */
   top: 4%;
@@ -173,7 +187,7 @@
   justify-content: center;
   position: absolute;
   z-index: 4;
-  /* Match .device-screen (overlaps the SVG cutout edge; see .hero-device::before). */
+  /* Match .device-screen (overlaps the SVG cutout edge; see .device-stage::before). */
   top: 4%;
   left: 9%;
   width: 82%;
@@ -194,8 +208,9 @@
   display: none !important;
 }
 
-.device-screen-content img {
+.hero .device-screen-content img {
   width: 120px;
+  width: 22cqw;
   height: auto;
 }
 
@@ -211,9 +226,10 @@
   .hero {
     flex-direction: column;
     gap: 0;
-    min-height: 0;
-    justify-content: flex-start;
-    padding-top: 1rem;
+    min-height: calc(100vh - 40px);
+    min-height: calc(100svh - 40px);
+    justify-content: center;
+    padding: 1rem 0.75rem 1.5rem;
   }
 
   .hero-content {
@@ -221,9 +237,19 @@
   }
 
   .hero-device {
-    display: block;
-    width: 560px;
-    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(460px, 100%);
+  }
+
+  .device-stage {
+    /* Reserve the height the buttons, the social row and the hero padding need
+       (px, not rem: Material scales the root font size), then let the device
+       take whichever of width or height runs out first. The buttons stay at the
+       full hero width either way. */
+    width: 100%;
+    width: min(100%, (100svh - 224px) * 320 / 460);
   }
 
   .device-screen-content {
@@ -263,20 +289,23 @@
     display: none !important;
   }
 
-  .device-screen-content h1 {
+  .hero .device-screen-content h1 {
     font-size: 1.6rem;
+    font-size: 7cqw;
     margin: 0.2rem 0 !important;
     color: #fff;
   }
 
-  .device-screen-content h3 {
+  .hero .device-screen-content h3 {
     font-size: 0.7rem;
+    font-size: 3.1cqw;
     margin: 0 0 0.3rem 0 !important;
     color: #fff;
   }
 
-  .device-screen-content img {
+  .hero .device-screen-content img {
     width: 100px;
+    width: 24cqw;
     height: auto;
   }
 
@@ -295,21 +324,27 @@
   }
 
   .device-below-btn {
-    display: block;
-    position: absolute;
-    top: calc(100% + 1rem);
-    left: 0;
-    right: 0;
+    /* In flow, not absolutely positioned: the buttons have to take part in the
+       layout so the device can be sized against the space that is left. */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
     text-align: center;
     visibility: visible;
   }
 
   .device-below-btn .md-button {
+    margin: 0;
     font-size: 0.7rem;
   }
 
-  .hero h3 {
-    font-size: 0.75rem;
+  .device-below-social {
+    flex-basis: 100%;
+    margin-top: 0.5rem;
   }
 
   .md-footer-meta__inner {
@@ -325,17 +360,52 @@
   }
 }
 
-@media (min-width: 620px) and (max-width: 1100px) {
-  .device-screen-content img {
-    width: 120px;
+/* Narrow phones: trim the chrome so the two buttons still share one row, which
+   is what the device height above is budgeted against. */
+@media (max-width: 420px) {
+  .hero {
+    /* Cancel .md-content__inner's side padding: the hero is edge to edge here,
+       and the reclaimed width is what keeps the buttons on one row. */
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
-  .device-screen-content h1 {
-    font-size: 2.2rem;
+  .device-below-btn .md-button {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+/* Short windows (landscape phones, split-screen): stacking the buttons under
+   the device would squeeze it down to a thumbnail, so sit them alongside. */
+@media (max-width: 1100px) and (max-height: 620px) and (orientation: landscape) {
+  .hero {
+    padding: 0.75rem;
   }
 
-  .device-screen-content h3 {
-    font-size: 1rem;
+  .hero-device {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .device-stage {
+    width: min(400px, (100svh - 72px) * 320 / 460, 45vw);
+  }
+
+  .device-below-btn {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .device-below-social {
+    flex-basis: auto;
   }
 }
 

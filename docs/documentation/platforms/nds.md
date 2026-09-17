@@ -10,10 +10,7 @@ title: "Nintendo DS"
 
 | Name | Type |  |
 |---|---|---|
-| `melonds` | Internal | :material-trophy:{ .trophy } |
 | `melondsds` | Internal | :material-trophy:{ .trophy } |
-| `desmume` | Internal | :material-trophy:{ .trophy } |
-| `desmume2015` | Internal | :material-trophy:{ .trophy } |
 | melonDS | Standalone | :material-trophy:{ .trophy } |
 | WatermelonDS | Standalone |  |
 | DraStic | Standalone |  |

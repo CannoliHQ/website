@@ -25,15 +25,17 @@ hide:
     </div>
   </div>
   <div class="hero-device">
-    <img src="resources/img/homepage/handheld.svg" class="device-frame" alt="">
-    <video class="device-screen" muted playsinline>
-      <source src="resources/videos/demo.mp4" type="video/mp4">
-    </video>
-    <div class="device-screen-content">
-      <img src="resources/img/logo.svg" alt="cannoli logo">
-      <h1>Cannoli</h1>
-      <h3>Sweet Retro Gaming on Android</h3>
-      <a href="documentation/" class="md-button md-button--primary">Documentation</a>
+    <div class="device-stage">
+      <img src="resources/img/homepage/handheld.svg" class="device-frame" alt="">
+      <video class="device-screen" muted playsinline>
+        <source src="resources/videos/demo.mp4" type="video/mp4">
+      </video>
+      <div class="device-screen-content">
+        <img src="resources/img/logo.svg" alt="cannoli logo">
+        <h1>Cannoli</h1>
+        <h3>Sweet Retro Gaming on Android</h3>
+        <a href="documentation/" class="md-button md-button--primary">Documentation</a>
+      </div>
     </div>
     <div class="device-below-btn">
       <a href="documentation/" class="md-button md-button--primary">Documentation</a>
