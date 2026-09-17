@@ -157,4 +157,4 @@ Open a game's context menu (`Start`) and select **Emulator Override** to pick fr
 - Cannoli's built-in cores
 - Any compatible standalone Android app
 
-The picker shows the source of each option (Internal, RetroArch, RicottaArch, or Standalone). To clear an override and return to the platform default, open the picker again and choose **Platform Default**.
+The picker shows the source of each option (Internal, RetroArch, or Standalone). To clear an override and return to the platform default, open the picker again and choose **Platform Default**.
