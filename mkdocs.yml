@@ -73,7 +73,6 @@ nav:
     - Settings: documentation/settings.md
     - Nonna's Kitchen: documentation/nonnas-kitchen.md
   - Integrations:
-#    - RicottaArch: documentation/ricotta.md
     - RetroAchievements: documentation/retroachievements.md
     - RomM: documentation/romm.md
   - Reference:

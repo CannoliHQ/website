@@ -79,9 +79,9 @@ See the [Customization](customization.md#appearance) page for details.
 
 ## Emulation
 
-- **Emulator Mapping:** Open a per-platform screen to choose which core or app handles each platform. The picker lists every emulator option grouped by source (Internal, RetroArch, RicottaArch, Standalone) and defaults to showing only what's installed.
-- **RetroArch Package:** Select which installed RetroArch or RicottaArch package Cannoli should launch.
-- **Installed Cores:** Lists all cores for the selected RetroArch/RicottaArch package.
+- **Emulator Mapping:** Open a per-platform screen to choose which core or app handles each platform. The picker lists every emulator option grouped by source (Internal, RetroArch, Standalone) and defaults to showing only what's installed.
+- **RetroArch Package:** Select which installed RetroArch package Cannoli should launch.
+- **Installed Cores:** Lists all cores for the selected RetroArch package.
 - **Save State On Quit:** When enabled, quitting a game from the In-Game Menu automatically saves state before exiting.
 
 > [!WARNING]
